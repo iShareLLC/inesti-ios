@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		125FE57B9B278B889C174BD8 /* Pods_iNestiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAEC5AFD372BA52FE8AC8ED /* Pods_iNestiUITests.framework */; };
 		3C01173020852EF7007C73D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C01172F20852EF7007C73D8 /* AppDelegate.swift */; };
 		3C01173520852EF7007C73D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C01173320852EF7007C73D8 /* Main.storyboard */; };
 		3C01173720852EF8007C73D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C01173620852EF8007C73D8 /* Assets.xcassets */; };
@@ -18,6 +19,8 @@
 		3CD2E7E2208698A7002252CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CD2E7E4208698A7002252CC /* InfoPlist.strings */; };
 		3CD2E7E8208698EB002252CC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CD2E7EA208698EB002252CC /* Localizable.strings */; };
 		3CD2E7EE20869905002252CC /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2E7ED20869905002252CC /* String+Localization.swift */; };
+		8CCA2A1F8BCFF62C74C81657 /* Pods_iNesti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B15A91E27453B5D78CE3AAB /* Pods_iNesti.framework */; };
+		9B67F31FD563B1304F6FD8A0 /* Pods_iNestiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F5BAE53357EF57B92A63F6 /* Pods_iNestiTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		106777E4FF79F39189345417 /* Pods-iNesti.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNesti.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iNesti/Pods-iNesti.debug.xcconfig"; sourceTree = "<group>"; };
+		3B15A91E27453B5D78CE3AAB /* Pods_iNesti.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iNesti.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C01172C20852EF7007C73D8 /* iNesti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iNesti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C01172F20852EF7007C73D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C01173620852EF8007C73D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +62,13 @@
 		3CD2E7F420869ACD002252CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CD2E7F520869AD9002252CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CD2E7F620869B5A002252CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		48B0DCCB0F045000E3080847 /* Pods-iNestiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiTests/Pods-iNestiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		541B821C0B7CE12A40DCE40D /* Pods-iNestiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiUITests/Pods-iNestiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		71F5BAE53357EF57B92A63F6 /* Pods_iNestiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iNestiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C576E4A9608C13AA5525141A /* Pods-iNestiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiUITests/Pods-iNestiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C60C1556F08CDAB711EF22C7 /* Pods-iNestiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiTests/Pods-iNestiTests.release.xcconfig"; sourceTree = "<group>"; };
+		CDAEC5AFD372BA52FE8AC8ED /* Pods_iNestiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iNestiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D20F74BB0A29983A64ABDA31 /* Pods-iNesti.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNesti.release.xcconfig"; path = "Pods/Target Support Files/Pods-iNesti/Pods-iNesti.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CCA2A1F8BCFF62C74C81657 /* Pods_iNesti.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B67F31FD563B1304F6FD8A0 /* Pods_iNestiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				125FE57B9B278B889C174BD8 /* Pods_iNestiUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +106,8 @@
 				3C01174320852EF8007C73D8 /* iNestiTests */,
 				3C01174E20852EF8007C73D8 /* iNestiUITests */,
 				3C01172D20852EF7007C73D8 /* Products */,
+				E1FAC3C38789CE1B98E7CF9B /* Pods */,
+				C4F438EC47C229029828DCD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,7 +128,6 @@
 				3CD2E7D620868F4E002252CC /* Common */,
 				3C01172F20852EF7007C73D8 /* AppDelegate.swift */,
 				3C01173320852EF7007C73D8 /* Main.storyboard */,
-				3C01173620852EF8007C73D8 /* Assets.xcassets */,
 				3C01173820852EF8007C73D8 /* LaunchScreen.storyboard */,
 				3CD2E7F720869B5A002252CC /* Info.plist */,
 				3CD2E7D420868F41002252CC /* HomeViewController.swift */,
@@ -149,6 +165,7 @@
 		3CD2E7D92086921D002252CC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3CEF332820869F3C005281BE /* UI */,
 				3CD2E7DF2086987B002252CC /* Localization */,
 				3CD2E7DA20869222002252CC /* Font */,
 			);
@@ -181,6 +198,37 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		3CEF332820869F3C005281BE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3C01173620852EF8007C73D8 /* Assets.xcassets */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C4F438EC47C229029828DCD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B15A91E27453B5D78CE3AAB /* Pods_iNesti.framework */,
+				71F5BAE53357EF57B92A63F6 /* Pods_iNestiTests.framework */,
+				CDAEC5AFD372BA52FE8AC8ED /* Pods_iNestiUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1FAC3C38789CE1B98E7CF9B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				106777E4FF79F39189345417 /* Pods-iNesti.debug.xcconfig */,
+				D20F74BB0A29983A64ABDA31 /* Pods-iNesti.release.xcconfig */,
+				48B0DCCB0F045000E3080847 /* Pods-iNestiTests.debug.xcconfig */,
+				C60C1556F08CDAB711EF22C7 /* Pods-iNestiTests.release.xcconfig */,
+				541B821C0B7CE12A40DCE40D /* Pods-iNestiUITests.debug.xcconfig */,
+				C576E4A9608C13AA5525141A /* Pods-iNestiUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C01175420852EF8007C73D8 /* Build configuration list for PBXNativeTarget "iNesti" */;
 			buildPhases = (
+				51AAC395E9C5D1882B042B7C /* [CP] Check Pods Manifest.lock */,
 				3C01172820852EF7007C73D8 /* Sources */,
 				3C01172920852EF7007C73D8 /* Frameworks */,
 				3C01172A20852EF7007C73D8 /* Resources */,
+				D9B0EECE326B9C36875D2FC7 /* [CP] Embed Pods Frameworks */,
+				0617A4C9C721BF0C425E044C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,9 +256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C01175720852EF8007C73D8 /* Build configuration list for PBXNativeTarget "iNestiTests" */;
 			buildPhases = (
+				4F63A784BC0FA3B00CE8850A /* [CP] Check Pods Manifest.lock */,
 				3C01173C20852EF8007C73D8 /* Sources */,
 				3C01173D20852EF8007C73D8 /* Frameworks */,
 				3C01173E20852EF8007C73D8 /* Resources */,
+				4131A597EC462A8455B66635 /* [CP] Embed Pods Frameworks */,
+				F793A9398B90545F573C814A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -223,9 +277,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C01175A20852EF8007C73D8 /* Build configuration list for PBXNativeTarget "iNestiUITests" */;
 			buildPhases = (
+				29D6225510C2A2C5CA693252 /* [CP] Check Pods Manifest.lock */,
 				3C01174720852EF8007C73D8 /* Sources */,
 				3C01174820852EF8007C73D8 /* Frameworks */,
 				3C01174920852EF8007C73D8 /* Resources */,
+				0C4584E29D3383C00DCB84E6 /* [CP] Embed Pods Frameworks */,
+				56F3F7E109280531A6873A07 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -309,6 +366,170 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0617A4C9C721BF0C425E044C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNesti/Pods-iNesti-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0C4584E29D3383C00DCB84E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNestiUITests/Pods-iNestiUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29D6225510C2A2C5CA693252 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iNestiUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4131A597EC462A8455B66635 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNestiTests/Pods-iNestiTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F63A784BC0FA3B00CE8850A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iNestiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51AAC395E9C5D1882B042B7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iNesti-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56F3F7E109280531A6873A07 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNestiUITests/Pods-iNestiUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9B0EECE326B9C36875D2FC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iNesti/Pods-iNesti-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNesti/Pods-iNesti-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F793A9398B90545F573C814A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNestiTests/Pods-iNestiTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3C01172820852EF7007C73D8 /* Sources */ = {
@@ -515,6 +736,7 @@
 		};
 		3C01175520852EF8007C73D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 106777E4FF79F39189345417 /* Pods-iNesti.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -533,6 +755,7 @@
 		};
 		3C01175620852EF8007C73D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D20F74BB0A29983A64ABDA31 /* Pods-iNesti.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -551,6 +774,7 @@
 		};
 		3C01175820852EF8007C73D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48B0DCCB0F045000E3080847 /* Pods-iNestiTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -572,6 +796,7 @@
 		};
 		3C01175920852EF8007C73D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C60C1556F08CDAB711EF22C7 /* Pods-iNestiTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -593,6 +818,7 @@
 		};
 		3C01175B20852EF8007C73D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 541B821C0B7CE12A40DCE40D /* Pods-iNestiUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -613,6 +839,7 @@
 		};
 		3C01175C20852EF8007C73D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C576E4A9608C13AA5525141A /* Pods-iNestiUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
