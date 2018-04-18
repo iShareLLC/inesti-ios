@@ -12,5 +12,9 @@ extension String {
     var localized: String {
         return NSLocalizedString(self, comment: self)
     }
+
+    var webURL: URL? {
+        return try? self.asURL()
+    }
 }
 

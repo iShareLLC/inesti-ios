@@ -5,3 +5,5 @@
   Created by Cunqi Xiao on 4/17/18.
   Copyright © 2018 iShareLLC. All rights reserved.
 */
+
+"common.unknownError" = "出现未知错误,请稍后再试";

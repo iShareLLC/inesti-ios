@@ -19,6 +19,12 @@
 		3CD2E7E2208698A7002252CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CD2E7E4208698A7002252CC /* InfoPlist.strings */; };
 		3CD2E7E8208698EB002252CC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CD2E7EA208698EB002252CC /* Localizable.strings */; };
 		3CD2E7EE20869905002252CC /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2E7ED20869905002252CC /* String+Localization.swift */; };
+		3CEF332E2086CD38005281BE /* PopularPlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF332D2086CD38005281BE /* PopularPlaceCell.swift */; };
+		3CEF33302086CD63005281BE /* PopularPlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CEF332F2086CD63005281BE /* PopularPlaceCell.xib */; };
+		3CEF33332086D3A7005281BE /* PopularPlacesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33322086D3A7005281BE /* PopularPlacesAPI.swift */; };
+		3CEF33352086D44A005281BE /* PopularPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33342086D44A005281BE /* PopularPlace.swift */; };
+		3CEF33382086D5AF005281BE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33372086D5AF005281BE /* HomeViewModel.swift */; };
+		3CEF333A2086D987005281BE /* CALayer+Sketch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33392086D987005281BE /* CALayer+Sketch.swift */; };
 		8CCA2A1F8BCFF62C74C81657 /* Pods_iNesti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B15A91E27453B5D78CE3AAB /* Pods_iNesti.framework */; };
 		9B67F31FD563B1304F6FD8A0 /* Pods_iNestiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F5BAE53357EF57B92A63F6 /* Pods_iNestiTests.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +68,12 @@
 		3CD2E7F420869ACD002252CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CD2E7F520869AD9002252CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CD2E7F620869B5A002252CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		3CEF332D2086CD38005281BE /* PopularPlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPlaceCell.swift; sourceTree = "<group>"; };
+		3CEF332F2086CD63005281BE /* PopularPlaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularPlaceCell.xib; sourceTree = "<group>"; };
+		3CEF33322086D3A7005281BE /* PopularPlacesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPlacesAPI.swift; sourceTree = "<group>"; };
+		3CEF33342086D44A005281BE /* PopularPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPlace.swift; sourceTree = "<group>"; };
+		3CEF33372086D5AF005281BE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3CEF33392086D987005281BE /* CALayer+Sketch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Sketch.swift"; sourceTree = "<group>"; };
 		48B0DCCB0F045000E3080847 /* Pods-iNestiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiTests/Pods-iNestiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		541B821C0B7CE12A40DCE40D /* Pods-iNestiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiUITests/Pods-iNestiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		71F5BAE53357EF57B92A63F6 /* Pods_iNestiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iNestiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,13 +136,13 @@
 		3C01172E20852EF7007C73D8 /* iNesti */ = {
 			isa = PBXGroup;
 			children = (
+				3CEF33292086CB29005281BE /* Home */,
 				3CD2E7D92086921D002252CC /* Resources */,
 				3CD2E7D620868F4E002252CC /* Common */,
 				3C01172F20852EF7007C73D8 /* AppDelegate.swift */,
 				3C01173320852EF7007C73D8 /* Main.storyboard */,
 				3C01173820852EF8007C73D8 /* LaunchScreen.storyboard */,
 				3CD2E7F720869B5A002252CC /* Info.plist */,
-				3CD2E7D420868F41002252CC /* HomeViewController.swift */,
 			);
 			path = iNesti;
 			sourceTree = "<group>";
@@ -194,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				3CD2E7ED20869905002252CC /* String+Localization.swift */,
+				3CEF33392086D987005281BE /* CALayer+Sketch.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -204,6 +217,59 @@
 				3C01173620852EF8007C73D8 /* Assets.xcassets */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		3CEF33292086CB29005281BE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3CEF33362086D5A4005281BE /* ViewModel */,
+				3CEF33312086D396005281BE /* Service */,
+				3CEF332C2086CD24005281BE /* View */,
+				3CEF332B2086CB72005281BE /* Model */,
+				3CEF332A2086CB32005281BE /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3CEF332A2086CB32005281BE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3CD2E7D420868F41002252CC /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3CEF332B2086CB72005281BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3CEF33342086D44A005281BE /* PopularPlace.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3CEF332C2086CD24005281BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3CEF332D2086CD38005281BE /* PopularPlaceCell.swift */,
+				3CEF332F2086CD63005281BE /* PopularPlaceCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3CEF33312086D396005281BE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3CEF33322086D3A7005281BE /* PopularPlacesAPI.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3CEF33362086D5A4005281BE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3CEF33372086D5AF005281BE /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C4F438EC47C229029828DCD8 /* Frameworks */ = {
@@ -348,6 +414,7 @@
 				3CD2E7E2208698A7002252CC /* InfoPlist.strings in Resources */,
 				3C01173720852EF8007C73D8 /* Assets.xcassets in Resources */,
 				3C01173520852EF7007C73D8 /* Main.storyboard in Resources */,
+				3CEF33302086CD63005281BE /* PopularPlaceCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,22 +557,26 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-iNesti/Pods-iNesti-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
@@ -538,6 +609,11 @@
 			files = (
 				3C01173020852EF7007C73D8 /* AppDelegate.swift in Sources */,
 				3CD2E7D520868F41002252CC /* HomeViewController.swift in Sources */,
+				3CEF33352086D44A005281BE /* PopularPlace.swift in Sources */,
+				3CEF333A2086D987005281BE /* CALayer+Sketch.swift in Sources */,
+				3CEF33382086D5AF005281BE /* HomeViewModel.swift in Sources */,
+				3CEF33332086D3A7005281BE /* PopularPlacesAPI.swift in Sources */,
+				3CEF332E2086CD38005281BE /* PopularPlaceCell.swift in Sources */,
 				3CD2E7D820868F54002252CC /* BaseViewController.swift in Sources */,
 				3CD2E7EE20869905002252CC /* String+Localization.swift in Sources */,
 			);
@@ -742,10 +818,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
 				INFOPLIST_FILE = iNesti/Base.lproj/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNesti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -761,10 +834,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
 				INFOPLIST_FILE = iNesti/Base.lproj/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNesti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -781,11 +851,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
 				INFOPLIST_FILE = iNestiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNestiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -803,11 +869,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
 				INFOPLIST_FILE = iNestiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNestiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -824,11 +886,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
 				INFOPLIST_FILE = iNestiUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNestiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -845,11 +903,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
 				INFOPLIST_FILE = iNestiUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNestiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
