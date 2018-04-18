@@ -31,7 +31,13 @@ class PopularPlaceCell: UICollectionViewCell, NibReusable {
     }
 
     func addShadow() {
+        let maskPath = UIBezierPath(roundedRect: coverImageView.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 4.0, height: 4.0))
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = maskPath.cgPath
+        maskLayer.frame = coverImageView.bounds
+        coverImageView.layer.mask = maskLayer
+
         container.layer.cornerRadius = 4
-        container.layer.applySketchShadow(color: UIColor(white: 0, alpha: 1), x: 0, y: 6, blur: 30, spread: 0)
+        container.layer.applySketchShadow(color: UIColor(white: 0, alpha: 0.25), x: 0, y: 6, blur: 30, spread: 0)
     }
 }

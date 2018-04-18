@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--探索房源-->
         <scene sceneID="g09-xH-gim">
             <objects>
                 <viewController id="hvf-ju-vSj" customClass="HomeViewController" customModule="iNesti" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,22 +18,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBB-8Y-fcJ">
-                                <rect key="frame" x="16" y="28" width="343" height="44"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49i-yV-CUl">
+                                <rect key="frame" x="0.0" y="20" width="375" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBB-8Y-fcJ">
+                                        <rect key="frame" x="16" y="8" width="343" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="WFS-VH-McN"/>
+                                        </constraints>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搜索房源" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TR-9Y-0VB">
+                                        <rect key="frame" x="32" y="18.5" width="64" height="23"/>
+                                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="0.40999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热门房源" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIh-bx-wIA">
+                                        <rect key="frame" x="16" y="64" width="112" height="39.5"/>
+                                        <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="WFS-VH-McN"/>
+                                    <constraint firstAttribute="height" constant="110" id="8Ox-6l-rey"/>
+                                    <constraint firstAttribute="trailing" secondItem="RBB-8Y-fcJ" secondAttribute="trailing" constant="16" id="D4Z-BD-NlG"/>
+                                    <constraint firstItem="1TR-9Y-0VB" firstAttribute="centerY" secondItem="RBB-8Y-fcJ" secondAttribute="centerY" id="DTa-I6-WPV"/>
+                                    <constraint firstItem="RBB-8Y-fcJ" firstAttribute="leading" secondItem="49i-yV-CUl" secondAttribute="leading" constant="16" id="EnR-Sv-z7P"/>
+                                    <constraint firstItem="IIh-bx-wIA" firstAttribute="top" secondItem="RBB-8Y-fcJ" secondAttribute="bottom" constant="12" id="OKq-Cx-hQt"/>
+                                    <constraint firstItem="IIh-bx-wIA" firstAttribute="leading" secondItem="RBB-8Y-fcJ" secondAttribute="leading" id="R4E-kx-gpQ"/>
+                                    <constraint firstItem="1TR-9Y-0VB" firstAttribute="leading" secondItem="49i-yV-CUl" secondAttribute="leading" constant="32" id="XJf-Za-F25"/>
+                                    <constraint firstItem="RBB-8Y-fcJ" firstAttribute="top" secondItem="49i-yV-CUl" secondAttribute="top" constant="8" id="gPL-zG-xIu"/>
                                 </constraints>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热门房源" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIh-bx-wIA">
-                                <rect key="frame" x="16" y="84" width="112" height="39.5"/>
-                                <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Fe-fV-wa3">
-                                <rect key="frame" x="0.0" y="131.5" width="375" height="486.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Fe-fV-wa3">
+                                <rect key="frame" x="0.0" y="130" width="375" height="487.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B1w-uC-r8M">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -51,30 +73,20 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搜索房源" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TR-9Y-0VB">
-                                <rect key="frame" x="51" y="38.5" width="64" height="23"/>
-                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
-                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="0.40999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="3Fe-fV-wa3" firstAttribute="top" secondItem="IIh-bx-wIA" secondAttribute="bottom" constant="8" id="3w7-12-ouO"/>
-                            <constraint firstItem="RBB-8Y-fcJ" firstAttribute="leading" secondItem="1TR-9Y-0VB" secondAttribute="trailing" constant="-99" id="702-vD-aXs"/>
-                            <constraint firstItem="IIh-bx-wIA" firstAttribute="leading" secondItem="RBB-8Y-fcJ" secondAttribute="leading" id="8xy-DE-ElF"/>
+                            <constraint firstItem="GiL-Wu-lB1" firstAttribute="trailing" secondItem="49i-yV-CUl" secondAttribute="trailing" id="8MY-8O-pDX"/>
                             <constraint firstItem="3Fe-fV-wa3" firstAttribute="leading" secondItem="GiL-Wu-lB1" secondAttribute="leading" id="Akd-TN-Uhz"/>
                             <constraint firstItem="GiL-Wu-lB1" firstAttribute="trailing" secondItem="3Fe-fV-wa3" secondAttribute="trailing" id="ELK-5g-dQk"/>
-                            <constraint firstItem="RBB-8Y-fcJ" firstAttribute="top" secondItem="GiL-Wu-lB1" secondAttribute="top" constant="8" id="R4w-eI-jvr"/>
-                            <constraint firstItem="GiL-Wu-lB1" firstAttribute="trailing" secondItem="RBB-8Y-fcJ" secondAttribute="trailing" constant="16" id="RuR-wH-seA"/>
-                            <constraint firstItem="1TR-9Y-0VB" firstAttribute="centerY" secondItem="RBB-8Y-fcJ" secondAttribute="centerY" id="Xdj-LN-aw6"/>
+                            <constraint firstItem="49i-yV-CUl" firstAttribute="leading" secondItem="GiL-Wu-lB1" secondAttribute="leading" id="Jha-ec-kcy"/>
+                            <constraint firstItem="3Fe-fV-wa3" firstAttribute="top" secondItem="49i-yV-CUl" secondAttribute="bottom" id="c1D-7Y-eQw"/>
                             <constraint firstItem="GiL-Wu-lB1" firstAttribute="bottom" secondItem="3Fe-fV-wa3" secondAttribute="bottom" id="eFh-2r-0Tr"/>
-                            <constraint firstItem="IIh-bx-wIA" firstAttribute="top" secondItem="RBB-8Y-fcJ" secondAttribute="bottom" constant="12" id="gu1-c2-g3g"/>
-                            <constraint firstItem="RBB-8Y-fcJ" firstAttribute="leading" secondItem="GiL-Wu-lB1" secondAttribute="leading" constant="16" id="ll8-1r-2BC"/>
+                            <constraint firstItem="49i-yV-CUl" firstAttribute="top" secondItem="GiL-Wu-lB1" secondAttribute="top" id="iwo-hN-z2w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GiL-Wu-lB1"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="Bsn-Dy-77I"/>
+                    <tabBarItem key="tabBarItem" title="探索房源" image="explore" selectedImage="explore-selected" id="Bsn-Dy-77I"/>
                     <connections>
                         <outlet property="collectionView" destination="3Fe-fV-wa3" id="QNi-qQ-LOg"/>
                         <outlet property="searchButton" destination="RBB-8Y-fcJ" id="PG6-LR-UrJ"/>
@@ -83,6 +95,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QdU-WG-DUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="831.20000000000005" y="-164.16791604197903"/>
+        </scene>
+        <!--房主页面-->
+        <scene sceneID="vfN-Xb-VCC">
+            <objects>
+                <viewController id="wsE-5e-LTO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bn2-nf-LKS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2BK-Rb-rjy"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="房主页面" image="user" selectedImage="user-selected" id="DRg-2C-DS1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UVb-xP-rRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-108" y="635"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="odX-X7-Gdd">
@@ -96,6 +124,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="hvf-ju-vSj" kind="relationship" relationship="viewControllers" id="lF6-GN-wF4"/>
+                        <segue destination="wsE-5e-LTO" kind="relationship" relationship="viewControllers" id="sgS-wy-vde"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6BG-Eb-RfY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -103,4 +132,10 @@
             <point key="canvasLocation" x="-108" y="-164.16791604197903"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="explore" width="21" height="21"/>
+        <image name="explore-selected" width="20" height="20"/>
+        <image name="user" width="20" height="20"/>
+        <image name="user-selected" width="22" height="22"/>
+    </resources>
 </document>

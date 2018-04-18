@@ -39,7 +39,6 @@ class HomeViewController: BaseViewController {
         dataSource = RxCollectionViewSectionedReloadDataSource<SectionOfPopularPlace>(configureCell: { _, cv, ip, item in
             let cell = cv.dequeueReusableCell(for: ip, cellType: PopularPlaceCell.self)
             cell.setup(with: item)
-            cell.addShadow()
             return cell
         })
 
@@ -62,5 +61,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDelegate
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        (cell as? PopularPlaceCell)?.addShadow()
     }
 }
