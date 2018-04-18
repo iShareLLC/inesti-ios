@@ -14,9 +14,9 @@ import RxDataSources
 
 class HomeViewController: BaseViewController {
     @IBOutlet private weak var searchButton: UIButton!
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var tableView: UITableView!
 
-    private var dataSource: RxCollectionViewSectionedReloadDataSource<SectionOfPopularPlace>!
+    private var dataSource: RxTableViewSectionedReloadDataSource<SectionOfPopularPlace>!
     private let homeViewModel = HomeViewModel()
 
     override func viewDidLoad() {
@@ -33,37 +33,20 @@ class HomeViewController: BaseViewController {
     }
 
     private func setupCollectionView() {
-        collectionView.register(cellType: PopularPlaceCell.self)
-        collectionView.rx.setDelegate(self).disposed(by: disposeBag)
+        tableView.register(cellType: PopularPlaceCell.self)
+//        tableView.rx.setDelegate(self).disposed(by: disposeBag)
 
-        dataSource = RxCollectionViewSectionedReloadDataSource<SectionOfPopularPlace>(configureCell: { _, cv, ip, item in
-            let cell = cv.dequeueReusableCell(for: ip, cellType: PopularPlaceCell.self)
+        dataSource = RxTableViewSectionedReloadDataSource<SectionOfPopularPlace>(configureCell: { _, tv, ip, item in
+            let cell = tv.dequeueReusableCell(for: ip, cellType: PopularPlaceCell.self)
             cell.setup(with: item)
+            cell.addShadow()
             return cell
         })
 
         homeViewModel.popularPlaces
             .asObservable()
             .observeOn(MainScheduler.instance)
-            .bind(to: collectionView.rx.items(dataSource: dataSource))
+            .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
-    }
-}
-
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width, height: 340)
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        (cell as? PopularPlaceCell)?.addShadow()
     }
 }

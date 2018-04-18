@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49i-yV-CUl">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49i-yV-CUl">
                                 <rect key="frame" x="0.0" y="20" width="375" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBB-8Y-fcJ">
@@ -53,43 +53,27 @@
                                     <constraint firstItem="RBB-8Y-fcJ" firstAttribute="top" secondItem="49i-yV-CUl" secondAttribute="top" constant="8" id="gPL-zG-xIu"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Fe-fV-wa3">
-                                <rect key="frame" x="0.0" y="130" width="375" height="487.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B1w-uC-r8M">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="A9y-X2-EQh">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vmY-qB-iTZ">
+                                <rect key="frame" x="0.0" y="130" width="375" height="488"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="GiL-Wu-lB1" firstAttribute="bottom" secondItem="vmY-qB-iTZ" secondAttribute="bottom" id="4hG-0q-xer"/>
+                            <constraint firstItem="vmY-qB-iTZ" firstAttribute="leading" secondItem="GiL-Wu-lB1" secondAttribute="leading" id="6sz-sK-3xK"/>
                             <constraint firstItem="GiL-Wu-lB1" firstAttribute="trailing" secondItem="49i-yV-CUl" secondAttribute="trailing" id="8MY-8O-pDX"/>
-                            <constraint firstItem="3Fe-fV-wa3" firstAttribute="leading" secondItem="GiL-Wu-lB1" secondAttribute="leading" id="Akd-TN-Uhz"/>
-                            <constraint firstItem="GiL-Wu-lB1" firstAttribute="trailing" secondItem="3Fe-fV-wa3" secondAttribute="trailing" id="ELK-5g-dQk"/>
                             <constraint firstItem="49i-yV-CUl" firstAttribute="leading" secondItem="GiL-Wu-lB1" secondAttribute="leading" id="Jha-ec-kcy"/>
-                            <constraint firstItem="3Fe-fV-wa3" firstAttribute="top" secondItem="49i-yV-CUl" secondAttribute="bottom" id="c1D-7Y-eQw"/>
-                            <constraint firstItem="GiL-Wu-lB1" firstAttribute="bottom" secondItem="3Fe-fV-wa3" secondAttribute="bottom" id="eFh-2r-0Tr"/>
+                            <constraint firstItem="GiL-Wu-lB1" firstAttribute="trailing" secondItem="vmY-qB-iTZ" secondAttribute="trailing" id="f09-h1-EW8"/>
+                            <constraint firstItem="vmY-qB-iTZ" firstAttribute="top" secondItem="49i-yV-CUl" secondAttribute="bottom" id="fpM-QS-DYp"/>
                             <constraint firstItem="49i-yV-CUl" firstAttribute="top" secondItem="GiL-Wu-lB1" secondAttribute="top" id="iwo-hN-z2w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GiL-Wu-lB1"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="探索房源" image="explore" selectedImage="explore-selected" id="Bsn-Dy-77I"/>
                     <connections>
-                        <outlet property="collectionView" destination="3Fe-fV-wa3" id="QNi-qQ-LOg"/>
                         <outlet property="searchButton" destination="RBB-8Y-fcJ" id="PG6-LR-UrJ"/>
+                        <outlet property="tableView" destination="vmY-qB-iTZ" id="9mh-GJ-FTW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QdU-WG-DUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
