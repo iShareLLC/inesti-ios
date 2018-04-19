@@ -23,7 +23,7 @@ class PopularPlaceCell: UITableViewCell, NibReusable {
     func setup(with place: PopularPlace) {
         priceLabel.text = place.price
         areaLabel.text = place.area
-        titleLabel.text = place.title
+        titleLabel.attributedText = place.attributedTitle
         summaryLabel.text = place.summary
         coverImageView.kf.setImage(with: place.imageUrls.first?.webURL)
     }

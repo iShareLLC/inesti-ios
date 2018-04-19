@@ -24,6 +24,13 @@ struct PopularPlace: Codable {
         return title2
     }
 
+    var attributedTitle: NSAttributedString {
+        let paragraph = NSMutableParagraphStyle()
+        paragraph.maximumLineHeight = 29
+        paragraph.lineBreakMode = .byWordWrapping
+        return NSAttributedString(string: title2, attributes: [NSAttributedStringKey.paragraphStyle: paragraph])
+    }
+
     var summary: String {
         return description
     }
