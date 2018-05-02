@@ -14,6 +14,10 @@
 		3C01173A20852EF8007C73D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C01173820852EF8007C73D8 /* LaunchScreen.storyboard */; };
 		3C01174520852EF8007C73D8 /* iNestiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C01174420852EF8007C73D8 /* iNestiTests.swift */; };
 		3C01175020852EF8007C73D8 /* iNestiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C01174F20852EF8007C73D8 /* iNestiUITests.swift */; };
+		3C0DD8F92099F7E400D60176 /* CXStoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0DD8F82099F7E400D60176 /* CXStoryboardLoadable.swift */; };
+		3C1E0B4B2092C83500A9D4BB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1E0B4A2092C83500A9D4BB /* SearchViewController.swift */; };
+		3C1E0B4D2092CD1A00A9D4BB /* CXPopupKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1E0B4C2092CD1A00A9D4BB /* CXPopupKit.framework */; };
+		3C1E0B502092CD6D00A9D4BB /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1E0B4F2092CD6D00A9D4BB /* SnapKit.framework */; };
 		3CD2E7D520868F41002252CC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2E7D420868F41002252CC /* HomeViewController.swift */; };
 		3CD2E7D820868F54002252CC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2E7D720868F54002252CC /* BaseViewController.swift */; };
 		3CD2E7E2208698A7002252CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CD2E7E4208698A7002252CC /* InfoPlist.strings */; };
@@ -58,6 +62,10 @@
 		3C01174B20852EF8007C73D8 /* iNestiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iNestiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C01174F20852EF8007C73D8 /* iNestiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iNestiUITests.swift; sourceTree = "<group>"; };
 		3C01175120852EF8007C73D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C0DD8F82099F7E400D60176 /* CXStoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXStoryboardLoadable.swift; sourceTree = "<group>"; };
+		3C1E0B4A2092C83500A9D4BB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		3C1E0B4C2092CD1A00A9D4BB /* CXPopupKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CXPopupKit.framework; path = Carthage/Build/iOS/CXPopupKit.framework; sourceTree = "<group>"; };
+		3C1E0B4F2092CD6D00A9D4BB /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		3CD2E7D420868F41002252CC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3CD2E7D720868F54002252CC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3CD2E7DB20869292002252CC /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -89,6 +97,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CCA2A1F8BCFF62C74C81657 /* Pods_iNesti.framework in Frameworks */,
+				3C1E0B4D2092CD1A00A9D4BB /* CXPopupKit.framework in Frameworks */,
+				3C1E0B502092CD6D00A9D4BB /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +146,7 @@
 		3C01172E20852EF7007C73D8 /* iNesti */ = {
 			isa = PBXGroup;
 			children = (
+				3C1E0B492092C82B00A9D4BB /* Search */,
 				3CEF33292086CB29005281BE /* Home */,
 				3CD2E7D92086921D002252CC /* Resources */,
 				3CD2E7D620868F4E002252CC /* Common */,
@@ -163,6 +174,14 @@
 				3C01175120852EF8007C73D8 /* Info.plist */,
 			);
 			path = iNestiUITests;
+			sourceTree = "<group>";
+		};
+		3C1E0B492092C82B00A9D4BB /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				3C1E0B4A2092C83500A9D4BB /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		3CD2E7D620868F4E002252CC /* Common */ = {
@@ -207,6 +226,7 @@
 			children = (
 				3CD2E7ED20869905002252CC /* String+Localization.swift */,
 				3CEF33392086D987005281BE /* CALayer+Sketch.swift */,
+				3C0DD8F82099F7E400D60176 /* CXStoryboardLoadable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -275,6 +295,8 @@
 		C4F438EC47C229029828DCD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C1E0B4F2092CD6D00A9D4BB /* SnapKit.framework */,
+				3C1E0B4C2092CD1A00A9D4BB /* CXPopupKit.framework */,
 				3B15A91E27453B5D78CE3AAB /* Pods_iNesti.framework */,
 				71F5BAE53357EF57B92A63F6 /* Pods_iNestiTests.framework */,
 				CDAEC5AFD372BA52FE8AC8ED /* Pods_iNestiUITests.framework */,
@@ -308,6 +330,7 @@
 				3C01172A20852EF7007C73D8 /* Resources */,
 				D9B0EECE326B9C36875D2FC7 /* [CP] Embed Pods Frameworks */,
 				0617A4C9C721BF0C425E044C /* [CP] Copy Pods Resources */,
+				3C1E0B4E2092CD2700A9D4BB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -483,6 +506,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3C1E0B4E2092CD2700A9D4BB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/CXPopupKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		4131A597EC462A8455B66635 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -566,6 +604,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/TTRangeSlider/TTRangeSlider.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -579,6 +618,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTRangeSlider.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -607,10 +647,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1E0B4B2092C83500A9D4BB /* SearchViewController.swift in Sources */,
 				3C01173020852EF7007C73D8 /* AppDelegate.swift in Sources */,
 				3CD2E7D520868F41002252CC /* HomeViewController.swift in Sources */,
 				3CEF33352086D44A005281BE /* PopularPlace.swift in Sources */,
 				3CEF333A2086D987005281BE /* CALayer+Sketch.swift in Sources */,
+				3C0DD8F92099F7E400D60176 /* CXStoryboardLoadable.swift in Sources */,
 				3CEF33382086D5AF005281BE /* HomeViewModel.swift in Sources */,
 				3CEF33332086D3A7005281BE /* PopularPlacesAPI.swift in Sources */,
 				3CEF332E2086CD38005281BE /* PopularPlaceCell.swift in Sources */,
@@ -817,8 +859,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iNesti/Base.lproj/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNesti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -833,8 +882,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iNesti/Base.lproj/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNesti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -851,7 +907,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
 				INFOPLIST_FILE = iNestiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNestiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -869,7 +929,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
 				INFOPLIST_FILE = iNestiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNestiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -886,7 +950,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
 				INFOPLIST_FILE = iNestiUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNestiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -903,7 +971,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
 				INFOPLIST_FILE = iNestiUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNestiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

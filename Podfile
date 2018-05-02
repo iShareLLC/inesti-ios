@@ -13,6 +13,7 @@ target 'iNesti' do
   pod 'Kingfisher', '~> 4.0'
   pod 'SVProgressHUD'
   pod 'Reusable'
+  pod 'TTRangeSlider'
 
   target 'iNestiTests' do
     inherit! :search_paths

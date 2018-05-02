@@ -22,6 +22,7 @@ PODS:
     - RxSwift (~> 4.0)
   - RxSwift (4.1.2)
   - SVProgressHUD (2.2.5)
+  - TTRangeSlider (1.0.6)
 
 DEPENDENCIES:
   - Kingfisher (~> 4.0)
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - RxDataSources (~> 3.0)
   - RxSwift (~> 4.0)
   - SVProgressHUD
+  - TTRangeSlider
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
@@ -43,7 +45,8 @@ SPEC CHECKSUMS:
   RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TTRangeSlider: 78188bea83f6471a06f75adbc88da5e990baeafe
 
-PODFILE CHECKSUM: e7a904ca735181fbd87d2a96999c380bb13a8555
+PODFILE CHECKSUM: 7df21bba728f4fadd42655e77ce7d20164ad3ddd
 
 COCOAPODS: 1.4.0
