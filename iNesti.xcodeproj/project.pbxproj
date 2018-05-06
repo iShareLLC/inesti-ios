@@ -18,6 +18,10 @@
 		3C1E0B4B2092C83500A9D4BB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1E0B4A2092C83500A9D4BB /* SearchViewController.swift */; };
 		3C1E0B4D2092CD1A00A9D4BB /* CXPopupKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1E0B4C2092CD1A00A9D4BB /* CXPopupKit.framework */; };
 		3C1E0B502092CD6D00A9D4BB /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1E0B4F2092CD6D00A9D4BB /* SnapKit.framework */; };
+		3C2F2FE72099FCF4002FA8FA /* LocationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F2FE62099FCF4002FA8FA /* LocationInputView.swift */; };
+		3C2F2FE92099FDEA002FA8FA /* LocationInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C2F2FE82099FDEA002FA8FA /* LocationInputView.xib */; };
+		3C2F2FEC209A0C7D002FA8FA /* LocationInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F2FEB209A0C7D002FA8FA /* LocationInputViewModel.swift */; };
+		3CA13BFE209D4EBF00479F71 /* CXUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA13BFD209D4EBF00479F71 /* CXUtil.swift */; };
 		3CD2E7D520868F41002252CC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2E7D420868F41002252CC /* HomeViewController.swift */; };
 		3CD2E7D820868F54002252CC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2E7D720868F54002252CC /* BaseViewController.swift */; };
 		3CD2E7E2208698A7002252CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CD2E7E4208698A7002252CC /* InfoPlist.strings */; };
@@ -66,6 +70,10 @@
 		3C1E0B4A2092C83500A9D4BB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3C1E0B4C2092CD1A00A9D4BB /* CXPopupKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CXPopupKit.framework; path = Carthage/Build/iOS/CXPopupKit.framework; sourceTree = "<group>"; };
 		3C1E0B4F2092CD6D00A9D4BB /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		3C2F2FE62099FCF4002FA8FA /* LocationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputView.swift; sourceTree = "<group>"; };
+		3C2F2FE82099FDEA002FA8FA /* LocationInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationInputView.xib; sourceTree = "<group>"; };
+		3C2F2FEB209A0C7D002FA8FA /* LocationInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputViewModel.swift; sourceTree = "<group>"; };
+		3CA13BFD209D4EBF00479F71 /* CXUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXUtil.swift; sourceTree = "<group>"; };
 		3CD2E7D420868F41002252CC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3CD2E7D720868F54002252CC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3CD2E7DB20869292002252CC /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -179,14 +187,42 @@
 		3C1E0B492092C82B00A9D4BB /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				3C2F2FEA209A0C74002FA8FA /* ViewModel */,
+				3C2F2FE52099FCA9002FA8FA /* View */,
 				3C1E0B4A2092C83500A9D4BB /* SearchViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
 		};
+		3C2F2FE52099FCA9002FA8FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C2F2FE62099FCF4002FA8FA /* LocationInputView.swift */,
+				3C2F2FE82099FDEA002FA8FA /* LocationInputView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3C2F2FEA209A0C74002FA8FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3C2F2FEB209A0C7D002FA8FA /* LocationInputViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3CA13BFC209D4EA100479F71 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3CA13BFD209D4EBF00479F71 /* CXUtil.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		3CD2E7D620868F4E002252CC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3CA13BFC209D4EA100479F71 /* Utils */,
 				3CD2E7EC208698F4002252CC /* Extensions */,
 				3CD2E7D720868F54002252CC /* BaseViewController.swift */,
 			);
@@ -434,6 +470,7 @@
 			files = (
 				3CD2E7E8208698EB002252CC /* Localizable.strings in Resources */,
 				3C01173A20852EF8007C73D8 /* LaunchScreen.storyboard in Resources */,
+				3C2F2FE92099FDEA002FA8FA /* LocationInputView.xib in Resources */,
 				3CD2E7E2208698A7002252CC /* InfoPlist.strings in Resources */,
 				3C01173720852EF8007C73D8 /* Assets.xcassets in Resources */,
 				3C01173520852EF7007C73D8 /* Main.storyboard in Resources */,
@@ -653,10 +690,13 @@
 				3CEF33352086D44A005281BE /* PopularPlace.swift in Sources */,
 				3CEF333A2086D987005281BE /* CALayer+Sketch.swift in Sources */,
 				3C0DD8F92099F7E400D60176 /* CXStoryboardLoadable.swift in Sources */,
+				3C2F2FE72099FCF4002FA8FA /* LocationInputView.swift in Sources */,
 				3CEF33382086D5AF005281BE /* HomeViewModel.swift in Sources */,
 				3CEF33332086D3A7005281BE /* PopularPlacesAPI.swift in Sources */,
 				3CEF332E2086CD38005281BE /* PopularPlaceCell.swift in Sources */,
+				3C2F2FEC209A0C7D002FA8FA /* LocationInputViewModel.swift in Sources */,
 				3CD2E7D820868F54002252CC /* BaseViewController.swift in Sources */,
+				3CA13BFE209D4EBF00479F71 /* CXUtil.swift in Sources */,
 				3CD2E7EE20869905002252CC /* String+Localization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
