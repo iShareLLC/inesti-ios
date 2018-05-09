@@ -18,12 +18,26 @@ class HomeViewController: BaseViewController {
 
     private var dataSource: RxTableViewSectionedReloadDataSource<SectionOfPopularPlace>!
     private let homeViewModel = HomeViewModel()
+    private var isInitialLoading = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setupSearchButton()
         setupCollectionView()
-        homeViewModel.requestPopularPlaces()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        if isInitialLoading {
+            let loadingView = SplashLoadingView.loadFromNib().createPopup()
+            loadingView.show(at: self)
+            homeViewModel.requestPopularPlaces { success in
+                loadingView.completeWithPositive(result: nil)
+            }
+            isInitialLoading = false
+        }
     }
 
     private func setupSearchButton() {
