@@ -422,35 +422,56 @@
         <!--房主页面-->
         <scene sceneID="vfN-Xb-VCC">
             <objects>
-                <viewController id="wsE-5e-LTO" sceneMemberID="viewController">
+                <viewController id="wsE-5e-LTO" customClass="HolderViewController" customModule="iNesti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bn2-nf-LKS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热门房源" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOQ-kj-D9y">
-                                <rect key="frame" x="16" y="36" width="112" height="39.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="房主页面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOQ-kj-D9y">
+                                <rect key="frame" x="16" y="36" width="112" height="40"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w1N-Nf-Zho">
+                                <rect key="frame" x="0.0" y="92" width="320" height="427"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxg-JX-I83">
+                                <rect key="frame" x="272" y="40" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="WXo-dA-zew"/>
+                                    <constraint firstAttribute="width" secondItem="sxg-JX-I83" secondAttribute="height" multiplier="1:1" id="zcV-Hr-nvw"/>
+                                </constraints>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="w1N-Nf-Zho" firstAttribute="top" secondItem="zOQ-kj-D9y" secondAttribute="bottom" constant="16" id="35g-iz-vkO"/>
                             <constraint firstItem="zOQ-kj-D9y" firstAttribute="top" secondItem="2BK-Rb-rjy" secondAttribute="top" constant="16" id="AcQ-nI-LlS"/>
+                            <constraint firstItem="sxg-JX-I83" firstAttribute="centerY" secondItem="zOQ-kj-D9y" secondAttribute="centerY" id="DEJ-7j-sAr"/>
+                            <constraint firstItem="2BK-Rb-rjy" firstAttribute="trailing" secondItem="w1N-Nf-Zho" secondAttribute="trailing" id="OzB-lp-SCh"/>
+                            <constraint firstItem="2BK-Rb-rjy" firstAttribute="trailing" secondItem="sxg-JX-I83" secondAttribute="trailing" constant="16" id="hIL-VA-AXX"/>
+                            <constraint firstItem="w1N-Nf-Zho" firstAttribute="leading" secondItem="2BK-Rb-rjy" secondAttribute="leading" id="kXM-2b-OXe"/>
                             <constraint firstItem="zOQ-kj-D9y" firstAttribute="leading" secondItem="2BK-Rb-rjy" secondAttribute="leading" constant="16" id="mgq-Aj-LfU"/>
+                            <constraint firstItem="2BK-Rb-rjy" firstAttribute="bottom" secondItem="w1N-Nf-Zho" secondAttribute="bottom" id="zIc-KL-8UM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2BK-Rb-rjy"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="房主页面" image="user" selectedImage="user-selected" id="DRg-2C-DS1"/>
+                    <connections>
+                        <outlet property="profileButton" destination="sxg-JX-I83" id="hkM-xX-WO3"/>
+                        <outlet property="tableView" destination="w1N-Nf-Zho" id="ScP-8I-ZCV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVb-xP-rRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-108" y="635"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Nest Tab Bar Controller-->
         <scene sceneID="odX-X7-Gdd">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hKQ-Eh-hhO" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hKQ-Eh-hhO" customClass="NestTabBarController" customModule="iNesti" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qiw-iK-qhw">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
