@@ -48,9 +48,9 @@ class LocationInputView: UIView, NibLoadable {
                 cell.textLabel?.font = UIFont(name: "PingFangSC-Regular", size: 18)
 
                 if row == 0 {
-                    cell.textLabel?.textColor = UIColor(red: 1, green: 157 / 255.0, blue: 2 / 255.0, alpha: 1)
+                    cell.textLabel?.textColor = UIColor.majorYellow
                 } else {
-                    cell.textLabel?.textColor = UIColor(red: 102 / 255.0, green: 102 / 255.0, blue: 102 / 255.0, alpha: 1)
+                    cell.textLabel?.textColor = UIColor.color(r: 102, g: 102, b: 102)
                 }
             }
             .disposed(by: disposeBag)

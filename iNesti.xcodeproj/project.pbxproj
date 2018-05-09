@@ -21,6 +21,10 @@
 		3C2F2FE72099FCF4002FA8FA /* LocationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F2FE62099FCF4002FA8FA /* LocationInputView.swift */; };
 		3C2F2FE92099FDEA002FA8FA /* LocationInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C2F2FE82099FDEA002FA8FA /* LocationInputView.xib */; };
 		3C2F2FEC209A0C7D002FA8FA /* LocationInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F2FEB209A0C7D002FA8FA /* LocationInputViewModel.swift */; };
+		3C8FF79920A2846A009EF837 /* RoomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FF79820A2846A009EF837 /* RoomDetailViewController.swift */; };
+		3C8FF79C20A2867B009EF837 /* RoomGallaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8FF79B20A2867B009EF837 /* RoomGallaryCell.xib */; };
+		3C8FF79E20A286AC009EF837 /* RoomGallaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FF79D20A286AC009EF837 /* RoomGallaryCell.swift */; };
+		3C8FF7A020A28D2E009EF837 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FF79F20A28D2E009EF837 /* UIColor+Extension.swift */; };
 		3CA13BFE209D4EBF00479F71 /* CXUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA13BFD209D4EBF00479F71 /* CXUtil.swift */; };
 		3CD2E7D520868F41002252CC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2E7D420868F41002252CC /* HomeViewController.swift */; };
 		3CD2E7D820868F54002252CC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2E7D720868F54002252CC /* BaseViewController.swift */; };
@@ -73,6 +77,10 @@
 		3C2F2FE62099FCF4002FA8FA /* LocationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputView.swift; sourceTree = "<group>"; };
 		3C2F2FE82099FDEA002FA8FA /* LocationInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationInputView.xib; sourceTree = "<group>"; };
 		3C2F2FEB209A0C7D002FA8FA /* LocationInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputViewModel.swift; sourceTree = "<group>"; };
+		3C8FF79820A2846A009EF837 /* RoomDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailViewController.swift; sourceTree = "<group>"; };
+		3C8FF79B20A2867B009EF837 /* RoomGallaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomGallaryCell.xib; sourceTree = "<group>"; };
+		3C8FF79D20A286AC009EF837 /* RoomGallaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGallaryCell.swift; sourceTree = "<group>"; };
+		3C8FF79F20A28D2E009EF837 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		3CA13BFD209D4EBF00479F71 /* CXUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXUtil.swift; sourceTree = "<group>"; };
 		3CD2E7D420868F41002252CC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3CD2E7D720868F54002252CC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +162,8 @@
 		3C01172E20852EF7007C73D8 /* iNesti */ = {
 			isa = PBXGroup;
 			children = (
+				3C8FF7A120A33D48009EF837 /* Splash */,
+				3C8FF79720A2841B009EF837 /* Detail */,
 				3C1E0B492092C82B00A9D4BB /* Search */,
 				3CEF33292086CB29005281BE /* Home */,
 				3CD2E7D92086921D002252CC /* Resources */,
@@ -211,6 +221,31 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		3C8FF79720A2841B009EF837 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				3C8FF79A20A285A6009EF837 /* View */,
+				3C8FF79820A2846A009EF837 /* RoomDetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		3C8FF79A20A285A6009EF837 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C8FF79B20A2867B009EF837 /* RoomGallaryCell.xib */,
+				3C8FF79D20A286AC009EF837 /* RoomGallaryCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3C8FF7A120A33D48009EF837 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		3CA13BFC209D4EA100479F71 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +298,7 @@
 				3CD2E7ED20869905002252CC /* String+Localization.swift */,
 				3CEF33392086D987005281BE /* CALayer+Sketch.swift */,
 				3C0DD8F82099F7E400D60176 /* CXStoryboardLoadable.swift */,
+				3C8FF79F20A28D2E009EF837 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -473,6 +509,7 @@
 				3C2F2FE92099FDEA002FA8FA /* LocationInputView.xib in Resources */,
 				3CD2E7E2208698A7002252CC /* InfoPlist.strings in Resources */,
 				3C01173720852EF8007C73D8 /* Assets.xcassets in Resources */,
+				3C8FF79C20A2867B009EF837 /* RoomGallaryCell.xib in Resources */,
 				3C01173520852EF7007C73D8 /* Main.storyboard in Resources */,
 				3CEF33302086CD63005281BE /* PopularPlaceCell.xib in Resources */,
 			);
@@ -632,6 +669,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-iNesti/Pods-iNesti-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
@@ -646,6 +684,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
@@ -687,11 +726,14 @@
 				3C1E0B4B2092C83500A9D4BB /* SearchViewController.swift in Sources */,
 				3C01173020852EF7007C73D8 /* AppDelegate.swift in Sources */,
 				3CD2E7D520868F41002252CC /* HomeViewController.swift in Sources */,
+				3C8FF79920A2846A009EF837 /* RoomDetailViewController.swift in Sources */,
+				3C8FF7A020A28D2E009EF837 /* UIColor+Extension.swift in Sources */,
 				3CEF33352086D44A005281BE /* PopularPlace.swift in Sources */,
 				3CEF333A2086D987005281BE /* CALayer+Sketch.swift in Sources */,
 				3C0DD8F92099F7E400D60176 /* CXStoryboardLoadable.swift in Sources */,
 				3C2F2FE72099FCF4002FA8FA /* LocationInputView.swift in Sources */,
 				3CEF33382086D5AF005281BE /* HomeViewModel.swift in Sources */,
+				3C8FF79E20A286AC009EF837 /* RoomGallaryCell.swift in Sources */,
 				3CEF33332086D3A7005281BE /* PopularPlacesAPI.swift in Sources */,
 				3CEF332E2086CD38005281BE /* PopularPlaceCell.swift in Sources */,
 				3C2F2FEC209A0C7D002FA8FA /* LocationInputViewModel.swift in Sources */,
@@ -904,10 +946,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = iNesti/Base.lproj/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNesti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -927,10 +966,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = iNesti/Base.lproj/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNesti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -947,11 +983,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
 				INFOPLIST_FILE = iNestiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNestiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -969,11 +1001,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
 				INFOPLIST_FILE = iNestiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNestiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -990,11 +1018,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
 				INFOPLIST_FILE = iNestiUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNestiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1011,11 +1035,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
 				INFOPLIST_FILE = iNestiUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNestiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

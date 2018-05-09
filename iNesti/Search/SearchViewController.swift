@@ -53,13 +53,12 @@ class SearchViewController: BaseViewController, CXStoryboardLoadable {
         setupShowResultButton()
         setupRoomTypeButtons()
     }
-
     private func setupRangeSlider() {
         rangeSlider.handleBorderWidth = 1
         rangeSlider.handleColor = .white
         rangeSlider.handleDiameter = 25
         rangeSlider.selectedHandleDiameterMultiplier = 1.1
-        rangeSlider.handleBorderColor = UIColor(red: 1, green: 157.0 / 255.0, blue: 2 / 255.0, alpha: 1)
+        rangeSlider.handleBorderColor = UIColor.majorYellow
         rangeSlider.minValue = 0
         rangeSlider.maxValue = 10000
         rangeSlider.step = 50

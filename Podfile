@@ -14,6 +14,7 @@ target 'iNesti' do
   pod 'SVProgressHUD'
   pod 'Reusable'
   pod 'TTRangeSlider'
+  pod 'ChameleonFramework'
 
   target 'iNestiTests' do
     inherit! :search_paths

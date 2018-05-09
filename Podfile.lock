@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.7.2)
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
   - Differentiator (3.0.2)
   - Kingfisher (4.7.0)
   - Moya/Core (11.0.2):
@@ -25,6 +28,7 @@ PODS:
   - TTRangeSlider (1.0.6)
 
 DEPENDENCIES:
+  - ChameleonFramework
   - Kingfisher (~> 4.0)
   - Moya/RxSwift (~> 11.0)
   - Reusable
@@ -36,6 +40,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   Moya: a725035953bc1c0eb1be505ab903984501d82440
@@ -47,6 +52,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TTRangeSlider: 78188bea83f6471a06f75adbc88da5e990baeafe
 
-PODFILE CHECKSUM: 7df21bba728f4fadd42655e77ce7d20164ad3ddd
+PODFILE CHECKSUM: 6c94bd6afaca70e10bffc0624f38d6615fe5cc7b
 
 COCOAPODS: 1.4.0
