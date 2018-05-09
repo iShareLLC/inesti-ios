@@ -15,6 +15,7 @@ target 'iNesti' do
   pod 'Reusable'
   pod 'TTRangeSlider'
   pod 'ChameleonFramework'
+  pod 'DZNEmptyDataSet'
 
   target 'iNestiTests' do
     inherit! :search_paths
