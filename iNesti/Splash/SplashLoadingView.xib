@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="hnS-nS-B4L" customClass="SplashLoadingView" customModule="iNesti" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RSq-4R-0M4">
+                    <rect key="frame" x="147" y="293" width="80" height="80"/>
+                    <color key="backgroundColor" red="0.96862745100000003" green="0.78823529410000004" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="RSq-4R-0M4" secondAttribute="height" multiplier="1:1" id="EBB-1a-VvI"/>
+                        <constraint firstAttribute="height" constant="80" id="FS6-Xr-EoB"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.61568627450000002" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="RSq-4R-0M4" firstAttribute="centerY" secondItem="hnS-nS-B4L" secondAttribute="centerY" id="S8l-db-AmV"/>
+                <constraint firstItem="RSq-4R-0M4" firstAttribute="centerX" secondItem="hnS-nS-B4L" secondAttribute="centerX" id="eGl-uU-iqy"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="7F9-AK-CKU"/>
+            <connections>
+                <outlet property="dot" destination="RSq-4R-0M4" id="DuU-nb-tj7"/>
+            </connections>
+            <point key="canvasLocation" x="95" y="-193"/>
+        </view>
+    </objects>
+</document>
