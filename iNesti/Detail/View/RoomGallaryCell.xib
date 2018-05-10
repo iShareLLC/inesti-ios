@@ -39,10 +39,15 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="llK-Ml-OFl">
+                        <rect key="frame" x="168" y="158.5" width="39" height="37"/>
+                    </pageControl>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="e8U-Ko-9f7" secondAttribute="bottom" id="7lj-mo-za7"/>
+                    <constraint firstAttribute="bottom" secondItem="llK-Ml-OFl" secondAttribute="bottom" constant="16" id="9Vc-h3-HYU"/>
                     <constraint firstItem="e8U-Ko-9f7" firstAttribute="leading" secondItem="SeZ-b1-7fM" secondAttribute="leading" id="Dpg-xY-mo1"/>
+                    <constraint firstItem="llK-Ml-OFl" firstAttribute="centerX" secondItem="SeZ-b1-7fM" secondAttribute="centerX" id="NlA-dd-aTx"/>
                     <constraint firstAttribute="trailing" secondItem="e8U-Ko-9f7" secondAttribute="trailing" id="jHn-YB-liP"/>
                     <constraint firstItem="pPn-RE-cFW" firstAttribute="top" secondItem="SeZ-b1-7fM" secondAttribute="top" id="mGp-9N-QTp"/>
                     <constraint firstItem="e8U-Ko-9f7" firstAttribute="top" secondItem="SeZ-b1-7fM" secondAttribute="top" id="o63-wx-ZXJ"/>
@@ -52,6 +57,7 @@
             <connections>
                 <outlet property="availableDateTimeLabel" destination="pPn-RE-cFW" id="ToH-0V-YNb"/>
                 <outlet property="collectionView" destination="e8U-Ko-9f7" id="L8o-Oj-r6y"/>
+                <outlet property="pageIndicator" destination="llK-Ml-OFl" id="Cue-eL-Zzx"/>
             </connections>
             <point key="canvasLocation" x="-154.5" y="82"/>
         </tableViewCell>

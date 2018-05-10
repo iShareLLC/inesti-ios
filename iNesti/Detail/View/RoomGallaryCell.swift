@@ -18,9 +18,10 @@ protocol RoomGallaryDisplayable {
 class RoomGallaryCell: UITableViewCell, NibReusable {
     @IBOutlet private weak var availableDateTimeLabel: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private   weak var pageIndicator: UIPageControl!
 
     func setup(with roomGallary: RoomGallaryDisplayable) {
-
+        pageIndicator.numberOfPages = roomGallary.roomImageUrls.count == 1 ? 0 : roomGallary.roomImageUrls.count
     }
 
     private func createAttributedString(for date: String) -> NSAttributedString {
