@@ -65,6 +65,7 @@ class SearchViewController: BaseViewController, CXStoryboardLoadable {
         rangeSlider.enableStep = true
         rangeSlider.selectedMaximum = 10000
         rangeSlider.addTarget(self, action: #selector(didChangeSliderValue(_:)), for: .valueChanged)
+        rangeSlider.hideLabels = true
     }
 
     @objc private func didChangeSliderValue(_ sender: TTRangeSlider) {
