@@ -19,7 +19,7 @@
             <subviews>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RSq-4R-0M4">
                     <rect key="frame" x="147" y="293" width="80" height="80"/>
-                    <color key="backgroundColor" red="0.96862745100000003" green="0.78823529410000004" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.46000000000000002" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="RSq-4R-0M4" secondAttribute="height" multiplier="1:1" id="EBB-1a-VvI"/>
                         <constraint firstAttribute="height" constant="80" id="FS6-Xr-EoB"/>
@@ -30,11 +30,18 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="Gt5-us-uzT">
+                    <rect key="frame" x="147" y="293" width="80" height="80"/>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.61568627450000002" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Gt5-us-uzT" firstAttribute="bottom" secondItem="RSq-4R-0M4" secondAttribute="bottom" id="31d-iN-TWO"/>
+                <constraint firstItem="Gt5-us-uzT" firstAttribute="top" secondItem="RSq-4R-0M4" secondAttribute="top" id="89Y-Ng-q8P"/>
+                <constraint firstItem="Gt5-us-uzT" firstAttribute="trailing" secondItem="RSq-4R-0M4" secondAttribute="trailing" id="ACJ-Tv-I8S"/>
                 <constraint firstItem="RSq-4R-0M4" firstAttribute="centerY" secondItem="hnS-nS-B4L" secondAttribute="centerY" id="S8l-db-AmV"/>
                 <constraint firstItem="RSq-4R-0M4" firstAttribute="centerX" secondItem="hnS-nS-B4L" secondAttribute="centerX" id="eGl-uU-iqy"/>
+                <constraint firstItem="Gt5-us-uzT" firstAttribute="leading" secondItem="RSq-4R-0M4" secondAttribute="leading" id="rIF-ZY-SYD"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="7F9-AK-CKU"/>
             <connections>
@@ -43,4 +50,7 @@
             <point key="canvasLocation" x="95" y="-193"/>
         </view>
     </objects>
+    <resources>
+        <image name="splash" width="180" height="180"/>
+    </resources>
 </document>
