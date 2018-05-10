@@ -1,5 +1,5 @@
 //
-//  RoomGallaryCell.swift
+//  RoomGalleryCell.swift
 //  iNesti
 //
 //  Created by Cunqi Xiao on 5/8/18.
@@ -9,19 +9,21 @@
 import UIKit
 import Reusable
 
-protocol RoomGallaryDisplayable {
+protocol RoomGalleryDisplayable {
     var availableStartDate: Date { get }
     var duration: String { get }
     var roomImageUrls: [String] { get }
 }
 
-class RoomGallaryCell: UITableViewCell, NibReusable {
+class RoomGalleryCell: UITableViewCell, NibReusable {
+    static let cellHeight: CGFloat = 210
+    static let indexPath: IndexPath = IndexPath(row: 0, section: 0)
     @IBOutlet private weak var availableDateTimeLabel: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private   weak var pageIndicator: UIPageControl!
 
-    func setup(with roomGallary: RoomGallaryDisplayable) {
-        pageIndicator.numberOfPages = roomGallary.roomImageUrls.count == 1 ? 0 : roomGallary.roomImageUrls.count
+    func setup(with displayable: RoomGalleryDisplayable) {
+        pageIndicator.numberOfPages = displayable.roomImageUrls.count == 1 ? 0 : displayable.roomImageUrls.count
     }
 
     private func createAttributedString(for date: String) -> NSAttributedString {
