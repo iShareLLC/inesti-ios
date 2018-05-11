@@ -28,10 +28,12 @@ class MockSummary: RoomSummaryDisplayable {
 
 class RoomDetailViewController: BaseViewController, CXStoryboardLoadable {
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var contactHolderButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupContactHolderButton()
     }
 
     private func setupTableView() {
@@ -40,6 +42,12 @@ class RoomDetailViewController: BaseViewController, CXStoryboardLoadable {
         tableView.register(cellType: RoomSummaryCell.self)
         tableView.dataSource = self
         tableView.delegate = self
+    }
+
+    private func setupContactHolderButton() {
+        contactHolderButton.layer.cornerRadius = 3.0
+        contactHolderButton.layer.masksToBounds = false
+        contactHolderButton.layer.applySketchShadow(color: UIColor(white: 0, alpha: 0.13), x: 0, y: 2, blur: 3, spread: 0)
     }
 }
 
@@ -75,7 +83,9 @@ extension  RoomDetailViewController: UITableViewDelegate {
 
 extension RoomDetailViewController: ExpandableLabelDelegate {
     func didExpandLabel(_ label: ExpandableLabel) {
-        tableView.reloadRows(at: [RoomSummaryCell.indexPath], with: .none)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 
     func willExpandLabel(_ label: ExpandableLabel) {
@@ -86,6 +96,8 @@ extension RoomDetailViewController: ExpandableLabelDelegate {
     }
 
     func didCollapseLabel(_ label: ExpandableLabel) {
-        tableView.reloadRows(at: [RoomSummaryCell.indexPath], with: .none)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }

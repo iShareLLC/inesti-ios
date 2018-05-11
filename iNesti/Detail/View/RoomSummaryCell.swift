@@ -28,7 +28,6 @@ class RoomSummaryCell: UITableViewCell, NibReusable {
         titleLabel.text = displayable.title
         expandableLabel.text = displayable.description
         expandableLabel.delegate = delegate
-        self.layoutIfNeeded()
     }
 
     override func awakeFromNib() {
@@ -36,16 +35,20 @@ class RoomSummaryCell: UITableViewCell, NibReusable {
         setupExpandableLabel()
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
+
     private func setupExpandableLabel() {
         expandableLabel.font = UIFont.getPingFangSC(with: 14.0, for: .regular)
         expandableLabel.textAlignment = .left
         expandableLabel.numberOfLines = 2
+        expandableLabel.collapsed = true
+        expandableLabel.shouldCollapse = true
         expandableLabel.collapsedAttributedLink = getReadMoreString()
-        expandableLabel.setLessLinkWith(lessLink: "收起", attributes: [
-            .font: UIFont.getPingFangSC(with: 14.0, for: .regular),
-            .foregroundColor: UIColor.majorYellow
-        ], position: nil)
+        expandableLabel.expandedAttributedLink = getLessLinkString()
         expandableLabel.ellipsis = NSAttributedString(string: "")
+        expandableLabel.animationView = UIView()
     }
 
     private func getReadMoreString() -> NSAttributedString {
@@ -53,5 +56,12 @@ class RoomSummaryCell: UITableViewCell, NibReusable {
             .font: UIFont.getPingFangSC(with: 14.0, for: .regular),
             .foregroundColor: UIColor.majorYellow
         ])
+    }
+
+    private func getLessLinkString() -> NSAttributedString {
+        return NSAttributedString(string: "收起", attributes: [
+            .font: UIFont.getPingFangSC(with: 14.0, for: .regular),
+            .foregroundColor: UIColor.majorYellow
+            ])
     }
 }

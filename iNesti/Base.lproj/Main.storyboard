@@ -85,11 +85,58 @@
                         <outlet property="searchButton" destination="RBB-8Y-fcJ" id="PG6-LR-UrJ"/>
                         <outlet property="tableView" destination="vmY-qB-iTZ" id="9mh-GJ-FTW"/>
                         <segue destination="nEX-su-8VY" kind="show" id="P2P-O7-lLT"/>
+                        <segue destination="X1a-3p-fFZ" kind="show" id="Aka-o2-2X6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QdU-WG-DUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="831.20000000000005" y="-164.16791604197903"/>
+        </scene>
+        <!--Room Detail View Controller-->
+        <scene sceneID="tLA-fb-cO1">
+            <objects>
+                <viewController id="W8C-eP-d7Q" customClass="RoomDetailViewController" customModule="iNesti" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zj2-mc-q6X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N3D-We-Wx3">
+                                <rect key="frame" x="0.0" y="64" width="320" height="434"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btw-hR-szZ">
+                                <rect key="frame" x="16" y="506" width="288" height="54"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="zxA-NT-KCu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="18"/>
+                                <state key="normal" title="联系房主">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="btw-hR-szZ" firstAttribute="top" secondItem="N3D-We-Wx3" secondAttribute="bottom" constant="8" id="1QD-bh-0FY"/>
+                            <constraint firstItem="N3D-We-Wx3" firstAttribute="top" secondItem="svD-4R-HqJ" secondAttribute="top" id="1y4-rx-DMb"/>
+                            <constraint firstItem="svD-4R-HqJ" firstAttribute="bottom" secondItem="btw-hR-szZ" secondAttribute="bottom" constant="8" id="ZuY-Fd-b3P"/>
+                            <constraint firstItem="btw-hR-szZ" firstAttribute="leading" secondItem="svD-4R-HqJ" secondAttribute="leading" constant="16" id="c5d-eM-sSE"/>
+                            <constraint firstItem="N3D-We-Wx3" firstAttribute="leading" secondItem="svD-4R-HqJ" secondAttribute="leading" id="pCL-2S-r1a"/>
+                            <constraint firstItem="svD-4R-HqJ" firstAttribute="trailing" secondItem="N3D-We-Wx3" secondAttribute="trailing" id="sK2-Sz-AzC"/>
+                            <constraint firstItem="svD-4R-HqJ" firstAttribute="trailing" secondItem="btw-hR-szZ" secondAttribute="trailing" constant="16" id="ux7-E9-vSE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="svD-4R-HqJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z8i-3L-Cik"/>
+                    <connections>
+                        <outlet property="contactHolderButton" destination="btw-hR-szZ" id="Wwl-oL-uxe"/>
+                        <outlet property="tableView" destination="N3D-We-Wx3" id="cZb-Vb-8Vg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Db5-Md-99C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2835" y="-165.8450704225352"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="cNN-Ie-MQl">
@@ -322,7 +369,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="18"/>
                                 <state key="normal" title="显示结果">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0 - $10000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJy-0g-7Pb">
@@ -486,6 +533,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6BG-Eb-RfY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-108" y="-164.16791604197903"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="47n-oF-PwA">
+            <objects>
+                <navigationController storyboardIdentifier="RoomDetailNav" automaticallyAdjustsScrollViewInsets="NO" id="X1a-3p-fFZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T03-5h-jy3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="W8C-eP-d7Q" kind="relationship" relationship="rootViewController" id="nAK-mh-x9g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nah-8x-w4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1837.5" y="-165.8450704225352"/>
         </scene>
     </scenes>
     <resources>

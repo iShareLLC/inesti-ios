@@ -69,5 +69,13 @@ class HomeViewController: BaseViewController {
             .observeOn(MainScheduler.instance)
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
+
+        tableView.rx.modelSelected(PopularPlace.self)
+            .subscribe(onNext: { [weak self] _ in
+                if let roomDetailNav = self?.storyboard?.instantiateViewController(withIdentifier: "RoomDetailNav") {
+                    self?.present(roomDetailNav, animated: true)
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }
