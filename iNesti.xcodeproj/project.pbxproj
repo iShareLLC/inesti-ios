@@ -22,8 +22,8 @@
 		3C2F2FE92099FDEA002FA8FA /* LocationInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C2F2FE82099FDEA002FA8FA /* LocationInputView.xib */; };
 		3C2F2FEC209A0C7D002FA8FA /* LocationInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F2FEB209A0C7D002FA8FA /* LocationInputViewModel.swift */; };
 		3C8FF79920A2846A009EF837 /* RoomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FF79820A2846A009EF837 /* RoomDetailViewController.swift */; };
-		3C8FF79C20A2867B009EF837 /* RoomGallaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8FF79B20A2867B009EF837 /* RoomGallaryCell.xib */; };
-		3C8FF79E20A286AC009EF837 /* RoomGallaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FF79D20A286AC009EF837 /* RoomGallaryCell.swift */; };
+		3C8FF79C20A2867B009EF837 /* RoomGalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8FF79B20A2867B009EF837 /* RoomGalleryCell.xib */; };
+		3C8FF79E20A286AC009EF837 /* RoomGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FF79D20A286AC009EF837 /* RoomGalleryCell.swift */; };
 		3C8FF7A020A28D2E009EF837 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FF79F20A28D2E009EF837 /* UIColor+Extension.swift */; };
 		3C8FF7A420A346AC009EF837 /* HolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FF7A320A346AC009EF837 /* HolderViewController.swift */; };
 		3C8FF7A620A34B5B009EF837 /* SplashLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FF7A520A34B5B009EF837 /* SplashLoadingView.swift */; };
@@ -47,6 +47,7 @@
 		3CEF33352086D44A005281BE /* PopularPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33342086D44A005281BE /* PopularPlace.swift */; };
 		3CEF33382086D5AF005281BE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33372086D5AF005281BE /* HomeViewModel.swift */; };
 		3CEF333A2086D987005281BE /* CALayer+Sketch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33392086D987005281BE /* CALayer+Sketch.swift */; };
+		5A9F17E378D7B0B1B167594C /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F16F3AE303C21B2BC3552 /* UIFont+Extension.swift */; };
 		8CCA2A1F8BCFF62C74C81657 /* Pods_iNesti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B15A91E27453B5D78CE3AAB /* Pods_iNesti.framework */; };
 		9B67F31FD563B1304F6FD8A0 /* Pods_iNestiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F5BAE53357EF57B92A63F6 /* Pods_iNestiTests.framework */; };
 /* End PBXBuildFile section */
@@ -88,8 +89,8 @@
 		3C2F2FE82099FDEA002FA8FA /* LocationInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationInputView.xib; sourceTree = "<group>"; };
 		3C2F2FEB209A0C7D002FA8FA /* LocationInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputViewModel.swift; sourceTree = "<group>"; };
 		3C8FF79820A2846A009EF837 /* RoomDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailViewController.swift; sourceTree = "<group>"; };
-		3C8FF79B20A2867B009EF837 /* RoomGallaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomGallaryCell.xib; sourceTree = "<group>"; };
-		3C8FF79D20A286AC009EF837 /* RoomGallaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGallaryCell.swift; sourceTree = "<group>"; };
+		3C8FF79B20A2867B009EF837 /* RoomGalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomGalleryCell.xib; sourceTree = "<group>"; };
+		3C8FF79D20A286AC009EF837 /* RoomGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGalleryCell.swift; sourceTree = "<group>"; };
 		3C8FF79F20A28D2E009EF837 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		3C8FF7A320A346AC009EF837 /* HolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolderViewController.swift; sourceTree = "<group>"; };
 		3C8FF7A520A34B5B009EF837 /* SplashLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashLoadingView.swift; sourceTree = "<group>"; };
@@ -120,6 +121,7 @@
 		3CEF33392086D987005281BE /* CALayer+Sketch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Sketch.swift"; sourceTree = "<group>"; };
 		48B0DCCB0F045000E3080847 /* Pods-iNestiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiTests/Pods-iNestiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		541B821C0B7CE12A40DCE40D /* Pods-iNestiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiUITests/Pods-iNestiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5A9F16F3AE303C21B2BC3552 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		71F5BAE53357EF57B92A63F6 /* Pods_iNestiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iNestiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C576E4A9608C13AA5525141A /* Pods-iNestiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiUITests/Pods-iNestiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C60C1556F08CDAB711EF22C7 /* Pods-iNestiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiTests/Pods-iNestiTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -254,8 +256,8 @@
 		3C8FF79A20A285A6009EF837 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3C8FF79B20A2867B009EF837 /* RoomGallaryCell.xib */,
-				3C8FF79D20A286AC009EF837 /* RoomGallaryCell.swift */,
+				3C8FF79B20A2867B009EF837 /* RoomGalleryCell.xib */,
+				3C8FF79D20A286AC009EF837 /* RoomGalleryCell.swift */,
 				3C8FF7B420A3C9E9009EF837 /* RoomSummaryCell.swift */,
 				3C8FF7B620A3C9F6009EF837 /* RoomSummaryCell.xib */,
 			);
@@ -345,6 +347,7 @@
 				3CEF33392086D987005281BE /* CALayer+Sketch.swift */,
 				3C0DD8F82099F7E400D60176 /* CXStoryboardLoadable.swift */,
 				3C8FF79F20A28D2E009EF837 /* UIColor+Extension.swift */,
+				5A9F16F3AE303C21B2BC3552 /* UIFont+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -557,7 +560,7 @@
 				3CD2E7E2208698A7002252CC /* InfoPlist.strings in Resources */,
 				3C8FF7A820A34B64009EF837 /* SplashLoadingView.xib in Resources */,
 				3C01173720852EF8007C73D8 /* Assets.xcassets in Resources */,
-				3C8FF79C20A2867B009EF837 /* RoomGallaryCell.xib in Resources */,
+				3C8FF79C20A2867B009EF837 /* RoomGalleryCell.xib in Resources */,
 				3C01173520852EF7007C73D8 /* Main.storyboard in Resources */,
 				3C8FF7B120A3681A009EF837 /* HolderPublishView.xib in Resources */,
 				3CEF33302086CD63005281BE /* PopularPlaceCell.xib in Resources */,
@@ -722,6 +725,7 @@
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/ExpandableLabel/ExpandableLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -738,6 +742,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ExpandableLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -789,7 +794,7 @@
 				3C2F2FE72099FCF4002FA8FA /* LocationInputView.swift in Sources */,
 				3CEF33382086D5AF005281BE /* HomeViewModel.swift in Sources */,
 				3C8FF7B320A36826009EF837 /* HolderPublishView.swift in Sources */,
-				3C8FF79E20A286AC009EF837 /* RoomGallaryCell.swift in Sources */,
+				3C8FF79E20A286AC009EF837 /* RoomGalleryCell.swift in Sources */,
 				3C8FF7A420A346AC009EF837 /* HolderViewController.swift in Sources */,
 				3CEF33332086D3A7005281BE /* PopularPlacesAPI.swift in Sources */,
 				3CEF332E2086CD38005281BE /* PopularPlaceCell.swift in Sources */,
@@ -798,6 +803,7 @@
 				3CD2E7D820868F54002252CC /* BaseViewController.swift in Sources */,
 				3CA13BFE209D4EBF00479F71 /* CXUtil.swift in Sources */,
 				3CD2E7EE20869905002252CC /* String+Localization.swift in Sources */,
+				5A9F17E378D7B0B1B167594C /* UIFont+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1004,10 +1010,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = iNesti/Base.lproj/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNesti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1027,10 +1030,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = iNesti/Base.lproj/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNesti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1047,11 +1047,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
 				INFOPLIST_FILE = iNestiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNestiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1069,11 +1065,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
 				INFOPLIST_FILE = iNestiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNestiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1090,11 +1082,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
 				INFOPLIST_FILE = iNestiUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNestiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1111,11 +1099,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PQ63WGMNP;
 				INFOPLIST_FILE = iNestiUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNestiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
