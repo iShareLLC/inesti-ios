@@ -17,6 +17,7 @@ target 'iNesti' do
   pod 'ChameleonFramework'
   pod 'DZNEmptyDataSet'
   pod 'ExpandableLabel'
+  pod 'R.swift'
 
   target 'iNestiTests' do
     inherit! :search_paths
