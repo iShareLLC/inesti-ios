@@ -26,7 +26,7 @@ class MockSummary: RoomSummaryDisplayable {
     }
 }
 
-class RoomDetailViewController: BaseViewController, CXStoryboardLoadable {
+class RoomDetailViewController: BaseViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var contactHolderButton: UIButton!
 

@@ -13,7 +13,7 @@ import RxCocoa
 import Reusable
 import TTRangeSlider
 
-class SearchViewController: BaseViewController, CXStoryboardLoadable {
+class SearchViewController: BaseViewController {
     @IBOutlet private weak var addressTextField: UITextField!
     @IBOutlet private weak var addressTextInputButton: UIButton!
     @IBOutlet private weak var datePickerButton: UIButton!
