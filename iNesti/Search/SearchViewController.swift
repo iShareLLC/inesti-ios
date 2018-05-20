@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CXPopupKit
 import RxSwift
 import RxCocoa
 import Reusable
@@ -38,8 +37,8 @@ class SearchViewController: BaseViewController {
             .disposed(by: disposeBag)
 
         datePickerButton.rx.tap
-            .subscribe(onNext: { [weak self] _ in
-                self?.showDatePicker()
+            .subscribe({ [weak self] _ in
+                //self?.showDatePicker()
             })
             .disposed(by: disposeBag)
 
@@ -79,6 +78,7 @@ class SearchViewController: BaseViewController {
     }
 
     private func showLocationInputView() {
+        /*
         let locationInputView = LocationInputView.loadFromNib()
         let popup = locationInputView.createPopup()
         popup.positiveAction = { result in
@@ -87,8 +87,10 @@ class SearchViewController: BaseViewController {
             }
         }
         popup.show(at: self)
+ */
     }
 
+    /*
     private func showDatePicker() {
         let datePicker = CXDatePicker(startDate: Date(), mode: .date, title: "开始时间", cancelButtonText: "取消", doneButtonText: "确认")
         let popup = datePicker.createPopup()
@@ -103,6 +105,7 @@ class SearchViewController: BaseViewController {
         }
         popup.show(at: self)
     }
+     */
 
     private func setupRoomTypeButtons() {
         func unselectRoomType() {
@@ -119,6 +122,7 @@ class SearchViewController: BaseViewController {
     }
 
     private func showDurationPicker() {
+        /*
         let range = (1 ... 20).map { "\($0)" }
         let durationPicker = CXPicker(with: [range, ["天", "周", "月"]], title: "租期", cancelButtonText: "取消", doneButtonText: "确认")
         let popup = durationPicker.createPopup()
@@ -130,5 +134,6 @@ class SearchViewController: BaseViewController {
             self?.durationPickerButton.setTitle(title, for: .normal)
         }
         popup.show(at: self)
+         */
     }
 }

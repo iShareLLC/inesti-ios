@@ -8,7 +8,6 @@
 
 import UIKit
 import Reusable
-import Kingfisher
 
 class PopularPlaceCell: UITableViewCell, NibReusable {
     @IBOutlet private weak var priceLabel: UILabel!
@@ -25,7 +24,7 @@ class PopularPlaceCell: UITableViewCell, NibReusable {
         areaLabel.text = place.area
         titleLabel.attributedText = place.attributedTitle
         summaryLabel.text = place.summary
-        coverImageView.kf.setImage(with: place.imageUrls.first?.webURL)
+        //coverImageView.kf.setImage(with: place.imageUrls.first?.webURL)
     }
 
     func addShadow() {

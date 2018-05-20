@@ -16,8 +16,6 @@
 		3C01175020852EF8007C73D8 /* iNestiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C01174F20852EF8007C73D8 /* iNestiUITests.swift */; };
 		3C0DD8F92099F7E400D60176 /* CXStoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0DD8F82099F7E400D60176 /* CXStoryboardLoadable.swift */; };
 		3C1E0B4B2092C83500A9D4BB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1E0B4A2092C83500A9D4BB /* SearchViewController.swift */; };
-		3C1E0B4D2092CD1A00A9D4BB /* CXPopupKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1E0B4C2092CD1A00A9D4BB /* CXPopupKit.framework */; };
-		3C1E0B502092CD6D00A9D4BB /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1E0B4F2092CD6D00A9D4BB /* SnapKit.framework */; };
 		3C2F2FE72099FCF4002FA8FA /* LocationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F2FE62099FCF4002FA8FA /* LocationInputView.swift */; };
 		3C2F2FE92099FDEA002FA8FA /* LocationInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C2F2FE82099FDEA002FA8FA /* LocationInputView.xib */; };
 		3C2F2FEC209A0C7D002FA8FA /* LocationInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F2FEB209A0C7D002FA8FA /* LocationInputViewModel.swift */; };
@@ -137,8 +135,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CCA2A1F8BCFF62C74C81657 /* Pods_iNesti.framework in Frameworks */,
-				3C1E0B4D2092CD1A00A9D4BB /* CXPopupKit.framework in Frameworks */,
-				3C1E0B502092CD6D00A9D4BB /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,13 +445,10 @@
 			buildConfigurationList = 3C01175420852EF8007C73D8 /* Build configuration list for PBXNativeTarget "iNesti" */;
 			buildPhases = (
 				51AAC395E9C5D1882B042B7C /* [CP] Check Pods Manifest.lock */,
-				3CEC988820A6079A0013BF8F /* ShellScript */,
 				3C01172820852EF7007C73D8 /* Sources */,
 				3C01172920852EF7007C73D8 /* Frameworks */,
 				3C01172A20852EF7007C73D8 /* Resources */,
 				D9B0EECE326B9C36875D2FC7 /* [CP] Embed Pods Frameworks */,
-				0617A4C9C721BF0C425E044C /* [CP] Copy Pods Resources */,
-				3C1E0B4E2092CD2700A9D4BB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -474,8 +467,6 @@
 				3C01173C20852EF8007C73D8 /* Sources */,
 				3C01173D20852EF8007C73D8 /* Frameworks */,
 				3C01173E20852EF8007C73D8 /* Resources */,
-				4131A597EC462A8455B66635 /* [CP] Embed Pods Frameworks */,
-				F793A9398B90545F573C814A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -495,8 +486,6 @@
 				3C01174720852EF8007C73D8 /* Sources */,
 				3C01174820852EF8007C73D8 /* Frameworks */,
 				3C01174920852EF8007C73D8 /* Resources */,
-				0C4584E29D3383C00DCB84E6 /* [CP] Embed Pods Frameworks */,
-				56F3F7E109280531A6873A07 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -589,36 +578,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0617A4C9C721BF0C425E044C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNesti/Pods-iNesti-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0C4584E29D3383C00DCB84E6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNestiUITests/Pods-iNestiUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		29D6225510C2A2C5CA693252 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -635,49 +594,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3C1E0B4E2092CD2700A9D4BB /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/CXPopupKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		3CEC988820A6079A0013BF8F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
-		};
-		4131A597EC462A8455B66635 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNestiTests/Pods-iNestiTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4F63A784BC0FA3B00CE8850A /* [CP] Check Pods Manifest.lock */ = {
@@ -716,21 +632,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		56F3F7E109280531A6873A07 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNestiUITests/Pods-iNestiUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D9B0EECE326B9C36875D2FC7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -739,11 +640,11 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-iNesti/Pods-iNesti-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/ExpandableLabel/ExpandableLabel.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -757,11 +658,11 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ExpandableLabel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -775,21 +676,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNesti/Pods-iNesti-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F793A9398B90545F573C814A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNestiTests/Pods-iNestiTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1023,12 +909,9 @@
 			baseConfigurationReference = 106777E4FF79F39189345417 /* Pods-iNesti.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2PQ63WGMNP;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = BJD4TB66LH;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = iNesti/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1036,6 +919,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNesti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1046,12 +930,9 @@
 			baseConfigurationReference = D20F74BB0A29983A64ABDA31 /* Pods-iNesti.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2PQ63WGMNP;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = BJD4TB66LH;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = iNesti/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1059,6 +940,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNesti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

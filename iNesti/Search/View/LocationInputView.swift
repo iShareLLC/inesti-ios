@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CXPopupKit
 import Reusable
 import RxSwift
 import RxCocoa
@@ -20,6 +19,7 @@ class LocationInputView: UIView, NibLoadable {
     private let locationInputViewModel = LocationInputViewModel()
     private let disposeBag = DisposeBag()
 
+    /*
     private let appearance: CXAppearance = {
         var appearance = CXAppearance()
         appearance.window.width = .equalToParent
@@ -34,7 +34,8 @@ class LocationInputView: UIView, NibLoadable {
         appearance.animation.duration = CXAnimation.Duration(0.35)
         return appearance
     }()
-
+     */
+    
     override func awakeFromNib() {
         super.awakeFromNib()
 
@@ -56,17 +57,11 @@ class LocationInputView: UIView, NibLoadable {
             .disposed(by: disposeBag)
 
         cancelButton.rx.tap
-            .subscribe(onNext: { [weak self] _ in
-                self?.popup?.completeWithNegative(result: nil)
+            .subscribe({ [weak self] _ in
+                //self?.popup?.completeWithNegative(result: nil)
             })
             .disposed(by: disposeBag)
 
         locationTextField.becomeFirstResponder()
-    }
-}
-
-extension LocationInputView: CXPopupable {
-    func createPopup() -> CXPopup {
-        return CXPopup(with: self, appearance: appearance)
     }
 }

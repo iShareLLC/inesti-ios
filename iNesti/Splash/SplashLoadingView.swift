@@ -8,22 +8,9 @@
 
 import UIKit
 import Reusable
-import CXPopupKit
 
 class SplashLoadingView: UIView, NibLoadable {
     @IBOutlet weak var dot: UIView!
-
-    private let appearance: CXAppearance = {
-        var appearance = CXAppearance()
-        appearance.window.width = .equalToParent
-        appearance.window.height = .equalToParent
-        appearance.window.allowTouchOutsideToDismiss = false
-        appearance.window.isSafeAreaEnabled = false
-        appearance.animation.duration = CXAnimation.Duration(in: 0.1, out: 0.35)
-        appearance.animation.style = .fade
-        appearance.animation.transition = CXAnimation.Transition(.center)
-        return appearance
-    }()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -54,8 +41,3 @@ class SplashLoadingView: UIView, NibLoadable {
     }
 }
 
-extension SplashLoadingView: CXPopupable {
-    func createPopup() -> CXPopup {
-        return CXPopup(with: self, appearance: appearance)
-    }
-}

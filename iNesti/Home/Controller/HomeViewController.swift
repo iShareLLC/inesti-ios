@@ -30,6 +30,7 @@ class HomeViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
+        /*
         if isInitialLoading {
             let loadingView = SplashLoadingView.loadFromNib().createPopup()
             loadingView.show(at: self)
@@ -38,6 +39,7 @@ class HomeViewController: BaseViewController {
             }
             isInitialLoading = false
         }
+ */
     }
 
     private func setupSearchButton() {

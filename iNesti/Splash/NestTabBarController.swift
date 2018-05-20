@@ -8,7 +8,6 @@
 
 import UIKit
 import Reusable
-import CXPopupKit
 
 class NestTabBarController: UITabBarController {
     override func viewWillAppear(_ animated: Bool) {
