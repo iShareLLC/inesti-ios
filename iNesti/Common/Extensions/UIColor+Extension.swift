@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ChameleonFramework
 
 extension UIColor {
     static var majorYellow: UIColor {

@@ -48,9 +48,9 @@ class HomeViewController: BaseViewController {
         searchButton.layer.applySketchShadow(color: UIColor(white: 0, alpha: 0.25), x: 0, y: 5, blur: 25, spread: 0)
         searchButton.rx.tap
             .subscribe(onNext: { [weak self] _ in
-                if let searchVC = R.storyboard.main.searchViewController() {
-                    self?.present(searchVC, animated: true, completion: nil)
-                }
+                //if let searchVC = R.storyboard.main.searchViewController() {
+                // self?.present(searchVC, animated: true, completion: nil)
+                //}
             })
             .disposed(by: disposeBag)
     }

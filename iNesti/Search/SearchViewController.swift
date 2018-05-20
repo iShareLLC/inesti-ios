@@ -22,7 +22,7 @@ class SearchViewController: BaseViewController {
     @IBOutlet private weak var cancelButton: UIButton!
     @IBOutlet private var roomTypeButtons: [UIButton]!
     @IBOutlet private weak var rangeSlider: TTRangeSlider!
-
+    
     override func viewDidLoad() {
         addressTextInputButton.rx.tap
             .subscribe(onNext: { [weak self] _ in
@@ -48,11 +48,15 @@ class SearchViewController: BaseViewController {
             })
             .disposed(by: disposeBag)
 
-        setupRangeSlider()
-        setupShowResultButton()
-        setupRoomTypeButtons()
-    }
-    private func setupRangeSlider() {
+        for button in roomTypeButtons {
+            button.rx.tap.subscribe(onNext: {[weak self] _ in
+                self?.roomTypeButtons.forEach { $0.isSelected = false  }
+                button.isSelected = true
+            })
+                .disposed(by: disposeBag)
+        }
+        
+        //Range Slider
         rangeSlider.handleBorderWidth = 1
         rangeSlider.handleColor = .white
         rangeSlider.handleDiameter = 25
@@ -65,13 +69,8 @@ class SearchViewController: BaseViewController {
         rangeSlider.selectedMaximum = 10000
         rangeSlider.addTarget(self, action: #selector(didChangeSliderValue(_:)), for: .valueChanged)
         rangeSlider.hideLabels = true
-    }
-
-    @objc private func didChangeSliderValue(_ sender: TTRangeSlider) {
-        rangeLabel.text = "$\(Int(sender.selectedMinimum)) - $\(Int(sender.selectedMaximum))"
-    }
-
-    private func setupShowResultButton() {
+        
+        //Show Result Button
         showResultButton.layer.cornerRadius = 3.0
         showResultButton.layer.masksToBounds = false
         showResultButton.layer.applySketchShadow(color: UIColor(white: 0, alpha: 0.13), x: 0, y: 2, blur: 3, spread: 0)
@@ -106,21 +105,7 @@ class SearchViewController: BaseViewController {
         popup.show(at: self)
     }
      */
-
-    private func setupRoomTypeButtons() {
-        func unselectRoomType() {
-            roomTypeButtons.forEach { $0.isSelected = false  }
-        }
-
-        for button in roomTypeButtons {
-            button.rx.tap.subscribe(onNext: { _ in
-                unselectRoomType()
-                button.isSelected = true
-            })
-            .disposed(by: disposeBag)
-        }
-    }
-
+    
     private func showDurationPicker() {
         /*
         let range = (1 ... 20).map { "\($0)" }
@@ -135,5 +120,12 @@ class SearchViewController: BaseViewController {
         }
         popup.show(at: self)
          */
+    }
+    
+    
+    //MARK: Action Handler
+    
+    @objc private func didChangeSliderValue(_ sender: TTRangeSlider) {
+        rangeLabel.text = "$\(Int(sender.selectedMinimum)) - $\(Int(sender.selectedMaximum))"
     }
 }

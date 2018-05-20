@@ -15,7 +15,6 @@ target 'iNesti' do
   pod 'SVProgressHUD'
   pod 'Reusable'
   pod 'TTRangeSlider'
-  pod 'ChameleonFramework'
   pod 'DZNEmptyDataSet'
   pod 'ExpandableLabel'
   pod 'R.swift'

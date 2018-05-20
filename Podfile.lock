@@ -2,9 +2,6 @@ PODS:
   - Alamofire (4.7.2)
   - AlamofireImage (3.3.1):
     - Alamofire (~> 4.5)
-  - ChameleonFramework (2.1.0):
-    - ChameleonFramework/Default (= 2.1.0)
-  - ChameleonFramework/Default (2.1.0)
   - Differentiator (3.0.2)
   - DZNEmptyDataSet (1.8.1)
   - ExpandableLabel (0.4.0)
@@ -36,7 +33,6 @@ PODS:
 DEPENDENCIES:
   - Alamofire (= 4.7.2)
   - AlamofireImage
-  - ChameleonFramework
   - DZNEmptyDataSet
   - ExpandableLabel
   - Moya/RxSwift (~> 11.0)
@@ -52,7 +48,6 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
-    - ChameleonFramework
     - Differentiator
     - DZNEmptyDataSet
     - ExpandableLabel
@@ -70,7 +65,6 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
-  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   ExpandableLabel: 5f5f61fbf71433000cd7c3290617e6fcccb72c86
@@ -85,6 +79,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TTRangeSlider: 78188bea83f6471a06f75adbc88da5e990baeafe
 
-PODFILE CHECKSUM: d828c17f39689be5609b19c23032e829af25fb51
+PODFILE CHECKSUM: 94261adcc57c66cae4795e7e0892ef70abffd4e9
 
 COCOAPODS: 1.5.2
