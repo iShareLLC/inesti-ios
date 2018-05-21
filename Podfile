@@ -18,6 +18,8 @@ target 'iNesti' do
   pod 'DZNEmptyDataSet'
   pod 'ExpandableLabel'
   pod 'KMPlaceholderTextView'
+  pod 'TTGTagCollectionView'
+  pod 'M13Checkbox'
 
   target 'iNestiTests' do
     inherit! :search_paths
