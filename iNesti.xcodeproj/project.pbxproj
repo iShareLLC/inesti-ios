@@ -50,7 +50,9 @@
 		4DD0A74220B1D22A00674AAD /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0A74120B1D22A00674AAD /* Date+Extension.swift */; };
 		4DD0A74620B2906200674AAD /* NewRental.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DD0A74520B2906200674AAD /* NewRental.storyboard */; };
 		5A9F17E378D7B0B1B167594C /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F16F3AE303C21B2BC3552 /* UIFont+Extension.swift */; };
+		6705C8A4DD572082F2424F92 /* Pods_iNestiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DBC36C9315A56DFDBFCC6A7 /* Pods_iNestiTests.framework */; };
 		8CCA2A1F8BCFF62C74C81657 /* Pods_iNesti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B15A91E27453B5D78CE3AAB /* Pods_iNesti.framework */; };
+		AEF41E06DCE610DF5EFB3459 /* Pods_iNestiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3DC2A8E712C1B96E0149960 /* Pods_iNestiUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,9 +128,11 @@
 		4DD0A74520B2906200674AAD /* NewRental.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewRental.storyboard; sourceTree = "<group>"; };
 		541B821C0B7CE12A40DCE40D /* Pods-iNestiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiUITests/Pods-iNestiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A9F16F3AE303C21B2BC3552 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		9DBC36C9315A56DFDBFCC6A7 /* Pods_iNestiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iNestiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C576E4A9608C13AA5525141A /* Pods-iNestiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiUITests/Pods-iNestiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C60C1556F08CDAB711EF22C7 /* Pods-iNestiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiTests/Pods-iNestiTests.release.xcconfig"; sourceTree = "<group>"; };
 		D20F74BB0A29983A64ABDA31 /* Pods-iNesti.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNesti.release.xcconfig"; path = "Pods/Target Support Files/Pods-iNesti/Pods-iNesti.release.xcconfig"; sourceTree = "<group>"; };
+		E3DC2A8E712C1B96E0149960 /* Pods_iNestiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iNestiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6705C8A4DD572082F2424F92 /* Pods_iNestiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF41E06DCE610DF5EFB3459 /* Pods_iNestiUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +458,8 @@
 			isa = PBXGroup;
 			children = (
 				3B15A91E27453B5D78CE3AAB /* Pods_iNesti.framework */,
+				9DBC36C9315A56DFDBFCC6A7 /* Pods_iNestiTests.framework */,
+				E3DC2A8E712C1B96E0149960 /* Pods_iNestiUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -677,8 +685,8 @@
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/ExpandableLabel/ExpandableLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/KMPlaceholderTextView/KMPlaceholderTextView.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -694,8 +702,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ExpandableLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KMPlaceholderTextView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",

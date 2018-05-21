@@ -5,15 +5,13 @@ PODS:
   - Differentiator (3.0.2)
   - DZNEmptyDataSet (1.8.1)
   - ExpandableLabel (0.4.0)
+  - KMPlaceholderTextView (1.3.0)
   - Moya/Core (11.0.2):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
   - Moya/RxSwift (11.0.2):
     - Moya/Core
     - RxSwift (~> 4.0)
-  - R.swift (4.0.0):
-    - R.swift.Library (~> 4.0.0)
-  - R.swift.Library (4.0.0)
   - Result (3.2.4)
   - Reusable (4.0.2):
     - Reusable/Storyboard (= 4.0.2)
@@ -35,8 +33,8 @@ DEPENDENCIES:
   - AlamofireImage
   - DZNEmptyDataSet
   - ExpandableLabel
+  - KMPlaceholderTextView
   - Moya/RxSwift (~> 11.0)
-  - R.swift
   - Reusable
   - RxCocoa (~> 4.0)
   - RxDataSources (~> 3.0)
@@ -51,9 +49,8 @@ SPEC REPOS:
     - Differentiator
     - DZNEmptyDataSet
     - ExpandableLabel
+    - KMPlaceholderTextView
     - Moya
-    - R.swift
-    - R.swift.Library
     - Result
     - Reusable
     - RxCocoa
@@ -68,9 +65,8 @@ SPEC CHECKSUMS:
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   ExpandableLabel: 5f5f61fbf71433000cd7c3290617e6fcccb72c86
+  KMPlaceholderTextView: 2bbcd19a273648a80a61e1e48f9743a24d8930e3
   Moya: a725035953bc1c0eb1be505ab903984501d82440
-  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
-  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   Reusable: 584a5629747c52e0f6a77841b400dc2643f6fa0f
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
@@ -79,6 +75,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TTRangeSlider: 78188bea83f6471a06f75adbc88da5e990baeafe
 
-PODFILE CHECKSUM: 94261adcc57c66cae4795e7e0892ef70abffd4e9
+PODFILE CHECKSUM: b5d8670d9a8644bcc50d423ae59aa1f8010e2949
 
 COCOAPODS: 1.5.2
