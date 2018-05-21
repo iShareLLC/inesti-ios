@@ -1,42 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hKQ-Eh-hhO">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--探索房源-->
         <scene sceneID="g09-xH-gim">
             <objects>
                 <viewController id="hvf-ju-vSj" customClass="HomeViewController" customModule="iNesti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gwn-MB-Okk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49i-yV-CUl">
-                                <rect key="frame" x="0.0" y="20" width="320" height="110"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBB-8Y-fcJ">
-                                        <rect key="frame" x="16" y="8" width="288" height="44"/>
+                                        <rect key="frame" x="16" y="8" width="382" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="WFS-VH-McN"/>
                                         </constraints>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搜索房源" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TR-9Y-0VB">
-                                        <rect key="frame" x="60" y="18.5" width="228" height="23"/>
+                                        <rect key="frame" x="60" y="18.666666666666664" width="322" height="23"/>
                                         <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="0.40999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热门房源" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIh-bx-wIA">
-                                        <rect key="frame" x="16" y="64" width="288" height="39.5"/>
+                                        <rect key="frame" x="16" y="64" width="382" height="39.666666666666657"/>
                                         <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -66,7 +72,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vmY-qB-iTZ">
-                                <rect key="frame" x="0.0" y="130" width="320" height="389"/>
+                                <rect key="frame" x="0.0" y="130" width="414" height="557"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -99,15 +105,15 @@
             <objects>
                 <viewController id="W8C-eP-d7Q" customClass="RoomDetailViewController" customModule="iNesti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zj2-mc-q6X">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N3D-We-Wx3">
-                                <rect key="frame" x="0.0" y="64" width="320" height="434"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="602"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btw-hR-szZ">
-                                <rect key="frame" x="16" y="506" width="288" height="54"/>
+                                <rect key="frame" x="16" y="674" width="382" height="54"/>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="zxA-NT-KCu"/>
@@ -145,23 +151,23 @@
             <objects>
                 <viewController storyboardIdentifier="SearchViewController" id="nEX-su-8VY" customClass="SearchViewController" customModule="iNesti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kaF-mt-YHo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搜索房源" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9m-wZ-AOg">
-                                <rect key="frame" x="16" y="36" width="112" height="39.5"/>
+                                <rect key="frame" x="16" y="36" width="112" height="39.333333333333343"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="地点" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TD0-lY-1uv">
-                                <rect key="frame" x="16" y="127.5" width="288" height="37.5"/>
+                                <rect key="frame" x="16" y="127.33333333333333" width="382" height="37.666666666666671"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jdk-uc-aDv">
-                                <rect key="frame" x="16" y="177" width="288" height="1"/>
+                                <rect key="frame" x="16" y="177" width="382" height="1"/>
                                 <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Zsl-MD-oG8"/>
@@ -175,7 +181,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvQ-mH-9dz">
-                                <rect key="frame" x="138" y="203.5" width="37" height="38"/>
+                                <rect key="frame" x="138" y="203.33333333333334" width="37" height="38"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="18"/>
                                 <state key="normal" title="12月">
                                     <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -189,26 +195,26 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uB8-2B-UwE">
-                                <rect key="frame" x="138" y="245.5" width="37" height="1"/>
+                                <rect key="frame" x="138" y="245.33333333333334" width="37" height="1"/>
                                 <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="7Ml-55-gaA"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="房型" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHM-b3-URB">
-                                <rect key="frame" x="16" y="279" width="288" height="25.5"/>
+                                <rect key="frame" x="16" y="279" width="382" height="25.333333333333314"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0XS-fG-AVQ">
-                                <rect key="frame" x="16" y="318.5" width="288" height="50"/>
+                                <rect key="frame" x="16" y="318.33333333333331" width="382" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4JT-ns-Zr3">
-                                        <rect key="frame" x="0.0" y="0.0" width="144" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="191" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vjq-Bs-5bC">
-                                                <rect key="frame" x="0.0" y="0.0" width="144" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="191" height="25"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuL-jI-zEb">
                                                         <rect key="frame" x="0.0" y="2" width="20" height="20"/>
@@ -221,7 +227,7 @@
                                                         <state key="selected" image="checkbox-checked"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="整套" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQl-6n-2MQ">
-                                                        <rect key="frame" x="28" y="2.5" width="32" height="20"/>
+                                                        <rect key="frame" x="28" y="2.3333333333333712" width="32" height="20"/>
                                                         <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
                                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -238,7 +244,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTV-XR-apw">
-                                                <rect key="frame" x="0.0" y="25" width="144" height="25"/>
+                                                <rect key="frame" x="0.0" y="25" width="191" height="25"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0o-OR-BFH">
                                                         <rect key="frame" x="0.0" y="2" width="20" height="20"/>
@@ -251,7 +257,7 @@
                                                         <state key="selected" image="checkbox-checked"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客卧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mc-ce-2MP">
-                                                        <rect key="frame" x="28" y="2.5" width="32" height="20"/>
+                                                        <rect key="frame" x="28" y="2.3333333333333712" width="32" height="20"/>
                                                         <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
                                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -270,10 +276,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Sm0-ck-TGi">
-                                        <rect key="frame" x="144" y="0.0" width="144" height="50"/>
+                                        <rect key="frame" x="191" y="0.0" width="191" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Fk-Qk-0xa">
-                                                <rect key="frame" x="0.0" y="0.0" width="144" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="191" height="25"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYr-yS-Z2N">
                                                         <rect key="frame" x="0.0" y="2" width="20" height="20"/>
@@ -286,7 +292,7 @@
                                                         <state key="selected" image="checkbox-checked"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主卧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSe-Jt-DtV">
-                                                        <rect key="frame" x="28" y="2.5" width="32" height="20"/>
+                                                        <rect key="frame" x="28" y="2.3333333333333712" width="32" height="20"/>
                                                         <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
                                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -303,7 +309,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L2t-ha-1UF">
-                                                <rect key="frame" x="0.0" y="25" width="144" height="25"/>
+                                                <rect key="frame" x="0.0" y="25" width="191" height="25"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaS-XD-kn8">
                                                         <rect key="frame" x="0.0" y="2" width="20" height="20"/>
@@ -316,7 +322,7 @@
                                                         <state key="selected" image="checkbox-checked"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客厅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbz-eo-fpL">
-                                                        <rect key="frame" x="28" y="2.5" width="32" height="20"/>
+                                                        <rect key="frame" x="28" y="2.3333333333333712" width="32" height="20"/>
                                                         <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
                                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -340,13 +346,13 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="预算" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKL-Ea-IMB">
-                                <rect key="frame" x="16" y="397.5" width="36.5" height="25.5"/>
+                                <rect key="frame" x="16.000000000000004" y="397.33333333333331" width="36.333333333333343" height="25.333333333333314"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nnG-gX-fXi" customClass="TTRangeSlider">
-                                <rect key="frame" x="16" y="430.5" width="288" height="66"/>
+                                <rect key="frame" x="16" y="430" width="382" height="66"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -362,7 +368,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l1-PG-bo7">
-                                <rect key="frame" x="16" y="502" width="288" height="54"/>
+                                <rect key="frame" x="16" y="670" width="382" height="54"/>
                                 <color key="backgroundColor" red="0.99607843137254903" green="0.79607843137254897" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="smN-ul-Dg0"/>
@@ -373,27 +379,27 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0 - $10000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJy-0g-7Pb">
-                                <rect key="frame" x="198" y="398" width="106" height="25.5"/>
+                                <rect key="frame" x="292" y="397.66666666666669" width="106" height="25.333333333333314"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="18"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKj-WK-Hhf">
-                                <rect key="frame" x="16" y="127" width="288" height="38"/>
+                                <rect key="frame" x="16" y="127" width="382" height="38"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="18"/>
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVr-vL-dDA">
-                                <rect key="frame" x="280" y="36" width="24" height="24"/>
+                                <rect key="frame" x="374" y="36" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="KTI-TK-dFm"/>
                                 </constraints>
                                 <state key="normal" image="close"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Triangle" translatesAutoresizingMaskIntoConstraints="NO" id="Azt-qK-oa4">
-                                <rect key="frame" x="167" y="220.5" width="8" height="4"/>
+                                <rect key="frame" x="167" y="220.33333333333334" width="8" height="4"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Azt-qK-oa4" secondAttribute="height" multiplier="15:8" id="bm2-Pd-7Dv"/>
                                     <constraint firstAttribute="width" constant="8" id="w2o-9d-vQZ"/>
@@ -474,7 +480,7 @@
             <objects>
                 <viewController id="wsE-5e-LTO" customClass="HolderViewController" customModule="iNesti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bn2-nf-LKS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="房主页面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOQ-kj-D9y">
@@ -484,11 +490,124 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w1N-Nf-Zho">
-                                <rect key="frame" x="0.0" y="92" width="320" height="427"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="595"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="iYv-as-ix5" customClass="LandlordPublishFooterView" customModule="iNesti" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="348" width="414" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a22-BS-J0k">
+                                            <rect key="frame" x="16" y="13" width="382" height="54"/>
+                                            <color key="backgroundColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="54" id="lu5-1s-PYl"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                            <state key="normal" title="添加房源" image="add">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="handleAddNewRentalButtonWithSender:" destination="iYv-as-ix5" eventType="touchUpInside" id="BDq-UF-5Qp"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="a22-BS-J0k" secondAttribute="trailing" constant="16" id="04L-qk-8oU"/>
+                                        <constraint firstItem="a22-BS-J0k" firstAttribute="centerY" secondItem="iYv-as-ix5" secondAttribute="centerY" id="LZx-8Y-2x7"/>
+                                        <constraint firstItem="a22-BS-J0k" firstAttribute="leading" secondItem="iYv-as-ix5" secondAttribute="leading" constant="16" id="inK-0R-WQh"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="actionButton" destination="a22-BS-J0k" id="gLi-vb-u1M"/>
+                                    </connections>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="LandlordRentalCell" rowHeight="320" id="itV-7M-COO">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="320"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="itV-7M-COO" id="tAk-Po-bwx">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="319.66666666666669"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PND-Xv-qCc">
+                                                    <rect key="frame" x="16" y="11" width="382" height="299.66666666666669"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ts4-yE-Op0">
+                                                            <rect key="frame" x="15" y="253.66666666666669" width="31" height="30"/>
+                                                            <state key="normal" title="编辑">
+                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWv-PM-nMk">
+                                                            <rect key="frame" x="56" y="253.66666666666669" width="31" height="30"/>
+                                                            <state key="normal" title="删除">
+                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="kWv-PM-nMk" firstAttribute="centerY" secondItem="Ts4-yE-Op0" secondAttribute="centerY" id="G91-ux-wGC"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kWv-PM-nMk" secondAttribute="trailing" constant="16" id="Io7-C0-Yhg"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Ts4-yE-Op0" secondAttribute="bottom" constant="16" id="ob8-qY-QoD"/>
+                                                        <constraint firstItem="kWv-PM-nMk" firstAttribute="leading" secondItem="Ts4-yE-Op0" secondAttribute="trailing" constant="10" id="wBM-Xt-hSy"/>
+                                                    </constraints>
+                                                </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rental_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="zBz-1C-ORv">
+                                                    <rect key="frame" x="16" y="11" width="382" height="173"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="173" id="s7Q-iS-Ba8"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="布鲁克林" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bun-oz-qA8">
+                                                    <rect key="frame" x="31" y="197" width="352" height="20"/>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="14"/>
+                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.46000000000000002" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="位于皇冠高度区的精装公寓" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fr-eo-HRZ">
+                                                    <rect key="frame" x="31" y="221" width="352" height="33.666666666666657"/>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1100/月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCy-0k-9ax">
+                                                    <rect key="frame" x="31" y="25" width="77" height="25"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WCy-0k-9ax" firstAttribute="top" secondItem="zBz-1C-ORv" secondAttribute="top" constant="14" id="0YM-eK-1oK"/>
+                                                <constraint firstAttribute="trailing" secondItem="zBz-1C-ORv" secondAttribute="trailing" constant="16" id="AcC-mX-FRD"/>
+                                                <constraint firstItem="bun-oz-qA8" firstAttribute="leading" secondItem="zBz-1C-ORv" secondAttribute="leading" constant="15" id="Ecr-5j-mCg"/>
+                                                <constraint firstItem="Ts4-yE-Op0" firstAttribute="leading" secondItem="7fr-eo-HRZ" secondAttribute="leading" id="Ltl-3B-XAw"/>
+                                                <constraint firstItem="7fr-eo-HRZ" firstAttribute="leading" secondItem="bun-oz-qA8" secondAttribute="leading" id="aLM-2S-VQ5"/>
+                                                <constraint firstItem="WCy-0k-9ax" firstAttribute="leading" secondItem="zBz-1C-ORv" secondAttribute="leading" constant="15" id="fSf-k0-zlo"/>
+                                                <constraint firstItem="PND-Xv-qCc" firstAttribute="trailing" secondItem="zBz-1C-ORv" secondAttribute="trailing" id="i6g-jH-3r8"/>
+                                                <constraint firstItem="WCy-0k-9ax" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="zBz-1C-ORv" secondAttribute="trailing" constant="-15" id="j0m-Gp-C0s"/>
+                                                <constraint firstItem="bun-oz-qA8" firstAttribute="trailing" secondItem="7fr-eo-HRZ" secondAttribute="trailing" id="mWx-Es-YpW"/>
+                                                <constraint firstItem="zBz-1C-ORv" firstAttribute="top" secondItem="tAk-Po-bwx" secondAttribute="topMargin" id="mv4-Rq-gh6"/>
+                                                <constraint firstItem="PND-Xv-qCc" firstAttribute="leading" secondItem="zBz-1C-ORv" secondAttribute="leading" id="mvu-TM-awU"/>
+                                                <constraint firstItem="7fr-eo-HRZ" firstAttribute="top" secondItem="bun-oz-qA8" secondAttribute="bottom" constant="4" id="rir-4S-QU8"/>
+                                                <constraint firstItem="PND-Xv-qCc" firstAttribute="top" secondItem="zBz-1C-ORv" secondAttribute="top" id="vWJ-BI-KOd"/>
+                                                <constraint firstItem="zBz-1C-ORv" firstAttribute="leading" secondItem="tAk-Po-bwx" secondAttribute="leading" constant="16" id="wmT-YP-0wV"/>
+                                                <constraint firstItem="Ts4-yE-Op0" firstAttribute="top" secondItem="7fr-eo-HRZ" secondAttribute="bottom" constant="10" id="xUa-wW-aai"/>
+                                                <constraint firstItem="bun-oz-qA8" firstAttribute="top" secondItem="zBz-1C-ORv" secondAttribute="bottom" constant="13" id="z3J-S2-mZJ"/>
+                                                <constraint firstItem="7fr-eo-HRZ" firstAttribute="trailing" secondItem="zBz-1C-ORv" secondAttribute="trailing" constant="-15" id="zAf-jv-Tuw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="wsE-5e-LTO" id="eAc-fr-HlE"/>
+                                    <outlet property="delegate" destination="wsE-5e-LTO" id="8xt-3J-Lay"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxg-JX-I83">
-                                <rect key="frame" x="272" y="40" width="32" height="32"/>
+                                <rect key="frame" x="366" y="40" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="WXo-dA-zew"/>
                                     <constraint firstAttribute="width" secondItem="sxg-JX-I83" secondAttribute="height" multiplier="1:1" id="zcV-Hr-nvw"/>
@@ -517,7 +636,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVb-xP-rRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-108" y="635"/>
+            <point key="canvasLocation" x="-110.14492753623189" y="634.23913043478262"/>
         </scene>
         <!--Nest Tab Bar Controller-->
         <scene sceneID="odX-X7-Gdd">
@@ -544,7 +663,7 @@
                 <navigationController storyboardIdentifier="RoomDetailNav" automaticallyAdjustsScrollViewInsets="NO" id="X1a-3p-fFZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T03-5h-jy3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -559,11 +678,13 @@
     </scenes>
     <resources>
         <image name="Triangle" width="8" height="5"/>
+        <image name="add" width="18" height="18"/>
         <image name="checkbox" width="20" height="20"/>
         <image name="checkbox-checked" width="20" height="20"/>
         <image name="close" width="15" height="15"/>
         <image name="explore" width="21" height="21"/>
         <image name="explore-selected" width="20" height="20"/>
+        <image name="rental_placeholder" width="114" height="58"/>
         <image name="search" width="16" height="17"/>
         <image name="user" width="20" height="20"/>
         <image name="user-selected" width="22" height="22"/>
