@@ -507,7 +507,7 @@
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
-                                                <action selector="handleAddNewRentalButtonWithSender:" destination="iYv-as-ix5" eventType="touchUpInside" id="BDq-UF-5Qp"/>
+                                                <segue destination="NAW-jY-wmf" kind="presentation" id="zBc-yk-xOj"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -658,6 +658,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVb-xP-rRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-110.14492753623189" y="634.23913043478262"/>
+        </scene>
+        <!--NewRental-->
+        <scene sceneID="7bx-cY-5M0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewRental" id="NAW-jY-wmf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S0x-Kv-gce" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505" y="634"/>
         </scene>
         <!--Nest Tab Bar Controller-->
         <scene sceneID="odX-X7-Gdd">

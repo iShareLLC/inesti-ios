@@ -53,6 +53,13 @@
 		6705C8A4DD572082F2424F92 /* Pods_iNestiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DBC36C9315A56DFDBFCC6A7 /* Pods_iNestiTests.framework */; };
 		8CCA2A1F8BCFF62C74C81657 /* Pods_iNesti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B15A91E27453B5D78CE3AAB /* Pods_iNesti.framework */; };
 		AEF41E06DCE610DF5EFB3459 /* Pods_iNestiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3DC2A8E712C1B96E0149960 /* Pods_iNestiUITests.framework */; };
+		E5E9DC5D20B33896004F3A6D /* AddRentalLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9DC5C20B33896004F3A6D /* AddRentalLocationViewController.swift */; };
+		E5E9DC5F20B338AB004F3A6D /* AddRentalTypeEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9DC5E20B338AB004F3A6D /* AddRentalTypeEntryViewController.swift */; };
+		E5E9DC6120B338BF004F3A6D /* AddRentalTagEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9DC6020B338BF004F3A6D /* AddRentalTagEntryViewController.swift */; };
+		E5E9DC6320B338DB004F3A6D /* AddRentalImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9DC6220B338DB004F3A6D /* AddRentalImagesViewController.swift */; };
+		E5E9DC6520B33940004F3A6D /* AddRentalPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9DC6420B33940004F3A6D /* AddRentalPageViewController.swift */; };
+		E5E9DC6720B33B8D004F3A6D /* AddRentalContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9DC6620B33B8D004F3A6D /* AddRentalContainerViewController.swift */; };
+		E5E9DC6920B33CE2004F3A6D /* INUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9DC6820B33CE2004F3A6D /* INUtilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +140,13 @@
 		C60C1556F08CDAB711EF22C7 /* Pods-iNestiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiTests/Pods-iNestiTests.release.xcconfig"; sourceTree = "<group>"; };
 		D20F74BB0A29983A64ABDA31 /* Pods-iNesti.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNesti.release.xcconfig"; path = "Pods/Target Support Files/Pods-iNesti/Pods-iNesti.release.xcconfig"; sourceTree = "<group>"; };
 		E3DC2A8E712C1B96E0149960 /* Pods_iNestiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iNestiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E9DC5C20B33896004F3A6D /* AddRentalLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRentalLocationViewController.swift; sourceTree = "<group>"; };
+		E5E9DC5E20B338AB004F3A6D /* AddRentalTypeEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRentalTypeEntryViewController.swift; sourceTree = "<group>"; };
+		E5E9DC6020B338BF004F3A6D /* AddRentalTagEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRentalTagEntryViewController.swift; sourceTree = "<group>"; };
+		E5E9DC6220B338DB004F3A6D /* AddRentalImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRentalImagesViewController.swift; sourceTree = "<group>"; };
+		E5E9DC6420B33940004F3A6D /* AddRentalPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRentalPageViewController.swift; sourceTree = "<group>"; };
+		E5E9DC6620B33B8D004F3A6D /* AddRentalContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRentalContainerViewController.swift; sourceTree = "<group>"; };
+		E5E9DC6820B33CE2004F3A6D /* INUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INUtilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -434,6 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				4DD0A73C20B1D1AB00674AAD /* INConstants.swift */,
+				E5E9DC6820B33CE2004F3A6D /* INUtilities.swift */,
 			);
 			path = Utlities;
 			sourceTree = "<group>";
@@ -450,6 +465,12 @@
 			isa = PBXGroup;
 			children = (
 				4DD0A74520B2906200674AAD /* NewRental.storyboard */,
+				E5E9DC6220B338DB004F3A6D /* AddRentalImagesViewController.swift */,
+				E5E9DC6020B338BF004F3A6D /* AddRentalTagEntryViewController.swift */,
+				E5E9DC5C20B33896004F3A6D /* AddRentalLocationViewController.swift */,
+				E5E9DC5E20B338AB004F3A6D /* AddRentalTypeEntryViewController.swift */,
+				E5E9DC6420B33940004F3A6D /* AddRentalPageViewController.swift */,
+				E5E9DC6620B33B8D004F3A6D /* AddRentalContainerViewController.swift */,
 			);
 			path = "New Rental";
 			sourceTree = "<group>";
@@ -489,6 +510,7 @@
 				3C01172920852EF7007C73D8 /* Frameworks */,
 				3C01172A20852EF7007C73D8 /* Resources */,
 				D9B0EECE326B9C36875D2FC7 /* [CP] Embed Pods Frameworks */,
+				0F2629863FDF990C180CAE5B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -507,6 +529,8 @@
 				3C01173C20852EF8007C73D8 /* Sources */,
 				3C01173D20852EF8007C73D8 /* Frameworks */,
 				3C01173E20852EF8007C73D8 /* Resources */,
+				BD43ABF2F32E4E6D389A1294 /* [CP] Embed Pods Frameworks */,
+				C90DA4F247589AE553BDC8D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -526,6 +550,8 @@
 				3C01174720852EF8007C73D8 /* Sources */,
 				3C01174820852EF8007C73D8 /* Frameworks */,
 				3C01174920852EF8007C73D8 /* Resources */,
+				5702A06B8BF9C8FD6C28BC8F /* [CP] Embed Pods Frameworks */,
+				631578EB7CD18ACF2DE7480C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -619,6 +645,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0F2629863FDF990C180CAE5B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNesti/Pods-iNesti-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		29D6225510C2A2C5CA693252 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -671,6 +712,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5702A06B8BF9C8FD6C28BC8F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNestiUITests/Pods-iNestiUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		631578EB7CD18ACF2DE7480C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNestiUITests/Pods-iNestiUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD43ABF2F32E4E6D389A1294 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNestiTests/Pods-iNestiTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C90DA4F247589AE553BDC8D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNestiTests/Pods-iNestiTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D9B0EECE326B9C36875D2FC7 /* [CP] Embed Pods Frameworks */ = {
@@ -728,13 +829,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5E9DC6520B33940004F3A6D /* AddRentalPageViewController.swift in Sources */,
 				3C1E0B4B2092C83500A9D4BB /* SearchViewController.swift in Sources */,
 				3C01173020852EF7007C73D8 /* AppDelegate.swift in Sources */,
 				3CD2E7D520868F41002252CC /* HomeViewController.swift in Sources */,
 				3C8FF7AD20A362AA009EF837 /* HolderRegistrationView.swift in Sources */,
 				3C8FF79920A2846A009EF837 /* RoomDetailViewController.swift in Sources */,
+				E5E9DC6720B33B8D004F3A6D /* AddRentalContainerViewController.swift in Sources */,
 				3C8FF7A620A34B5B009EF837 /* SplashLoadingView.swift in Sources */,
 				3C8FF7A020A28D2E009EF837 /* UIColor+Extension.swift in Sources */,
+				E5E9DC6920B33CE2004F3A6D /* INUtilities.swift in Sources */,
 				4DD0A74020B1D1FA00674AAD /* String+Extension.swift in Sources */,
 				3C8FF7B520A3C9E9009EF837 /* RoomSummaryCell.swift in Sources */,
 				3CEF33352086D44A005281BE /* PopularPlace.swift in Sources */,
@@ -746,13 +850,17 @@
 				4DD0A74220B1D22A00674AAD /* Date+Extension.swift in Sources */,
 				3C8FF79E20A286AC009EF837 /* RoomGalleryCell.swift in Sources */,
 				3C8FF7A420A346AC009EF837 /* HolderViewController.swift in Sources */,
+				E5E9DC6320B338DB004F3A6D /* AddRentalImagesViewController.swift in Sources */,
 				3CEF33332086D3A7005281BE /* PopularPlacesAPI.swift in Sources */,
 				3CEF332E2086CD38005281BE /* PopularPlaceCell.swift in Sources */,
 				3C8FF7AA20A34FBE009EF837 /* NestTabBarController.swift in Sources */,
+				E5E9DC5F20B338AB004F3A6D /* AddRentalTypeEntryViewController.swift in Sources */,
+				E5E9DC6120B338BF004F3A6D /* AddRentalTagEntryViewController.swift in Sources */,
 				3C2F2FEC209A0C7D002FA8FA /* LocationInputViewModel.swift in Sources */,
 				4DD0A73D20B1D1AB00674AAD /* INConstants.swift in Sources */,
 				4DD0A73A20B1D0E900674AAD /* INAPIManager.swift in Sources */,
 				3CD2E7D820868F54002252CC /* BaseViewController.swift in Sources */,
+				E5E9DC5D20B33896004F3A6D /* AddRentalLocationViewController.swift in Sources */,
 				3CA13BFE209D4EBF00479F71 /* CXUtil.swift in Sources */,
 				3CD2E7EE20869905002252CC /* String+Localization.swift in Sources */,
 				5A9F17E378D7B0B1B167594C /* UIFont+Extension.swift in Sources */,
