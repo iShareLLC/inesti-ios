@@ -14,6 +14,9 @@ class HolderViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profileButton: UIButton!
 
+    //var dataSource = ["1", "2", "3"]
+    var dataSource = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -26,7 +29,7 @@ extension HolderViewController: UITableViewDelegate {
 extension HolderViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return isEmptyData() ? 1 : dataSource.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -34,12 +37,24 @@ extension HolderViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if isEmptyData() {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LandlordNoItemCell", for: indexPath)
+            return cell
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "LandlordRentalCell", for: indexPath)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if isEmptyData() {
+            return 200
+        }
         return 320
+    }
+    
+    //MARK: HELPER
+    private func isEmptyData() -> Bool {
+        return dataSource.count == 0
     }
 }
 

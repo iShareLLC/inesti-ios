@@ -493,7 +493,7 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="595"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="iYv-as-ix5" customClass="LandlordPublishFooterView" customModule="iNesti" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="348" width="414" height="80"/>
+                                    <rect key="frame" x="0.0" y="548" width="414" height="80"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a22-BS-J0k">
@@ -597,6 +597,27 @@
                                                 <constraint firstItem="Ts4-yE-Op0" firstAttribute="top" secondItem="7fr-eo-HRZ" secondAttribute="bottom" constant="10" id="xUa-wW-aai"/>
                                                 <constraint firstItem="bun-oz-qA8" firstAttribute="top" secondItem="zBz-1C-ORv" secondAttribute="bottom" constant="13" id="z3J-S2-mZJ"/>
                                                 <constraint firstItem="7fr-eo-HRZ" firstAttribute="trailing" secondItem="zBz-1C-ORv" secondAttribute="trailing" constant="-15" id="zAf-jv-Tuw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LandlordNoItemCell" rowHeight="200" id="pPp-mx-aH7">
+                                        <rect key="frame" x="0.0" y="348" width="414" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pPp-mx-aH7" id="lMB-LK-yJ6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您还没有已发布的房源，点击 “添加房源” 按钮开始添加。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBh-ue-cI8">
+                                                    <rect key="frame" x="35" y="74.666666666666671" width="337.33333333333331" height="50.666666666666671"/>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="18"/>
+                                                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lBh-ue-cI8" secondAttribute="trailing" constant="35" id="Tld-Dm-2QI"/>
+                                                <constraint firstItem="lBh-ue-cI8" firstAttribute="centerY" secondItem="lMB-LK-yJ6" secondAttribute="centerY" id="cMb-lU-Ilb"/>
+                                                <constraint firstItem="lBh-ue-cI8" firstAttribute="leading" secondItem="lMB-LK-yJ6" secondAttribute="leading" constant="35" id="f51-JW-qen"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
