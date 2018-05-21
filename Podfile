@@ -20,6 +20,7 @@ target 'iNesti' do
   pod 'KMPlaceholderTextView'
   pod 'TTGTagCollectionView'
   pod 'M13Checkbox'
+  pod 'DropDown'
 
   target 'iNestiTests' do
     inherit! :search_paths

@@ -8,18 +8,26 @@
 
 import UIKit
 
+protocol AddRentalPageViewControllerDelegate: class {
+    func addRentalPageUpdate(index: Int)
+}
+
 class AddRentalPageViewController: UIPageViewController {
 
-    var viewControllerArray = [UIViewController]()
-    var locationViewController: AddRentalLocationViewController?
-    var typeEntryViewController: AddRentalTypeEntryViewController?
-    var tagEntryViewController: AddRentalTagEntryViewController?
-    var imagesViewController: AddRentalImagesViewController?
+    private var viewControllerArray = [UIViewController]()
+    private var locationViewController: AddRentalLocationViewController?
+    private var typeEntryViewController: AddRentalTypeEntryViewController?
+    private var tagEntryViewController: AddRentalTagEntryViewController?
+    private var imagesViewController: AddRentalImagesViewController?
+    weak var addRentalPageDelegate: AddRentalPageViewControllerDelegate?
+    //var pendingIndex: Int = 0
+    private var currentIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         dataSource = self
+        delegate = self
         
         let locationViewController = INUtilities.instantiateViewContorller(id: "AddRentalLocationViewController", storyboardId: "NewRental")
         let typeEntryViewController = INUtilities.instantiateViewContorller(id: "AddRentalTypeEntryViewController", storyboardId: "NewRental")
@@ -34,12 +42,66 @@ class AddRentalPageViewController: UIPageViewController {
                                animated: true,
                                completion: nil)
         }
+        
+        removeSwipeGesture()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func removeSwipeGesture(){
+        for view in self.view.subviews {
+            if let subView = view as? UIScrollView {
+                subView.isScrollEnabled = false
+            }
+        }
+    }
+    
+    public func numberOfPages() -> Int {
+        return viewControllerArray.count
+    }
+    
+    public func navigateToPreviousPage(completion:((Int) -> Void)?) {
+        let nextIndex = currentIndex - 1
+        if nextIndex < viewControllerArray.count {
+            let viewController = viewControllerArray[nextIndex]
+            self.setViewControllers([viewController], direction: .reverse, animated: true, completion: nil)
+            currentIndex = nextIndex
+            completion?(currentIndex)
+        }
+    }
+    
+    public func navigateToNextPage(completion:((Int) -> Void)?) {
+        let nextIndex = currentIndex + 1
+        if nextIndex < viewControllerArray.count {
+            let viewController = viewControllerArray[nextIndex]
+            self.setViewControllers([viewController], direction: .forward, animated: true, completion: nil)
+            currentIndex = nextIndex
+            completion?(currentIndex)
+        }
+    }
+    
+    public func getCurrentIndex() -> Int {
+        return currentIndex
+    }
+}
+
+extension AddRentalPageViewController: UIPageViewControllerDelegate {
+    
+//    func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
+//        if let viewController = pendingViewControllers.first, let index = viewControllerArray.index(of: viewController) {
+//            pendingIndex = index
+//        }
+//    }
+//
+//    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+//        if completed {
+//            currentIndex = pendingIndex
+//            addRentalPageDelegate?.addRentalPageUpdate(index: currentIndex)
+//        }
+//    }
 }
 
 extension AddRentalPageViewController: UIPageViewControllerDataSource {
