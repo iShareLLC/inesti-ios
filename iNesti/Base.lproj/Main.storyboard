@@ -478,7 +478,7 @@
         <!--房主页面-->
         <scene sceneID="vfN-Xb-VCC">
             <objects>
-                <viewController id="wsE-5e-LTO" customClass="HolderViewController" customModule="iNesti" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wsE-5e-LTO" customClass="LandlordViewController" customModule="iNesti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bn2-nf-LKS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

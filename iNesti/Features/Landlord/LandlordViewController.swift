@@ -1,5 +1,5 @@
 //
-//  HolderViewController.swift
+//  LandlordViewController.swift
 //  iNesti
 //
 //  Created by Cunqi Xiao on 5/9/18.
@@ -9,7 +9,7 @@
 import UIKit
 import DZNEmptyDataSet
 
-class HolderViewController: BaseViewController {
+class LandlordViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profileButton: UIButton!
@@ -22,11 +22,11 @@ class HolderViewController: BaseViewController {
     }
 }
 
-extension HolderViewController: UITableViewDelegate {
+extension LandlordViewController: UITableViewDelegate {
     
 }
 
-extension HolderViewController: UITableViewDataSource {
+extension LandlordViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return isEmptyData() ? 1 : dataSource.count
@@ -56,14 +56,6 @@ extension HolderViewController: UITableViewDataSource {
     private func isEmptyData() -> Bool {
         return dataSource.count == 0
     }
-}
-
-extension HolderViewController: HolderPublishViewDelegate {
-    
-    func addNewRentalButtonTapped() {
-        DLog("Button tapped, navigate to adding new rental page")
-    }
-    
 }
 
 protocol LandlordPublishFooterViewDelegate: class {

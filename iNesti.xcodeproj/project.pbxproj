@@ -22,14 +22,10 @@
 		3C8FF79C20A2867B009EF837 /* RoomGalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8FF79B20A2867B009EF837 /* RoomGalleryCell.xib */; };
 		3C8FF79E20A286AC009EF837 /* RoomGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FF79D20A286AC009EF837 /* RoomGalleryCell.swift */; };
 		3C8FF7A020A28D2E009EF837 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FF79F20A28D2E009EF837 /* UIColor+Extension.swift */; };
-		3C8FF7A420A346AC009EF837 /* HolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FF7A320A346AC009EF837 /* HolderViewController.swift */; };
+		3C8FF7A420A346AC009EF837 /* LandlordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FF7A320A346AC009EF837 /* LandlordViewController.swift */; };
 		3C8FF7A620A34B5B009EF837 /* SplashLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FF7A520A34B5B009EF837 /* SplashLoadingView.swift */; };
 		3C8FF7A820A34B64009EF837 /* SplashLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8FF7A720A34B64009EF837 /* SplashLoadingView.xib */; };
 		3C8FF7AA20A34FBE009EF837 /* NestTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FF7A920A34FBE009EF837 /* NestTabBarController.swift */; };
-		3C8FF7AD20A362AA009EF837 /* HolderRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FF7AC20A362AA009EF837 /* HolderRegistrationView.swift */; };
-		3C8FF7AF20A362B5009EF837 /* HolderRegistrationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8FF7AE20A362B5009EF837 /* HolderRegistrationView.xib */; };
-		3C8FF7B120A3681A009EF837 /* HolderPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8FF7B020A3681A009EF837 /* HolderPublishView.xib */; };
-		3C8FF7B320A36826009EF837 /* HolderPublishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FF7B220A36826009EF837 /* HolderPublishView.swift */; };
 		3C8FF7B520A3C9E9009EF837 /* RoomSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FF7B420A3C9E9009EF837 /* RoomSummaryCell.swift */; };
 		3C8FF7B720A3C9F6009EF837 /* RoomSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8FF7B620A3C9F6009EF837 /* RoomSummaryCell.xib */; };
 		3CA13BFE209D4EBF00479F71 /* CXUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA13BFD209D4EBF00479F71 /* CXUtil.swift */; };
@@ -100,14 +96,10 @@
 		3C8FF79B20A2867B009EF837 /* RoomGalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomGalleryCell.xib; sourceTree = "<group>"; };
 		3C8FF79D20A286AC009EF837 /* RoomGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGalleryCell.swift; sourceTree = "<group>"; };
 		3C8FF79F20A28D2E009EF837 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		3C8FF7A320A346AC009EF837 /* HolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolderViewController.swift; sourceTree = "<group>"; };
+		3C8FF7A320A346AC009EF837 /* LandlordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandlordViewController.swift; sourceTree = "<group>"; };
 		3C8FF7A520A34B5B009EF837 /* SplashLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashLoadingView.swift; sourceTree = "<group>"; };
 		3C8FF7A720A34B64009EF837 /* SplashLoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashLoadingView.xib; sourceTree = "<group>"; };
 		3C8FF7A920A34FBE009EF837 /* NestTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestTabBarController.swift; sourceTree = "<group>"; };
-		3C8FF7AC20A362AA009EF837 /* HolderRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolderRegistrationView.swift; sourceTree = "<group>"; };
-		3C8FF7AE20A362B5009EF837 /* HolderRegistrationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HolderRegistrationView.xib; sourceTree = "<group>"; };
-		3C8FF7B020A3681A009EF837 /* HolderPublishView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HolderPublishView.xib; sourceTree = "<group>"; };
-		3C8FF7B220A36826009EF837 /* HolderPublishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolderPublishView.swift; sourceTree = "<group>"; };
 		3C8FF7B420A3C9E9009EF837 /* RoomSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSummaryCell.swift; sourceTree = "<group>"; };
 		3C8FF7B620A3C9F6009EF837 /* RoomSummaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomSummaryCell.xib; sourceTree = "<group>"; };
 		3CA13BFD209D4EBF00479F71 /* CXUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXUtil.swift; sourceTree = "<group>"; };
@@ -205,7 +197,6 @@
 				4DD0A74320B2902000674AAD /* Features */,
 				4DD0A73B20B1D18600674AAD /* Utlities */,
 				4DD0A73820B1D0C800674AAD /* Managers */,
-				3C8FF7A220A3469F009EF837 /* Landlord */,
 				3C8FF7A120A33D48009EF837 /* Splash */,
 				3C8FF79720A2841B009EF837 /* Detail */,
 				3C1E0B492092C82B00A9D4BB /* Search */,
@@ -298,21 +289,9 @@
 		3C8FF7A220A3469F009EF837 /* Landlord */ = {
 			isa = PBXGroup;
 			children = (
-				3C8FF7AB20A36286009EF837 /* View */,
-				3C8FF7A320A346AC009EF837 /* HolderViewController.swift */,
+				3C8FF7A320A346AC009EF837 /* LandlordViewController.swift */,
 			);
 			path = Landlord;
-			sourceTree = "<group>";
-		};
-		3C8FF7AB20A36286009EF837 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3C8FF7AC20A362AA009EF837 /* HolderRegistrationView.swift */,
-				3C8FF7AE20A362B5009EF837 /* HolderRegistrationView.xib */,
-				3C8FF7B020A3681A009EF837 /* HolderPublishView.xib */,
-				3C8FF7B220A36826009EF837 /* HolderPublishView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		3CA13BFC209D4EA100479F71 /* Utils */ = {
@@ -456,6 +435,7 @@
 		4DD0A74320B2902000674AAD /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				3C8FF7A220A3469F009EF837 /* Landlord */,
 				4DD0A74420B2904100674AAD /* New Rental */,
 			);
 			path = Features;
@@ -613,7 +593,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CD2E7E8208698EB002252CC /* Localizable.strings in Resources */,
-				3C8FF7AF20A362B5009EF837 /* HolderRegistrationView.xib in Resources */,
 				3C01173A20852EF8007C73D8 /* LaunchScreen.storyboard in Resources */,
 				3C2F2FE92099FDEA002FA8FA /* LocationInputView.xib in Resources */,
 				3CD2E7E2208698A7002252CC /* InfoPlist.strings in Resources */,
@@ -621,7 +600,6 @@
 				3C01173720852EF8007C73D8 /* Assets.xcassets in Resources */,
 				3C8FF79C20A2867B009EF837 /* RoomGalleryCell.xib in Resources */,
 				3C01173520852EF7007C73D8 /* Main.storyboard in Resources */,
-				3C8FF7B120A3681A009EF837 /* HolderPublishView.xib in Resources */,
 				3CEF33302086CD63005281BE /* PopularPlaceCell.xib in Resources */,
 				4DD0A74620B2906200674AAD /* NewRental.storyboard in Resources */,
 				3C8FF7B720A3C9F6009EF837 /* RoomSummaryCell.xib in Resources */,
@@ -833,7 +811,6 @@
 				3C1E0B4B2092C83500A9D4BB /* SearchViewController.swift in Sources */,
 				3C01173020852EF7007C73D8 /* AppDelegate.swift in Sources */,
 				3CD2E7D520868F41002252CC /* HomeViewController.swift in Sources */,
-				3C8FF7AD20A362AA009EF837 /* HolderRegistrationView.swift in Sources */,
 				3C8FF79920A2846A009EF837 /* RoomDetailViewController.swift in Sources */,
 				E5E9DC6720B33B8D004F3A6D /* AddRentalContainerViewController.swift in Sources */,
 				3C8FF7A620A34B5B009EF837 /* SplashLoadingView.swift in Sources */,
@@ -846,10 +823,9 @@
 				3C0DD8F92099F7E400D60176 /* CXStoryboardLoadable.swift in Sources */,
 				3C2F2FE72099FCF4002FA8FA /* LocationInputView.swift in Sources */,
 				3CEF33382086D5AF005281BE /* HomeViewModel.swift in Sources */,
-				3C8FF7B320A36826009EF837 /* HolderPublishView.swift in Sources */,
 				4DD0A74220B1D22A00674AAD /* Date+Extension.swift in Sources */,
 				3C8FF79E20A286AC009EF837 /* RoomGalleryCell.swift in Sources */,
-				3C8FF7A420A346AC009EF837 /* HolderViewController.swift in Sources */,
+				3C8FF7A420A346AC009EF837 /* LandlordViewController.swift in Sources */,
 				E5E9DC6320B338DB004F3A6D /* AddRentalImagesViewController.swift in Sources */,
 				3CEF33332086D3A7005281BE /* PopularPlacesAPI.swift in Sources */,
 				3CEF332E2086CD38005281BE /* PopularPlaceCell.swift in Sources */,
