@@ -56,6 +56,8 @@
 		E5E9DC6520B33940004F3A6D /* AddRentalPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9DC6420B33940004F3A6D /* AddRentalPageViewController.swift */; };
 		E5E9DC6720B33B8D004F3A6D /* AddRentalContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9DC6620B33B8D004F3A6D /* AddRentalContainerViewController.swift */; };
 		E5E9DC6920B33CE2004F3A6D /* INUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9DC6820B33CE2004F3A6D /* INUtilities.swift */; };
+		E5E9DC7020B363A2004F3A6D /* RoomTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9DC6F20B363A2004F3A6D /* RoomTypeCell.swift */; };
+		E5E9DC7320B36542004F3A6D /* RentalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9DC7220B36542004F3A6D /* RentalType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +141,8 @@
 		E5E9DC6420B33940004F3A6D /* AddRentalPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRentalPageViewController.swift; sourceTree = "<group>"; };
 		E5E9DC6620B33B8D004F3A6D /* AddRentalContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRentalContainerViewController.swift; sourceTree = "<group>"; };
 		E5E9DC6820B33CE2004F3A6D /* INUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INUtilities.swift; sourceTree = "<group>"; };
+		E5E9DC6F20B363A2004F3A6D /* RoomTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTypeCell.swift; sourceTree = "<group>"; };
+		E5E9DC7220B36542004F3A6D /* RentalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +198,7 @@
 		3C01172E20852EF7007C73D8 /* iNesti */ = {
 			isa = PBXGroup;
 			children = (
+				E5E9DC7120B36527004F3A6D /* Models */,
 				4DD0A74320B2902000674AAD /* Features */,
 				4DD0A73B20B1D18600674AAD /* Utlities */,
 				4DD0A73820B1D0C800674AAD /* Managers */,
@@ -444,6 +449,7 @@
 		4DD0A74420B2904100674AAD /* New Rental */ = {
 			isa = PBXGroup;
 			children = (
+				E5E9DC6E20B36378004F3A6D /* Views */,
 				4DD0A74520B2906200674AAD /* NewRental.storyboard */,
 				E5E9DC6220B338DB004F3A6D /* AddRentalImagesViewController.swift */,
 				E5E9DC6020B338BF004F3A6D /* AddRentalTagEntryViewController.swift */,
@@ -476,6 +482,22 @@
 				C576E4A9608C13AA5525141A /* Pods-iNestiUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E5E9DC6E20B36378004F3A6D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E5E9DC6F20B363A2004F3A6D /* RoomTypeCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E5E9DC7120B36527004F3A6D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E5E9DC7220B36542004F3A6D /* RentalType.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -813,6 +835,7 @@
 				3CD2E7D520868F41002252CC /* HomeViewController.swift in Sources */,
 				3C8FF79920A2846A009EF837 /* RoomDetailViewController.swift in Sources */,
 				E5E9DC6720B33B8D004F3A6D /* AddRentalContainerViewController.swift in Sources */,
+				E5E9DC7020B363A2004F3A6D /* RoomTypeCell.swift in Sources */,
 				3C8FF7A620A34B5B009EF837 /* SplashLoadingView.swift in Sources */,
 				3C8FF7A020A28D2E009EF837 /* UIColor+Extension.swift in Sources */,
 				E5E9DC6920B33CE2004F3A6D /* INUtilities.swift in Sources */,
@@ -833,6 +856,7 @@
 				E5E9DC5F20B338AB004F3A6D /* AddRentalTypeEntryViewController.swift in Sources */,
 				E5E9DC6120B338BF004F3A6D /* AddRentalTagEntryViewController.swift in Sources */,
 				3C2F2FEC209A0C7D002FA8FA /* LocationInputViewModel.swift in Sources */,
+				E5E9DC7320B36542004F3A6D /* RentalType.swift in Sources */,
 				4DD0A73D20B1D1AB00674AAD /* INConstants.swift in Sources */,
 				4DD0A73A20B1D0E900674AAD /* INAPIManager.swift in Sources */,
 				3CD2E7D820868F54002252CC /* BaseViewController.swift in Sources */,

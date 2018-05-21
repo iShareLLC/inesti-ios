@@ -10,10 +10,16 @@ import UIKit
 
 class AddRentalTypeEntryViewController: BaseViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var actionButton: UIButton!
+    
+    var itemCount = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +27,37 @@ class AddRentalTypeEntryViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    //MARK: Action Handle
+    
+    @IBAction func handleAddRoomButton(sender: UIButton) {
+        itemCount += 1
+        tableView.beginUpdates()
+        tableView.insertRows(at: [IndexPath(item: 0, section: 0)], with: UITableViewRowAnimation.bottom)
+        tableView.endUpdates()
     }
-    */
+}
 
+extension AddRentalTypeEntryViewController: UITableViewDelegate {
+    
+}
+
+extension AddRentalTypeEntryViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itemCount
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RoomTypeCell", for: indexPath)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 185
+    }
 }
