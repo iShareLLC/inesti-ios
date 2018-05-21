@@ -17,7 +17,34 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitty_body" translatesAutoresizingMaskIntoConstraints="NO" id="A2c-9t-mjS">
+                                <rect key="frame" x="128.5" y="266.5" width="118" height="74"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="z1" translatesAutoresizingMaskIntoConstraints="NO" id="Zkc-W6-VdY">
+                                <rect key="frame" x="205" y="279.5" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="YFV-PJ-lT3"/>
+                                    <constraint firstAttribute="width" constant="16" id="wcz-zY-f32"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="z2" translatesAutoresizingMaskIntoConstraints="NO" id="Miq-Vf-fGU">
+                                <rect key="frame" x="221" y="268.5" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="9gD-qM-BJ9"/>
+                                    <constraint firstAttribute="height" constant="16" id="QW4-VD-hmz"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.79607843137254897" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zkc-W6-VdY" firstAttribute="top" secondItem="Miq-Vf-fGU" secondAttribute="bottom" constant="-5" id="2eW-cB-0AR"/>
+                            <constraint firstItem="Zkc-W6-VdY" firstAttribute="centerX" secondItem="A2c-9t-mjS" secondAttribute="centerX" constant="25.5" id="62o-GG-1c4"/>
+                            <constraint firstItem="A2c-9t-mjS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OHz-i8-A4f"/>
+                            <constraint firstItem="A2c-9t-mjS" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-40" id="TUo-OH-bRg"/>
+                            <constraint firstItem="Miq-Vf-fGU" firstAttribute="leading" secondItem="Zkc-W6-VdY" secondAttribute="trailing" id="eJs-R1-c4U"/>
+                            <constraint firstItem="Zkc-W6-VdY" firstAttribute="centerY" secondItem="A2c-9t-mjS" secondAttribute="centerY" constant="-16" id="q1O-Ok-OVE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -26,4 +53,9 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="kitty_body" width="118" height="74"/>
+        <image name="z1" width="14" height="15"/>
+        <image name="z2" width="14" height="14"/>
+    </resources>
 </document>

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		125FE57B9B278B889C174BD8 /* Pods_iNestiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAEC5AFD372BA52FE8AC8ED /* Pods_iNestiUITests.framework */; };
 		3C01173020852EF7007C73D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C01172F20852EF7007C73D8 /* AppDelegate.swift */; };
 		3C01173520852EF7007C73D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C01173320852EF7007C73D8 /* Main.storyboard */; };
 		3C01173720852EF8007C73D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C01173620852EF8007C73D8 /* Assets.xcassets */; };
@@ -51,7 +50,6 @@
 		4DD0A74220B1D22A00674AAD /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0A74120B1D22A00674AAD /* Date+Extension.swift */; };
 		5A9F17E378D7B0B1B167594C /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F16F3AE303C21B2BC3552 /* UIFont+Extension.swift */; };
 		8CCA2A1F8BCFF62C74C81657 /* Pods_iNesti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B15A91E27453B5D78CE3AAB /* Pods_iNesti.framework */; };
-		9B67F31FD563B1304F6FD8A0 /* Pods_iNestiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F5BAE53357EF57B92A63F6 /* Pods_iNestiTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +83,6 @@
 		3C01175120852EF8007C73D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C0DD8F82099F7E400D60176 /* CXStoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXStoryboardLoadable.swift; sourceTree = "<group>"; };
 		3C1E0B4A2092C83500A9D4BB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		3C1E0B4C2092CD1A00A9D4BB /* CXPopupKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CXPopupKit.framework; path = Carthage/Build/iOS/CXPopupKit.framework; sourceTree = "<group>"; };
-		3C1E0B4F2092CD6D00A9D4BB /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		3C2F2FE62099FCF4002FA8FA /* LocationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputView.swift; sourceTree = "<group>"; };
 		3C2F2FE82099FDEA002FA8FA /* LocationInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationInputView.xib; sourceTree = "<group>"; };
 		3C2F2FEB209A0C7D002FA8FA /* LocationInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputViewModel.swift; sourceTree = "<group>"; };
@@ -115,7 +111,6 @@
 		3CD2E7F420869ACD002252CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CD2E7F520869AD9002252CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CD2E7F620869B5A002252CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
-		3CEC988920A607F40013BF8F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		3CEF332D2086CD38005281BE /* PopularPlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPlaceCell.swift; sourceTree = "<group>"; };
 		3CEF332F2086CD63005281BE /* PopularPlaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularPlaceCell.xib; sourceTree = "<group>"; };
 		3CEF33322086D3A7005281BE /* PopularPlacesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPlacesAPI.swift; sourceTree = "<group>"; };
@@ -129,10 +124,8 @@
 		4DD0A74120B1D22A00674AAD /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		541B821C0B7CE12A40DCE40D /* Pods-iNestiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiUITests/Pods-iNestiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A9F16F3AE303C21B2BC3552 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
-		71F5BAE53357EF57B92A63F6 /* Pods_iNestiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iNestiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C576E4A9608C13AA5525141A /* Pods-iNestiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiUITests/Pods-iNestiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C60C1556F08CDAB711EF22C7 /* Pods-iNestiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiTests/Pods-iNestiTests.release.xcconfig"; sourceTree = "<group>"; };
-		CDAEC5AFD372BA52FE8AC8ED /* Pods_iNestiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iNestiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D20F74BB0A29983A64ABDA31 /* Pods-iNesti.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNesti.release.xcconfig"; path = "Pods/Target Support Files/Pods-iNesti/Pods-iNesti.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,7 +142,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B67F31FD563B1304F6FD8A0 /* Pods_iNestiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +149,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				125FE57B9B278B889C174BD8 /* Pods_iNestiUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +180,6 @@
 		3C01172E20852EF7007C73D8 /* iNesti */ = {
 			isa = PBXGroup;
 			children = (
-				4DD0A73E20B1D1E800674AAD /* Extensions */,
 				4DD0A73B20B1D18600674AAD /* Utlities */,
 				4DD0A73820B1D0C800674AAD /* Managers */,
 				3C8FF7A220A3469F009EF837 /* Holder */,
@@ -313,7 +303,6 @@
 		3CD2E7D620868F4E002252CC /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				3CEC988920A607F40013BF8F /* R.generated.swift */,
 				3CA13BFC209D4EA100479F71 /* Utils */,
 				3CD2E7EC208698F4002252CC /* Extensions */,
 				3CD2E7D720868F54002252CC /* BaseViewController.swift */,
@@ -352,6 +341,8 @@
 		3CD2E7EC208698F4002252CC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4DD0A74120B1D22A00674AAD /* Date+Extension.swift */,
+				4DD0A73F20B1D1FA00674AAD /* String+Extension.swift */,
 				3CD2E7ED20869905002252CC /* String+Localization.swift */,
 				3CEF33392086D987005281BE /* CALayer+Sketch.swift */,
 				3C0DD8F82099F7E400D60176 /* CXStoryboardLoadable.swift */,
@@ -438,23 +429,10 @@
 			path = Utlities;
 			sourceTree = "<group>";
 		};
-		4DD0A73E20B1D1E800674AAD /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				4DD0A73F20B1D1FA00674AAD /* String+Extension.swift */,
-				4DD0A74120B1D22A00674AAD /* Date+Extension.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		C4F438EC47C229029828DCD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3C1E0B4F2092CD6D00A9D4BB /* SnapKit.framework */,
-				3C1E0B4C2092CD1A00A9D4BB /* CXPopupKit.framework */,
 				3B15A91E27453B5D78CE3AAB /* Pods_iNesti.framework */,
-				71F5BAE53357EF57B92A63F6 /* Pods_iNestiTests.framework */,
-				CDAEC5AFD372BA52FE8AC8ED /* Pods_iNestiUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
