@@ -17,7 +17,7 @@ target 'iNesti' do
   pod 'TTRangeSlider'
   pod 'DZNEmptyDataSet'
   pod 'ExpandableLabel'
-  pod 'R.swift'
+  pod 'KMPlaceholderTextView'
 
   target 'iNestiTests' do
     inherit! :search_paths

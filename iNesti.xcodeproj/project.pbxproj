@@ -48,6 +48,7 @@
 		4DD0A73D20B1D1AB00674AAD /* INConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0A73C20B1D1AB00674AAD /* INConstants.swift */; };
 		4DD0A74020B1D1FA00674AAD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0A73F20B1D1FA00674AAD /* String+Extension.swift */; };
 		4DD0A74220B1D22A00674AAD /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0A74120B1D22A00674AAD /* Date+Extension.swift */; };
+		4DD0A74620B2906200674AAD /* NewRental.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DD0A74520B2906200674AAD /* NewRental.storyboard */; };
 		5A9F17E378D7B0B1B167594C /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F16F3AE303C21B2BC3552 /* UIFont+Extension.swift */; };
 		8CCA2A1F8BCFF62C74C81657 /* Pods_iNesti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B15A91E27453B5D78CE3AAB /* Pods_iNesti.framework */; };
 /* End PBXBuildFile section */
@@ -122,6 +123,7 @@
 		4DD0A73C20B1D1AB00674AAD /* INConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INConstants.swift; sourceTree = "<group>"; };
 		4DD0A73F20B1D1FA00674AAD /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		4DD0A74120B1D22A00674AAD /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		4DD0A74520B2906200674AAD /* NewRental.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewRental.storyboard; sourceTree = "<group>"; };
 		541B821C0B7CE12A40DCE40D /* Pods-iNestiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiUITests/Pods-iNestiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A9F16F3AE303C21B2BC3552 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		C576E4A9608C13AA5525141A /* Pods-iNestiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiUITests/Pods-iNestiUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		3C01172E20852EF7007C73D8 /* iNesti */ = {
 			isa = PBXGroup;
 			children = (
+				4DD0A74320B2902000674AAD /* Features */,
 				4DD0A73B20B1D18600674AAD /* Utlities */,
 				4DD0A73820B1D0C800674AAD /* Managers */,
 				3C8FF7A220A3469F009EF837 /* Landlord */,
@@ -429,6 +432,22 @@
 			path = Utlities;
 			sourceTree = "<group>";
 		};
+		4DD0A74320B2902000674AAD /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				4DD0A74420B2904100674AAD /* New Rental */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		4DD0A74420B2904100674AAD /* New Rental */ = {
+			isa = PBXGroup;
+			children = (
+				4DD0A74520B2906200674AAD /* NewRental.storyboard */,
+			);
+			path = "New Rental";
+			sourceTree = "<group>";
+		};
 		C4F438EC47C229029828DCD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -570,6 +589,7 @@
 				3C01173520852EF7007C73D8 /* Main.storyboard in Resources */,
 				3C8FF7B120A3681A009EF837 /* HolderPublishView.xib in Resources */,
 				3CEF33302086CD63005281BE /* PopularPlaceCell.xib in Resources */,
+				4DD0A74620B2906200674AAD /* NewRental.storyboard in Resources */,
 				3C8FF7B720A3C9F6009EF837 /* RoomSummaryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
