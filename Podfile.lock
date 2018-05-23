@@ -3,6 +3,7 @@ PODS:
   - AlamofireImage (3.3.1):
     - Alamofire (~> 4.5)
   - Differentiator (3.0.2)
+  - DropDown (2.3.2)
   - DZNEmptyDataSet (1.8.1)
   - ExpandableLabel (0.4.0)
   - KMPlaceholderTextView (1.3.0)
@@ -33,6 +34,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (= 4.7.2)
   - AlamofireImage
+  - DropDown
   - DZNEmptyDataSet
   - ExpandableLabel
   - KMPlaceholderTextView
@@ -46,10 +48,31 @@ DEPENDENCIES:
   - TTGTagCollectionView
   - TTRangeSlider
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - Differentiator
+    - DropDown
+    - DZNEmptyDataSet
+    - ExpandableLabel
+    - KMPlaceholderTextView
+    - M13Checkbox
+    - Moya
+    - Result
+    - Reusable
+    - RxCocoa
+    - RxDataSources
+    - RxSwift
+    - SVProgressHUD
+    - TTGTagCollectionView
+    - TTRangeSlider
+
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
+  DropDown: 7f87abecc28f9b4edad810fe1211c5c018c257e5
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   ExpandableLabel: 5f5f61fbf71433000cd7c3290617e6fcccb72c86
   KMPlaceholderTextView: 2bbcd19a273648a80a61e1e48f9743a24d8930e3
@@ -64,6 +87,6 @@ SPEC CHECKSUMS:
   TTGTagCollectionView: 958f20b946dee92a8ba20dc37d10a06737641ae9
   TTRangeSlider: 78188bea83f6471a06f75adbc88da5e990baeafe
 
-PODFILE CHECKSUM: d3bacdbe25eafa8f6c6ecef33d026f62b2d96c56
+PODFILE CHECKSUM: e0d9a1bebf454e51014339150dcf72526350879c
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.2

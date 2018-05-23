@@ -45,8 +45,9 @@ class AddRentalContainerViewController: BaseViewController {
         if addRentalPageController.getCurrentIndex() == 0 {
             self.dismiss(animated: true, completion: nil)
         } else {
-            addRentalPageController.navigateToPreviousPage { (index) in
-                DLog("index: \(index)")
+            addRentalPageController.navigateToPreviousPage { [weak self] (index) in
+                guard let strongSelf = self else { return }
+                strongSelf.checkNextButtonEnabled(index: index)
             }
         }
     }
@@ -57,16 +58,18 @@ class AddRentalContainerViewController: BaseViewController {
     
     @IBAction func handleNextButton(sender: UIButton) {
         addRentalPageController.navigateToNextPage { [weak self] (index) in
-            DLog("index: \(index)")
             guard let strongSelf = self else { return }
-            
-            if index == strongSelf.addRentalPageController.numberOfPages() - 1 {
-                strongSelf.nextButton.isUserInteractionEnabled = false
-                strongSelf.nextButton.alpha = 0.3
-            } else {
-                strongSelf.nextButton.isUserInteractionEnabled = true
-                strongSelf.nextButton.alpha = 1
-            }
+            strongSelf.checkNextButtonEnabled(index: index)
+        }
+    }
+    
+    private func checkNextButtonEnabled(index: Int) {
+        if index == addRentalPageController.numberOfPages() - 1 {
+            nextButton.isUserInteractionEnabled = false
+            nextButton.alpha = 0.3
+        } else {
+            nextButton.isUserInteractionEnabled = true
+            nextButton.alpha = 1
         }
     }
 }
