@@ -13,6 +13,7 @@ class AddRentalContainerViewController: BaseViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     let addRentalPageEmbedId = "AddRentalPageEmbed"
     weak var addRentalPageController: AddRentalPageViewController!
@@ -53,24 +54,49 @@ class AddRentalContainerViewController: BaseViewController {
     }
 
     @IBAction func handleSaveButton(sender: UIButton) {
-        
+        save()
     }
     
     @IBAction func handleNextButton(sender: UIButton) {
-        addRentalPageController.navigateToNextPage { [weak self] (index) in
-            guard let strongSelf = self else { return }
-            strongSelf.checkNextButtonEnabled(index: index)
+        
+        if addRentalPageController.getCurrentIndex() == addRentalPageController.numberOfPages() - 1 {
+            //Last page
+            //TODO: Publish
+            publish()
+            
+        } else {
+            addRentalPageController.navigateToNextPage { [weak self] (index) in
+                guard let strongSelf = self else { return }
+                strongSelf.checkNextButtonEnabled(index: index)
+            }
         }
+        
     }
     
     private func checkNextButtonEnabled(index: Int) {
+//        if index == addRentalPageController.numberOfPages() - 1 {
+//            nextButton.isUserInteractionEnabled = false
+//            nextButton.alpha = 0.3
+//        } else {
+//            nextButton.isUserInteractionEnabled = true
+//            nextButton.alpha = 1
+//        }
+        
+        backButton.isHidden = (index == 0)
+        
         if index == addRentalPageController.numberOfPages() - 1 {
-            nextButton.isUserInteractionEnabled = false
-            nextButton.alpha = 0.3
+            nextButton.setTitle("发布", for: .normal)
         } else {
-            nextButton.isUserInteractionEnabled = true
-            nextButton.alpha = 1
+            nextButton.setTitle("下一页", for: .normal)
         }
+    }
+    
+    private func publish() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    private func save() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 

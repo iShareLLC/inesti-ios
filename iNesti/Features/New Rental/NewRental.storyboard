@@ -29,9 +29,12 @@
                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="currentPageIndicatorTintColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bx-PY-UrG">
-                                <rect key="frame" x="16" y="30" width="40" height="37"/>
-                                <state key="normal" title="BACK"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bx-PY-UrG">
+                                <rect key="frame" x="16" y="30" width="44" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="bAs-Xu-mZP"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
                                 <connections>
                                     <action selector="handleBackButtonWithSender:" destination="Llh-e2-NEB" eventType="touchUpInside" id="3r5-u1-8QX"/>
                                 </connections>
@@ -92,6 +95,7 @@
                         <viewLayoutGuide key="safeArea" id="gN5-Bi-tqS"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="5bx-PY-UrG" id="TzP-6j-Wgz"/>
                         <outlet property="nextButton" destination="c2j-0T-aUf" id="Ynz-nm-zu8"/>
                         <outlet property="pageControl" destination="Kn9-Jf-Kiw" id="oui-n1-Xt7"/>
                         <outlet property="saveButton" destination="YUu-rH-14k" id="9gh-98-NFD"/>
@@ -661,5 +665,6 @@
     </scenes>
     <resources>
         <image name="add" width="18" height="18"/>
+        <image name="back" width="21" height="14"/>
     </resources>
 </document>

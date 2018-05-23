@@ -507,7 +507,7 @@
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
-                                                <segue destination="NAW-jY-wmf" kind="presentation" id="zBc-yk-xOj"/>
+                                                <action selector="handleActionButtonWithSender:" destination="iYv-as-ix5" eventType="touchUpInside" id="lMU-a4-ZMk"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -518,7 +518,7 @@
                                         <constraint firstItem="a22-BS-J0k" firstAttribute="leading" secondItem="iYv-as-ix5" secondAttribute="leading" constant="16" id="inK-0R-WQh"/>
                                     </constraints>
                                     <connections>
-                                        <outlet property="actionButton" destination="a22-BS-J0k" id="gLi-vb-u1M"/>
+                                        <outlet property="actionButton" destination="a22-BS-J0k" id="U4i-MM-cRV"/>
                                     </connections>
                                 </view>
                                 <prototypes>
@@ -572,7 +572,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1100/月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCy-0k-9ax">
-                                                    <rect key="frame" x="31" y="25" width="77" height="25"/>
+                                                    <rect key="frame" x="31" y="25" width="77" height="24.666666666666671"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -600,7 +600,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LandlordNoItemCell" rowHeight="200" id="pPp-mx-aH7">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LandlordNoItemCell" rowHeight="200" id="pPp-mx-aH7" customClass="LandlordNoItemCell" customModule="iNesti" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="348" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pPp-mx-aH7" id="lMB-LK-yJ6">
@@ -620,6 +620,9 @@
                                                 <constraint firstItem="lBh-ue-cI8" firstAttribute="leading" secondItem="lMB-LK-yJ6" secondAttribute="leading" constant="35" id="f51-JW-qen"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="messageLabel" destination="lBh-ue-cI8" id="M5y-Cx-cQs"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -651,8 +654,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="房主页面" image="user" selectedImage="user-selected" id="DRg-2C-DS1"/>
                     <connections>
+                        <outlet property="footerView" destination="iYv-as-ix5" id="7GA-4A-ind"/>
                         <outlet property="profileButton" destination="sxg-JX-I83" id="hkM-xX-WO3"/>
                         <outlet property="tableView" destination="w1N-Nf-Zho" id="ScP-8I-ZCV"/>
+                        <segue destination="NAW-jY-wmf" kind="presentation" identifier="NewRentalSegue" id="89v-RA-BRr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVb-xP-rRp" userLabel="First Responder" sceneMemberID="firstResponder"/>

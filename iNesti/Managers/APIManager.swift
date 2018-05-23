@@ -1,5 +1,5 @@
 //
-//  INAPIManager.swift
+//  APIManager.swift
 //  iNesti
 //
 //  Created by Zian Chen on 5/20/18.
@@ -9,9 +9,9 @@
 import UIKit
 import Alamofire
 
-class INAPIManager: NSObject {
+class APIManager: NSObject {
     
-    static let shared = INAPIManager()
+    static let shared = APIManager()
     
     enum ServerKey: String {
         case data = "data"
