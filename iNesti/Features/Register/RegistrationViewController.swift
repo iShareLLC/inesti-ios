@@ -18,9 +18,9 @@ class RegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //wechatCheckbox.addTarget(self, action: #selector(handleCheckbox(sender:)), for: .valueChanged)
-        //emailCheckbox.addTarget(self, action: #selector(handleCheckbox(sender:)), for: .valueChanged)
-        //phoneCheckbox.addTarget(self, action: #selector(handleCheckbox(sender:)), for: .valueChanged)
+        wechatCheckbox.addTarget(self, action: #selector(handleCheckbox(sender:)), for: .valueChanged)
+        emailCheckbox.addTarget(self, action: #selector(handleCheckbox(sender:)), for: .valueChanged)
+        phoneCheckbox.addTarget(self, action: #selector(handleCheckbox(sender:)), for: .valueChanged)
         // Do any additional setup after loading the view.
     }
 
@@ -39,13 +39,13 @@ class RegistrationViewController: UIViewController {
     
     @objc func handleCheckbox(sender: M13Checkbox) {
         if sender == wechatCheckbox {
-            DLog("Wechat checkbox")
+            DLog("Wechat checkbox checked: \(sender.checkState.rawValue)")
             
         } else if sender == emailCheckbox {
-            DLog("Email checkbox")
+            DLog("Email checkbox checked: \(sender.checkState.rawValue)")
             
         } else if sender == phoneCheckbox {
-            DLog("Phone checkbox")
+            DLog("Phone checkbox checked: \(sender.checkState.rawValue)")
             
         }
     }
