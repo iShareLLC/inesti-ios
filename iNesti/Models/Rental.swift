@@ -14,6 +14,7 @@ struct Rental {
     var location: String?
     var price: Int?
     var duration: RentalDuration?
+    var imageUrl: String?
 }
 
 enum RentalDuration {

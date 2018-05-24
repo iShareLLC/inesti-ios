@@ -22,6 +22,7 @@ class RentalDataStore: NSObject {
             unpublishRental.append(rental)
         }
         //TODO: API ADD
+        NotificationCenter.default.post(name: .DataStoreDidUpdate, object: nil)
     }
     
     func removeRental(id: Int, state: RentalPublishState) {
@@ -32,8 +33,8 @@ class RentalDataStore: NSObject {
             } else {
                 unpublishRental.remove(at: index)
             }
+            NotificationCenter.default.post(name: .DataStoreDidUpdate, object: nil)
         }
-        
         //TODO: API REMOVE
     }
     

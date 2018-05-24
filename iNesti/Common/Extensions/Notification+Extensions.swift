@@ -11,4 +11,7 @@ import Foundation
 public extension Notification.Name {
     public static let UserDidLogin = Notification.Name(rawValue: "com.inesti.users.didLogin")
     public static let UserDidLogout = Notification.Name(rawValue: "com.inesti.users.didLogout")
+    
+    public static let DataStoreDidUpdate = Notification.Name(rawValue: "com.inesti.dataStore.didUpdate")
+    
 }

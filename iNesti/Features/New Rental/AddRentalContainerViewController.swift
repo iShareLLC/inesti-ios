@@ -87,15 +87,23 @@ class AddRentalContainerViewController: BaseViewController {
         if index == addRentalPageController.numberOfPages() - 1 {
             nextButton.setTitle("发布", for: .normal)
         } else {
-            nextButton.setTitle("下一页", for: .normal)
+            nextButton.setTitle("下一步", for: .normal)
         }
     }
     
     private func publish() {
+        
+        let rental = Rental(id: 0, title: "hello", location: nil, price: nil, duration: nil, imageUrl: nil)
+        RentalDataStore.shared.addRental(rental: rental, state: .published)
+        
         self.dismiss(animated: true, completion: nil)
     }
     
     private func save() {
+        
+        //let rental = Rental(id: 0, title: "hello", location: nil, price: nil, duration: nil, imageUrl: nil)
+        //RentalDataStore.shared.addRental(rental: rental, state: .unpublish)
+        
         self.dismiss(animated: true, completion: nil)
     }
 }

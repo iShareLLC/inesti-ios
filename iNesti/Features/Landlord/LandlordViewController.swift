@@ -19,7 +19,7 @@ class LandlordViewController: BaseViewController {
     @IBOutlet weak var footerView: LandlordPublishFooterView!
 
     //var dataSource = ["1", "2", "3"]
-    var dataSource = [String]()
+    var dataSource = RentalDataStore.shared.getRentals(state: .published)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +28,10 @@ class LandlordViewController: BaseViewController {
         
         NotificationCenter.default.addObserver(forName: .UserDidLogin, object: nil, queue: nil) {[weak self] _ in
             self?.footerView.setType(viewType: .newRental)
-            self?.dataSource = ["1"]
-            //TODO: Fetch user listing
+        }
+        
+        NotificationCenter.default.addObserver(forName: .DataStoreDidUpdate, object: nil, queue: nil) {[weak self] _ in
+            self?.dataSource = RentalDataStore.shared.getRentals(state: .published)
             self?.tableView.reloadData()
         }
     }
