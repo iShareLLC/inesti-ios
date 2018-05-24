@@ -12,6 +12,7 @@ import DZNEmptyDataSet
 class LandlordViewController: BaseViewController {
     
     let kNewRentalSegue = "NewRentalSegue"
+    let kRegistrationSegue = "RegistrationSegue"
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profileButton: UIButton!
@@ -27,7 +28,7 @@ class LandlordViewController: BaseViewController {
         
         NotificationCenter.default.addObserver(forName: .UserDidLogin, object: nil, queue: nil) {[weak self] _ in
             self?.footerView.setType(viewType: .newRental)
-            
+            self?.dataSource = ["1"]
             //TODO: Fetch user listing
             self?.tableView.reloadData()
         }
@@ -80,9 +81,8 @@ extension LandlordViewController: UITableViewDataSource {
 extension LandlordViewController: LandlordPublishFooterViewDelegate {
     
     func footerActionButtonHandler(viewType: LandlordPublishFooterView.FooterViewType) {
-        DLog("Footer action type: \(viewType)")
         if viewType == .registration {
-            
+            performSegue(withIdentifier: kRegistrationSegue, sender: nil)
         } else {
             performSegue(withIdentifier: kNewRentalSegue, sender: nil)
         }

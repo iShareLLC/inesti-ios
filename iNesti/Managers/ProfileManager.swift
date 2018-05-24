@@ -13,7 +13,7 @@ class ProfileManager: NSObject {
     
     static let shared = ProfileManager()
     
-    private var isLoggedIn: Bool = true
+    private var isLoggedIn: Bool = false
     
     public func getIsLoggedIn() -> Bool {
         return isLoggedIn

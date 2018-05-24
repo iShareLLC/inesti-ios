@@ -658,6 +658,7 @@
                         <outlet property="profileButton" destination="sxg-JX-I83" id="hkM-xX-WO3"/>
                         <outlet property="tableView" destination="w1N-Nf-Zho" id="ScP-8I-ZCV"/>
                         <segue destination="NAW-jY-wmf" kind="presentation" identifier="NewRentalSegue" id="89v-RA-BRr"/>
+                        <segue destination="HGO-HX-anJ" kind="presentation" identifier="RegistrationSegue" id="lz9-ga-xUW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVb-xP-rRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -671,6 +672,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S0x-Kv-gce" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="505" y="634"/>
+        </scene>
+        <!--Registration-->
+        <scene sceneID="bSU-l8-GmH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Registration" id="HGO-HX-anJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zjy-JR-fDS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="519" y="695"/>
         </scene>
         <!--Nest Tab Bar Controller-->
         <scene sceneID="odX-X7-Gdd">
