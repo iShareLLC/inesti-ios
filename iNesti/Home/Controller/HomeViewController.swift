@@ -16,15 +16,22 @@ class HomeViewController: BaseViewController {
     @IBOutlet private weak var searchButton: UIButton!
     @IBOutlet private weak var tableView: UITableView!
 
-    private var dataSource: RxTableViewSectionedReloadDataSource<SectionOfPopularPlace>!
+    private var dataSource = RentalDataStore.shared.getPopularRentals()
     private let homeViewModel = HomeViewModel()
     private var isInitialLoading = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let rental = Rental(id: 0, title: "hello", location: nil, price: nil, duration: nil, imageUrl: nil)
+        RentalDataStore.shared.addPopularRental(rental: rental)
+        RentalDataStore.shared.addPopularRental(rental: rental)
+        
+        dataSource = RentalDataStore.shared.getPopularRentals()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         setupSearchButton()
-        setupCollectionView()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -54,30 +61,30 @@ class HomeViewController: BaseViewController {
             })
             .disposed(by: disposeBag)
     }
+}
 
-    private func setupCollectionView() {
-        tableView.register(cellType: PopularPlaceCell.self)
-//        tableView.rx.setDelegate(self).disposed(by: disposeBag)
+extension HomeViewController: UITableViewDataSource {
+    
+}
 
-        dataSource = RxTableViewSectionedReloadDataSource<SectionOfPopularPlace>(configureCell: { _, tv, ip, item in
-            let cell = tv.dequeueReusableCell(for: ip, cellType: PopularPlaceCell.self)
-            cell.setup(with: item)
-            cell.addShadow()
-            return cell
-        })
-
-        homeViewModel.popularPlaces
-            .asObservable()
-            .observeOn(MainScheduler.instance)
-            .bind(to: tableView.rx.items(dataSource: dataSource))
-            .disposed(by: disposeBag)
-
-        tableView.rx.modelSelected(PopularPlace.self)
-            .subscribe(onNext: { [weak self] _ in
-                if let roomDetailNav = self?.storyboard?.instantiateViewController(withIdentifier: "RoomDetailNav") {
-                    self?.present(roomDetailNav, animated: true)
-                }
-            })
-            .disposed(by: disposeBag)
+extension HomeViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSource.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: PopularRentalCell = tableView.dequeueReusableCell(withIdentifier: "PopularRentalCell", for: indexPath) as! PopularRentalCell
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 320
     }
 }
+
+

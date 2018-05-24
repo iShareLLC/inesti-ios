@@ -14,6 +14,7 @@ class RentalDataStore: NSObject {
     
     private var publishedRental: [Rental] = [Rental]()
     private var unpublishRental: [Rental] = [Rental]()
+    private var popularRental: [Rental] = [Rental]()
     
     func addRental(rental: Rental, state: RentalPublishState) {
         if (state == .published) {
@@ -40,6 +41,15 @@ class RentalDataStore: NSObject {
     
     func getRentals(state: RentalPublishState) -> [Rental] {
         return (state == .published) ? publishedRental : unpublishRental
+    }
+    
+    func getPopularRentals() -> [Rental] {
+        return popularRental
+    }
+    
+    //TODO: TEST ONLY
+    func addPopularRental(rental: Rental) {
+        popularRental.append(rental)
     }
 }
 

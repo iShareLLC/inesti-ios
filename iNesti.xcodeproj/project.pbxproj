@@ -52,6 +52,8 @@
 		4DD0A74620B2906200674AAD /* NewRental.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DD0A74520B2906200674AAD /* NewRental.storyboard */; };
 		4DFB187B20B66E3A0091C1B0 /* RentalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB187A20B66E3A0091C1B0 /* RentalDataStore.swift */; };
 		4DFB187D20B66E6A0091C1B0 /* Rental.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB187C20B66E6A0091C1B0 /* Rental.swift */; };
+		4DFB188020B6761C0091C1B0 /* PopularRentalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB187F20B6761C0091C1B0 /* PopularRentalViewController.swift */; };
+		4DFB188320B678EA0091C1B0 /* PopularRentalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB188220B678EA0091C1B0 /* PopularRentalCell.swift */; };
 		5A9F17E378D7B0B1B167594C /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F16F3AE303C21B2BC3552 /* UIFont+Extension.swift */; };
 		6705C8A4DD572082F2424F92 /* Pods_iNestiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DBC36C9315A56DFDBFCC6A7 /* Pods_iNestiTests.framework */; };
 		8CCA2A1F8BCFF62C74C81657 /* Pods_iNesti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B15A91E27453B5D78CE3AAB /* Pods_iNesti.framework */; };
@@ -143,6 +145,8 @@
 		4DD0A74520B2906200674AAD /* NewRental.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewRental.storyboard; sourceTree = "<group>"; };
 		4DFB187A20B66E3A0091C1B0 /* RentalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalDataStore.swift; sourceTree = "<group>"; };
 		4DFB187C20B66E6A0091C1B0 /* Rental.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rental.swift; sourceTree = "<group>"; };
+		4DFB187F20B6761C0091C1B0 /* PopularRentalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularRentalViewController.swift; sourceTree = "<group>"; };
+		4DFB188220B678EA0091C1B0 /* PopularRentalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularRentalCell.swift; sourceTree = "<group>"; };
 		541B821C0B7CE12A40DCE40D /* Pods-iNestiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiUITests/Pods-iNestiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A9F16F3AE303C21B2BC3552 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		9DBC36C9315A56DFDBFCC6A7 /* Pods_iNestiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iNestiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -412,7 +416,6 @@
 		3CEF332B2086CB72005281BE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3CEF33342086D44A005281BE /* PopularPlace.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 		4DD0A74320B2902000674AAD /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				4DFB187E20B6757F0091C1B0 /* Popular */,
 				4D3F1E6F20B661F6006FE7AD /* Register */,
 				3C8FF7A220A3469F009EF837 /* Landlord */,
 				4DD0A74420B2904100674AAD /* New Rental */,
@@ -493,6 +497,23 @@
 				E5E9DC6620B33B8D004F3A6D /* AddRentalContainerViewController.swift */,
 			);
 			path = "New Rental";
+			sourceTree = "<group>";
+		};
+		4DFB187E20B6757F0091C1B0 /* Popular */ = {
+			isa = PBXGroup;
+			children = (
+				4DFB188120B678D70091C1B0 /* Views */,
+				4DFB187F20B6761C0091C1B0 /* PopularRentalViewController.swift */,
+			);
+			path = Popular;
+			sourceTree = "<group>";
+		};
+		4DFB188120B678D70091C1B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4DFB188220B678EA0091C1B0 /* PopularRentalCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C4F438EC47C229029828DCD8 /* Frameworks */ = {
@@ -529,6 +550,7 @@
 		E5E9DC7120B36527004F3A6D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3CEF33342086D44A005281BE /* PopularPlace.swift */,
 				E5E9DC7220B36542004F3A6D /* RentalType.swift */,
 				4DFB187C20B66E6A0091C1B0 /* Rental.swift */,
 			);
@@ -791,6 +813,7 @@
 				3C1E0B4B2092C83500A9D4BB /* SearchViewController.swift in Sources */,
 				3C01173020852EF7007C73D8 /* AppDelegate.swift in Sources */,
 				3CD2E7D520868F41002252CC /* HomeViewController.swift in Sources */,
+				4DFB188020B6761C0091C1B0 /* PopularRentalViewController.swift in Sources */,
 				3C8FF79920A2846A009EF837 /* RoomDetailViewController.swift in Sources */,
 				E5E9DC6720B33B8D004F3A6D /* AddRentalContainerViewController.swift in Sources */,
 				E5E9DC7020B363A2004F3A6D /* RoomTypeCell.swift in Sources */,
@@ -807,6 +830,7 @@
 				3C0DD8F92099F7E400D60176 /* CXStoryboardLoadable.swift in Sources */,
 				3C2F2FE72099FCF4002FA8FA /* LocationInputView.swift in Sources */,
 				3CEF33382086D5AF005281BE /* HomeViewModel.swift in Sources */,
+				4DFB188320B678EA0091C1B0 /* PopularRentalCell.swift in Sources */,
 				4DD0A74220B1D22A00674AAD /* Date+Extension.swift in Sources */,
 				3C8FF79E20A286AC009EF837 /* RoomGalleryCell.swift in Sources */,
 				4D3F1E6720B5178A006FE7AD /* INTagHelper.swift in Sources */,
