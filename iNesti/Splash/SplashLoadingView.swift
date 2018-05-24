@@ -14,7 +14,6 @@ class SplashLoadingView: UIView, NibLoadable {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-//        self.backgroundColor = UIColor.majorYellow
 
         let pulseAnimation = CABasicAnimation(keyPath: "transform.scale")
         pulseAnimation.fromValue = 1.0

@@ -18,8 +18,16 @@ class RegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        wechatCheckbox.tintColor = UIColor.in_yellow
+        wechatCheckbox.boxType = .square
         wechatCheckbox.addTarget(self, action: #selector(handleCheckbox(sender:)), for: .valueChanged)
+        
+        emailCheckbox.tintColor = UIColor.in_yellow
+        emailCheckbox.boxType = .square
         emailCheckbox.addTarget(self, action: #selector(handleCheckbox(sender:)), for: .valueChanged)
+        
+        phoneCheckbox.tintColor = UIColor.in_yellow
+        phoneCheckbox.boxType = .square
         phoneCheckbox.addTarget(self, action: #selector(handleCheckbox(sender:)), for: .valueChanged)
         // Do any additional setup after loading the view.
     }

@@ -61,7 +61,7 @@ class SearchViewController: BaseViewController {
         rangeSlider.handleColor = .white
         rangeSlider.handleDiameter = 25
         rangeSlider.selectedHandleDiameterMultiplier = 1.1
-        rangeSlider.handleBorderColor = UIColor.majorYellow
+        rangeSlider.handleBorderColor = UIColor.in_yellow
         rangeSlider.minValue = 0
         rangeSlider.maxValue = 10000
         rangeSlider.step = 50

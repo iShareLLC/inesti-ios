@@ -9,11 +9,11 @@
 import UIKit
 
 extension UIColor {
-    static var majorYellow: UIColor {
+    static var in_yellow: UIColor {
         return UIColor.color(r: 254, g: 203, b: 16)
     }
 
-    static var textSecondaryGary: UIColor {
+    static var in_textGray: UIColor {
         return UIColor.color(r: 51, g: 51, b: 51, a: 0.55)
     }
 

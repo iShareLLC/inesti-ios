@@ -54,14 +54,14 @@ class RoomSummaryCell: UITableViewCell, NibReusable {
     private func getReadMoreString() -> NSAttributedString {
         return NSAttributedString(string: "查看更多", attributes: [
             .font: UIFont.getPingFangSC(with: 14.0, for: .regular),
-            .foregroundColor: UIColor.majorYellow
+            .foregroundColor: UIColor.in_yellow
         ])
     }
 
     private func getLessLinkString() -> NSAttributedString {
         return NSAttributedString(string: "收起", attributes: [
             .font: UIFont.getPingFangSC(with: 14.0, for: .regular),
-            .foregroundColor: UIColor.majorYellow
+            .foregroundColor: UIColor.in_yellow
             ])
     }
 }

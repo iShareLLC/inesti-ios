@@ -27,7 +27,7 @@ class RoomGalleryCell: UITableViewCell, NibReusable {
     }
 
     private func createAttributedString(for date: String) -> NSAttributedString {
-        let title = NSAttributedString(string: "开放时间", attributes: [NSAttributedStringKey.font: UIFont(name: "PingFangSC-Semibold", size: 9.0), NSAttributedStringKey.foregroundColor: UIColor.textSecondaryGary])
+        let title = NSAttributedString(string: "开放时间", attributes: [NSAttributedStringKey.font: UIFont(name: "PingFangSC-Semibold", size: 9.0), NSAttributedStringKey.foregroundColor: UIColor.in_textGray])
         return title
     }
 }
