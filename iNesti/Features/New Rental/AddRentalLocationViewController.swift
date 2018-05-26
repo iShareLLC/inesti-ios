@@ -12,6 +12,7 @@ class AddRentalLocationViewController: BaseViewController {
 
     @IBOutlet var locationTextField: INTextField!
     @IBOutlet var titleTextField: INTextField!
+    @IBOutlet var areaTextField: INTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
