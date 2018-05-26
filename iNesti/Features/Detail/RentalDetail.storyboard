@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="38I-g5-H7a">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rental Detail View Controller-->
+        <scene sceneID="44J-SB-5Xt">
+            <objects>
+                <viewController id="38I-g5-H7a" customClass="RentalDetailViewController" customModule="iNesti" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="79c-eb-KVl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SH4-9X-h6g">
+                                <rect key="frame" x="16" y="20" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="r2X-ya-D8B"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="handleBackButtonWithSender:" destination="38I-g5-H7a" eventType="touchUpInside" id="1hA-IZ-Zr4"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hbt-wX-mYx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="1136"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalImageCell" rowHeight="170" id="za0-L9-Rak">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="170"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="za0-L9-Rak" id="RGi-1f-OlK">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="169.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rental_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="MKg-0W-zkM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtA-Pz-Xg2">
+                                                    <rect key="frame" x="255" y="0.0" width="120" height="40"/>
+                                                    <color key="backgroundColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="7aP-6s-qYA"/>
+                                                        <constraint firstAttribute="height" constant="40" id="Pev-En-dNc"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="MKg-0W-zkM" secondAttribute="trailing" id="5sX-bR-uoA"/>
+                                                <constraint firstItem="MKg-0W-zkM" firstAttribute="top" secondItem="RGi-1f-OlK" secondAttribute="top" id="9Oa-UW-SO7"/>
+                                                <constraint firstItem="rtA-Pz-Xg2" firstAttribute="top" secondItem="MKg-0W-zkM" secondAttribute="top" id="FC8-nl-v6G"/>
+                                                <constraint firstItem="rtA-Pz-Xg2" firstAttribute="trailing" secondItem="MKg-0W-zkM" secondAttribute="trailing" id="R95-zB-71d"/>
+                                                <constraint firstItem="MKg-0W-zkM" firstAttribute="leading" secondItem="RGi-1f-OlK" secondAttribute="leading" id="Z4f-mO-11M"/>
+                                                <constraint firstAttribute="bottom" secondItem="MKg-0W-zkM" secondAttribute="bottom" id="kv8-bH-0oR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalInfoCell" rowHeight="120" id="4Tp-JD-LGc">
+                                        <rect key="frame" x="0.0" y="198" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Tp-JD-LGc" id="hO7-z4-lNK">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="布鲁克林" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaE-sw-6aN">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="20"/>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="14"/>
+                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.46000000000000002" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="精装修, 带家具, 独立厨卫, 包水电网络; 交通方便, 生活便利, 房子干净整洁." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTj-96-C1E">
+                                                    <rect key="frame" x="16" y="69" width="343" height="33.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="位于皇冠高度区的精装公寓" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Z7-bj-bR6">
+                                                    <rect key="frame" x="16" y="25" width="343" height="34"/>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7Z7-bj-bR6" firstAttribute="top" secondItem="OaE-sw-6aN" secondAttribute="bottom" constant="5" id="4m6-ZS-mHU"/>
+                                                <constraint firstItem="7Z7-bj-bR6" firstAttribute="trailing" secondItem="OaE-sw-6aN" secondAttribute="trailing" id="ELz-3V-pfE"/>
+                                                <constraint firstItem="GTj-96-C1E" firstAttribute="top" secondItem="7Z7-bj-bR6" secondAttribute="bottom" constant="10" id="UOm-QV-qYC"/>
+                                                <constraint firstItem="7Z7-bj-bR6" firstAttribute="leading" secondItem="OaE-sw-6aN" secondAttribute="leading" id="UXF-uv-Ovt"/>
+                                                <constraint firstItem="OaE-sw-6aN" firstAttribute="leading" secondItem="hO7-z4-lNK" secondAttribute="leading" constant="16" id="iys-nh-ctq"/>
+                                                <constraint firstItem="GTj-96-C1E" firstAttribute="leading" secondItem="7Z7-bj-bR6" secondAttribute="leading" id="lHl-E4-2Xr"/>
+                                                <constraint firstItem="OaE-sw-6aN" firstAttribute="top" secondItem="hO7-z4-lNK" secondAttribute="top" id="sdP-uU-On3"/>
+                                                <constraint firstItem="GTj-96-C1E" firstAttribute="trailing" secondItem="7Z7-bj-bR6" secondAttribute="trailing" id="uYQ-FH-5Cz"/>
+                                                <constraint firstAttribute="trailing" secondItem="OaE-sw-6aN" secondAttribute="trailing" constant="16" id="x7o-Dd-SKw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalPriceCell" rowHeight="150" id="4L3-sn-hQf">
+                                        <rect key="frame" x="0.0" y="318" width="375" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4L3-sn-hQf" id="iKQ-iT-UgW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="房型及价格" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssd-TU-OUI">
+                                                    <rect key="frame" x="16" y="16" width="90.5" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="28" id="4jI-Pj-6ak"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hXs-Ic-YRD">
+                                                    <rect key="frame" x="16" y="54" width="343" height="18.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主卧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4W3-3i-UJk">
+                                                            <rect key="frame" x="0.0" y="0.0" width="114.5" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="次卧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlq-lz-T4S">
+                                                            <rect key="frame" x="114.5" y="0.0" width="114" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客厅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCM-BS-nzd">
+                                                            <rect key="frame" x="228.5" y="0.0" width="114.5" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7hk-em-aaT">
+                                                    <rect key="frame" x="16" y="72.5" width="343" height="18.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1000/月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZR-QN-dZY">
+                                                            <rect key="frame" x="0.0" y="0.0" width="114.5" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$850/月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqB-V4-9p4">
+                                                            <rect key="frame" x="114.5" y="0.0" width="114" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$560月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvf-aY-vkC">
+                                                            <rect key="frame" x="228.5" y="0.0" width="114.5" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PCB-fZ-1va">
+                                                    <rect key="frame" x="16" y="91" width="343" height="18.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1000/月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euF-7Y-7Uk">
+                                                            <rect key="frame" x="0.0" y="0.0" width="114.5" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$850/月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6C6-OK-VXA">
+                                                            <rect key="frame" x="114.5" y="0.0" width="114" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$560月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNy-d7-PAS">
+                                                            <rect key="frame" x="228.5" y="0.0" width="114.5" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="I16-bq-H9Y">
+                                                    <rect key="frame" x="16" y="109.5" width="343" height="18.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1000/月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRb-Mk-ACn">
+                                                            <rect key="frame" x="0.0" y="0.0" width="114.5" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$850/月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDK-eH-5mI">
+                                                            <rect key="frame" x="114.5" y="0.0" width="114" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$560月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYF-YP-255">
+                                                            <rect key="frame" x="228.5" y="0.0" width="114.5" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="hXs-Ic-YRD" secondAttribute="trailing" constant="16" id="3wf-P6-5RD"/>
+                                                <constraint firstItem="PCB-fZ-1va" firstAttribute="trailing" secondItem="7hk-em-aaT" secondAttribute="trailing" id="9Bd-c2-Txh"/>
+                                                <constraint firstItem="7hk-em-aaT" firstAttribute="leading" secondItem="hXs-Ic-YRD" secondAttribute="leading" id="9TY-mg-WJk"/>
+                                                <constraint firstItem="PCB-fZ-1va" firstAttribute="leading" secondItem="7hk-em-aaT" secondAttribute="leading" id="A0y-Fk-lho"/>
+                                                <constraint firstItem="PCB-fZ-1va" firstAttribute="top" secondItem="7hk-em-aaT" secondAttribute="bottom" id="C15-rj-UbU"/>
+                                                <constraint firstItem="hXs-Ic-YRD" firstAttribute="leading" secondItem="iKQ-iT-UgW" secondAttribute="leading" constant="16" id="HZZ-Wf-9Vk"/>
+                                                <constraint firstItem="I16-bq-H9Y" firstAttribute="leading" secondItem="euF-7Y-7Uk" secondAttribute="leading" id="NXt-OA-fTp"/>
+                                                <constraint firstItem="hXs-Ic-YRD" firstAttribute="top" secondItem="ssd-TU-OUI" secondAttribute="bottom" constant="10" id="Vi7-7I-Ib8"/>
+                                                <constraint firstItem="I16-bq-H9Y" firstAttribute="leading" secondItem="PCB-fZ-1va" secondAttribute="leading" id="ZmI-ME-RXw"/>
+                                                <constraint firstItem="I16-bq-H9Y" firstAttribute="trailing" secondItem="PCB-fZ-1va" secondAttribute="trailing" id="aU4-G6-uFj"/>
+                                                <constraint firstItem="ssd-TU-OUI" firstAttribute="leading" secondItem="iKQ-iT-UgW" secondAttribute="leading" constant="16" id="cJ0-vu-URu"/>
+                                                <constraint firstItem="I16-bq-H9Y" firstAttribute="top" secondItem="PCB-fZ-1va" secondAttribute="bottom" id="exS-at-wfU"/>
+                                                <constraint firstItem="7hk-em-aaT" firstAttribute="top" secondItem="hXs-Ic-YRD" secondAttribute="bottom" id="iSE-Ze-WPO"/>
+                                                <constraint firstItem="7hk-em-aaT" firstAttribute="trailing" secondItem="hXs-Ic-YRD" secondAttribute="trailing" id="opg-Vm-2cc"/>
+                                                <constraint firstItem="ssd-TU-OUI" firstAttribute="top" secondItem="iKQ-iT-UgW" secondAttribute="top" constant="16" id="wsi-Oj-SPT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalStatusCell" rowHeight="160" id="k29-Yy-YJs">
+                                        <rect key="frame" x="0.0" y="468" width="375" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k29-Yy-YJs" id="x3S-fa-nm3">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="基本情况" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U82-Lo-kwh">
+                                                    <rect key="frame" x="15" y="11" width="72.5" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="28" id="HaB-EW-40m"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hgl-OR-OKl">
+                                                    <rect key="frame" x="15" y="44" width="344" height="92.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zUp-5U-B68">
+                                                            <rect key="frame" x="0.0" y="0.0" width="172" height="92.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="租金包含网费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdg-Kh-A60">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="租金包含电费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fB9-RW-Qn5">
+                                                                    <rect key="frame" x="0.0" y="18.5" width="172" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="租金包含水费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVm-wX-cPu">
+                                                                    <rect key="frame" x="0.0" y="37" width="172" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="租金包含燃气费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3H-Wb-q7P">
+                                                                    <rect key="frame" x="0.0" y="55.5" width="172" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24小时门卫" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQ5-PG-Mx9">
+                                                                    <rect key="frame" x="0.0" y="74" width="172" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wME-g8-rIt">
+                                                            <rect key="frame" x="172" y="0.0" width="172" height="92.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可养狗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNm-lM-UXa">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可养猫" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qI-UA-cz6">
+                                                                    <rect key="frame" x="0.0" y="18.5" width="172" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="租金包含水费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chI-BZ-jwh">
+                                                                    <rect key="frame" x="0.0" y="37" width="172" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="租金包含燃气费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqf-BF-HmF">
+                                                                    <rect key="frame" x="0.0" y="55.5" width="172" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24小时门卫" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FbV-yW-jzU">
+                                                                    <rect key="frame" x="0.0" y="74" width="172" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="U82-Lo-kwh" firstAttribute="top" secondItem="x3S-fa-nm3" secondAttribute="topMargin" id="Ghr-kD-0z1"/>
+                                                <constraint firstItem="hgl-OR-OKl" firstAttribute="top" secondItem="U82-Lo-kwh" secondAttribute="bottom" constant="5" id="j1e-pp-W8i"/>
+                                                <constraint firstItem="hgl-OR-OKl" firstAttribute="leading" secondItem="U82-Lo-kwh" secondAttribute="leading" id="jys-aE-M5s"/>
+                                                <constraint firstAttribute="trailing" secondItem="hgl-OR-OKl" secondAttribute="trailing" constant="16" id="k1y-EA-gg1"/>
+                                                <constraint firstItem="U82-Lo-kwh" firstAttribute="leading" secondItem="x3S-fa-nm3" secondAttribute="leadingMargin" id="oyN-z9-Nlu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalSpotlightCell" rowHeight="130" id="WFd-Pa-x76">
+                                        <rect key="frame" x="0.0" y="628" width="375" height="130"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WFd-Pa-x76" id="Ook-Pv-gzu">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="亮点" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yai-86-bKx">
+                                                    <rect key="frame" x="15" y="11" width="36.5" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="28" id="9tb-db-EBG"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VdI-sU-7KC">
+                                                    <rect key="frame" x="15" y="44" width="344" height="74"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="t5m-Qk-vFu">
+                                                            <rect key="frame" x="0.0" y="0.0" width="172" height="74"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="空调" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXw-Cs-BEn">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="游泳池" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWe-kB-IWH">
+                                                                    <rect key="frame" x="0.0" y="18.5" width="172" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="健身房" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiW-E1-fVy">
+                                                                    <rect key="frame" x="0.0" y="37" width="172" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热水" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKE-YO-hU3">
+                                                                    <rect key="frame" x="0.0" y="55.5" width="172" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="P39-pB-3ou">
+                                                            <rect key="frame" x="172" y="0.0" width="172" height="74"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="工作台" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLw-24-W9E">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="打印机" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="549-Rn-zH2">
+                                                                    <rect key="frame" x="0.0" y="18.5" width="172" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="显示器" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwf-3M-LYd">
+                                                                    <rect key="frame" x="0.0" y="37" width="172" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查看更多" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYI-QB-O61">
+                                                                    <rect key="frame" x="0.0" y="55.5" width="172" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VdI-sU-7KC" firstAttribute="leading" secondItem="yai-86-bKx" secondAttribute="leading" id="0AF-v9-R7x"/>
+                                                <constraint firstItem="yai-86-bKx" firstAttribute="leading" secondItem="Ook-Pv-gzu" secondAttribute="leadingMargin" id="HaP-gK-uuS"/>
+                                                <constraint firstItem="VdI-sU-7KC" firstAttribute="top" secondItem="yai-86-bKx" secondAttribute="bottom" constant="5" id="Ruw-f4-IOs"/>
+                                                <constraint firstItem="yai-86-bKx" firstAttribute="top" secondItem="Ook-Pv-gzu" secondAttribute="topMargin" id="gcf-K0-9vR"/>
+                                                <constraint firstAttribute="trailing" secondItem="VdI-sU-7KC" secondAttribute="trailing" constant="16" id="pIi-rA-zDO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalContactCell" rowHeight="60" id="zKQ-j8-PXN">
+                                        <rect key="frame" x="0.0" y="758" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zKQ-j8-PXN" id="zZg-yN-kEG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtF-P8-YqC">
+                                                    <rect key="frame" x="16" y="5" width="343" height="49.5"/>
+                                                    <color key="backgroundColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="联系屋主">
+                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="QtF-P8-YqC" secondAttribute="bottom" constant="5" id="RhR-UN-vyN"/>
+                                                <constraint firstItem="QtF-P8-YqC" firstAttribute="leading" secondItem="zZg-yN-kEG" secondAttribute="leading" constant="16" id="bNj-Th-xvg"/>
+                                                <constraint firstItem="QtF-P8-YqC" firstAttribute="top" secondItem="zZg-yN-kEG" secondAttribute="top" constant="5" id="oCf-by-RTD"/>
+                                                <constraint firstAttribute="trailing" secondItem="QtF-P8-YqC" secondAttribute="trailing" constant="16" id="rlA-eb-jSU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="abF-RD-vxQ" firstAttribute="trailing" secondItem="Hbt-wX-mYx" secondAttribute="trailing" id="48X-cd-2hM"/>
+                            <constraint firstItem="Hbt-wX-mYx" firstAttribute="top" secondItem="SH4-9X-h6g" secondAttribute="bottom" id="CSe-eC-YAN"/>
+                            <constraint firstItem="abF-RD-vxQ" firstAttribute="bottom" secondItem="Hbt-wX-mYx" secondAttribute="bottom" id="Obu-mV-XE2"/>
+                            <constraint firstItem="Hbt-wX-mYx" firstAttribute="leading" secondItem="79c-eb-KVl" secondAttribute="leading" id="cuA-gn-xjS"/>
+                            <constraint firstItem="SH4-9X-h6g" firstAttribute="top" secondItem="abF-RD-vxQ" secondAttribute="top" id="fKz-We-GOO"/>
+                            <constraint firstItem="abF-RD-vxQ" firstAttribute="trailing" secondItem="SH4-9X-h6g" secondAttribute="trailing" constant="16" id="fPa-NW-aAK"/>
+                            <constraint firstItem="SH4-9X-h6g" firstAttribute="leading" secondItem="abF-RD-vxQ" secondAttribute="leading" constant="16" id="rv8-4w-Awe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="abF-RD-vxQ"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="1200"/>
+                    <connections>
+                        <outlet property="tableView" destination="Hbt-wX-mYx" id="90L-YD-hgh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aC1-pc-TRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="449.77511244377814"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="21" height="14"/>
+        <image name="rental_placeholder" width="114" height="58"/>
+    </resources>
+</document>

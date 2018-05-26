@@ -7,10 +7,15 @@
 //
 
 import UIKit
-import Reusable
+
+enum MainNavigationSegue: String {
+    // Home page
+    case rentalDetailSegue = "RentalDetailSegue"
+}
 
 class NestTabBarController: UITabBarController {
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    
+    public func handleMainNavigationSegue(segue: MainNavigationSegue, sender: Any?) {
+        self.performSegue(withIdentifier: segue.rawValue, sender: sender)
     }
 }

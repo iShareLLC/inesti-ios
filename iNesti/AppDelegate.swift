@@ -12,11 +12,21 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var mainNavigationController: UINavigationController!
+    var mainTabViewController: NestTabBarController!
 
-
+    static public func shared() -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
+        if let mainNavigationController = self.window?.rootViewController as? UINavigationController {
+            self.mainNavigationController = mainNavigationController
+            self.mainTabViewController = mainNavigationController.childViewControllers[0] as? NestTabBarController
+        }
+        
         UITabBar.appearance().tintColor = UIColor.in_yellow
 
         return true
@@ -43,7 +53,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    //MARK:- Global Navigation
+    public func handleMainNavigation(navigationSegue: MainNavigationSegue, sender: Any?) {
+        mainTabViewController.handleMainNavigationSegue(segue: navigationSegue, sender: sender)
+    }
 
 }
 

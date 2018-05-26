@@ -62,11 +62,7 @@ class HomeViewController: BaseViewController {
     }
 }
 
-extension HomeViewController: UITableViewDataSource {
-    
-}
-
-extension HomeViewController: UITableViewDelegate {
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
@@ -83,6 +79,10 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 320
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        AppDelegate.shared().handleMainNavigation(navigationSegue: .rentalDetailSegue, sender: nil)
     }
 }
 
