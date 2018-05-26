@@ -18,6 +18,11 @@ class PopularRentalCell: UITableViewCell {
     
     private var isShadowAdded = false
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        //addShadow()
+    }
+    
     func setup(with place: PopularPlace) {
         priceLabel.text = place.price
         areaLabel.text = place.area

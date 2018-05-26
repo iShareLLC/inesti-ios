@@ -13,22 +13,24 @@ import Reusable
 import TTRangeSlider
 
 class SearchViewController: BaseViewController {
-    @IBOutlet private weak var addressTextField: UITextField!
-    @IBOutlet private weak var addressTextInputButton: UIButton!
-    @IBOutlet private weak var datePickerButton: UIButton!
-    @IBOutlet private weak var durationPickerButton: UIButton!
-    @IBOutlet private weak var showResultButton: UIButton!
-    @IBOutlet private weak var rangeLabel: UILabel!
-    @IBOutlet private weak var cancelButton: UIButton!
-    @IBOutlet private var roomTypeButtons: [UIButton]!
-    @IBOutlet private weak var rangeSlider: TTRangeSlider!
+    @IBOutlet weak var addressTextField: INTextField!
+    @IBOutlet weak var startDateTextField: INTextField!
+    @IBOutlet weak var durationTextField: INTextField!
+//    @IBOutlet private weak var addressTextInputButton: UIButton!
+//    @IBOutlet private weak var datePickerButton: UIButton!
+//    @IBOutlet private weak var durationPickerButton: UIButton!
+    @IBOutlet weak var showResultButton: UIButton!
+    @IBOutlet weak var rangeLabel: UILabel!
+    @IBOutlet weak var cancelButton: UIButton!
+    //@IBOutlet private var roomTypeButtons: [UIButton]!
+    @IBOutlet weak var rangeSlider: TTRangeSlider!
     
     override func viewDidLoad() {
-        addressTextInputButton.rx.tap
-            .subscribe(onNext: { [weak self] _ in
-                self?.showLocationInputView()
-            })
-            .disposed(by: disposeBag)
+//        addressTextInputButton.rx.tap
+//            .subscribe(onNext: { [weak self] _ in
+//                self?.showLocationInputView()
+//            })
+//            .disposed(by: disposeBag)
 
         cancelButton.rx.tap
             .subscribe(onNext: { [weak self] _ in
@@ -36,25 +38,17 @@ class SearchViewController: BaseViewController {
             })
             .disposed(by: disposeBag)
 
-        datePickerButton.rx.tap
-            .subscribe({ [weak self] _ in
-                //self?.showDatePicker()
-            })
-            .disposed(by: disposeBag)
+//        datePickerButton.rx.tap
+//            .subscribe({ [weak self] _ in
+//                //self?.showDatePicker()
+//            })
+//            .disposed(by: disposeBag)
 
-        durationPickerButton.rx.tap
-            .subscribe(onNext: { [weak self] _ in
-                self?.showDurationPicker()
-            })
-            .disposed(by: disposeBag)
-
-        for button in roomTypeButtons {
-            button.rx.tap.subscribe(onNext: {[weak self] _ in
-                self?.roomTypeButtons.forEach { $0.isSelected = false  }
-                button.isSelected = true
-            })
-                .disposed(by: disposeBag)
-        }
+//        durationPickerButton.rx.tap
+//            .subscribe(onNext: { [weak self] _ in
+//                self?.showDurationPicker()
+//            })
+//            .disposed(by: disposeBag)
         
         //Range Slider
         rangeSlider.handleBorderWidth = 1
