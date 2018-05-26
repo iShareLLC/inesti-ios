@@ -40,13 +40,23 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Si-f0-7B0">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="780"/>
                                         <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="租期" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SvS-g7-b8w" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
+                                                <rect key="frame" x="152" y="144" width="60" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="VTN-5A-NRM"/>
+                                                    <constraint firstAttribute="height" constant="50" id="xns-0U-cBo"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搜索房源" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4s-rM-C4a">
                                                 <rect key="frame" x="16" y="16" width="112" height="39.5"/>
                                                 <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="28"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="地点" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2F-g3-LmJ" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="地点" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2F-g3-LmJ" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="87.5" width="343" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="otB-cV-FxH"/>
@@ -55,7 +65,7 @@
                                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="开始日期" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LuA-Sk-djd" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="开始日期" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LuA-Sk-djd" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="144" width="120" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="j57-Zc-a0U"/>
@@ -248,22 +258,31 @@
                                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="租期" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SvS-g7-b8w" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
-                                                <rect key="frame" x="152" y="144" width="60" height="50"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a1A-Cg-F1O">
+                                                <rect key="frame" x="0.0" y="137.5" width="375" height="0.0"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="VTN-5A-NRM"/>
-                                                    <constraint firstAttribute="height" constant="50" id="xns-0U-cBo"/>
+                                                    <constraint firstAttribute="height" id="nuU-CA-se3"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchTypeAheadCell" id="FCN-ag-O9f">
+                                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FCN-ag-O9f" id="eiI-AR-Eg5">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="LO1-ga-Pij" firstAttribute="bottom" secondItem="mBx-48-Xn4" secondAttribute="bottom" constant="16" id="1cQ-XW-1xP"/>
                                             <constraint firstItem="ApM-ct-ZKo" firstAttribute="top" secondItem="u4s-rM-C4a" secondAttribute="top" id="32G-Ay-rKJ"/>
+                                            <constraint firstItem="a1A-Cg-F1O" firstAttribute="top" secondItem="x2F-g3-LmJ" secondAttribute="bottom" id="625-VL-aam"/>
                                             <constraint firstItem="LuA-Sk-djd" firstAttribute="top" secondItem="x2F-g3-LmJ" secondAttribute="bottom" constant="6.5" id="CJk-ED-GFi"/>
+                                            <constraint firstItem="LO1-ga-Pij" firstAttribute="trailing" secondItem="a1A-Cg-F1O" secondAttribute="trailing" id="D73-Gi-emy"/>
                                             <constraint firstItem="n3n-7U-tpT" firstAttribute="leading" secondItem="mBx-48-Xn4" secondAttribute="leading" id="Dhd-lJ-PhC"/>
                                             <constraint firstItem="EPP-d8-AgM" firstAttribute="trailing" secondItem="mBx-48-Xn4" secondAttribute="trailing" id="EsV-wC-wrd"/>
                                             <constraint firstItem="ApM-ct-ZKo" firstAttribute="width" secondItem="ApM-ct-ZKo" secondAttribute="height" multiplier="1:1" id="Fgh-aq-JZT"/>
@@ -287,6 +306,7 @@
                                             <constraint firstItem="EPP-d8-AgM" firstAttribute="top" secondItem="Fj9-dn-Jzu" secondAttribute="bottom" constant="16" id="gTd-y7-vLp"/>
                                             <constraint firstItem="u4s-rM-C4a" firstAttribute="leading" secondItem="LO1-ga-Pij" secondAttribute="leading" constant="16" id="hdD-Y4-Yfz"/>
                                             <constraint firstItem="SvS-g7-b8w" firstAttribute="leading" secondItem="LuA-Sk-djd" secondAttribute="trailing" constant="16" id="k3I-oA-g2E"/>
+                                            <constraint firstItem="a1A-Cg-F1O" firstAttribute="leading" secondItem="LO1-ga-Pij" secondAttribute="leading" id="lfE-Fr-v1k"/>
                                             <constraint firstItem="XkE-N1-UKi" firstAttribute="trailing" secondItem="mBx-48-Xn4" secondAttribute="trailing" id="mWp-Cg-u6M"/>
                                             <constraint firstItem="x2F-g3-LmJ" firstAttribute="top" secondItem="u4s-rM-C4a" secondAttribute="bottom" constant="32" id="oJn-ey-0MB"/>
                                             <constraint firstItem="GMO-q3-JZ7" firstAttribute="trailing" secondItem="mBx-48-Xn4" secondAttribute="trailing" id="rAr-af-SSR"/>
@@ -329,6 +349,8 @@
                         <outlet property="rangeSlider" destination="GMO-q3-JZ7" id="43A-ad-eTv"/>
                         <outlet property="showResultButton" destination="mBx-48-Xn4" id="bA3-VT-wf0"/>
                         <outlet property="startDateTextField" destination="LuA-Sk-djd" id="bKX-2a-dqm"/>
+                        <outlet property="typeAheadTableView" destination="a1A-Cg-F1O" id="e2X-Z6-kM9"/>
+                        <outlet property="typeAheadTableViewConstraint" destination="nuU-CA-se3" id="472-Y3-eRO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8N-f6-6Rl" userLabel="First Responder" sceneMemberID="firstResponder"/>

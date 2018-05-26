@@ -16,22 +16,38 @@ class SearchViewController: BaseViewController {
     @IBOutlet weak var addressTextField: INTextField!
     @IBOutlet weak var startDateTextField: INTextField!
     @IBOutlet weak var durationTextField: INTextField!
-//    @IBOutlet private weak var addressTextInputButton: UIButton!
-//    @IBOutlet private weak var datePickerButton: UIButton!
-//    @IBOutlet private weak var durationPickerButton: UIButton!
     @IBOutlet weak var showResultButton: UIButton!
     @IBOutlet weak var rangeLabel: UILabel!
     @IBOutlet weak var cancelButton: UIButton!
-    //@IBOutlet private var roomTypeButtons: [UIButton]!
     @IBOutlet weak var rangeSlider: TTRangeSlider!
     
+    @IBOutlet weak var typeAheadTableView: UITableView!
+    @IBOutlet weak var typeAheadTableViewConstraint: NSLayoutConstraint!
+    
+    var typeAheadResults = [String]() {
+        didSet {
+            if self.isViewLoaded {
+                typeAheadTableView.reloadData()
+                if typeAheadResults.count > 0 {
+                    typeAheadTableViewConstraint.constant = 300
+                } else {
+                    typeAheadTableViewConstraint.constant = 0
+                }
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+                    self.view.layoutIfNeeded()
+                }, completion: nil)
+            }
+        }
+    }
+    let typeAheadData = ["Chinatown", "Woodhaven", "East Village", "Soho", "Brooklyn", "Flushing", "Roosevelt Island", "Elmhurst"]
+    
     override func viewDidLoad() {
-//        addressTextInputButton.rx.tap
-//            .subscribe(onNext: { [weak self] _ in
-//                self?.showLocationInputView()
-//            })
-//            .disposed(by: disposeBag)
 
+        typeAheadTableView.delegate = self
+        typeAheadTableView.dataSource = self
+        
+        addressTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
         cancelButton.rx.tap
             .subscribe(onNext: { [weak self] _ in
                 self?.dismiss(animated: true, completion: nil)
@@ -122,4 +138,41 @@ class SearchViewController: BaseViewController {
     @objc private func didChangeSliderValue(_ sender: TTRangeSlider) {
         rangeLabel.text = "$\(Int(sender.selectedMinimum)) - $\(Int(sender.selectedMaximum))"
     }
+}
+
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return typeAheadResults.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTypeAheadCell", for: indexPath)
+        cell.textLabel?.text = typeAheadResults[indexPath.row]
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        addressTextField.text = typeAheadResults[indexPath.row]
+        typeAheadResults.removeAll()
+    }
+    
+}
+
+extension SearchViewController: UITextFieldDelegate {
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        typeAheadResults = typeAheadData.filter({ (location) -> Bool in
+            if let text = textField.text {
+                return (location.lowercased().range(of: text) != nil)
+            } else {
+                return false
+            }
+        })
+    }
+    
 }
