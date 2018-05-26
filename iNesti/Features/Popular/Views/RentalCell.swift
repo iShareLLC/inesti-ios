@@ -1,5 +1,5 @@
 //
-//  PopularRentalCell.swift
+//  RentalCell.swift
 //  iNesti
 //
 //  Created by Zian Chen on 5/24/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PopularRentalCell: UITableViewCell {
+class RentalCell: UITableViewCell {
     @IBOutlet private weak var priceLabel: UILabel!
     @IBOutlet private weak var coverImageView: UIImageView!
     @IBOutlet private weak var areaLabel: UILabel!

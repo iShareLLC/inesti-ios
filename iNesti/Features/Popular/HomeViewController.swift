@@ -77,7 +77,7 @@ extension HomeViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: PopularRentalCell = tableView.dequeueReusableCell(withIdentifier: "PopularRentalCell", for: indexPath) as! PopularRentalCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RentalCell", for: indexPath) as! RentalCell
         return cell
     }
     

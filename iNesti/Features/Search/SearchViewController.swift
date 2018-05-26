@@ -24,6 +24,9 @@ class SearchViewController: BaseViewController {
     @IBOutlet weak var typeAheadTableView: UITableView!
     @IBOutlet weak var typeAheadTableViewConstraint: NSLayoutConstraint!
     
+    let typeAheadData = ["Chinatown", "Woodhaven", "East Village", "Soho", "Brooklyn", "Flushing", "Roosevelt Island", "Elmhurst"]
+    let kSearchResultSegue = "SearchResultSegue"
+    
     var typeAheadResults = [String]() {
         didSet {
             if self.isViewLoaded {
@@ -39,7 +42,6 @@ class SearchViewController: BaseViewController {
             }
         }
     }
-    let typeAheadData = ["Chinatown", "Woodhaven", "East Village", "Soho", "Brooklyn", "Flushing", "Roosevelt Island", "Elmhurst"]
     
     override func viewDidLoad() {
 
@@ -137,6 +139,13 @@ class SearchViewController: BaseViewController {
     
     @objc private func didChangeSliderValue(_ sender: TTRangeSlider) {
         rangeLabel.text = "$\(Int(sender.selectedMinimum)) - $\(Int(sender.selectedMaximum))"
+    }
+    
+    @IBAction func handleSearchButton(sender: UIButton) {
+        
+        //TODO: Add Search API
+        
+        performSegue(withIdentifier: kSearchResultSegue, sender: nil)
     }
 }
 

@@ -44,6 +44,7 @@
 		4D3F1E7120B66209006FE7AD /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3F1E7020B66209006FE7AD /* Registration.storyboard */; };
 		4D3F1E7320B66790006FE7AD /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3F1E7220B66790006FE7AD /* RegistrationViewController.swift */; };
 		4DBFFA3620B997DC00FDA2BD /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DBFFA3520B997DC00FDA2BD /* Search.storyboard */; };
+		4DBFFA3820B9BAF200FDA2BD /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFFA3720B9BAF200FDA2BD /* SearchResultViewController.swift */; };
 		4DD0A73A20B1D0E900674AAD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0A73920B1D0E900674AAD /* APIManager.swift */; };
 		4DD0A73D20B1D1AB00674AAD /* INConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0A73C20B1D1AB00674AAD /* INConstants.swift */; };
 		4DD0A74020B1D1FA00674AAD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0A73F20B1D1FA00674AAD /* String+Extension.swift */; };
@@ -51,7 +52,7 @@
 		4DD0A74620B2906200674AAD /* NewRental.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DD0A74520B2906200674AAD /* NewRental.storyboard */; };
 		4DFB187B20B66E3A0091C1B0 /* RentalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB187A20B66E3A0091C1B0 /* RentalDataStore.swift */; };
 		4DFB187D20B66E6A0091C1B0 /* Rental.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB187C20B66E6A0091C1B0 /* Rental.swift */; };
-		4DFB188320B678EA0091C1B0 /* PopularRentalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB188220B678EA0091C1B0 /* PopularRentalCell.swift */; };
+		4DFB188320B678EA0091C1B0 /* RentalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB188220B678EA0091C1B0 /* RentalCell.swift */; };
 		5A9F17E378D7B0B1B167594C /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F16F3AE303C21B2BC3552 /* UIFont+Extension.swift */; };
 		6705C8A4DD572082F2424F92 /* Pods_iNestiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DBC36C9315A56DFDBFCC6A7 /* Pods_iNestiTests.framework */; };
 		8CCA2A1F8BCFF62C74C81657 /* Pods_iNesti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B15A91E27453B5D78CE3AAB /* Pods_iNesti.framework */; };
@@ -135,6 +136,7 @@
 		4D3F1E7020B66209006FE7AD /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		4D3F1E7220B66790006FE7AD /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		4DBFFA3520B997DC00FDA2BD /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		4DBFFA3720B9BAF200FDA2BD /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		4DD0A73920B1D0E900674AAD /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		4DD0A73C20B1D1AB00674AAD /* INConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INConstants.swift; sourceTree = "<group>"; };
 		4DD0A73F20B1D1FA00674AAD /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -142,7 +144,7 @@
 		4DD0A74520B2906200674AAD /* NewRental.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewRental.storyboard; sourceTree = "<group>"; };
 		4DFB187A20B66E3A0091C1B0 /* RentalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalDataStore.swift; sourceTree = "<group>"; };
 		4DFB187C20B66E6A0091C1B0 /* Rental.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rental.swift; sourceTree = "<group>"; };
-		4DFB188220B678EA0091C1B0 /* PopularRentalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularRentalCell.swift; sourceTree = "<group>"; };
+		4DFB188220B678EA0091C1B0 /* RentalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalCell.swift; sourceTree = "<group>"; };
 		541B821C0B7CE12A40DCE40D /* Pods-iNestiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiUITests/Pods-iNestiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A9F16F3AE303C21B2BC3552 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		9DBC36C9315A56DFDBFCC6A7 /* Pods_iNestiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iNestiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,7 +258,6 @@
 			children = (
 				3C2F2FEA209A0C74002FA8FA /* ViewModel */,
 				3C2F2FE52099FCA9002FA8FA /* View */,
-				3C1E0B4A2092C83500A9D4BB /* SearchViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -435,6 +436,8 @@
 		4DBFFA3420B997C400FDA2BD /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				3C1E0B4A2092C83500A9D4BB /* SearchViewController.swift */,
+				4DBFFA3720B9BAF200FDA2BD /* SearchResultViewController.swift */,
 				4DBFFA3520B997DC00FDA2BD /* Search.storyboard */,
 			);
 			path = Search;
@@ -489,7 +492,7 @@
 		4DFB188120B678D70091C1B0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4DFB188220B678EA0091C1B0 /* PopularRentalCell.swift */,
+				4DFB188220B678EA0091C1B0 /* RentalCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -807,7 +810,7 @@
 				3C0DD8F92099F7E400D60176 /* CXStoryboardLoadable.swift in Sources */,
 				3C2F2FE72099FCF4002FA8FA /* LocationInputView.swift in Sources */,
 				3CEF33382086D5AF005281BE /* HomeViewModel.swift in Sources */,
-				4DFB188320B678EA0091C1B0 /* PopularRentalCell.swift in Sources */,
+				4DFB188320B678EA0091C1B0 /* RentalCell.swift in Sources */,
 				4DD0A74220B1D22A00674AAD /* Date+Extension.swift in Sources */,
 				3C8FF79E20A286AC009EF837 /* RoomGalleryCell.swift in Sources */,
 				4D3F1E6720B5178A006FE7AD /* INTagHelper.swift in Sources */,
@@ -817,6 +820,7 @@
 				E50A61FE20B611C400E7403F /* Notification+Extensions.swift in Sources */,
 				4DFB187B20B66E3A0091C1B0 /* RentalDataStore.swift in Sources */,
 				3C8FF7AA20A34FBE009EF837 /* NestTabBarController.swift in Sources */,
+				4DBFFA3820B9BAF200FDA2BD /* SearchResultViewController.swift in Sources */,
 				E5E9DC5F20B338AB004F3A6D /* AddRentalTypeEntryViewController.swift in Sources */,
 				E5E9DC6120B338BF004F3A6D /* AddRentalTagEntryViewController.swift in Sources */,
 				4D3F1E7320B66790006FE7AD /* RegistrationViewController.swift in Sources */,
