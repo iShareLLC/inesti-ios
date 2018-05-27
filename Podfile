@@ -21,6 +21,7 @@ target 'iNesti' do
   pod 'TTGTagCollectionView'
   pod 'M13Checkbox'
   pod 'DropDown'
+  pod 'SKPhotoBrowser'
 
   target 'iNestiTests' do
     inherit! :search_paths
