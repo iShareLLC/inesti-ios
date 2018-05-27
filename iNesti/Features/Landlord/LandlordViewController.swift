@@ -26,14 +26,27 @@ class LandlordViewController: BaseViewController {
         footerView.delegate = self
         footerView.isHidden = !ProfileManager.shared.getIsLoggedIn()
         
-        NotificationCenter.default.addObserver(forName: .UserDidLogin, object: nil, queue: nil) {[weak self] _ in
+        updateProfileButton(isLoggedIn: ProfileManager.shared.getIsLoggedIn())
+        
+        NotificationCenter.default.addObserver(forName: .UserDidChange, object: nil, queue: nil) {[weak self] _ in
             self?.footerView.isHidden = !ProfileManager.shared.getIsLoggedIn()
             self?.tableView.reloadData()
+            self?.updateProfileButton(isLoggedIn: ProfileManager.shared.getIsLoggedIn())
         }
         
         NotificationCenter.default.addObserver(forName: .DataStoreDidUpdate, object: nil, queue: nil) {[weak self] _ in
             self?.dataSource = RentalDataStore.shared.getRentals(state: .published)
             self?.tableView.reloadData()
+        }
+    }
+    
+    private func updateProfileButton(isLoggedIn: Bool)  {
+        if (ProfileManager.shared.getIsLoggedIn()) {
+            profileButton.isUserInteractionEnabled = true
+            profileButton.alpha = 1
+        } else {
+            profileButton.isUserInteractionEnabled = false
+            profileButton.alpha = 0.3
         }
     }
 }

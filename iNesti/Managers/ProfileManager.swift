@@ -21,10 +21,6 @@ class ProfileManager: NSObject {
     
     public func setIsLoggined(isLogin: Bool) {
         isLoggedIn = isLogin
-        if isLogin {
-            NotificationCenter.default.post(name: .UserDidLogin, object: nil)
-        } else {
-            NotificationCenter.default.post(name: .UserDidLogout, object: nil)
-        }
+        NotificationCenter.default.post(name: .UserDidChange, object: isLogin)
     }
 }

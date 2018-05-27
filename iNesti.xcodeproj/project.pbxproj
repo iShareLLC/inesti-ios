@@ -47,6 +47,11 @@
 		4DBFFA3820B9BAF200FDA2BD /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFFA3720B9BAF200FDA2BD /* SearchResultViewController.swift */; };
 		4DBFFA3B20B9D56900FDA2BD /* RentalDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DBFFA3A20B9D56900FDA2BD /* RentalDetail.storyboard */; };
 		4DBFFA3D20B9EDEC00FDA2BD /* RentalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFFA3C20B9EDEC00FDA2BD /* RentalDetailViewController.swift */; };
+		4DBFFA4120BA6FFA00FDA2BD /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFFA4020BA6FFA00FDA2BD /* ProfileSettingsViewController.swift */; };
+		4DBFFA4320BA703300FDA2BD /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DBFFA4220BA703300FDA2BD /* Profile.storyboard */; };
+		4DBFFA4720BA796300FDA2BD /* UpdatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFFA4620BA796300FDA2BD /* UpdatePasswordViewController.swift */; };
+		4DBFFA4920BA797C00FDA2BD /* UpdateInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFFA4820BA797C00FDA2BD /* UpdateInfoViewController.swift */; };
+		4DBFFA4B20BA7CA600FDA2BD /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFFA4A20BA7CA600FDA2BD /* UIViewController+Extensions.swift */; };
 		4DD0A73A20B1D0E900674AAD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0A73920B1D0E900674AAD /* APIManager.swift */; };
 		4DD0A73D20B1D1AB00674AAD /* INConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0A73C20B1D1AB00674AAD /* INConstants.swift */; };
 		4DD0A74020B1D1FA00674AAD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0A73F20B1D1FA00674AAD /* String+Extension.swift */; };
@@ -141,6 +146,11 @@
 		4DBFFA3720B9BAF200FDA2BD /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		4DBFFA3A20B9D56900FDA2BD /* RentalDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RentalDetail.storyboard; sourceTree = "<group>"; };
 		4DBFFA3C20B9EDEC00FDA2BD /* RentalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalDetailViewController.swift; sourceTree = "<group>"; };
+		4DBFFA4020BA6FFA00FDA2BD /* ProfileSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewController.swift; sourceTree = "<group>"; };
+		4DBFFA4220BA703300FDA2BD /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		4DBFFA4620BA796300FDA2BD /* UpdatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewController.swift; sourceTree = "<group>"; };
+		4DBFFA4820BA797C00FDA2BD /* UpdateInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateInfoViewController.swift; sourceTree = "<group>"; };
+		4DBFFA4A20BA7CA600FDA2BD /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		4DD0A73920B1D0E900674AAD /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		4DD0A73C20B1D1AB00674AAD /* INConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INConstants.swift; sourceTree = "<group>"; };
 		4DD0A73F20B1D1FA00674AAD /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -316,7 +326,11 @@
 		3C8FF7A220A3469F009EF837 /* Landlord */ = {
 			isa = PBXGroup;
 			children = (
+				4DBFFA4220BA703300FDA2BD /* Profile.storyboard */,
 				3C8FF7A320A346AC009EF837 /* LandlordViewController.swift */,
+				4DBFFA4020BA6FFA00FDA2BD /* ProfileSettingsViewController.swift */,
+				4DBFFA4620BA796300FDA2BD /* UpdatePasswordViewController.swift */,
+				4DBFFA4820BA797C00FDA2BD /* UpdateInfoViewController.swift */,
 			);
 			path = Landlord;
 			sourceTree = "<group>";
@@ -382,6 +396,7 @@
 				3C8FF79F20A28D2E009EF837 /* UIColor+Extension.swift */,
 				5A9F16F3AE303C21B2BC3552 /* UIFont+Extension.swift */,
 				E50A61FD20B611C400E7403F /* Notification+Extensions.swift */,
+				4DBFFA4A20BA7CA600FDA2BD /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -673,6 +688,7 @@
 				3C01173520852EF7007C73D8 /* Main.storyboard in Resources */,
 				4DD0A74620B2906200674AAD /* NewRental.storyboard in Resources */,
 				4DBFFA3620B997DC00FDA2BD /* Search.storyboard in Resources */,
+				4DBFFA4320BA703300FDA2BD /* Profile.storyboard in Resources */,
 				3C8FF7B720A3C9F6009EF837 /* RoomSummaryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -809,6 +825,7 @@
 			files = (
 				E5E9DC6520B33940004F3A6D /* AddRentalPageViewController.swift in Sources */,
 				3C1E0B4B2092C83500A9D4BB /* SearchViewController.swift in Sources */,
+				4DBFFA4920BA797C00FDA2BD /* UpdateInfoViewController.swift in Sources */,
 				3C01173020852EF7007C73D8 /* AppDelegate.swift in Sources */,
 				3CD2E7D520868F41002252CC /* HomeViewController.swift in Sources */,
 				3C8FF79920A2846A009EF837 /* RoomDetailViewController.swift in Sources */,
@@ -816,6 +833,7 @@
 				E5E9DC7020B363A2004F3A6D /* RoomTypeCell.swift in Sources */,
 				3C8FF7A620A34B5B009EF837 /* SplashLoadingView.swift in Sources */,
 				3C8FF7A020A28D2E009EF837 /* UIColor+Extension.swift in Sources */,
+				4DBFFA4120BA6FFA00FDA2BD /* ProfileSettingsViewController.swift in Sources */,
 				E5E9DC6920B33CE2004F3A6D /* INUtilities.swift in Sources */,
 				E50A61FC20B6064000E7403F /* ProfileManager.swift in Sources */,
 				4D3F1E6C20B54C99006FE7AD /* INTextField.swift in Sources */,
@@ -831,6 +849,7 @@
 				4DD0A74220B1D22A00674AAD /* Date+Extension.swift in Sources */,
 				3C8FF79E20A286AC009EF837 /* RoomGalleryCell.swift in Sources */,
 				4D3F1E6720B5178A006FE7AD /* INTagHelper.swift in Sources */,
+				4DBFFA4720BA796300FDA2BD /* UpdatePasswordViewController.swift in Sources */,
 				3C8FF7A420A346AC009EF837 /* LandlordViewController.swift in Sources */,
 				E5E9DC6320B338DB004F3A6D /* AddRentalImagesViewController.swift in Sources */,
 				3CEF33332086D3A7005281BE /* PopularPlacesAPI.swift in Sources */,
@@ -849,6 +868,7 @@
 				3CD2E7D820868F54002252CC /* BaseViewController.swift in Sources */,
 				E5E9DC5D20B33896004F3A6D /* AddRentalLocationViewController.swift in Sources */,
 				4DFB187D20B66E6A0091C1B0 /* Rental.swift in Sources */,
+				4DBFFA4B20BA7CA600FDA2BD /* UIViewController+Extensions.swift in Sources */,
 				3CA13BFE209D4EBF00479F71 /* CXUtil.swift in Sources */,
 				3CD2E7EE20869905002252CC /* String+Localization.swift in Sources */,
 				5A9F17E378D7B0B1B167594C /* UIFont+Extension.swift in Sources */,

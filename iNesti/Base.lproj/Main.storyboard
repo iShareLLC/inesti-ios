@@ -468,11 +468,26 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxg-JX-I83">
-                                <rect key="frame" x="366" y="40" width="32" height="32"/>
+                                <rect key="frame" x="354" y="34" width="44" height="44"/>
+                                <color key="backgroundColor" red="0.57254901960000004" green="0.56078431370000004" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="WXo-dA-zew"/>
+                                    <constraint firstAttribute="height" constant="44" id="WXo-dA-zew"/>
                                     <constraint firstAttribute="width" secondItem="sxg-JX-I83" secondAttribute="height" multiplier="1:1" id="zcV-Hr-nvw"/>
                                 </constraints>
+                                <state key="normal" title="W">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cNQ-SV-GGQ" kind="presentation" id="O7e-Vc-pON"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dq9-Yx-sec">
+                                <rect key="frame" x="295" y="34" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dq9-Yx-sec" secondAttribute="height" multiplier="1:1" id="JAm-70-Mbp"/>
+                                    <constraint firstAttribute="height" constant="44" id="LgM-3S-o6Y"/>
+                                </constraints>
+                                <state key="normal" image="edit"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -480,11 +495,14 @@
                             <constraint firstItem="w1N-Nf-Zho" firstAttribute="top" secondItem="zOQ-kj-D9y" secondAttribute="bottom" constant="16" id="35g-iz-vkO"/>
                             <constraint firstItem="zOQ-kj-D9y" firstAttribute="top" secondItem="2BK-Rb-rjy" secondAttribute="top" constant="16" id="AcQ-nI-LlS"/>
                             <constraint firstItem="sxg-JX-I83" firstAttribute="centerY" secondItem="zOQ-kj-D9y" secondAttribute="centerY" id="DEJ-7j-sAr"/>
+                            <constraint firstItem="sxg-JX-I83" firstAttribute="leading" secondItem="dq9-Yx-sec" secondAttribute="trailing" constant="15" id="IXW-9i-aDe"/>
                             <constraint firstItem="2BK-Rb-rjy" firstAttribute="trailing" secondItem="w1N-Nf-Zho" secondAttribute="trailing" id="OzB-lp-SCh"/>
+                            <constraint firstItem="dq9-Yx-sec" firstAttribute="width" secondItem="dq9-Yx-sec" secondAttribute="height" multiplier="1:1" id="d7W-aV-FNf"/>
                             <constraint firstItem="sxg-JX-I83" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zOQ-kj-D9y" secondAttribute="trailing" constant="10" id="gGR-2P-F3E"/>
                             <constraint firstItem="2BK-Rb-rjy" firstAttribute="trailing" secondItem="sxg-JX-I83" secondAttribute="trailing" constant="16" id="hIL-VA-AXX"/>
                             <constraint firstItem="w1N-Nf-Zho" firstAttribute="leading" secondItem="2BK-Rb-rjy" secondAttribute="leading" id="kXM-2b-OXe"/>
                             <constraint firstItem="zOQ-kj-D9y" firstAttribute="leading" secondItem="2BK-Rb-rjy" secondAttribute="leading" constant="16" id="mgq-Aj-LfU"/>
+                            <constraint firstItem="dq9-Yx-sec" firstAttribute="centerY" secondItem="sxg-JX-I83" secondAttribute="centerY" id="x4k-wt-BJv"/>
                             <constraint firstItem="2BK-Rb-rjy" firstAttribute="bottom" secondItem="w1N-Nf-Zho" secondAttribute="bottom" id="zIc-KL-8UM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2BK-Rb-rjy"/>
@@ -503,13 +521,21 @@
             </objects>
             <point key="canvasLocation" x="-326.08695652173918" y="612.22826086956525"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="fVf-wC-f6L">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="cNQ-SV-GGQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hns-5D-rcw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="435" y="413"/>
+        </scene>
         <!--NewRental-->
         <scene sceneID="7bx-cY-5M0">
             <objects>
                 <viewControllerPlaceholder storyboardName="NewRental" id="NAW-jY-wmf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S0x-Kv-gce" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="505" y="634"/>
+            <point key="canvasLocation" x="464" y="615"/>
         </scene>
         <!--Registration-->
         <scene sceneID="bSU-l8-GmH">
@@ -517,7 +543,7 @@
                 <viewControllerPlaceholder storyboardName="Registration" id="HGO-HX-anJ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zjy-JR-fDS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="519" y="695"/>
+            <point key="canvasLocation" x="459" y="735"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ea2-DW-BEt">
@@ -563,14 +589,6 @@
             </objects>
             <point key="canvasLocation" x="-323" y="-159"/>
         </scene>
-        <!--RentalDetail-->
-        <scene sceneID="2FQ-bg-vCd">
-            <objects>
-                <viewControllerPlaceholder storyboardName="RentalDetail" id="fUf-6k-84K" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0et-wa-iRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1543" y="-299"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="47n-oF-PwA">
             <objects>
@@ -592,6 +610,7 @@
     </scenes>
     <resources>
         <image name="add" width="18" height="18"/>
+        <image name="edit" width="68" height="68"/>
         <image name="explore" width="21" height="21"/>
         <image name="explore-selected" width="20" height="20"/>
         <image name="rental_placeholder" width="114" height="58"/>
