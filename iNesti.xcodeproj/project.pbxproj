@@ -43,6 +43,7 @@
 		4DBFFA4920BA797C00FDA2BD /* UpdateInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFFA4820BA797C00FDA2BD /* UpdateInfoViewController.swift */; };
 		4DBFFA4B20BA7CA600FDA2BD /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFFA4A20BA7CA600FDA2BD /* UIViewController+Extensions.swift */; };
 		4DBFFA4D20BADD2D00FDA2BD /* UnpublishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFFA4C20BADD2D00FDA2BD /* UnpublishedViewController.swift */; };
+		4DBFFA4F20BAFF9400FDA2BD /* INPageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFFA4E20BAFF9400FDA2BD /* INPageControlView.swift */; };
 		4DD0A73A20B1D0E900674AAD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0A73920B1D0E900674AAD /* APIManager.swift */; };
 		4DD0A73D20B1D1AB00674AAD /* INConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0A73C20B1D1AB00674AAD /* INConstants.swift */; };
 		4DD0A74020B1D1FA00674AAD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0A73F20B1D1FA00674AAD /* String+Extension.swift */; };
@@ -133,6 +134,7 @@
 		4DBFFA4820BA797C00FDA2BD /* UpdateInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateInfoViewController.swift; sourceTree = "<group>"; };
 		4DBFFA4A20BA7CA600FDA2BD /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		4DBFFA4C20BADD2D00FDA2BD /* UnpublishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnpublishedViewController.swift; sourceTree = "<group>"; };
+		4DBFFA4E20BAFF9400FDA2BD /* INPageControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INPageControlView.swift; sourceTree = "<group>"; };
 		4DD0A73920B1D0E900674AAD /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		4DD0A73C20B1D1AB00674AAD /* INConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INConstants.swift; sourceTree = "<group>"; };
 		4DD0A73F20B1D1FA00674AAD /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -462,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				E5E9DC6F20B363A2004F3A6D /* RoomTypeCell.swift */,
+				4DBFFA4E20BAFF9400FDA2BD /* INPageControlView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -735,6 +738,7 @@
 				3C01173020852EF7007C73D8 /* AppDelegate.swift in Sources */,
 				3CD2E7D520868F41002252CC /* HomeViewController.swift in Sources */,
 				E5E9DC6720B33B8D004F3A6D /* AddRentalContainerViewController.swift in Sources */,
+				4DBFFA4F20BAFF9400FDA2BD /* INPageControlView.swift in Sources */,
 				E5E9DC7020B363A2004F3A6D /* RoomTypeCell.swift in Sources */,
 				3C8FF7A620A34B5B009EF837 /* SplashLoadingView.swift in Sources */,
 				3C8FF7A020A28D2E009EF837 /* UIColor+Extension.swift in Sources */,

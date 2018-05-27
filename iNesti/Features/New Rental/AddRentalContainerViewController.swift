@@ -10,7 +10,7 @@ import UIKit
 
 class AddRentalContainerViewController: BaseViewController {
 
-    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var pageControlView: INPageControlView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
@@ -20,7 +20,7 @@ class AddRentalContainerViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pageControl.numberOfPages = 4
+        pageControlView.delegate = self
         
         // Do any additional setup after loading the view.
     }
@@ -28,7 +28,6 @@ class AddRentalContainerViewController: BaseViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == addRentalPageEmbedId, let pageViewController = segue.destination as? AddRentalPageViewController {
             addRentalPageController = pageViewController
-            //addRentalPageController.addRentalPageDelegate = self
         }
     }
     
@@ -44,7 +43,7 @@ class AddRentalContainerViewController: BaseViewController {
             addRentalPageController.navigateToPreviousPage { [weak self] (index) in
                 guard let strongSelf = self else { return }
                 strongSelf.checkNextButtonEnabled(index: index)
-                strongSelf.pageControl.currentPage = index
+                strongSelf.pageControlView.setIndex(index: index)
             }
         }
     }
@@ -64,21 +63,12 @@ class AddRentalContainerViewController: BaseViewController {
             addRentalPageController.navigateToNextPage { [weak self] (index) in
                 guard let strongSelf = self else { return }
                 strongSelf.checkNextButtonEnabled(index: index)
-                strongSelf.pageControl.currentPage = index
+                strongSelf.pageControlView.setIndex(index: index)
             }
         }
-        
     }
     
     private func checkNextButtonEnabled(index: Int) {
-//        if index == addRentalPageController.numberOfPages() - 1 {
-//            nextButton.isUserInteractionEnabled = false
-//            nextButton.alpha = 0.3
-//        } else {
-//            nextButton.isUserInteractionEnabled = true
-//            nextButton.alpha = 1
-//        }
-        
         if index == addRentalPageController.numberOfPages() - 1 {
             nextButton.setTitle("发布", for: .normal)
         } else {
@@ -101,6 +91,17 @@ class AddRentalContainerViewController: BaseViewController {
         
         self.dismiss(animated: true, completion: nil)
     }
+}
+
+extension AddRentalContainerViewController: INPageControlViewDelegate {
+    
+    func pageControlTappedIndex(index: Int) {
+        DLog("Page index tapped: \(index)")
+        addRentalPageController.navigationToPage(index) { (pageIndex) in
+            DLog("Navigated to: \(pageIndex)")
+        }
+    }
+    
 }
 
 //extension AddRentalContainerViewController: AddRentalPageViewControllerDelegate {

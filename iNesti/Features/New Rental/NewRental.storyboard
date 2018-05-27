@@ -19,20 +19,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vnH-0G-9oR">
-                                <rect key="frame" x="0.0" y="113" width="375" height="494"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="487"/>
                                 <connections>
                                     <segue destination="yLc-sh-7mU" kind="embed" identifier="AddRentalPageEmbed" id="3Os-mH-7c3"/>
                                 </connections>
                             </containerView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Kn9-Jf-Kiw">
-                                <rect key="frame" x="168" y="20" width="39" height="37"/>
-                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="currentPageIndicatorTintColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bx-PY-UrG">
-                                <rect key="frame" x="16" y="20" width="44" height="37"/>
+                                <rect key="frame" x="16" y="20" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="bAs-Xu-mZP"/>
+                                    <constraint firstAttribute="height" constant="44" id="gZD-2l-hET"/>
                                 </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
@@ -40,7 +36,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加房源" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Noz-9m-Pqh">
-                                <rect key="frame" x="16" y="73" width="112" height="39.5"/>
+                                <rect key="frame" x="16" y="80" width="112" height="39.5"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -74,21 +70,73 @@
                                     <constraint firstAttribute="height" constant="50" id="ala-jD-UI8"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUn-28-PzR" customClass="INPageControlView" customModule="iNesti" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="21" width="200" height="43"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="oBm-4S-pXt">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="43"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gd-l8-ImY">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="43"/>
+                                                <state key="normal" title="1"/>
+                                                <connections>
+                                                    <action selector="handlePageButtonWithSender:" destination="WUn-28-PzR" eventType="touchUpInside" id="8Bm-a3-ZgB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wA1-Zh-R89">
+                                                <rect key="frame" x="50" y="0.0" width="50" height="43"/>
+                                                <state key="normal" title="2"/>
+                                                <connections>
+                                                    <action selector="handlePageButtonWithSender:" destination="WUn-28-PzR" eventType="touchUpInside" id="bP9-ko-Xqe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIc-sc-K2g">
+                                                <rect key="frame" x="100" y="0.0" width="50" height="43"/>
+                                                <state key="normal" title="3"/>
+                                                <connections>
+                                                    <action selector="handlePageButtonWithSender:" destination="WUn-28-PzR" eventType="touchUpInside" id="CE9-IZ-H5j"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eI3-bx-2uV">
+                                                <rect key="frame" x="150" y="0.0" width="50" height="43"/>
+                                                <state key="normal" title="4"/>
+                                                <connections>
+                                                    <action selector="handlePageButtonWithSender:" destination="WUn-28-PzR" eventType="touchUpInside" id="Xp8-Y9-Gab"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="0aw-PW-Cj0"/>
+                                    <constraint firstItem="oBm-4S-pXt" firstAttribute="top" secondItem="WUn-28-PzR" secondAttribute="top" id="9g6-ce-JuR"/>
+                                    <constraint firstAttribute="width" constant="200" id="AQY-uX-189"/>
+                                    <constraint firstItem="oBm-4S-pXt" firstAttribute="leading" secondItem="WUn-28-PzR" secondAttribute="leading" id="Ib6-IW-BuW"/>
+                                    <constraint firstAttribute="trailing" secondItem="oBm-4S-pXt" secondAttribute="trailing" id="Oq8-hD-81P"/>
+                                    <constraint firstAttribute="bottom" secondItem="oBm-4S-pXt" secondAttribute="bottom" id="awV-32-sBR"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="pageButtons" destination="5gd-l8-ImY" collectionClass="NSMutableArray" id="soV-yW-no6"/>
+                                    <outletCollection property="pageButtons" destination="wA1-Zh-R89" collectionClass="NSMutableArray" id="UyQ-r0-qf3"/>
+                                    <outletCollection property="pageButtons" destination="CIc-sc-K2g" collectionClass="NSMutableArray" id="GjU-L4-Ej3"/>
+                                    <outletCollection property="pageButtons" destination="eI3-bx-2uV" collectionClass="NSMutableArray" id="zEE-AE-w6L"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vnH-0G-9oR" firstAttribute="leading" secondItem="gN5-Bi-tqS" secondAttribute="leading" id="2yt-au-nc5"/>
-                            <constraint firstItem="Kn9-Jf-Kiw" firstAttribute="top" secondItem="gN5-Bi-tqS" secondAttribute="top" id="6Z9-Yg-oog"/>
                             <constraint firstItem="5bx-PY-UrG" firstAttribute="leading" secondItem="gN5-Bi-tqS" secondAttribute="leading" constant="16" id="G3m-KM-jg7"/>
                             <constraint firstItem="gN5-Bi-tqS" firstAttribute="trailing" secondItem="Hft-Tx-YyI" secondAttribute="trailing" id="Gb9-my-go6"/>
-                            <constraint firstItem="5bx-PY-UrG" firstAttribute="top" secondItem="Kn9-Jf-Kiw" secondAttribute="top" id="JSB-31-WFC"/>
                             <constraint firstItem="Noz-9m-Pqh" firstAttribute="leading" secondItem="5bx-PY-UrG" secondAttribute="leading" id="SQT-hD-IRd"/>
+                            <constraint firstItem="WUn-28-PzR" firstAttribute="top" secondItem="gN5-Bi-tqS" secondAttribute="top" constant="1" id="Y5T-RR-mSk"/>
                             <constraint firstItem="gN5-Bi-tqS" firstAttribute="bottom" secondItem="Hft-Tx-YyI" secondAttribute="bottom" constant="10" id="aBT-2w-etw"/>
-                            <constraint firstItem="Kn9-Jf-Kiw" firstAttribute="centerX" secondItem="gN5-Bi-tqS" secondAttribute="centerX" id="bNm-VO-UjR"/>
-                            <constraint firstItem="5bx-PY-UrG" firstAttribute="height" secondItem="Kn9-Jf-Kiw" secondAttribute="height" id="bd7-IS-w5U"/>
+                            <constraint firstItem="5bx-PY-UrG" firstAttribute="top" secondItem="gN5-Bi-tqS" secondAttribute="top" id="cYZ-Vt-9DZ"/>
                             <constraint firstItem="vnH-0G-9oR" firstAttribute="top" secondItem="Noz-9m-Pqh" secondAttribute="bottom" id="d0d-1p-Cn6"/>
                             <constraint firstItem="gN5-Bi-tqS" firstAttribute="trailing" secondItem="vnH-0G-9oR" secondAttribute="trailing" id="dII-Mv-toy"/>
                             <constraint firstItem="Hft-Tx-YyI" firstAttribute="leading" secondItem="gN5-Bi-tqS" secondAttribute="leading" id="jst-0C-tKM"/>
+                            <constraint firstItem="WUn-28-PzR" firstAttribute="centerX" secondItem="gN5-Bi-tqS" secondAttribute="centerX" id="lyi-2q-gpN"/>
                             <constraint firstItem="Noz-9m-Pqh" firstAttribute="top" secondItem="5bx-PY-UrG" secondAttribute="bottom" constant="16" id="vzv-W2-v5N"/>
                             <constraint firstItem="Hft-Tx-YyI" firstAttribute="top" secondItem="vnH-0G-9oR" secondAttribute="bottom" id="w2S-Zx-8hN"/>
                         </constraints>
@@ -97,7 +145,7 @@
                     <connections>
                         <outlet property="backButton" destination="5bx-PY-UrG" id="TzP-6j-Wgz"/>
                         <outlet property="nextButton" destination="c2j-0T-aUf" id="Ynz-nm-zu8"/>
-                        <outlet property="pageControl" destination="Kn9-Jf-Kiw" id="oui-n1-Xt7"/>
+                        <outlet property="pageControlView" destination="WUn-28-PzR" id="RHg-JS-0Ay"/>
                         <outlet property="saveButton" destination="YUu-rH-14k" id="9gh-98-NFD"/>
                     </connections>
                 </viewController>

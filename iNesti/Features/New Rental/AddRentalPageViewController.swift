@@ -83,6 +83,16 @@ class AddRentalPageViewController: UIPageViewController {
         }
     }
     
+    public func navigationToPage(_ pageIndex: Int, completion:((Int) -> Void)?) {
+        if pageIndex < viewControllerArray.count && pageIndex != currentIndex {
+            let viewController = viewControllerArray[pageIndex]
+            let flipDirection: UIPageViewControllerNavigationDirection = (pageIndex > currentIndex) ? .forward : .reverse
+            self.setViewControllers([viewController], direction: flipDirection, animated: true, completion: nil)
+            currentIndex = pageIndex
+            completion?(currentIndex)
+        }
+    }
+    
     public func getCurrentIndex() -> Int {
         return currentIndex
     }
