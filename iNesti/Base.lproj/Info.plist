@@ -21,7 +21,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>需要获取图片以设置用户头像</string>
+	<string>需要授权相簿权限以获取房屋图片</string>
+	<key>NSCameraUsageDescription</key>
+	<string>需要授权相机权限以获取房屋图片</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>OpenSans-Bold.tff</string>
