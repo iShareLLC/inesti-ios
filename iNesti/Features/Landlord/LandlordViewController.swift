@@ -16,6 +16,7 @@ class LandlordViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profileButton: UIButton!
+    @IBOutlet weak var unpublishedButton: UIButton!
     @IBOutlet weak var footerView: LandlordPublishFooterView!
 
     //var dataSource = ["1", "2", "3"]
@@ -26,12 +27,12 @@ class LandlordViewController: BaseViewController {
         footerView.delegate = self
         footerView.isHidden = !ProfileManager.shared.getIsLoggedIn()
         
-        updateProfileButton(isLoggedIn: ProfileManager.shared.getIsLoggedIn())
+        updateProfileButtons(isLoggedIn: ProfileManager.shared.getIsLoggedIn())
         
         NotificationCenter.default.addObserver(forName: .UserDidChange, object: nil, queue: nil) {[weak self] _ in
             self?.footerView.isHidden = !ProfileManager.shared.getIsLoggedIn()
             self?.tableView.reloadData()
-            self?.updateProfileButton(isLoggedIn: ProfileManager.shared.getIsLoggedIn())
+            self?.updateProfileButtons(isLoggedIn: ProfileManager.shared.getIsLoggedIn())
         }
         
         NotificationCenter.default.addObserver(forName: .DataStoreDidUpdate, object: nil, queue: nil) {[weak self] _ in
@@ -40,14 +41,9 @@ class LandlordViewController: BaseViewController {
         }
     }
     
-    private func updateProfileButton(isLoggedIn: Bool)  {
-        if (ProfileManager.shared.getIsLoggedIn()) {
-            profileButton.isUserInteractionEnabled = true
-            profileButton.alpha = 1
-        } else {
-            profileButton.isUserInteractionEnabled = false
-            profileButton.alpha = 0.3
-        }
+    private func updateProfileButtons(isLoggedIn: Bool)  {
+        profileButton.isHidden = !ProfileManager.shared.getIsLoggedIn()
+        unpublishedButton.isHidden = !ProfileManager.shared.getIsLoggedIn()
     }
 }
 

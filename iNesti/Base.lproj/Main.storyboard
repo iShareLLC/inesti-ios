@@ -517,6 +517,7 @@
                         <outlet property="footerView" destination="iYv-as-ix5" id="7GA-4A-ind"/>
                         <outlet property="profileButton" destination="sxg-JX-I83" id="hkM-xX-WO3"/>
                         <outlet property="tableView" destination="w1N-Nf-Zho" id="ScP-8I-ZCV"/>
+                        <outlet property="unpublishedButton" destination="dq9-Yx-sec" id="MaJ-TF-UTT"/>
                         <segue destination="NAW-jY-wmf" kind="presentation" identifier="NewRentalSegue" id="89v-RA-BRr"/>
                         <segue destination="HGO-HX-anJ" kind="presentation" identifier="RegistrationSegue" id="lz9-ga-xUW"/>
                     </connections>
