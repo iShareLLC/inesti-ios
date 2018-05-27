@@ -17,7 +17,6 @@ class HomeViewController: BaseViewController {
     @IBOutlet private weak var tableView: UITableView!
 
     private var dataSource = RentalDataStore.shared.getPopularRentals()
-    private let homeViewModel = HomeViewModel()
     private var isInitialLoading = true
 
     override func viewDidLoad() {
@@ -33,32 +32,11 @@ class HomeViewController: BaseViewController {
         
         setupSearchButton()
     }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        /*
-        if isInitialLoading {
-            let loadingView = SplashLoadingView.loadFromNib().createPopup()
-            loadingView.show(at: self)
-            homeViewModel.requestPopularPlaces { success in
-                loadingView.completeWithPositive(result: nil)
-            }
-            isInitialLoading = false
-        }
- */
-    }
-
+    
     private func setupSearchButton() {
         searchButton.layer.cornerRadius = 2.0
         searchButton.layer.masksToBounds = false
         searchButton.layer.applySketchShadow(color: UIColor(white: 0, alpha: 0.25), x: 0, y: 5, blur: 25, spread: 0)
-//        searchButton.rx.tap
-//            .subscribe(onNext: { [weak self] _ in
-//                let searchVC = INUtilities.instantiateViewContorller(id: "SearchViewController", storyboardId: "Main")
-//                self?.present(searchVC, animated: true, completion: nil)
-//            })
-//            .disposed(by: disposeBag)
     }
 }
 
