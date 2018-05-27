@@ -1008,16 +1008,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = BJD4TB66LH;
+				DEVELOPMENT_TEAM = 96H49DDL9H;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = iNesti/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNesti;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iShare-LLC.iNesti";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "4305937a-45b6-48d4-b844-6a887acf474d";
+				PROVISIONING_PROFILE_SPECIFIER = "iNesti Development Profile";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1028,17 +1029,19 @@
 			baseConfigurationReference = D20F74BB0A29983A64ABDA31 /* Pods-iNesti.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = BJD4TB66LH;
+				DEVELOPMENT_TEAM = 96H49DDL9H;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = iNesti/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iShareLLC.iNesti;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iShare-LLC.iNesti";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "6bf334a9-475f-467e-a7a8-4f98c3af6c5e";
+				PROVISIONING_PROFILE_SPECIFIER = "iNesti AdHoc Profile";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
