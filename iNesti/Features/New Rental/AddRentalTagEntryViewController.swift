@@ -102,6 +102,20 @@ class RentalTagCell: UITableViewCell {
         tagView.manualCalculateHeight = true;
         tagView.delegate = self
         self.selectionStyle = .none
+        
+        if let config = tagView.defaultConfig {
+            config.tagTextColor = UIColor.in_textGray
+            config.tagSelectedTextColor = UIColor.black
+            config.tagBackgroundColor = UIColor.white
+            config.tagSelectedBackgroundColor = UIColor.in_yellow
+            config.tagCornerRadius = 16.0
+            config.tagSelectedCornerRadius = 16.0
+            config.tagBorderWidth = 1
+            config.tagSelectedBorderWidth = 1
+            config.tagBorderColor = UIColor.in_textGray
+            config.tagSelectedBorderColor = UIColor.in_textGray
+            config.tagShadowOpacity = 0
+        }
     }
     
     func setTags(tags: [String], row: Int) {
@@ -113,6 +127,7 @@ class RentalTagCell: UITableViewCell {
 
 extension RentalTagCell: TTGTextTagCollectionViewDelegate {
     func textTagCollectionView(_ textTagCollectionView: TTGTextTagCollectionView!, didTapTag tagText: String!, at index: UInt, selected: Bool, tagConfig config: TTGTextTagConfig!) {
+        
         self.delegate?.rentalTagSelected(row: rowIndex, tagIndex: Int(index))
     }
 }
