@@ -472,9 +472,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUd-Xx-43r">
-                                <rect key="frame" x="16" y="20" width="343" height="44"/>
+                                <rect key="frame" x="16" y="20" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="PCT-8v-Xld"/>
+                                    <constraint firstAttribute="width" constant="44" id="QEt-zt-EN8"/>
                                 </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
@@ -487,6 +488,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLq-8y-UX5">
+                                <rect key="frame" x="316" y="20" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ehC-Ch-8yk"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="handleCloseButtonWithSender:" destination="OAa-Yz-kIg" eventType="touchUpInside" id="Stg-PP-CCT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -494,25 +505,36 @@
                             <constraint firstItem="PiT-dY-dBm" firstAttribute="trailing" secondItem="wpY-5G-xDo" secondAttribute="trailing" constant="16" id="9Ig-jE-4Eb"/>
                             <constraint firstItem="3Ub-pi-Y8o" firstAttribute="top" secondItem="3QA-O3-fIW" secondAttribute="bottom" constant="16" id="9Og-V3-Eer"/>
                             <constraint firstItem="3QA-O3-fIW" firstAttribute="top" secondItem="wpY-5G-xDo" secondAttribute="bottom" constant="12" id="Hcd-nO-Kwn"/>
+                            <constraint firstItem="PiT-dY-dBm" firstAttribute="trailing" secondItem="RLq-8y-UX5" secondAttribute="trailing" constant="15" id="Kew-VB-OS2"/>
                             <constraint firstItem="hUd-Xx-43r" firstAttribute="top" secondItem="wpY-5G-xDo" secondAttribute="top" id="OsR-cr-j0J"/>
                             <constraint firstItem="3Ub-pi-Y8o" firstAttribute="leading" secondItem="PiT-dY-dBm" secondAttribute="leading" id="QQ2-kM-WaM"/>
                             <constraint firstItem="PiT-dY-dBm" firstAttribute="bottom" secondItem="3Ub-pi-Y8o" secondAttribute="bottom" id="VXc-S8-swA"/>
                             <constraint firstItem="3QA-O3-fIW" firstAttribute="leading" secondItem="hUd-Xx-43r" secondAttribute="leading" id="fWE-1p-wvt"/>
-                            <constraint firstItem="hUd-Xx-43r" firstAttribute="width" secondItem="wpY-5G-xDo" secondAttribute="width" id="gLd-kr-sTg"/>
+                            <constraint firstItem="RLq-8y-UX5" firstAttribute="width" secondItem="RLq-8y-UX5" secondAttribute="height" multiplier="1:1" id="hZO-cT-QZo"/>
                             <constraint firstItem="wpY-5G-xDo" firstAttribute="top" secondItem="PiT-dY-dBm" secondAttribute="top" id="ncX-je-sxY"/>
                             <constraint firstItem="PiT-dY-dBm" firstAttribute="trailing" secondItem="3Ub-pi-Y8o" secondAttribute="trailing" id="pqu-1L-pLW"/>
                             <constraint firstItem="hUd-Xx-43r" firstAttribute="leading" secondItem="PiT-dY-dBm" secondAttribute="leading" constant="16" id="rC2-p5-QvP"/>
+                            <constraint firstItem="RLq-8y-UX5" firstAttribute="top" secondItem="PiT-dY-dBm" secondAttribute="top" id="ucQ-hF-FAj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PiT-dY-dBm"/>
                     </view>
                     <connections>
                         <outlet property="resultMessageLabel" destination="3QA-O3-fIW" id="Ke0-ch-ONY"/>
                         <outlet property="tableView" destination="3Ub-pi-Y8o" id="OcB-9t-f6A"/>
+                        <segue destination="Bdx-04-M09" kind="show" identifier="RentalDetailSegue" id="dX7-0x-Hna"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mmr-yb-YGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1284" y="203"/>
+        </scene>
+        <!--RentalDetail-->
+        <scene sceneID="diz-6N-g6F">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RentalDetail" id="Bdx-04-M09" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n0m-GH-ApK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913" y="272"/>
         </scene>
     </scenes>
     <resources>

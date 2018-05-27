@@ -10,6 +10,8 @@ import UIKit
 
 class SearchResultViewController: UIViewController {
 
+    let kRentalDetailSegue = "RentalDetailSegue"
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var resultMessageLabel: UILabel!
     
@@ -29,6 +31,10 @@ class SearchResultViewController: UIViewController {
     
     @IBAction func handleBackButton(sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func handleCloseButton(sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -51,4 +57,9 @@ extension SearchResultViewController: UITableViewDelegate, UITableViewDataSource
         return 320
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        //Inject the rental detail and display
+        performSegue(withIdentifier: kRentalDetailSegue, sender: nil)
+    }
 }
