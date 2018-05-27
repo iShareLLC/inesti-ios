@@ -24,10 +24,11 @@ class LandlordViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         footerView.delegate = self
-        footerView.setType(viewType: (ProfileManager.shared.getIsLoggedIn()) ? .newRental : .registration)
+        footerView.isHidden = !ProfileManager.shared.getIsLoggedIn()
         
         NotificationCenter.default.addObserver(forName: .UserDidLogin, object: nil, queue: nil) {[weak self] _ in
-            self?.footerView.setType(viewType: .newRental)
+            self?.footerView.isHidden = !ProfileManager.shared.getIsLoggedIn()
+            self?.tableView.reloadData()
         }
         
         NotificationCenter.default.addObserver(forName: .DataStoreDidUpdate, object: nil, queue: nil) {[weak self] _ in
@@ -37,11 +38,23 @@ class LandlordViewController: BaseViewController {
     }
 }
 
-extension LandlordViewController: UITableViewDelegate {
+extension LandlordViewController: LandlordNoLoginCellDelegate {
     
+    func handleWeChatButton(sender: UIButton) {
+        DLog("Wechat tapped")
+    }
+    
+    func handleLoginButton(sender: UIButton) {
+        DLog("Login tapped")
+    }
+    
+    func handleRegisterButton(sender: UIButton) {
+        DLog("Register Tapped")
+        performSegue(withIdentifier: kRegistrationSegue, sender: nil)
+    }
 }
 
-extension LandlordViewController: UITableViewDataSource {
+extension LandlordViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return isEmptyData() ? 1 : dataSource.count
@@ -53,15 +66,16 @@ extension LandlordViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if isEmptyData() {
-            let cell: LandlordNoItemCell = tableView.dequeueReusableCell(withIdentifier: "LandlordNoItemCell", for: indexPath) as! LandlordNoItemCell
-            
             if ProfileManager.shared.getIsLoggedIn() {
-                cell.setMessage(message: "您还没有已发布的房源，点击 “添加房源” 按钮开始添加。")
+                let cell: LandlordNoItemCell = tableView.dequeueReusableCell(withIdentifier: "LandlordNoItemCell", for: indexPath) as! LandlordNoItemCell
+                cell.selectionStyle = .none
+                return cell
             } else {
-                cell.setMessage(message: "发布房源之前，你需要注册账户。")
+                let cell: LandlordNoLoginCell = tableView.dequeueReusableCell(withIdentifier: "LandlordNoLoginCell", for: indexPath) as! LandlordNoLoginCell
+                cell.selectionStyle = .none
+                cell.delegate = self
+                return cell
             }
-            
-            return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "LandlordRentalCell", for: indexPath)
         return cell
@@ -69,7 +83,11 @@ extension LandlordViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if isEmptyData() {
-            return 200
+            if ProfileManager.shared.getIsLoggedIn() {
+                return 200
+            } else {
+                return 400
+            }
         }
         return 320
     }
@@ -82,18 +100,14 @@ extension LandlordViewController: UITableViewDataSource {
 
 extension LandlordViewController: LandlordPublishFooterViewDelegate {
     
-    func footerActionButtonHandler(viewType: LandlordPublishFooterView.FooterViewType) {
-        if viewType == .registration {
-            performSegue(withIdentifier: kRegistrationSegue, sender: nil)
-        } else {
-            performSegue(withIdentifier: kNewRentalSegue, sender: nil)
-        }
+    func addRentalHandler() {
+        performSegue(withIdentifier: kNewRentalSegue, sender: nil)
     }
 }
 
 
 protocol LandlordPublishFooterViewDelegate: class {
-    func footerActionButtonHandler(viewType: LandlordPublishFooterView.FooterViewType)
+    func addRentalHandler()
 }
 
 class LandlordPublishFooterView: UITableViewHeaderFooterView {
@@ -105,36 +119,43 @@ class LandlordPublishFooterView: UITableViewHeaderFooterView {
     @IBOutlet private weak var actionButton: UIButton!
     
     weak var delegate: LandlordPublishFooterViewDelegate?
-    private var type: FooterViewType = .registration
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         actionButton.layer.cornerRadius = 3.0
         actionButton.layer.masksToBounds = false
         actionButton.layer.applySketchShadow(color: UIColor(white: 0, alpha: 0.13), x: 0, y: 2, blur: 3, spread: 0)
     }
     
     @IBAction func handleActionButton(sender: UIButton) {
-        delegate?.footerActionButtonHandler(viewType: type)
-    }
-    
-    public func setType(viewType: FooterViewType) {
-        type = viewType
-        if viewType == .registration {
-            actionButton.setImage(nil, for: .normal)
-            actionButton.setTitle("注册用户", for: .normal)
-        } else {
-            actionButton.setImage(UIImage(named: "add"), for: .normal)
-            actionButton.setTitle("添加房源", for: .normal)
-        }
+        delegate?.addRentalHandler()
     }
 }
 
 class LandlordNoItemCell: UITableViewCell {
-    @IBOutlet private weak var messageLabel: UILabel!
     
-    public func setMessage(message: String) {
-        messageLabel.text = message
+}
+
+protocol LandlordNoLoginCellDelegate: class {
+    func handleWeChatButton(sender: UIButton)
+    func handleLoginButton(sender: UIButton)
+    func handleRegisterButton(sender: UIButton)
+}
+
+class LandlordNoLoginCell: UITableViewCell {
+    
+    weak var delegate: LandlordNoLoginCellDelegate?
+    
+    @IBAction func handleWeChat(sender: UIButton) {
+        delegate?.handleWeChatButton(sender: sender)
+    }
+    
+    @IBAction func handleLogin(sender: UIButton) {
+        delegate?.handleLoginButton(sender: sender)
+    }
+    
+    @IBAction func handleRegister(sender: UIButton) {
+        delegate?.handleRegisterButton(sender: sender)
     }
 }
+

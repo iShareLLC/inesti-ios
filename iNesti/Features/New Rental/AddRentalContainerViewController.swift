@@ -82,8 +82,6 @@ class AddRentalContainerViewController: BaseViewController {
 //            nextButton.alpha = 1
 //        }
         
-        backButton.isHidden = (index == 0)
-        
         if index == addRentalPageController.numberOfPages() - 1 {
             nextButton.setTitle("发布", for: .normal)
         } else {
