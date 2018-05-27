@@ -20,24 +20,36 @@ class LandlordViewController: BaseViewController {
     @IBOutlet weak var footerView: LandlordPublishFooterView!
 
     //var dataSource = ["1", "2", "3"]
-    var dataSource = RentalDataStore.shared.getRentals(state: .published)
+    var dataSource = [Rental]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         footerView.delegate = self
         footerView.isHidden = !ProfileManager.shared.getIsLoggedIn()
+        
+        dataSource = RentalDataStore.shared.getRentals(state: .published)
         
         updateProfileButtons(isLoggedIn: ProfileManager.shared.getIsLoggedIn())
         
         NotificationCenter.default.addObserver(forName: .UserDidChange, object: nil, queue: nil) {[weak self] _ in
+            
+            if ProfileManager.shared.getIsLoggedIn() {
+                self?.dataSource = RentalDataStore.shared.getRentals(state: .published)
+            } else {
+                self?.dataSource.removeAll()
+            }
+            
             self?.footerView.isHidden = !ProfileManager.shared.getIsLoggedIn()
             self?.tableView.reloadData()
             self?.updateProfileButtons(isLoggedIn: ProfileManager.shared.getIsLoggedIn())
         }
         
         NotificationCenter.default.addObserver(forName: .DataStoreDidUpdate, object: nil, queue: nil) {[weak self] _ in
-            self?.dataSource = RentalDataStore.shared.getRentals(state: .published)
-            self?.tableView.reloadData()
+            if ProfileManager.shared.getIsLoggedIn() {
+                self?.dataSource = RentalDataStore.shared.getRentals(state: .published)
+                self?.tableView.reloadData()
+            }
         }
     }
     
@@ -74,31 +86,35 @@ extension LandlordViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if isEmptyData() {
-            if ProfileManager.shared.getIsLoggedIn() {
+        
+        if ProfileManager.shared.getIsLoggedIn() {
+            if isEmptyData() {
                 let cell: LandlordNoItemCell = tableView.dequeueReusableCell(withIdentifier: "LandlordNoItemCell", for: indexPath) as! LandlordNoItemCell
                 cell.selectionStyle = .none
                 return cell
             } else {
-                let cell: LandlordNoLoginCell = tableView.dequeueReusableCell(withIdentifier: "LandlordNoLoginCell", for: indexPath) as! LandlordNoLoginCell
-                cell.selectionStyle = .none
-                cell.delegate = self
+                let cell = tableView.dequeueReusableCell(withIdentifier: "LandlordRentalCell", for: indexPath)
                 return cell
             }
+            
+        } else {
+            let cell: LandlordNoLoginCell = tableView.dequeueReusableCell(withIdentifier: "LandlordNoLoginCell", for: indexPath) as! LandlordNoLoginCell
+            cell.selectionStyle = .none
+            cell.delegate = self
+            return cell
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LandlordRentalCell", for: indexPath)
-        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if isEmptyData() {
-            if ProfileManager.shared.getIsLoggedIn() {
+        if ProfileManager.shared.getIsLoggedIn() {
+            if isEmptyData() {
                 return 200
             } else {
-                return 400
+                return 320
             }
+        } else {
+            return 400
         }
-        return 320
     }
     
     //MARK: HELPER
