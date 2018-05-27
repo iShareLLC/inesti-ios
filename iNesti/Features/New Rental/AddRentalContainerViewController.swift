@@ -36,11 +36,6 @@ class AddRentalContainerViewController: BaseViewController {
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     //MARK: Action Handler
     @IBAction func handleBackButton(sender: UIButton) {
         if addRentalPageController.getCurrentIndex() == 0 {
@@ -49,6 +44,7 @@ class AddRentalContainerViewController: BaseViewController {
             addRentalPageController.navigateToPreviousPage { [weak self] (index) in
                 guard let strongSelf = self else { return }
                 strongSelf.checkNextButtonEnabled(index: index)
+                strongSelf.pageControl.currentPage = index
             }
         }
     }
@@ -68,6 +64,7 @@ class AddRentalContainerViewController: BaseViewController {
             addRentalPageController.navigateToNextPage { [weak self] (index) in
                 guard let strongSelf = self else { return }
                 strongSelf.checkNextButtonEnabled(index: index)
+                strongSelf.pageControl.currentPage = index
             }
         }
         
