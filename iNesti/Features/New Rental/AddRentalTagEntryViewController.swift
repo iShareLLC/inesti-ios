@@ -34,11 +34,6 @@ class AddRentalTagEntryViewController: BaseViewController {
         tableView.rowHeight = UITableViewAutomaticDimension;
         tableView.estimatedRowHeight = 80;
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 }
 
 extension AddRentalTagEntryViewController: UITableViewDelegate {

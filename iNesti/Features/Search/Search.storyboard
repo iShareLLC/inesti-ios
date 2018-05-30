@@ -102,7 +102,7 @@
                                                 </constraints>
                                                 <state key="normal" image="close"/>
                                             </button>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hqN-LL-Wxw">
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hqN-LL-Wxw">
                                                 <rect key="frame" x="0.0" y="210" width="375" height="216"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="216" id="GRZ-AK-waI"/>
