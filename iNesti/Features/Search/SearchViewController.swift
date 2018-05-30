@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import Reusable
 import TTRangeSlider
+import DropDown
 
 class SearchViewController: BaseViewController {
     @IBOutlet weak var addressTextField: INTextField!
@@ -23,6 +24,7 @@ class SearchViewController: BaseViewController {
     
     @IBOutlet weak var typeAheadTableView: UITableView!
     @IBOutlet weak var typeAheadTableViewConstraint: NSLayoutConstraint!
+    @IBOutlet weak var periodButton: UIButton!
     
     let typeAheadData = ["Chinatown", "Woodhaven", "East Village", "Soho", "Brooklyn", "Flushing", "Roosevelt Island", "Elmhurst"]
     let kSearchResultSegue = "SearchResultSegue"
@@ -146,6 +148,18 @@ class SearchViewController: BaseViewController {
         //TODO: Add Search API
         
         performSegue(withIdentifier: kSearchResultSegue, sender: nil)
+    }
+    
+    @IBAction func handlePeriodButton(sender: UIButton) {
+        let dropDown = DropDown()
+        dropDown.anchorView = sender
+        dropDown.dataSource = ["月", "日", "年"]
+        dropDown.selectionAction = { [weak self] (index: Int, item: String) in
+            self?.periodButton.setTitle("/ \(item)", for: .normal)
+        }
+        dropDown.direction = .bottom
+        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
+        dropDown.show()
     }
 }
 
