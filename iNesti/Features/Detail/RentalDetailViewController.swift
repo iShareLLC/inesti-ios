@@ -11,16 +11,57 @@ import UIKit
 class RentalDetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var containerView: UIView!
+    
+    weak var contactViewController: RentalContactViewController!
+    var isContactShown: Bool = false {
+        didSet {
+            DispatchQueue.main.async {
+                if self.isContactShown {
+                    self.containerView.isHidden = false
+                    UIView.animate(withDuration: 0.3, animations: {
+                        self.containerView.alpha = 1
+                    })
+                } else {
+                    UIView.animate(withDuration: 0.3, animations: {
+                        self.containerView.alpha = 0
+                    }) { (completed) in
+                        self.containerView.isHidden = true
+                    }
+                }
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.containerView.isHidden = true
+        self.containerView.alpha = 0
+        
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewContrller = segue.destination as? RentalContactViewController {
+            contactViewController = viewContrller
+            contactViewController.delegate = self
+        }
     }
 
     @IBAction func handleBackButton(sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func handleContactButton(sender: UIButton) {
+        isContactShown = true
+    }
+}
+
+extension RentalDetailViewController: RentalContactViewControllerDelegate {
+    func handleDismiss() {
+        isContactShown = false
     }
 }
 
