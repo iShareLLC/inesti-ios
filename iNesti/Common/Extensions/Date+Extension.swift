@@ -66,6 +66,13 @@ extension Date {
         return dateFormatter.string(from: Date(timeIntervalSince1970: time))
     }
     
+    static func getTimeString(format: String, date: Date) -> String {
+        let dateFormatter = DateFormatter.init()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: date)
+    }
+    
     static func getFutureDateFromNow(year: Int = 0, month: Int = 0, day: Int = 0) -> Date? {
         let currentDate = Date()
         var dateComponent = DateComponents()

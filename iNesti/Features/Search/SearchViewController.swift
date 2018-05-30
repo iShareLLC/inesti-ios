@@ -26,6 +26,8 @@ class SearchViewController: BaseViewController {
     @IBOutlet weak var typeAheadTableViewConstraint: NSLayoutConstraint!
     @IBOutlet weak var periodButton: UIButton!
     
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
     var typeAheadData = [INLocation]()
     let kSearchResultSegue = "SearchResultSegue"
     
@@ -116,6 +118,11 @@ class SearchViewController: BaseViewController {
         dropDown.direction = .bottom
         dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
         dropDown.show()
+    }
+    
+    @IBAction func handleDatePickerValueChange(sender: UIDatePicker) {
+       let dateString = Date.getTimeString(format: "MM/dd/yyyy", date: sender.date)
+        startDateTextField.text = dateString
     }
 }
 
