@@ -1,0 +1,198 @@
+[
+	{
+		"location": "Park Slope",
+		"displayName": "公园坡度"
+	},
+	{
+		"location": "Long Island City",
+		"displayName": "长岛市"
+	},
+	{
+		"location": "Kips Bay",
+		"displayName": "基普斯湾"
+	},
+	{
+		"location": "SoHo",
+		"displayName": "苏豪区"
+	},
+	{
+		"location": "Fordham",
+		"displayName": "福特汉姆"
+	},
+	{
+		"location": "Midtown West",
+		"displayName": "中城西区"
+	},
+	{
+		"location": "Prospect Heights",
+		"displayName": "展望高地"
+	},
+	{
+		"location": "Downtown Brooklyn",
+		"displayName": "布鲁克林下城"
+	},
+	{
+		"location": "Brooklyn Heights",
+		"displayName": "布鲁克林高地"
+	},
+	{
+		"location": "Lower East Side",
+		"displayName": "下东区"
+	},
+	{
+		"location": "Astoria",
+		"displayName": "阿斯托里亚"
+	},
+	{
+		"location": "Greenwich Village",
+		"displayName": "格林威治村"
+	},
+	{
+		"location": "East Harlem",
+		"displayName": "东哈莱姆"
+	},
+	{
+		"location": "Flatiron District",
+		"displayName": "熨斗区"
+	},
+	{
+		"location": "Forest Hills",
+		"displayName": "森林小丘"
+	},
+	{
+		"location": "Lincoln Square",
+		"displayName": "林肯广场"
+	},
+	{
+		"location": "Williamsburg",
+		"displayName": "威廉斯堡"
+	},
+	{
+		"location": "Washington Heights",
+		"displayName": "华盛顿高地"
+	},
+	{
+		"location": "Fresh Meadows",
+		"displayName": "新鲜草地"
+	},
+	{
+		"location": "Financial District",
+		"displayName": "金融区"
+	},
+	{
+		"location": "City Island",
+		"displayName": "城市岛"
+	},
+	{
+		"location": "Bayside",
+		"displayName": "碧沙"
+	},
+	{
+		"location": "Nolita",
+		"displayName": "诺利塔"
+	},
+	{
+		"location": "Inwood",
+		"displayName": "英伍德"
+	},
+	{
+		"location": "Chelsea",
+		"displayName": "切尔西"
+	},
+	{
+		"location": "Upper West Side",
+		"displayName": "上西区"
+	},
+	{
+		"location": "Flushing",
+		"displayName": "法拉盛"
+	},
+	{
+		"location": "Carnegie Hill",
+		"displayName": "卡内基丘"
+	},
+	{
+		"location": "Gramercy Park",
+		"displayName": "格拉梅西公园"
+	},
+	{
+		"location": "West Village",
+		"displayName": "西村"
+	},
+	{
+		"location": "Upper East Side",
+		"displayName": "上东区"
+	},
+	{
+		"location": "Jackson Heights",
+		"displayName": "杰克逊高地"
+	},
+	{
+		"location": "Morningside Heights",
+		"displayName": "晨边高地"
+	},
+	{
+		"location": "Little Italy",
+		"displayName": "小意大利"
+	},
+	{
+		"location": "Manhattan Valley",
+		"displayName": "曼哈顿谷"
+	},
+	{
+		"location": "Tribeca",
+		"displayName": "翠贝卡"
+	},
+	{
+		"location": "East Village",
+		"displayName": "东村"
+	},
+	{
+		"location": "Murray Hill",
+		"displayName": "默里山"
+	},
+	{
+		"location": "DUMBO",
+		"displayName": "桥下艺术新区"
+	},
+	{
+		"location": "Midtown",
+		"displayName": "中城"
+	},
+	{
+		"location": "Woodside",
+		"displayName": "伍德赛德"
+	},
+	{
+		"location": "Hell's Kitchen/Clinton",
+		"displayName": "地狱厨房/克林顿区"
+	},
+	{
+		"location": "Battery Park City",
+		"displayName": "炮台公园城"
+	},
+	{
+		"location": "West Harlem",
+		"displayName": "西哈莱姆"
+	},
+	{
+		"location": "Roosevelt Island",
+		"displayName": "罗斯福岛"
+	},
+	{
+		"location": "Central Harlem",
+		"displayName": "中央哈莱姆"
+	},
+	{
+		"location": "Alphabet City",
+		"displayName": "字母城"
+	},
+	{
+		"location": "Midtown East",
+		"displayName": "中城东区"
+	},
+	{
+		"location": "Chinatown",
+		"displayName": "中国城"
+	}
+]

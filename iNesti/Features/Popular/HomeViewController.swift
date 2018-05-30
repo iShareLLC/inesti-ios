@@ -31,6 +31,8 @@ class HomeViewController: BaseViewController {
         tableView.dataSource = self
         
         setupSearchButton()
+        
+        INTagHelper.shared.loadJSON()
     }
     
     private func setupSearchButton() {

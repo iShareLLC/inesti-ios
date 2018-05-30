@@ -26,10 +26,10 @@ class SearchViewController: BaseViewController {
     @IBOutlet weak var typeAheadTableViewConstraint: NSLayoutConstraint!
     @IBOutlet weak var periodButton: UIButton!
     
-    let typeAheadData = ["Chinatown", "Woodhaven", "East Village", "Soho", "Brooklyn", "Flushing", "Roosevelt Island", "Elmhurst"]
+    var typeAheadData = [INLocation]()
     let kSearchResultSegue = "SearchResultSegue"
     
-    var typeAheadResults = [String]() {
+    var typeAheadResults = [INLocation]() {
         didSet {
             if self.isViewLoaded {
                 typeAheadTableView.reloadData()
@@ -47,6 +47,8 @@ class SearchViewController: BaseViewController {
     
     override func viewDidLoad() {
 
+        typeAheadData = INTagHelper.shared.locations
+        
         typeAheadTableView.delegate = self
         typeAheadTableView.dataSource = self
         
@@ -90,53 +92,7 @@ class SearchViewController: BaseViewController {
         showResultButton.layer.applySketchShadow(color: UIColor(white: 0, alpha: 0.13), x: 0, y: 2, blur: 3, spread: 0)
     }
 
-    private func showLocationInputView() {
-        /*
-        let locationInputView = LocationInputView.loadFromNib()
-        let popup = locationInputView.createPopup()
-        popup.positiveAction = { result in
-            guard let location = result as? String else {
-                return
-            }
-        }
-        popup.show(at: self)
- */
-    }
 
-    /*
-    private func showDatePicker() {
-        let datePicker = CXDatePicker(startDate: Date(), mode: .date, title: "开始时间", cancelButtonText: "取消", doneButtonText: "确认")
-        let popup = datePicker.createPopup()
-        popup.positiveAction = { [weak self] result in
-            guard let date = result as? Date else {
-                return
-            }
-            let formatter = DateFormatter()
-            formatter.dateStyle = .short
-            let dateString = formatter.string(from: date)
-            self?.datePickerButton.setTitle(dateString, for: .normal)
-        }
-        popup.show(at: self)
-    }
-     */
-    
-    private func showDurationPicker() {
-        /*
-        let range = (1 ... 20).map { "\($0)" }
-        let durationPicker = CXPicker(with: [range, ["天", "周", "月"]], title: "租期", cancelButtonText: "取消", doneButtonText: "确认")
-        let popup = durationPicker.createPopup()
-        popup.positiveAction = { [weak self] options in
-            guard let items = options as? [String] else {
-                return
-            }
-            let title = "\(items[0])\(items[1])"
-            self?.durationPickerButton.setTitle(title, for: .normal)
-        }
-        popup.show(at: self)
-         */
-    }
-    
-    
     //MARK: Action Handler
     
     @objc private func didChangeSliderValue(_ sender: TTRangeSlider) {
@@ -171,7 +127,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTypeAheadCell", for: indexPath)
-        cell.textLabel?.text = typeAheadResults[indexPath.row]
+        cell.textLabel?.text = typeAheadResults[indexPath.row].displayName
         return cell
     }
     
@@ -180,7 +136,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        addressTextField.text = typeAheadResults[indexPath.row]
+        addressTextField.text = typeAheadResults[indexPath.row].displayName
         typeAheadResults.removeAll()
     }
     
@@ -191,7 +147,7 @@ extension SearchViewController: UITextFieldDelegate {
     @objc func textFieldDidChange(_ textField: UITextField) {
         typeAheadResults = typeAheadData.filter({ (location) -> Bool in
             if let text = textField.text {
-                return (location.lowercased().range(of: text) != nil)
+                return (location.location.lowercased().range(of: text) != nil)
             } else {
                 return false
             }

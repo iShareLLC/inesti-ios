@@ -8,6 +8,26 @@
 
 import UIKit
 
+class INTagHelper: NSObject {
+    
+    var locations = [INLocation]()
+    
+    static let shared = INTagHelper()
+    
+    func loadJSON() {
+        if let path = Bundle.main.path(forResource: "location", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonDecoder = JSONDecoder()
+                self.locations = try jsonDecoder.decode([INLocation].self, from: data)
+            } catch {
+                // handle error
+                DLog("JSON Decoding Error!")
+            }
+        }
+    }
+}
+
 let rentIncludedTagsKeys = ["eletric", "water", "internet", "heat", "gas", "public"]
 let rentIncludedTagsValues = ["电费", "水费", "网费", "暖气费", "燃气费", "公共设施费"]
 
