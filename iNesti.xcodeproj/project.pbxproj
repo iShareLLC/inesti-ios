@@ -61,6 +61,8 @@
 		AEF41E06DCE610DF5EFB3459 /* Pods_iNestiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3DC2A8E712C1B96E0149960 /* Pods_iNestiUITests.framework */; };
 		E50A61FC20B6064000E7403F /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50A61FB20B6064000E7403F /* ProfileManager.swift */; };
 		E50A61FE20B611C400E7403F /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50A61FD20B611C400E7403F /* Notification+Extensions.swift */; };
+		E5BDAE8420BF387900184423 /* APITester.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BDAE8320BF387900184423 /* APITester.swift */; };
+		E5BDAE8A20C095DE00184423 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BDAE8920C095DE00184423 /* SearchResult.swift */; };
 		E5E9DC5D20B33896004F3A6D /* AddRentalLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9DC5C20B33896004F3A6D /* AddRentalLocationViewController.swift */; };
 		E5E9DC5F20B338AB004F3A6D /* AddRentalTypeEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9DC5E20B338AB004F3A6D /* AddRentalTypeEntryViewController.swift */; };
 		E5E9DC6120B338BF004F3A6D /* AddRentalTagEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9DC6020B338BF004F3A6D /* AddRentalTagEntryViewController.swift */; };
@@ -158,6 +160,8 @@
 		E3DC2A8E712C1B96E0149960 /* Pods_iNestiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iNestiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50A61FB20B6064000E7403F /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		E50A61FD20B611C400E7403F /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
+		E5BDAE8320BF387900184423 /* APITester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITester.swift; sourceTree = "<group>"; };
+		E5BDAE8920C095DE00184423 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		E5E9DC5C20B33896004F3A6D /* AddRentalLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRentalLocationViewController.swift; sourceTree = "<group>"; };
 		E5E9DC5E20B338AB004F3A6D /* AddRentalTypeEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRentalTypeEntryViewController.swift; sourceTree = "<group>"; };
 		E5E9DC6020B338BF004F3A6D /* AddRentalTagEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRentalTagEntryViewController.swift; sourceTree = "<group>"; };
@@ -412,6 +416,7 @@
 				4DD0A73920B1D0E900674AAD /* APIManager.swift */,
 				E50A61FB20B6064000E7403F /* ProfileManager.swift */,
 				4DFB187A20B66E3A0091C1B0 /* RentalDataStore.swift */,
+				E5BDAE8320BF387900184423 /* APITester.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -500,6 +505,7 @@
 				3CEF33342086D44A005281BE /* PopularPlace.swift */,
 				E5E9DC7220B36542004F3A6D /* RentalType.swift */,
 				4DFB187C20B66E6A0091C1B0 /* Rental.swift */,
+				E5BDAE8920C095DE00184423 /* SearchResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -792,6 +798,7 @@
 				4D3F1E7320B66790006FE7AD /* RegistrationViewController.swift in Sources */,
 				E5E9DC7320B36542004F3A6D /* RentalType.swift in Sources */,
 				4DBFFA3D20B9EDEC00FDA2BD /* RentalDetailViewController.swift in Sources */,
+				E5BDAE8A20C095DE00184423 /* SearchResult.swift in Sources */,
 				4DD0A73D20B1D1AB00674AAD /* INConstants.swift in Sources */,
 				4D31A60120BE5D1200BA934C /* RentalContactViewController.swift in Sources */,
 				4DD0A73A20B1D0E900674AAD /* APIManager.swift in Sources */,
@@ -803,6 +810,7 @@
 				3CA13BFE209D4EBF00479F71 /* CXUtil.swift in Sources */,
 				3CD2E7EE20869905002252CC /* String+Localization.swift in Sources */,
 				4DBFFA4D20BADD2D00FDA2BD /* UnpublishedViewController.swift in Sources */,
+				E5BDAE8420BF387900184423 /* APITester.swift in Sources */,
 				5A9F17E378D7B0B1B167594C /* UIFont+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

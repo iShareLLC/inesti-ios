@@ -13,6 +13,11 @@ class APIManager: NSObject {
     
     static let shared = APIManager()
     
+    enum ServerRoute: String {
+        case rentalDetail = "rental/detail"
+        case rentalSearch = "rental/search"
+    }
+    
     enum ServerKey: String {
         case data = "data"
         case appToken = "app_token"
@@ -20,12 +25,48 @@ class APIManager: NSObject {
         case message = "message"
     }
     
-    let host = "https://ugbtybu1el.execute-api.us-east-1.amazonaws.com/prod"
+    let host = "https://8iw95ock4b.execute-api.us-east-1.amazonaws.com/prod/"
     
+    func getRentalDetail(city: String, neighborhood: String, title: String, postTime: Int) {
+        
+        let params: [String: Any] = [
+            "city" : city,
+            "neighborhood": neighborhood,
+            "title": title,
+            "postTime": postTime
+        ]
+        
+        getDataReturn(route: ServerRoute.rentalDetail.rawValue, params: params) { (response, status, error) in
+            print(response)
+        }
+    }
+    
+    func getRentalSearch(rentalType: String, start: Int, limit: Int, duration: Int, neighborhood: String, startDate: Int, durationUnit: Int, minPrice: Int, maxPrice: Int) {
+        
+        let params: [String: Any] = [
+            "rentalType" : rentalType,
+            "start": start,
+            "limit": limit,
+            "duration": duration,
+            "neighborhood": neighborhood,
+            "startDate": startDate,
+            "durationUnit": durationUnit,
+            "minPrice": minPrice,
+            "minPrice": minPrice
+        ]
+        
+        getDataReturn(route: ServerRoute.rentalSearch.rawValue, params: params) { (response, status, error) in
+            print(response)
+        }
+    }
+    
+    func getRentalList() {
+        
+    }
     
     //MARK: POST DATA HANDLERS
     
-    func postBooleanReturn(route: String, data: [String: Any], withAuth: Bool = true, completion: @escaping (Bool, Error?) -> Void) {
+    func postBooleanReturn(route: String, data: [String: Any], completion: @escaping (Bool, Error?) -> Void) {
         
         let parameters: [String: Any] = [
             //ServerKey.appToken.rawValue : appToken,
@@ -107,28 +148,9 @@ class APIManager: NSObject {
         }
     }
     
-    
-    //MARK: GET DATA HANDLERS
-    func getDataReturnWithAuth(route: String, params: [String: Any]?, completion: @escaping ([String : Any]?, Int, Error?) -> Void) {
-        getDataReturn(route: route, params: params, withAuth: true, completion: completion)
-    }
-    
-    func getDataReturn(route: String, params: [String: Any]?, withAuth: Bool, completion: @escaping ([String : Any]?, Int, Error?) -> Void) {
+    func getDataReturn(route: String, params: [String: Any]?, completion: @escaping ([String : Any]?, Int, Error?) -> Void) {
         
         var parameter:[String: Any] = [:]
-            //ServerKey.appToken.rawValue : appToken,
-            //ServerKey.timestamp.rawValue: Date.getTimestampNow()
-        
-//        if withAuth {
-//            guard let profileUser = ProfileManager.shared.getCurrentUser() else {
-//                DLog("\(route): Unable to find profile user")
-//                completion(nil, -1, nil)
-//                return
-//            }
-//
-//            parameter[ServerKey.userToken.rawValue] = profileUser.token ?? ""
-//            parameter[ServerKey.username.rawValue] = profileUser.username ?? ""
-//        }
         
         //Combine the incoming data
         if let params = params {
@@ -160,8 +182,9 @@ class APIManager: NSObject {
      */
     private func getDataWithUrlRoute(_ route: String, parameters: [String: Any], completion: @escaping(([String : Any]?, Error?) -> Void)) {
         let requestUrlStr = host + route
+        let httpHeaders = ["x-api-key":"K8KvaXzfLoBivwsxGuJwaBmgaW8eCVN9UsNe0MA3"]
         
-        Alamofire.request(requestUrlStr, parameters: parameters).responseString{ response in
+        Alamofire.request(requestUrlStr, parameters: parameters, headers:httpHeaders).responseString{ response in
             if let urlRequest = response.request?.url {
                 let printText: String = """
                 =========================

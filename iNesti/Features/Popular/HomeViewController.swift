@@ -22,7 +22,7 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let rental = Rental(id: 0, title: "hello", location: nil, price: nil, duration: nil, imageUrl: nil)
+        let rental = Rental(id: 0)
         RentalDataStore.shared.addPopularRental(rental: rental)
         RentalDataStore.shared.addPopularRental(rental: rental)
         
@@ -30,15 +30,11 @@ class HomeViewController: BaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        setupSearchButton()
-        
-        INTagHelper.shared.loadJSON()
-    }
-    
-    private func setupSearchButton() {
         searchButton.layer.cornerRadius = 2.0
         searchButton.layer.masksToBounds = false
         searchButton.layer.applySketchShadow(color: UIColor(white: 0, alpha: 0.25), x: 0, y: 5, blur: 25, spread: 0)
+        
+        INTagHelper.shared.loadJSON()
     }
 }
 

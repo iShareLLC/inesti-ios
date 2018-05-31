@@ -43,6 +43,12 @@ class RentalDetailViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //APITester().testRentalDetail()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let viewContrller = segue.destination as? RentalContactViewController {
             contactViewController = viewContrller
