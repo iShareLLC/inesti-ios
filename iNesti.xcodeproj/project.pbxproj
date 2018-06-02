@@ -55,6 +55,9 @@
 		4DE765CA20C2D682002C7A7C /* INBasicItemInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DE765C920C2D682002C7A7C /* INBasicItemInfoView.xib */; };
 		4DE765CC20C2E5AB002C7A7C /* INBasicInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE765CB20C2E5AB002C7A7C /* INBasicInfoCell.swift */; };
 		4DE765CE20C2E774002C7A7C /* INBasicItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE765CD20C2E774002C7A7C /* INBasicItemInfoView.swift */; };
+		4DE765D020C2FAA4002C7A7C /* INItemSpotlightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DE765CF20C2FAA4002C7A7C /* INItemSpotlightView.xib */; };
+		4DE765D220C2FAC5002C7A7C /* INItemSpotlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE765D120C2FAC5002C7A7C /* INItemSpotlightView.swift */; };
+		4DE765D420C2FE4B002C7A7C /* INSpotlightInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE765D320C2FE4B002C7A7C /* INSpotlightInfoCell.swift */; };
 		4DFB187B20B66E3A0091C1B0 /* RentalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB187A20B66E3A0091C1B0 /* RentalDataStore.swift */; };
 		4DFB187D20B66E6A0091C1B0 /* Rental.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB187C20B66E6A0091C1B0 /* Rental.swift */; };
 		4DFB188320B678EA0091C1B0 /* RentalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB188220B678EA0091C1B0 /* RentalCell.swift */; };
@@ -154,6 +157,9 @@
 		4DE765C920C2D682002C7A7C /* INBasicItemInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = INBasicItemInfoView.xib; sourceTree = "<group>"; };
 		4DE765CB20C2E5AB002C7A7C /* INBasicInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INBasicInfoCell.swift; sourceTree = "<group>"; };
 		4DE765CD20C2E774002C7A7C /* INBasicItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INBasicItemInfoView.swift; sourceTree = "<group>"; };
+		4DE765CF20C2FAA4002C7A7C /* INItemSpotlightView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = INItemSpotlightView.xib; sourceTree = "<group>"; };
+		4DE765D120C2FAC5002C7A7C /* INItemSpotlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INItemSpotlightView.swift; sourceTree = "<group>"; };
+		4DE765D320C2FE4B002C7A7C /* INSpotlightInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INSpotlightInfoCell.swift; sourceTree = "<group>"; };
 		4DFB187A20B66E3A0091C1B0 /* RentalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalDataStore.swift; sourceTree = "<group>"; };
 		4DFB187C20B66E6A0091C1B0 /* Rental.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rental.swift; sourceTree = "<group>"; };
 		4DFB188220B678EA0091C1B0 /* RentalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalCell.swift; sourceTree = "<group>"; };
@@ -462,6 +468,9 @@
 				4DE765C920C2D682002C7A7C /* INBasicItemInfoView.xib */,
 				4DE765CD20C2E774002C7A7C /* INBasicItemInfoView.swift */,
 				4DE765CB20C2E5AB002C7A7C /* INBasicInfoCell.swift */,
+				4DE765CF20C2FAA4002C7A7C /* INItemSpotlightView.xib */,
+				4DE765D120C2FAC5002C7A7C /* INItemSpotlightView.swift */,
+				4DE765D320C2FE4B002C7A7C /* INSpotlightInfoCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -642,6 +651,7 @@
 				3CD2E7E2208698A7002252CC /* InfoPlist.strings in Resources */,
 				4DBFFA3B20B9D56900FDA2BD /* RentalDetail.storyboard in Resources */,
 				3C8FF7A820A34B64009EF837 /* SplashLoadingView.xib in Resources */,
+				4DE765D020C2FAA4002C7A7C /* INItemSpotlightView.xib in Resources */,
 				3C01173720852EF8007C73D8 /* Assets.xcassets in Resources */,
 				3C01173520852EF7007C73D8 /* Main.storyboard in Resources */,
 				4DD0A74620B2906200674AAD /* NewRental.storyboard in Resources */,
@@ -813,6 +823,7 @@
 				4DFB187B20B66E3A0091C1B0 /* RentalDataStore.swift in Sources */,
 				3C8FF7AA20A34FBE009EF837 /* NestTabBarController.swift in Sources */,
 				4DBFFA3820B9BAF200FDA2BD /* SearchResultViewController.swift in Sources */,
+				4DE765D220C2FAC5002C7A7C /* INItemSpotlightView.swift in Sources */,
 				E5E9DC5F20B338AB004F3A6D /* AddRentalTypeEntryViewController.swift in Sources */,
 				E5E9DC6120B338BF004F3A6D /* AddRentalTagEntryViewController.swift in Sources */,
 				4D3F1E7320B66790006FE7AD /* RegistrationViewController.swift in Sources */,
@@ -830,6 +841,7 @@
 				3CA13BFE209D4EBF00479F71 /* CXUtil.swift in Sources */,
 				3CD2E7EE20869905002252CC /* String+Localization.swift in Sources */,
 				4DBFFA4D20BADD2D00FDA2BD /* UnpublishedViewController.swift in Sources */,
+				4DE765D420C2FE4B002C7A7C /* INSpotlightInfoCell.swift in Sources */,
 				E5BDAE8420BF387900184423 /* APITester.swift in Sources */,
 				5A9F17E378D7B0B1B167594C /* UIFont+Extension.swift in Sources */,
 			);

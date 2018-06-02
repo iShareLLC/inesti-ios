@@ -102,6 +102,20 @@ extension RentalDetailViewController: UITableViewDelegate, UITableViewDataSource
             cell.setItemInfo(itemInfo: [info1, info2, info3, info4, info5, info6, info7, info8, info9, info10])
             return cell
             
+        } else if (reuseId == "RentalSpotlightCell") {
+            let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath) as! INSpotlightInfoCell
+            let info1 = INSpotlightItemInfo(name: "空调", iconName: "ac")
+            let info2 = INSpotlightItemInfo(name: "工作台", iconName: "workstation")
+            let info3 = INSpotlightItemInfo(name: "游泳池", iconName: "swimming-pool")
+            let info4 = INSpotlightItemInfo(name: "打印机", iconName: "print")
+            let info5 = INSpotlightItemInfo(name: "健身房", iconName: "gym")
+            let info6 = INSpotlightItemInfo(name: "显示器", iconName: "monitor")
+            let info7 = INSpotlightItemInfo(name: "热水", iconName: "shower")
+            let info8 = INSpotlightItemInfo(name: "查看更多", iconName: "")
+            
+            cell.setItemInfo(itemInfo: [info1, info2, info3, info4, info5, info6, info7, info8])
+            return cell
+            
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath)
             cell.selectionStyle = .none
@@ -155,7 +169,7 @@ enum RentalDetailSections: Int {
         case .status:
             return 200
         case .spotlight:
-            return 140
+            return 160
         case .transit:
             return 100
         case .contact:

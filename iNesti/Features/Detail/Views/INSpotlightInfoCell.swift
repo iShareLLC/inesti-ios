@@ -1,5 +1,5 @@
 //
-//  INBasicInfoCell.swift
+//  INSpotlightInfoCell.swift
 //  iNesti
 //
 //  Created by Zian Chen on 6/2/18.
@@ -8,12 +8,13 @@
 
 import UIKit
 
-class INBasicInfoCell: UITableViewCell {
+class INSpotlightInfoCell: UITableViewCell {
+
     @IBOutlet weak var stackView1: UIStackView!
     @IBOutlet weak var stackView2: UIStackView!
     private var isEmpty = true
     
-    var basicItemInfo = [INBasicItemInfo]()
+    var spotlightItemInfo = [INSpotlightItemInfo]()
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -21,13 +22,13 @@ class INBasicInfoCell: UITableViewCell {
         stackView2.distribution = .fillEqually
     }
     
-    func setItemInfo(itemInfo: [INBasicItemInfo]) {
-        basicItemInfo = itemInfo
+    func setItemInfo(itemInfo: [INSpotlightItemInfo]) {
+        spotlightItemInfo = itemInfo
         
         if isEmpty {
             for i in 0..<itemInfo.count {
                 let info = itemInfo[i]
-                let infoView = INBasicItemInfoView()
+                let infoView = INItemSpotlightView()
                 infoView.setInfo(info: info)
                 if (i % 2 == 0) {
                     stackView1.addArrangedSubview(infoView)
@@ -35,7 +36,6 @@ class INBasicInfoCell: UITableViewCell {
                     stackView2.addArrangedSubview(infoView)
                 }
             }
-            
             isEmpty = false
         }
     }
