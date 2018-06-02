@@ -116,7 +116,18 @@ extension RentalDetailViewController: UITableViewDelegate, UITableViewDataSource
             cell.setItemInfo(itemInfo: [info1, info2, info3, info4, info5, info6, info7, info8])
             return cell
             
-        } else {
+        } else if (reuseId == "RentalTransitCell") {
+            let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath) as! INTrafficItemInfoCell
+            let info1 = INSpotlightItemInfo(name: "地铁D", iconName: "subway")
+            let info2 = INSpotlightItemInfo(name: "PATH", iconName: "metro")
+            
+            let traffic1 = "13分钟步行至 Brighton Beach"
+            let traffic2 = "5分钟步行至 Chinatown"
+            cell.setItemInfo(itemInfo: [info1, info2], trafficInfo: [traffic1, traffic2])
+            return cell
+        }
+        
+        else {
             let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath)
             cell.selectionStyle = .none
             return cell

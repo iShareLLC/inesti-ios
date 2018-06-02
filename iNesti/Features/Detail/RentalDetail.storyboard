@@ -329,7 +329,7 @@
                                             <outlet property="stackView2" destination="P39-pB-3ou" id="r9g-nT-076"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalTransitCell" rowHeight="100" id="2Cj-Wz-vOD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalTransitCell" rowHeight="100" id="2Cj-Wz-vOD" customClass="INTrafficItemInfoCell" customModule="iNesti" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="768" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Cj-Wz-vOD" id="CDv-4D-Ac9">
@@ -337,52 +337,26 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Ytm-kO-KDb">
-                                                    <rect key="frame" x="15" y="41.5" width="344" height="37"/>
+                                                    <rect key="frame" x="15" y="42" width="344" height="50"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bd1-xQ-nLC">
-                                                            <rect key="frame" x="0.0" y="0.0" width="57.5" height="37"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地铁D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haE-Ou-2ER">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="57.5" height="18.5"/>
-                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Path" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSO-ax-p2m">
-                                                                    <rect key="frame" x="0.0" y="18.5" width="57.5" height="18.5"/>
-                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
+                                                            <rect key="frame" x="0.0" y="0.0" width="172" height="50"/>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TMG-ux-BwK">
-                                                            <rect key="frame" x="57.5" y="0.0" width="286.5" height="37"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13分钟步行至 Brighton Beach" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVB-ip-OkH">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="286.5" height="18.5"/>
-                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5分钟步行至 Chinatown" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0t-XX-Ebc">
-                                                                    <rect key="frame" x="0.0" y="18.5" width="286.5" height="18.5"/>
-                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
+                                                            <rect key="frame" x="172" y="0.0" width="172" height="50"/>
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="交通" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o68-qL-O0G">
-                                                    <rect key="frame" x="15" y="11" width="36.5" height="25.5"/>
+                                                    <rect key="frame" x="15" y="11" width="36.5" height="26"/>
                                                     <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ytm-kO-KDb" secondAttribute="bottom" constant="-3" id="CVG-TF-hzd"/>
+                                                <constraint firstItem="Ytm-kO-KDb" firstAttribute="top" secondItem="CDv-4D-Ac9" secondAttribute="top" constant="42" id="GF1-Mw-o5s"/>
                                                 <constraint firstAttribute="trailing" secondItem="Ytm-kO-KDb" secondAttribute="trailing" constant="16" id="W3b-l8-hfG"/>
                                                 <constraint firstItem="o68-qL-O0G" firstAttribute="top" secondItem="CDv-4D-Ac9" secondAttribute="topMargin" id="YCM-le-f5B"/>
                                                 <constraint firstItem="Ytm-kO-KDb" firstAttribute="top" secondItem="o68-qL-O0G" secondAttribute="bottom" constant="5" id="c2v-2z-m8A"/>
@@ -390,6 +364,10 @@
                                                 <constraint firstItem="Ytm-kO-KDb" firstAttribute="leading" secondItem="o68-qL-O0G" secondAttribute="leading" id="r7t-fe-qx7"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="stackView1" destination="bd1-xQ-nLC" id="y2G-lY-Zey"/>
+                                            <outlet property="stackView2" destination="TMG-ux-BwK" id="d3L-WX-UdL"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalContactCell" rowHeight="90" id="zKQ-j8-PXN">
                                         <rect key="frame" x="0.0" y="868" width="375" height="90"/>
