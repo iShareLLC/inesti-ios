@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a9C-tz-Zhc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a9C-tz-Zhc">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -394,7 +394,7 @@
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xa7-Yy-5MV">
                                                     <rect key="frame" x="20" y="205.33333333333334" width="374" height="54.000000000000028"/>
-                                                    <color key="backgroundColor" red="0.27058823529411763" green="0.75294117647058822" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.77254901960784317" blue="0.047058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="54" id="r0D-c5-j3U"/>
                                                     </constraints>
@@ -405,18 +405,22 @@
                                                         <action selector="handleWeChatWithSender:" destination="chJ-df-dvr" eventType="touchUpInside" id="JOj-n9-eRh"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="还没有账户？点击注册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEY-V7-xrz">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="还没有账户？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEY-V7-xrz">
                                                     <rect key="frame" x="20" y="279.33333333333331" width="374" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHn-P9-Vx4">
-                                                    <rect key="frame" x="120" y="273" width="80" height="44"/>
+                                                    <rect key="frame" x="120" y="268" width="80" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="Bn1-C4-mSo"/>
                                                         <constraint firstAttribute="height" constant="44" id="e1f-XH-9Ar"/>
                                                     </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <state key="normal" title="点击注册">
+                                                        <color key="titleColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="handleRegisterWithSender:" destination="chJ-df-dvr" eventType="touchUpInside" id="xAI-pt-EE5"/>
                                                     </connections>
@@ -426,8 +430,8 @@
                                                 <constraint firstItem="gHn-P9-Vx4" firstAttribute="leading" secondItem="jb0-E0-cae" secondAttribute="leading" constant="120" id="FrI-pL-pWk"/>
                                                 <constraint firstItem="5Db-tJ-X3h" firstAttribute="top" secondItem="jb0-E0-cae" secondAttribute="topMargin" constant="80" id="HCV-RK-QEB"/>
                                                 <constraint firstItem="XEd-VU-hPF" firstAttribute="leading" secondItem="5Db-tJ-X3h" secondAttribute="leading" id="SrG-tc-pGv"/>
-                                                <constraint firstItem="gHn-P9-Vx4" firstAttribute="centerY" secondItem="WEY-V7-xrz" secondAttribute="centerY" constant="5" id="Wbp-m9-XRd"/>
                                                 <constraint firstItem="WEY-V7-xrz" firstAttribute="leading" secondItem="Xa7-Yy-5MV" secondAttribute="leading" id="XDu-jQ-noC"/>
+                                                <constraint firstItem="gHn-P9-Vx4" firstAttribute="centerY" secondItem="WEY-V7-xrz" secondAttribute="centerY" id="aY3-qH-KwY"/>
                                                 <constraint firstItem="WEY-V7-xrz" firstAttribute="trailing" secondItem="Xa7-Yy-5MV" secondAttribute="trailing" id="cjs-yz-dbf"/>
                                                 <constraint firstItem="5Db-tJ-X3h" firstAttribute="leading" secondItem="jb0-E0-cae" secondAttribute="leadingMargin" id="hzv-uy-zLc"/>
                                                 <constraint firstItem="XEd-VU-hPF" firstAttribute="top" secondItem="5Db-tJ-X3h" secondAttribute="bottom" constant="25" id="jVg-j1-fuT"/>

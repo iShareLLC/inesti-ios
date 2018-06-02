@@ -407,9 +407,9 @@
 		4DBFFA3420B997C400FDA2BD /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				4DBFFA3520B997DC00FDA2BD /* Search.storyboard */,
 				3C1E0B4A2092C83500A9D4BB /* SearchViewController.swift */,
 				4DBFFA3720B9BAF200FDA2BD /* SearchResultViewController.swift */,
-				4DBFFA3520B997DC00FDA2BD /* Search.storyboard */,
 			);
 			path = Search;
 			sourceTree = "<group>";
