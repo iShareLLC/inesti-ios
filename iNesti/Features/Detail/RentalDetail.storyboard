@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="38I-g5-H7a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="38I-g5-H7a">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -582,60 +582,72 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xiaowan0602" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGn-pu-8MW">
-                                        <rect key="frame" x="16" y="106" width="108.5" height="21.5"/>
+                                        <rect key="frame" x="16" y="111" width="108.5" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邮箱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6c-LK-ROt">
-                                        <rect key="frame" x="16" y="159.5" width="37" height="21.5"/>
+                                        <rect key="frame" x="16" y="162.5" width="37" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电话" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFa-Ax-Yvc">
-                                        <rect key="frame" x="16" y="239.5" width="37" height="21.5"/>
+                                        <rect key="frame" x="16" y="258" width="37" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xiaowan0602@1234.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3K7-By-gT2">
-                                        <rect key="frame" x="16" y="186" width="204" height="21.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4m-m4-zji">
+                                        <rect key="frame" x="16" y="289.5" width="127" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="复制" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IET-BO-tkA">
-                                        <rect key="frame" x="146.5" y="106" width="37" height="21.5"/>
+                                        <state key="normal" title="(512) 656-1279">
+                                            <color key="titleColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handlePhoneButtonWithSender:" destination="Ug5-cb-OJg" eventType="touchUpInside" id="SoG-k7-cUU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cP3-p5-14p">
+                                        <rect key="frame" x="16" y="194" width="204" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(512) 656-1279" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3z-VX-CrA">
-                                        <rect key="frame" x="16" y="266" width="127" height="21.5"/>
+                                        <state key="normal" title="xiaowan0602@1234.com">
+                                            <color key="titleColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handleEmailButtonWithSender:" destination="Ug5-cb-OJg" eventType="touchUpInside" id="BbP-EE-0L6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2D-S2-eSW">
+                                        <rect key="frame" x="139.5" y="105" width="37" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <state key="normal" title="复制">
+                                            <color key="titleColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handleCopyButtonWithSender:" destination="Ug5-cb-OJg" eventType="touchUpInside" id="dUQ-yf-u73"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="IET-BO-tkA" firstAttribute="centerY" secondItem="IGn-pu-8MW" secondAttribute="centerY" id="3zg-Ob-EPa"/>
-                                    <constraint firstItem="lFa-Ax-Yvc" firstAttribute="top" secondItem="3K7-By-gT2" secondAttribute="bottom" constant="32" id="BnY-ev-kPP"/>
+                                    <constraint firstItem="q4m-m4-zji" firstAttribute="leading" secondItem="lFa-Ax-Yvc" secondAttribute="leading" id="5fE-bv-gL2"/>
+                                    <constraint firstItem="cP3-p5-14p" firstAttribute="top" secondItem="z6c-LK-ROt" secondAttribute="bottom" constant="10" id="9dk-Ja-WuD"/>
+                                    <constraint firstItem="lFa-Ax-Yvc" firstAttribute="leading" secondItem="cP3-p5-14p" secondAttribute="leading" id="AfA-od-hL0"/>
                                     <constraint firstAttribute="height" constant="360" id="Lxb-oY-8hq"/>
+                                    <constraint firstItem="t2D-S2-eSW" firstAttribute="centerY" secondItem="IGn-pu-8MW" secondAttribute="centerY" id="Nx8-xb-FgH"/>
+                                    <constraint firstItem="q4m-m4-zji" firstAttribute="top" secondItem="lFa-Ax-Yvc" secondAttribute="bottom" constant="10" id="Oq2-un-fk4"/>
                                     <constraint firstItem="IGn-pu-8MW" firstAttribute="leading" secondItem="Lou-tH-U2Q" secondAttribute="leading" id="OtP-Ch-U0q"/>
-                                    <constraint firstItem="IGn-pu-8MW" firstAttribute="top" secondItem="Lou-tH-U2Q" secondAttribute="bottom" constant="5" id="R5g-kW-cV7"/>
-                                    <constraint firstItem="lFa-Ax-Yvc" firstAttribute="leading" secondItem="3K7-By-gT2" secondAttribute="leading" id="WjX-az-eaU"/>
-                                    <constraint firstItem="c3z-VX-CrA" firstAttribute="leading" secondItem="lFa-Ax-Yvc" secondAttribute="leading" id="b0I-yG-qg3"/>
+                                    <constraint firstItem="IGn-pu-8MW" firstAttribute="top" secondItem="Lou-tH-U2Q" secondAttribute="bottom" constant="10" id="R5g-kW-cV7"/>
                                     <constraint firstItem="J0I-VX-268" firstAttribute="leading" secondItem="7M7-dK-FHk" secondAttribute="leading" constant="16" id="gGe-SC-I8X"/>
-                                    <constraint firstItem="c3z-VX-CrA" firstAttribute="top" secondItem="lFa-Ax-Yvc" secondAttribute="bottom" constant="5" id="hHm-CU-F8Q"/>
+                                    <constraint firstItem="t2D-S2-eSW" firstAttribute="leading" secondItem="IGn-pu-8MW" secondAttribute="trailing" constant="15" id="hVD-3I-trZ"/>
                                     <constraint firstItem="Lou-tH-U2Q" firstAttribute="top" secondItem="J0I-VX-268" secondAttribute="bottom" constant="32" id="jCe-0o-2Ft"/>
-                                    <constraint firstItem="z6c-LK-ROt" firstAttribute="top" secondItem="IGn-pu-8MW" secondAttribute="bottom" constant="32" id="ko1-cW-IU5"/>
-                                    <constraint firstItem="3K7-By-gT2" firstAttribute="top" secondItem="z6c-LK-ROt" secondAttribute="bottom" constant="5" id="map-bk-S96"/>
+                                    <constraint firstItem="z6c-LK-ROt" firstAttribute="top" secondItem="IGn-pu-8MW" secondAttribute="bottom" constant="30" id="ko1-cW-IU5"/>
                                     <constraint firstItem="z6c-LK-ROt" firstAttribute="leading" secondItem="IGn-pu-8MW" secondAttribute="leading" id="mgi-XH-MgX"/>
-                                    <constraint firstItem="3K7-By-gT2" firstAttribute="leading" secondItem="z6c-LK-ROt" secondAttribute="leading" id="mxo-tl-TPV"/>
+                                    <constraint firstItem="lFa-Ax-Yvc" firstAttribute="top" secondItem="cP3-p5-14p" secondAttribute="bottom" constant="30" id="qJ0-Hh-1BJ"/>
+                                    <constraint firstItem="cP3-p5-14p" firstAttribute="leading" secondItem="z6c-LK-ROt" secondAttribute="leading" id="qUv-jY-reB"/>
                                     <constraint firstItem="J0I-VX-268" firstAttribute="top" secondItem="7M7-dK-FHk" secondAttribute="top" constant="16" id="uxA-h1-2sP"/>
-                                    <constraint firstItem="IET-BO-tkA" firstAttribute="leading" secondItem="IGn-pu-8MW" secondAttribute="trailing" constant="22" id="v4g-zQ-Zc0"/>
                                     <constraint firstItem="Lou-tH-U2Q" firstAttribute="leading" secondItem="J0I-VX-268" secondAttribute="leading" id="xiK-Us-SYh"/>
                                 </constraints>
                             </view>
@@ -646,9 +658,13 @@
                             <constraint firstAttribute="trailing" secondItem="7M7-dK-FHk" secondAttribute="trailing" id="HTa-1a-ir0"/>
                             <constraint firstItem="7M7-dK-FHk" firstAttribute="leading" secondItem="5Qq-lH-iQL" secondAttribute="leading" id="W86-z3-AqA"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mad-MK-FJe"/>
                     </view>
                     <connections>
                         <outlet property="contactViewContainer" destination="7M7-dK-FHk" id="EHu-dH-dgb"/>
+                        <outlet property="copyButton" destination="t2D-S2-eSW" id="8nV-AL-pyN"/>
+                        <outlet property="emailButton" destination="cP3-p5-14p" id="UQg-Ud-77j"/>
+                        <outlet property="phoneButton" destination="q4m-m4-zji" id="bPK-FZ-G7h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ti6-0p-7T3" userLabel="First Responder" sceneMemberID="firstResponder"/>
