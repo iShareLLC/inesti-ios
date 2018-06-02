@@ -245,7 +245,7 @@
                                             <constraint firstAttribute="trailing" secondItem="lWU-6y-lgi" secondAttribute="trailing" constant="16" id="ohB-wJ-BWG"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalStatusCell" rowHeight="160" id="k29-Yy-YJs">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalStatusCell" rowHeight="160" id="k29-Yy-YJs" customClass="INBasicInfoCell" customModule="iNesti" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="468" width="375" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k29-Yy-YJs" id="x3S-fa-nm3">
@@ -262,89 +262,30 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hgl-OR-OKl">
-                                                    <rect key="frame" x="15" y="44" width="344" height="92.5"/>
+                                                    <rect key="frame" x="15" y="49" width="344" height="90"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zUp-5U-B68">
-                                                            <rect key="frame" x="0.0" y="0.0" width="172" height="92.5"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="租金包含网费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdg-Kh-A60">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="18.5"/>
-                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="租金包含电费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fB9-RW-Qn5">
-                                                                    <rect key="frame" x="0.0" y="18.5" width="172" height="18.5"/>
-                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="租金包含水费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVm-wX-cPu">
-                                                                    <rect key="frame" x="0.0" y="37" width="172" height="18.5"/>
-                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="租金包含燃气费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3H-Wb-q7P">
-                                                                    <rect key="frame" x="0.0" y="55.5" width="172" height="18.5"/>
-                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24小时门卫" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQ5-PG-Mx9">
-                                                                    <rect key="frame" x="0.0" y="74" width="172" height="18.5"/>
-                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
+                                                            <rect key="frame" x="0.0" y="0.0" width="172" height="90"/>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wME-g8-rIt">
-                                                            <rect key="frame" x="172" y="0.0" width="172" height="92.5"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可养狗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNm-lM-UXa">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="18.5"/>
-                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可养猫" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qI-UA-cz6">
-                                                                    <rect key="frame" x="0.0" y="18.5" width="172" height="18.5"/>
-                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="租金包含水费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chI-BZ-jwh">
-                                                                    <rect key="frame" x="0.0" y="37" width="172" height="18.5"/>
-                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="租金包含燃气费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqf-BF-HmF">
-                                                                    <rect key="frame" x="0.0" y="55.5" width="172" height="18.5"/>
-                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24小时门卫" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FbV-yW-jzU">
-                                                                    <rect key="frame" x="0.0" y="74" width="172" height="18.5"/>
-                                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
+                                                            <rect key="frame" x="172" y="0.0" width="172" height="90"/>
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="U82-Lo-kwh" firstAttribute="top" secondItem="x3S-fa-nm3" secondAttribute="topMargin" id="Ghr-kD-0z1"/>
-                                                <constraint firstItem="hgl-OR-OKl" firstAttribute="top" secondItem="U82-Lo-kwh" secondAttribute="bottom" constant="5" id="j1e-pp-W8i"/>
+                                                <constraint firstItem="hgl-OR-OKl" firstAttribute="top" secondItem="U82-Lo-kwh" secondAttribute="bottom" constant="10" id="j1e-pp-W8i"/>
                                                 <constraint firstItem="hgl-OR-OKl" firstAttribute="leading" secondItem="U82-Lo-kwh" secondAttribute="leading" id="jys-aE-M5s"/>
                                                 <constraint firstAttribute="trailing" secondItem="hgl-OR-OKl" secondAttribute="trailing" constant="16" id="k1y-EA-gg1"/>
                                                 <constraint firstItem="U82-Lo-kwh" firstAttribute="leading" secondItem="x3S-fa-nm3" secondAttribute="leadingMargin" id="oyN-z9-Nlu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hgl-OR-OKl" secondAttribute="bottom" constant="10" id="r4O-De-orp"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="stackView1" destination="zUp-5U-B68" id="ySZ-k7-Ij1"/>
+                                            <outlet property="stackView2" destination="wME-g8-rIt" id="YIo-oh-AwE"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalSpotlightCell" rowHeight="140" id="WFd-Pa-x76">
                                         <rect key="frame" x="0.0" y="628" width="375" height="140"/>

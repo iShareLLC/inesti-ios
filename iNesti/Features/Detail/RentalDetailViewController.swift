@@ -41,14 +41,10 @@ class RentalDetailViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = UITableViewAutomaticDimension;
+        tableView.estimatedRowHeight = 140;
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        //APITester().testRentalDetail()
-    }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let viewContrller = segue.destination as? RentalContactViewController {
             contactViewController = viewContrller
@@ -87,9 +83,30 @@ extension RentalDetailViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuseId = RentalDetailSections.getSection(indexPath.row).reuseIdentifier()
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath)
-        cell.selectionStyle = .none
-        return cell
+        
+        if reuseId == "RentalStatusCell" {
+            let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath) as! INBasicInfoCell
+            
+            //var itemArray = [INBasicItemInfo]()
+            let info1 = INBasicItemInfo(name: "租金包含网费", isAvaialble: true)
+            let info2 = INBasicItemInfo(name: "可养狗", isAvaialble: false)
+            let info3 = INBasicItemInfo(name: "租金包含网费", isAvaialble: true)
+            let info4 = INBasicItemInfo(name: "可养猫", isAvaialble: true)
+            let info5 = INBasicItemInfo(name: "租金包含水费", isAvaialble: false)
+            let info6 = INBasicItemInfo(name: "禁止吸烟", isAvaialble: true)
+            let info7 = INBasicItemInfo(name: "租金包含燃气费", isAvaialble: false)
+            let info8 = INBasicItemInfo(name: "洗衣机", isAvaialble: false)
+            let info9 = INBasicItemInfo(name: "24小时门卫", isAvaialble: true)
+            let info10 = INBasicItemInfo(name: "烘干机", isAvaialble: false)
+            
+            cell.setItemInfo(itemInfo: [info1, info2, info3, info4, info5, info6, info7, info8, info9, info10])
+            return cell
+            
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath)
+            cell.selectionStyle = .none
+            return cell
+        }
     }
 }
 
@@ -136,7 +153,7 @@ enum RentalDetailSections: Int {
         case .price:
             return 150
         case .status:
-            return 160
+            return 200
         case .spotlight:
             return 140
         case .transit:

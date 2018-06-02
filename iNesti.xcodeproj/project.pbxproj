@@ -52,6 +52,9 @@
 		4DD0A74020B1D1FA00674AAD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0A73F20B1D1FA00674AAD /* String+Extension.swift */; };
 		4DD0A74220B1D22A00674AAD /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0A74120B1D22A00674AAD /* Date+Extension.swift */; };
 		4DD0A74620B2906200674AAD /* NewRental.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DD0A74520B2906200674AAD /* NewRental.storyboard */; };
+		4DE765CA20C2D682002C7A7C /* INBasicItemInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DE765C920C2D682002C7A7C /* INBasicItemInfoView.xib */; };
+		4DE765CC20C2E5AB002C7A7C /* INBasicInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE765CB20C2E5AB002C7A7C /* INBasicInfoCell.swift */; };
+		4DE765CE20C2E774002C7A7C /* INBasicItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE765CD20C2E774002C7A7C /* INBasicItemInfoView.swift */; };
 		4DFB187B20B66E3A0091C1B0 /* RentalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB187A20B66E3A0091C1B0 /* RentalDataStore.swift */; };
 		4DFB187D20B66E6A0091C1B0 /* Rental.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB187C20B66E6A0091C1B0 /* Rental.swift */; };
 		4DFB188320B678EA0091C1B0 /* RentalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB188220B678EA0091C1B0 /* RentalCell.swift */; };
@@ -148,6 +151,9 @@
 		4DD0A73F20B1D1FA00674AAD /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		4DD0A74120B1D22A00674AAD /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		4DD0A74520B2906200674AAD /* NewRental.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewRental.storyboard; sourceTree = "<group>"; };
+		4DE765C920C2D682002C7A7C /* INBasicItemInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = INBasicItemInfoView.xib; sourceTree = "<group>"; };
+		4DE765CB20C2E5AB002C7A7C /* INBasicInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INBasicInfoCell.swift; sourceTree = "<group>"; };
+		4DE765CD20C2E774002C7A7C /* INBasicItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INBasicItemInfoView.swift; sourceTree = "<group>"; };
 		4DFB187A20B66E3A0091C1B0 /* RentalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalDataStore.swift; sourceTree = "<group>"; };
 		4DFB187C20B66E6A0091C1B0 /* Rental.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rental.swift; sourceTree = "<group>"; };
 		4DFB188220B678EA0091C1B0 /* RentalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalCell.swift; sourceTree = "<group>"; };
@@ -403,6 +409,7 @@
 		4DBFFA3920B9D55100FDA2BD /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				4DE765C820C2D656002C7A7C /* Views */,
 				4DBFFA3A20B9D56900FDA2BD /* RentalDetail.storyboard */,
 				4DBFFA3C20B9EDEC00FDA2BD /* RentalDetailViewController.swift */,
 				4D31A60020BE5D1200BA934C /* RentalContactViewController.swift */,
@@ -447,6 +454,16 @@
 				E5E9DC6620B33B8D004F3A6D /* AddRentalContainerViewController.swift */,
 			);
 			path = "New Rental";
+			sourceTree = "<group>";
+		};
+		4DE765C820C2D656002C7A7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4DE765C920C2D682002C7A7C /* INBasicItemInfoView.xib */,
+				4DE765CD20C2E774002C7A7C /* INBasicItemInfoView.swift */,
+				4DE765CB20C2E5AB002C7A7C /* INBasicInfoCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4DFB187E20B6757F0091C1B0 /* Popular */ = {
@@ -631,6 +648,7 @@
 				4DBFFA3620B997DC00FDA2BD /* Search.storyboard in Resources */,
 				4D31A60420BE659200BA934C /* location.json in Resources */,
 				4DBFFA4320BA703300FDA2BD /* Profile.storyboard in Resources */,
+				4DE765CA20C2D682002C7A7C /* INBasicItemInfoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,6 +785,7 @@
 				E5E9DC6520B33940004F3A6D /* AddRentalPageViewController.swift in Sources */,
 				3C1E0B4B2092C83500A9D4BB /* SearchViewController.swift in Sources */,
 				4DBFFA4920BA797C00FDA2BD /* UpdateInfoViewController.swift in Sources */,
+				4DE765CE20C2E774002C7A7C /* INBasicItemInfoView.swift in Sources */,
 				3C01173020852EF7007C73D8 /* AppDelegate.swift in Sources */,
 				3CD2E7D520868F41002252CC /* HomeViewController.swift in Sources */,
 				E5E9DC6720B33B8D004F3A6D /* AddRentalContainerViewController.swift in Sources */,
@@ -789,6 +808,7 @@
 				4DBFFA4720BA796300FDA2BD /* UpdatePasswordViewController.swift in Sources */,
 				3C8FF7A420A346AC009EF837 /* LandlordViewController.swift in Sources */,
 				E5E9DC6320B338DB004F3A6D /* AddRentalImagesViewController.swift in Sources */,
+				4DE765CC20C2E5AB002C7A7C /* INBasicInfoCell.swift in Sources */,
 				E50A61FE20B611C400E7403F /* Notification+Extensions.swift in Sources */,
 				4DFB187B20B66E3A0091C1B0 /* RentalDataStore.swift in Sources */,
 				3C8FF7AA20A34FBE009EF837 /* NestTabBarController.swift in Sources */,
