@@ -131,9 +131,9 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1100/月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pq9-o7-b2T">
                                                     <rect key="frame" x="31" y="25" width="77" height="24.666666666666671"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -337,9 +337,9 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1100/月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCy-0k-9ax">
                                                     <rect key="frame" x="31" y="25" width="77" height="24.666666666666671"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -412,9 +412,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHn-P9-Vx4">
-                                                    <rect key="frame" x="120" y="268" width="80" height="44"/>
+                                                    <rect key="frame" x="120" y="268" width="70" height="44"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="80" id="Bn1-C4-mSo"/>
                                                         <constraint firstAttribute="height" constant="44" id="e1f-XH-9Ar"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -433,6 +432,7 @@
                                                 <constraint firstItem="WEY-V7-xrz" firstAttribute="leading" secondItem="Xa7-Yy-5MV" secondAttribute="leading" id="XDu-jQ-noC"/>
                                                 <constraint firstItem="gHn-P9-Vx4" firstAttribute="centerY" secondItem="WEY-V7-xrz" secondAttribute="centerY" id="aY3-qH-KwY"/>
                                                 <constraint firstItem="WEY-V7-xrz" firstAttribute="trailing" secondItem="Xa7-Yy-5MV" secondAttribute="trailing" id="cjs-yz-dbf"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gHn-P9-Vx4" secondAttribute="trailing" constant="16" id="g7L-0e-Oyz"/>
                                                 <constraint firstItem="5Db-tJ-X3h" firstAttribute="leading" secondItem="jb0-E0-cae" secondAttribute="leadingMargin" id="hzv-uy-zLc"/>
                                                 <constraint firstItem="XEd-VU-hPF" firstAttribute="top" secondItem="5Db-tJ-X3h" secondAttribute="bottom" constant="25" id="jVg-j1-fuT"/>
                                                 <constraint firstItem="WEY-V7-xrz" firstAttribute="top" secondItem="Xa7-Yy-5MV" secondAttribute="bottom" constant="20" id="lsc-0r-yha"/>
