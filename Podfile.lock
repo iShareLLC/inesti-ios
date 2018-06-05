@@ -2,10 +2,13 @@ PODS:
   - Alamofire (4.7.2)
   - AlamofireImage (3.3.1):
     - Alamofire (~> 4.5)
+  - Crashlytics (3.10.2):
+    - Fabric (~> 1.7.7)
   - Differentiator (3.0.2)
   - DropDown (2.3.2)
   - DZNEmptyDataSet (1.8.1)
   - ExpandableLabel (0.4.0)
+  - Fabric (1.7.7)
   - KMPlaceholderTextView (1.3.0)
   - M13Checkbox (3.2.2)
   - Moya/Core (11.0.2):
@@ -35,9 +38,11 @@ PODS:
 DEPENDENCIES:
   - Alamofire (= 4.7.2)
   - AlamofireImage
+  - Crashlytics
   - DropDown
   - DZNEmptyDataSet
   - ExpandableLabel
+  - Fabric
   - KMPlaceholderTextView
   - M13Checkbox
   - Moya/RxSwift (~> 11.0)
@@ -54,10 +59,12 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
+    - Crashlytics
     - Differentiator
     - DropDown
     - DZNEmptyDataSet
     - ExpandableLabel
+    - Fabric
     - KMPlaceholderTextView
     - M13Checkbox
     - Moya
@@ -74,10 +81,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
+  Crashlytics: 0360624eea1c978a743feddb2fb1ef8b37fb7a0d
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
   DropDown: 7f87abecc28f9b4edad810fe1211c5c018c257e5
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   ExpandableLabel: 5f5f61fbf71433000cd7c3290617e6fcccb72c86
+  Fabric: bda89e242bce1b7b8ab264248cf3407774ce0095
   KMPlaceholderTextView: 2bbcd19a273648a80a61e1e48f9743a24d8930e3
   M13Checkbox: a8c2491cfbbca10797925fd0b9154a782bf40d89
   Moya: a725035953bc1c0eb1be505ab903984501d82440
@@ -91,6 +100,6 @@ SPEC CHECKSUMS:
   TTGTagCollectionView: 958f20b946dee92a8ba20dc37d10a06737641ae9
   TTRangeSlider: 78188bea83f6471a06f75adbc88da5e990baeafe
 
-PODFILE CHECKSUM: 4a56291d12eee06f33595ee15a05c54fd1108ca2
+PODFILE CHECKSUM: 9c775281e4c5ac649f85339ed91c89dfe7dcdfc2
 
 COCOAPODS: 1.5.2

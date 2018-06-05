@@ -551,6 +551,7 @@
 				3C01172920852EF7007C73D8 /* Frameworks */,
 				3C01172A20852EF7007C73D8 /* Resources */,
 				D9B0EECE326B9C36875D2FC7 /* [CP] Embed Pods Frameworks */,
+				E597FB0120C72C3300627E32 /* Fabrics */,
 			);
 			buildRules = (
 			);
@@ -787,6 +788,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNesti/Pods-iNesti-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		E597FB0120C72C3300627E32 /* Fabrics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabrics;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 252a9c4c670c0041f987526661c9da77d7469953 dc8370797366b1cfa3e09f2aa7245aa80905220757bae6a6380135fec248228b";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1048,6 +1063,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 96H49DDL9H;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = iNesti/Base.lproj/Info.plist;

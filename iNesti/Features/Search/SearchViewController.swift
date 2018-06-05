@@ -12,6 +12,7 @@ import RxCocoa
 import Reusable
 import TTRangeSlider
 import DropDown
+import Crashlytics
 
 class SearchViewController: BaseViewController {
     @IBOutlet weak var addressTextField: INTextField!
@@ -104,7 +105,7 @@ class SearchViewController: BaseViewController {
     @IBAction func handleSearchButton(sender: UIButton) {
         
         //TODO: Add Search API
-        
+
         performSegue(withIdentifier: kSearchResultSegue, sender: nil)
     }
     

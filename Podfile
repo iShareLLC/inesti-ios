@@ -22,6 +22,9 @@ target 'iNesti' do
   pod 'M13Checkbox'
   pod 'DropDown'
   pod 'SKPhotoBrowser'
+  
+  pod 'Fabric'
+  pod 'Crashlytics'
 
   target 'iNestiTests' do
     inherit! :search_paths
