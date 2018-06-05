@@ -75,7 +75,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="确认密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="izM-Q8-bMQ" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="388" width="343" height="50"/>
@@ -84,7 +84,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主要联系方式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpT-y1-4H0">
                                                 <rect key="frame" x="16" y="470" width="104" height="21"/>
@@ -224,7 +224,9 @@
                     </view>
                     <size key="freeformSize" width="375" height="660"/>
                     <connections>
+                        <outlet property="confirmTextField" destination="izM-Q8-bMQ" id="XIh-Id-gKx"/>
                         <outlet property="emailCheckbox" destination="4a6-Gk-pKk" id="eb4-8m-uzU"/>
+                        <outlet property="passwordTextField" destination="RMn-Qm-8yd" id="bJe-I4-Xl7"/>
                         <outlet property="phoneCheckbox" destination="bm5-YN-8qn" id="P29-Sh-YdH"/>
                         <outlet property="wechatCheckbox" destination="aRN-DV-XaX" id="CRC-sM-eON"/>
                     </connections>
