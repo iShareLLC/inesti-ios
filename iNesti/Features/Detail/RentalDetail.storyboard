@@ -34,7 +34,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="1036"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalImageCell" rowHeight="170" id="za0-L9-Rak">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RentalImageCell" rowHeight="170" id="za0-L9-Rak">
                                         <rect key="frame" x="0.0" y="28" width="375" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="za0-L9-Rak" id="RGi-1f-OlK">
@@ -81,7 +81,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalInfoCell" rowHeight="120" id="4Tp-JD-LGc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RentalInfoCell" rowHeight="120" id="4Tp-JD-LGc">
                                         <rect key="frame" x="0.0" y="198" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Tp-JD-LGc" id="hO7-z4-lNK">
@@ -120,7 +120,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalPriceCell" rowHeight="150" id="4L3-sn-hQf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RentalPriceCell" rowHeight="150" id="4L3-sn-hQf">
                                         <rect key="frame" x="0.0" y="318" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4L3-sn-hQf" id="iKQ-iT-UgW">
@@ -245,7 +245,7 @@
                                             <constraint firstAttribute="trailing" secondItem="lWU-6y-lgi" secondAttribute="trailing" constant="16" id="ohB-wJ-BWG"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalStatusCell" rowHeight="160" id="k29-Yy-YJs" customClass="INBasicInfoCell" customModule="iNesti" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RentalStatusCell" rowHeight="160" id="k29-Yy-YJs" customClass="INBasicInfoCell" customModule="iNesti" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="468" width="375" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k29-Yy-YJs" id="x3S-fa-nm3">
@@ -287,7 +287,7 @@
                                             <outlet property="stackView2" destination="wME-g8-rIt" id="YIo-oh-AwE"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalSpotlightCell" rowHeight="140" id="WFd-Pa-x76" customClass="INSpotlightInfoCell" customModule="iNesti" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RentalSpotlightCell" rowHeight="140" id="WFd-Pa-x76" customClass="INSpotlightInfoCell" customModule="iNesti" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="628" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WFd-Pa-x76" id="Ook-Pv-gzu">
@@ -329,7 +329,7 @@
                                             <outlet property="stackView2" destination="P39-pB-3ou" id="r9g-nT-076"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalTransitCell" rowHeight="100" id="2Cj-Wz-vOD" customClass="INTrafficItemInfoCell" customModule="iNesti" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RentalTransitCell" rowHeight="100" id="2Cj-Wz-vOD" customClass="INTrafficItemInfoCell" customModule="iNesti" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="768" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Cj-Wz-vOD" id="CDv-4D-Ac9">
@@ -369,7 +369,7 @@
                                             <outlet property="stackView2" destination="TMG-ux-BwK" id="d3L-WX-UdL"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentalContactCell" rowHeight="90" id="zKQ-j8-PXN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RentalContactCell" rowHeight="90" id="zKQ-j8-PXN">
                                         <rect key="frame" x="0.0" y="868" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zKQ-j8-PXN" id="zZg-yN-kEG">
