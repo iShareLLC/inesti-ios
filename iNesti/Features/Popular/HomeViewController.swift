@@ -33,9 +33,9 @@ class HomeViewController: BaseViewController {
         
         //APITester().testRentalList()
         //Add pagination
-        APIManager.shared.getRentalList(city: "nyc", start: 0, limit: 15) { (response, error) in
-            if let response = response {
-                self.dataSource.append(contentsOf: response.data.results)
+        APIManager.shared.getRentalList(city: "nyc", start: 0, limit: 15) { (object, error) in
+            if let object = object {
+                self.dataSource.append(contentsOf: object.results)
                 self.tableView.reloadData()
             }
         }

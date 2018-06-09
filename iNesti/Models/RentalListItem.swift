@@ -22,16 +22,11 @@ struct RentalListItem: Codable {
     }
 }
 
-struct RentalResponse: Codable {
-    
-    struct RentalListObject: Codable {
-        let results: [RentalListItem]
-        let totalCount: Int
-    }
-    
+struct RentalListObject: Codable {
     let statusCode: Int
     let message: String
-    let data: RentalListObject
+    let results: [RentalListItem]
+    let totalCount: Int
 }
 
 

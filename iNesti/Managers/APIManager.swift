@@ -61,7 +61,7 @@ class APIManager: NSObject {
         }
     }
     
-    func getRentalList(city: String, start: Int, limit: Int, completion: @escaping((RentalResponse?, Error?) -> Void)) {
+    func getRentalList(city: String, start: Int, limit: Int, completion: @escaping((RentalListObject?, Error?) -> Void)) {
         
         let params: [String: Any] = [
             "city" : city,
@@ -72,8 +72,8 @@ class APIManager: NSObject {
         getDataReturn(route: ServerRoute.rentalList.rawValue, params: params) { (data, error) in
             if let data = data {
                 do {
-                    let response = try JSONDecoder().decode(RentalResponse.self, from: data)
-                    completion(response, nil)
+                    let object = try JSONDecoder().decode(RentalListObject.self, from: data)
+                    completion(object, nil)
                 } catch {
                     DLog("JSON failed: \(error)")
                     completion(nil, error)
