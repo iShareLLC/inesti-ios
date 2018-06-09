@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class RentalCell: UITableViewCell {
     @IBOutlet private weak var priceLabel: UILabel!
@@ -23,12 +24,14 @@ class RentalCell: UITableViewCell {
         //addShadow()
     }
     
-    func setup(with place: PopularPlace) {
-        priceLabel.text = place.price
-        areaLabel.text = place.area
-        titleLabel.attributedText = place.attributedTitle
-        summaryLabel.text = place.summary
-        //coverImageView.kf.setImage(with: place.imageUrls.first?.webURL)
+    func setup(item: RentalListItem) {
+        priceLabel.text = item.priceString()
+        areaLabel.text = item.title1
+        titleLabel.text = item.title2
+        summaryLabel.text = item.description
+        if let image = item.imageUrls.first, let imageUrl = URL(string: image) {
+            coverImageView.af_setImage(withURL: imageUrl)
+        }
     }
     
     func addShadow() {

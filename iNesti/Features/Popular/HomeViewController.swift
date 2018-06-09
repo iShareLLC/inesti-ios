@@ -16,17 +16,12 @@ class HomeViewController: BaseViewController {
     @IBOutlet private weak var searchButton: UIButton!
     @IBOutlet private weak var tableView: UITableView!
 
-    private var dataSource = RentalDataStore.shared.getPopularRentals()
+    private var dataSource = [RentalListItem]()
     private var isInitialLoading = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let rental = Rental(id: 0)
-        RentalDataStore.shared.addPopularRental(rental: rental)
-        RentalDataStore.shared.addPopularRental(rental: rental)
         
-        dataSource = RentalDataStore.shared.getPopularRentals()
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -35,6 +30,15 @@ class HomeViewController: BaseViewController {
         searchButton.layer.applySketchShadow(color: UIColor(white: 0, alpha: 0.25), x: 0, y: 5, blur: 25, spread: 0)
         
         INTagHelper.shared.loadJSON()
+        
+        //APITester().testRentalList()
+        //Add pagination
+        APIManager.shared.getRentalList(city: "nyc", start: 0, limit: 15) { (response, error) in
+            if let response = response {
+                self.dataSource.append(contentsOf: response.data.results)
+                self.tableView.reloadData()
+            }
+        }
     }
 }
 
@@ -49,7 +53,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = dataSource[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "RentalCell", for: indexPath) as! RentalCell
+        cell.setup(item: item)
         return cell
     }
     

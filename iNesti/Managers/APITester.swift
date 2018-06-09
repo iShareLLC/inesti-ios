@@ -14,4 +14,7 @@ class APITester: NSObject {
         APIManager.shared.getRentalDetail(city: "nyc", neighborhood: "midtown", title: "random-title", postTime: Date.getTimestampNow())
     }
     
+    func testRentalList () {
+        //APIManager.shared.getRentalList(city: "nyc", start: 0, limit: 15)
+    }
 }

@@ -129,8 +129,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1100/月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pq9-o7-b2T">
-                                                    <rect key="frame" x="31" y="25" width="77" height="24.666666666666671"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1100/月" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pq9-o7-b2T" customClass="INPaddingLabel" customModule="iNesti" customModuleProvider="target">
+                                                    <rect key="frame" x="26" y="21" width="77" height="24.666666666666671"/>
                                                     <color key="backgroundColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
                                                     <nil key="textColor"/>
@@ -145,10 +145,10 @@
                                                 <constraint firstItem="hLx-b5-2tb" firstAttribute="leading" secondItem="b98-yH-0gF" secondAttribute="leading" id="NgZ-9D-67i"/>
                                                 <constraint firstItem="b98-yH-0gF" firstAttribute="leading" secondItem="oR0-a0-dlM" secondAttribute="leading" constant="16" id="SqA-Lm-POi"/>
                                                 <constraint firstItem="qVI-MM-FMu" firstAttribute="top" secondItem="I8r-ys-Lm6" secondAttribute="bottom" constant="4.3333333333333428" id="bJ5-nI-bLP"/>
-                                                <constraint firstItem="Pq9-o7-b2T" firstAttribute="top" secondItem="b98-yH-0gF" secondAttribute="top" constant="14" id="cwo-uD-3dc"/>
+                                                <constraint firstItem="Pq9-o7-b2T" firstAttribute="top" secondItem="b98-yH-0gF" secondAttribute="top" constant="10" id="cwo-uD-3dc"/>
                                                 <constraint firstItem="qVI-MM-FMu" firstAttribute="leading" secondItem="I8r-ys-Lm6" secondAttribute="leading" id="ffT-Hk-g5i"/>
                                                 <constraint firstItem="biX-Il-xGO" firstAttribute="top" secondItem="b98-yH-0gF" secondAttribute="bottom" constant="13" id="gAs-XB-gyE"/>
-                                                <constraint firstItem="Pq9-o7-b2T" firstAttribute="leading" secondItem="b98-yH-0gF" secondAttribute="leading" constant="15" id="iTi-xY-ge0"/>
+                                                <constraint firstItem="Pq9-o7-b2T" firstAttribute="leading" secondItem="b98-yH-0gF" secondAttribute="leading" constant="10" id="iTi-xY-ge0"/>
                                                 <constraint firstItem="b98-yH-0gF" firstAttribute="top" secondItem="oR0-a0-dlM" secondAttribute="topMargin" id="igI-4J-xjO"/>
                                                 <constraint firstItem="I8r-ys-Lm6" firstAttribute="trailing" secondItem="b98-yH-0gF" secondAttribute="trailing" constant="-15" id="jfA-9Z-uHv"/>
                                                 <constraint firstItem="hLx-b5-2tb" firstAttribute="trailing" secondItem="b98-yH-0gF" secondAttribute="trailing" id="syc-rg-iFd"/>
@@ -349,7 +349,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1100/月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCy-0k-9ax">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1100/月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCy-0k-9ax" customClass="INPaddingLabel" customModule="iNesti" customModuleProvider="target">
                                                     <rect key="frame" x="31" y="25" width="77" height="24.666666666666671"/>
                                                     <color key="backgroundColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
