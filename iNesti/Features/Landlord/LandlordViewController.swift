@@ -93,7 +93,11 @@ extension LandlordViewController: UITableViewDataSource, UITableViewDelegate {
                 cell.selectionStyle = .none
                 return cell
             } else {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "LandlordRentalCell", for: indexPath)
+                let rental = dataSource[indexPath.row]
+                let cell = tableView.dequeueReusableCell(withIdentifier: "LandlordRentalCell", for: indexPath) as! LandlordRentalCell
+                cell.selectionStyle = .none
+                cell.delegate = self
+                cell.rental = rental
                 return cell
             }
             
@@ -127,6 +131,17 @@ extension LandlordViewController: LandlordPublishFooterViewDelegate {
     
     func addRentalHandler() {
         performSegue(withIdentifier: kNewRentalSegue, sender: nil)
+    }
+}
+
+extension LandlordViewController: LandlordRentalCellDelegate {
+    
+    func handleEdit(rental: Rental) {
+        DLog("Edit Rental")
+    }
+    
+    func handleDelete(rental: Rental) {
+        DLog("Delete Rental")
     }
 }
 
@@ -181,6 +196,28 @@ class LandlordNoLoginCell: UITableViewCell {
     
     @IBAction func handleRegister(sender: UIButton) {
         delegate?.handleRegisterButton(sender: sender)
+    }
+}
+
+
+protocol LandlordRentalCellDelegate: class {
+    func handleEdit(rental: Rental)
+    func handleDelete(rental: Rental)
+}
+
+class LandlordRentalCell: UITableViewCell {
+    
+    weak var delegate: LandlordRentalCellDelegate?
+    var rental: Rental?
+    
+    @IBAction func handleEditButton(sender: UIButton) {
+        guard let rental = rental else { return }
+        delegate?.handleEdit(rental: rental)
+    }
+    
+    @IBAction func handleDeleteButton(sender: UIButton) {
+        guard let rental = rental else { return }
+        delegate?.handleDelete(rental: rental)
     }
 }
 
