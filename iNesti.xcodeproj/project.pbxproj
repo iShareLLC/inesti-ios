@@ -36,6 +36,7 @@
 		4D3F1E6E20B54E58006FE7AD /* INTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3F1E6D20B54E58006FE7AD /* INTextView.swift */; };
 		4D3F1E7120B66209006FE7AD /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3F1E7020B66209006FE7AD /* Registration.storyboard */; };
 		4D3F1E7320B66790006FE7AD /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3F1E7220B66790006FE7AD /* RegistrationViewController.swift */; };
+		4D990B5B20CC190B0034A979 /* INButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D990B5A20CC190B0034A979 /* INButton.swift */; };
 		4DBFFA3620B997DC00FDA2BD /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DBFFA3520B997DC00FDA2BD /* Search.storyboard */; };
 		4DBFFA3820B9BAF200FDA2BD /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFFA3720B9BAF200FDA2BD /* SearchResultViewController.swift */; };
 		4DBFFA3B20B9D56900FDA2BD /* RentalDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DBFFA3A20B9D56900FDA2BD /* RentalDetail.storyboard */; };
@@ -139,6 +140,7 @@
 		4D3F1E6D20B54E58006FE7AD /* INTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INTextView.swift; sourceTree = "<group>"; };
 		4D3F1E7020B66209006FE7AD /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		4D3F1E7220B66790006FE7AD /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		4D990B5A20CC190B0034A979 /* INButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INButton.swift; sourceTree = "<group>"; };
 		4DBFFA3520B997DC00FDA2BD /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		4DBFFA3720B9BAF200FDA2BD /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		4DBFFA3A20B9D56900FDA2BD /* RentalDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RentalDetail.storyboard; sourceTree = "<group>"; };
@@ -391,6 +393,7 @@
 			children = (
 				4D3F1E6B20B54C99006FE7AD /* INTextField.swift */,
 				4D3F1E6D20B54E58006FE7AD /* INTextView.swift */,
+				4D990B5A20CC190B0034A979 /* INButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -840,6 +843,7 @@
 				E50A61FE20B611C400E7403F /* Notification+Extensions.swift in Sources */,
 				4DFB187B20B66E3A0091C1B0 /* RentalDataStore.swift in Sources */,
 				3C8FF7AA20A34FBE009EF837 /* NestTabBarController.swift in Sources */,
+				4D990B5B20CC190B0034A979 /* INButton.swift in Sources */,
 				4DBFFA3820B9BAF200FDA2BD /* SearchResultViewController.swift in Sources */,
 				4DE765D220C2FAC5002C7A7C /* INItemSpotlightView.swift in Sources */,
 				E5E9DC5F20B338AB004F3A6D /* AddRentalTypeEntryViewController.swift in Sources */,

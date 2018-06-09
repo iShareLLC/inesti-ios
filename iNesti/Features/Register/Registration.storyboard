@@ -49,6 +49,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="dsN-9u-YQL" id="x74-TN-OPq"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="邮箱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jgm-Jb-4M8" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="190" width="343" height="50"/>
@@ -58,6 +61,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="dsN-9u-YQL" id="IPm-nT-SVs"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="电话" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gfd-zs-w3Y" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
                                                 <rect key="frame" x="82" y="256" width="277" height="50"/>
@@ -67,6 +73,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="dsN-9u-YQL" id="31s-54-DfC"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RMn-Qm-8yd" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="322" width="343" height="50"/>
@@ -76,6 +85,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="dsN-9u-YQL" id="lV8-RG-aob"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="确认密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="izM-Q8-bMQ" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="388" width="343" height="50"/>
@@ -85,6 +97,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="dsN-9u-YQL" id="b6I-tD-4cC"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主要联系方式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpT-y1-4H0">
                                                 <rect key="frame" x="16" y="470" width="104" height="21"/>
@@ -101,6 +116,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="dsN-9u-YQL" id="UG9-zZ-Zyo"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQV-R9-6Du">
                                                 <rect key="frame" x="41" y="507" width="35" height="21"/>
@@ -228,6 +246,7 @@
                         <outlet property="emailCheckbox" destination="4a6-Gk-pKk" id="eb4-8m-uzU"/>
                         <outlet property="passwordTextField" destination="RMn-Qm-8yd" id="bJe-I4-Xl7"/>
                         <outlet property="phoneCheckbox" destination="bm5-YN-8qn" id="P29-Sh-YdH"/>
+                        <outlet property="scrollView" destination="uDD-ag-Zl1" id="GP6-xD-Ab7"/>
                         <outlet property="wechatCheckbox" destination="aRN-DV-XaX" id="CRC-sM-eON"/>
                     </connections>
                 </viewController>

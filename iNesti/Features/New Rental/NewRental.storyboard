@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Llh-e2-NEB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Llh-e2-NEB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -494,17 +494,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="地铁线路" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fiV-J9-KST" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="63" width="164" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="YhR-lc-nXp"/>
-                                                    </constraints>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="站名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0f0-xf-ILL" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="119" width="343" height="40"/>
+                                                    <rect key="frame" x="16" y="118" width="343" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="wRS-X1-SX4"/>
                                                     </constraints>
@@ -513,32 +504,23 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="步行时间" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nGx-27-PvF" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
-                                                    <rect key="frame" x="190" y="63" width="120" height="40"/>
+                                                    <rect key="frame" x="151" y="61" width="120" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="gFx-Xw-zwt"/>
                                                         <constraint firstAttribute="width" constant="120" id="n5g-YH-duj"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分钟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5g-MD-BGg">
-                                                    <rect key="frame" x="324" y="73" width="35" height="21"/>
+                                                    <rect key="frame" x="286" y="71" width="73" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Path 线路" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4gi-Kv-hWL" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="191" width="163" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="Rdu-eb-adz"/>
-                                                    </constraints>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="站名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="83V-bC-job" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="247" width="343" height="40"/>
+                                                    <rect key="frame" x="16" y="243" width="343" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="0DY-Jf-QYn"/>
                                                     </constraints>
@@ -547,47 +529,83 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="步行时间" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h2d-yh-ey4" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
-                                                    <rect key="frame" x="189" y="191" width="120" height="40"/>
+                                                    <rect key="frame" x="151" y="188" width="120" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="6PJ-et-lxz"/>
                                                         <constraint firstAttribute="width" constant="120" id="da5-YR-4Iq"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分钟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjk-Fy-aE5">
-                                                    <rect key="frame" x="324" y="200" width="35" height="21"/>
+                                                    <rect key="frame" x="286" y="197" width="73" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTa-xA-Hnr" customClass="INButton" customModule="iNesti" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="59" width="120" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="xSY-iJ-8nA"/>
+                                                        <constraint firstAttribute="height" constant="44" id="z0F-xh-sYL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <state key="normal" title="Subway 线路">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="handleSubwayLineButtonWithSender:" destination="3Fs-Yb-FfI" eventType="touchUpInside" id="NBT-X5-EE2"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpJ-ol-fUg" customClass="INButton" customModule="iNesti" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="188" width="120" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="ZtJ-sB-h8p"/>
+                                                        <constraint firstAttribute="width" constant="120" id="oxe-H1-Uci"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <state key="normal" title="Path 线路">
+                                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="handlePathLineButtonWithSender:" destination="3Fs-Yb-FfI" eventType="touchUpInside" id="wFx-Bo-RNN"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="h2d-yh-ey4" firstAttribute="centerY" secondItem="4gi-Kv-hWL" secondAttribute="centerY" id="1qH-OJ-ICE"/>
+                                                <constraint firstItem="83V-bC-job" firstAttribute="leading" secondItem="tCB-mZ-3jX" secondAttribute="leading" id="0cd-An-y0h"/>
                                                 <constraint firstItem="0f0-xf-ILL" firstAttribute="trailing" secondItem="K5g-MD-BGg" secondAttribute="trailing" id="65M-jB-fsU"/>
                                                 <constraint firstAttribute="trailing" secondItem="K5g-MD-BGg" secondAttribute="trailing" constant="16" id="AbW-Ju-Sxf"/>
-                                                <constraint firstItem="0f0-xf-ILL" firstAttribute="top" secondItem="fiV-J9-KST" secondAttribute="bottom" constant="16" id="Ahu-Qf-FEQ"/>
-                                                <constraint firstItem="83V-bC-job" firstAttribute="top" secondItem="4gi-Kv-hWL" secondAttribute="bottom" constant="16" id="Du1-et-BHC"/>
-                                                <constraint firstItem="hjk-Fy-aE5" firstAttribute="leading" secondItem="h2d-yh-ey4" secondAttribute="trailing" constant="14.5" id="KXe-aN-xeg"/>
+                                                <constraint firstItem="xpJ-ol-fUg" firstAttribute="top" secondItem="0f0-xf-ILL" secondAttribute="bottom" constant="30" id="EiB-M6-00v"/>
+                                                <constraint firstItem="nGx-27-PvF" firstAttribute="centerY" secondItem="NTa-xA-Hnr" secondAttribute="centerY" id="HSj-ha-n4L"/>
+                                                <constraint firstItem="nGx-27-PvF" firstAttribute="leading" secondItem="NTa-xA-Hnr" secondAttribute="trailing" constant="15" id="JLk-Br-5VR"/>
+                                                <constraint firstItem="xpJ-ol-fUg" firstAttribute="leading" secondItem="0f0-xf-ILL" secondAttribute="leading" id="K23-ys-xoo"/>
+                                                <constraint firstItem="hjk-Fy-aE5" firstAttribute="leading" secondItem="h2d-yh-ey4" secondAttribute="trailing" constant="15" id="KXe-aN-xeg"/>
                                                 <constraint firstItem="K5g-MD-BGg" firstAttribute="centerY" secondItem="nGx-27-PvF" secondAttribute="centerY" id="Naf-PT-cnT"/>
-                                                <constraint firstItem="fiV-J9-KST" firstAttribute="leading" secondItem="tCB-mZ-3jX" secondAttribute="leading" id="SXe-M3-syO"/>
-                                                <constraint firstItem="nGx-27-PvF" firstAttribute="centerY" secondItem="fiV-J9-KST" secondAttribute="centerY" id="Tib-mJ-Ida"/>
-                                                <constraint firstItem="0f0-xf-ILL" firstAttribute="leading" secondItem="fiV-J9-KST" secondAttribute="leading" id="UHV-2Y-5xI"/>
-                                                <constraint firstItem="K5g-MD-BGg" firstAttribute="leading" secondItem="nGx-27-PvF" secondAttribute="trailing" constant="14.5" id="Xtr-wz-Trf"/>
-                                                <constraint firstItem="nGx-27-PvF" firstAttribute="leading" secondItem="fiV-J9-KST" secondAttribute="trailing" constant="10" id="bDm-kf-axv"/>
+                                                <constraint firstItem="83V-bC-job" firstAttribute="top" secondItem="xpJ-ol-fUg" secondAttribute="bottom" constant="15" id="Oh9-9p-416"/>
+                                                <constraint firstItem="h2d-yh-ey4" firstAttribute="leading" secondItem="xpJ-ol-fUg" secondAttribute="trailing" constant="15" id="SqW-H5-RUk"/>
+                                                <constraint firstItem="NTa-xA-Hnr" firstAttribute="top" secondItem="tCB-mZ-3jX" secondAttribute="bottom" constant="15" id="WIq-78-yw8"/>
+                                                <constraint firstItem="K5g-MD-BGg" firstAttribute="leading" secondItem="nGx-27-PvF" secondAttribute="trailing" constant="15" id="Xtr-wz-Trf"/>
                                                 <constraint firstItem="hjk-Fy-aE5" firstAttribute="centerY" secondItem="h2d-yh-ey4" secondAttribute="centerY" id="daM-Gr-G65"/>
+                                                <constraint firstItem="h2d-yh-ey4" firstAttribute="centerY" secondItem="xpJ-ol-fUg" secondAttribute="centerY" id="dfA-0g-UfG"/>
                                                 <constraint firstItem="tCB-mZ-3jX" firstAttribute="top" secondItem="tkR-Ed-P5g" secondAttribute="top" constant="16" id="hfw-fH-QSL"/>
-                                                <constraint firstItem="h2d-yh-ey4" firstAttribute="leading" secondItem="4gi-Kv-hWL" secondAttribute="trailing" constant="10" id="iB4-4T-jp9"/>
-                                                <constraint firstItem="4gi-Kv-hWL" firstAttribute="top" secondItem="0f0-xf-ILL" secondAttribute="bottom" constant="32" id="jGp-cE-I7Q"/>
-                                                <constraint firstItem="83V-bC-job" firstAttribute="leading" secondItem="4gi-Kv-hWL" secondAttribute="leading" id="nOd-J1-eb6"/>
                                                 <constraint firstItem="tCB-mZ-3jX" firstAttribute="leading" secondItem="tkR-Ed-P5g" secondAttribute="leading" constant="16" id="oF7-ua-Agb"/>
+                                                <constraint firstItem="0f0-xf-ILL" firstAttribute="top" secondItem="NTa-xA-Hnr" secondAttribute="bottom" constant="15" id="oyQ-NW-9Tt"/>
+                                                <constraint firstItem="NTa-xA-Hnr" firstAttribute="leading" secondItem="tCB-mZ-3jX" secondAttribute="leading" id="qQP-yk-Ule"/>
                                                 <constraint firstItem="83V-bC-job" firstAttribute="trailing" secondItem="hjk-Fy-aE5" secondAttribute="trailing" id="rl6-L1-63i"/>
+                                                <constraint firstItem="0f0-xf-ILL" firstAttribute="leading" secondItem="tCB-mZ-3jX" secondAttribute="leading" id="ukb-ft-03h"/>
                                                 <constraint firstItem="hjk-Fy-aE5" firstAttribute="trailing" secondItem="K5g-MD-BGg" secondAttribute="trailing" id="vdu-qF-CZ5"/>
-                                                <constraint firstItem="fiV-J9-KST" firstAttribute="top" secondItem="tCB-mZ-3jX" secondAttribute="bottom" constant="19" id="xAO-dY-fdh"/>
-                                                <constraint firstItem="4gi-Kv-hWL" firstAttribute="leading" secondItem="0f0-xf-ILL" secondAttribute="leading" id="xpI-bW-Wrj"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="pathLineButton" destination="xpJ-ol-fUg" id="OLa-FB-xWL"/>
+                                            <outlet property="pathStationTextField" destination="83V-bC-job" id="9cg-zQ-BKg"/>
+                                            <outlet property="pathTimeTextField" destination="h2d-yh-ey4" id="fD0-sq-9Yd"/>
+                                            <outlet property="subwayLineButton" destination="NTa-xA-Hnr" id="Qvo-Gv-VeC"/>
+                                            <outlet property="subwayStationTextField" destination="0f0-xf-ILL" id="L6f-SJ-Ogk"/>
+                                            <outlet property="subwayTimeTextField" destination="nGx-27-PvF" id="dZv-w2-ZqR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

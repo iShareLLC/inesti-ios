@@ -8,6 +8,7 @@
 
 import UIKit
 import TTGTagCollectionView
+import DropDown
 
 class AddRentalTagEntryViewController: BaseViewController {
 
@@ -36,11 +37,19 @@ class AddRentalTagEntryViewController: BaseViewController {
     }
 }
 
-extension AddRentalTagEntryViewController: UITableViewDelegate {
+extension AddRentalTagEntryViewController: RentalTrafficCellDelegate {
+    
+    func pickSubwayLine(subwayLineKey: String) {
+        DLog("Subway key: \(subwayLineKey)")
+    }
+    
+    func pickPathLine(pathLineKey: String) {
+        DLog("Path key: \(pathLineKey)")
+    }
     
 }
 
-extension AddRentalTagEntryViewController: UITableViewDataSource {
+extension AddRentalTagEntryViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row != 4 {
@@ -51,6 +60,7 @@ extension AddRentalTagEntryViewController: UITableViewDataSource {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: rentalTrafficCellId, for: indexPath) as! RentalTrafficCell
+            cell.delegate = self
             return cell
         }
     }
@@ -127,10 +137,51 @@ extension RentalTagCell: TTGTextTagCollectionViewDelegate {
     }
 }
 
+
+protocol RentalTrafficCellDelegate: class {
+    func pickSubwayLine(subwayLineKey: String)
+    func pickPathLine(pathLineKey: String)
+}
+
 class RentalTrafficCell: UITableViewCell {
+    
+    @IBOutlet var subwayLineButton: UIButton!
+    @IBOutlet var subwayTimeTextField: INTextField!
+    @IBOutlet var subwayStationTextField: INTextField!
+    @IBOutlet var pathLineButton: UIButton!
+    @IBOutlet var pathTimeTextField: INTextField!
+    @IBOutlet var pathStationTextField: INTextField!
+    weak var delegate: RentalTrafficCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
     }
+    
+    @IBAction func handleSubwayLineButton(sender: UIButton) {
+//        let dropDown = DropDown()
+//        dropDown.anchorView = sender
+//        dropDown.dataSource = ["月", "日", "年"]
+//        dropDown.selectionAction = { [weak self] (index: Int, item: String) in
+//            self?.delegate?.pickSubwayLine(subwayLine: item)
+//        }
+//        dropDown.direction = .bottom
+//        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
+//        dropDown.show()
+    }
+    
+    @IBAction func handlePathLineButton(sender: UIButton) {
+        let dropDown = DropDown()
+        dropDown.anchorView = sender
+        dropDown.dataSource = pathLineValues
+        dropDown.selectionAction = { [weak self] (index: Int, item: String) in
+            self?.delegate?.pickPathLine(pathLineKey: pathLineKey[index])
+            self?.pathLineButton.setTitle(item, for: .normal)
+            self?.pathLineButton.setTitleColor(.black, for: .normal)
+        }
+        dropDown.direction = .bottom
+        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
+        dropDown.show()
+    }
 }
+

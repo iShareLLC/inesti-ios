@@ -18,6 +18,8 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var passwordTextField: INTextField!
     @IBOutlet weak var confirmTextField: INTextField!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -88,5 +90,17 @@ class RegistrationViewController: UIViewController {
         }
         
         return true
+    }
+}
+
+extension RegistrationViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        scrollView.scrollRectToVisible(textField.frame, animated: true)
     }
 }
