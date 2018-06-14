@@ -184,19 +184,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="标题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9PV-xl-cNd" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
-                                <rect key="frame" x="16" y="217" width="343" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="街区/e.g. midtown, financial district" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wxB-qt-K2S" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
+                                <rect key="frame" x="16" y="151" width="343" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Jwk-xf-oe4"/>
+                                    <constraint firstAttribute="height" constant="50" id="hWt-Tq-39t"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="街区/e.g. midtown, financial district" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wxB-qt-K2S" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
-                                <rect key="frame" x="16" y="151" width="343" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="房源具体地址（不会显示在租房页面）" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cZo-v7-W3Y" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
+                                <rect key="frame" x="16" y="219" width="343" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="hWt-Tq-39t"/>
+                                    <constraint firstAttribute="height" constant="50" id="rkM-Bo-fVz"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="邮政编码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ol7-U4-B7x" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
+                                <rect key="frame" x="16" y="287" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="AKh-KP-H6k"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -225,6 +234,15 @@
                                     <constraint firstAttribute="height" constant="60" id="hfu-fT-T8N"/>
                                 </constraints>
                             </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="标题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9PV-xl-cNd" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
+                                <rect key="frame" x="16" y="358" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Jwk-xf-oe4"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -233,13 +251,21 @@
                             <constraint firstItem="yoD-oY-8GW" firstAttribute="top" secondItem="WKe-PW-ftI" secondAttribute="bottom" constant="16" id="30s-tJ-tFT"/>
                             <constraint firstItem="9PV-xl-cNd" firstAttribute="trailing" secondItem="yoD-oY-8GW" secondAttribute="trailing" id="4NU-Ci-DG7"/>
                             <constraint firstItem="NO9-wA-NLC" firstAttribute="trailing" secondItem="af4-zS-SbQ" secondAttribute="trailing" id="4UF-lk-XlS"/>
+                            <constraint firstItem="9PV-xl-cNd" firstAttribute="leading" secondItem="ol7-U4-B7x" secondAttribute="leading" id="6pF-4e-EI6"/>
                             <constraint firstItem="9PV-xl-cNd" firstAttribute="leading" secondItem="yoD-oY-8GW" secondAttribute="leading" id="7Y9-6S-RJs"/>
+                            <constraint firstItem="cZo-v7-W3Y" firstAttribute="leading" secondItem="wxB-qt-K2S" secondAttribute="leading" id="8bL-GR-GkM"/>
+                            <constraint firstItem="9PV-xl-cNd" firstAttribute="top" secondItem="ol7-U4-B7x" secondAttribute="bottom" constant="21" id="F0F-NY-tYU"/>
+                            <constraint firstItem="cZo-v7-W3Y" firstAttribute="trailing" secondItem="wxB-qt-K2S" secondAttribute="trailing" id="GXH-00-cbo"/>
+                            <constraint firstItem="ol7-U4-B7x" firstAttribute="top" secondItem="cZo-v7-W3Y" secondAttribute="bottom" constant="18" id="IQK-LA-Xox"/>
                             <constraint firstItem="WKe-PW-ftI" firstAttribute="top" secondItem="NO9-wA-NLC" secondAttribute="top" constant="16" id="Jkf-jc-g8b"/>
                             <constraint firstItem="wxB-qt-K2S" firstAttribute="top" secondItem="yoD-oY-8GW" secondAttribute="bottom" constant="18" id="Raf-i0-9FV"/>
+                            <constraint firstItem="ol7-U4-B7x" firstAttribute="trailing" secondItem="cZo-v7-W3Y" secondAttribute="trailing" id="Wdz-xX-4Ge"/>
                             <constraint firstItem="NO9-wA-NLC" firstAttribute="bottom" secondItem="af4-zS-SbQ" secondAttribute="bottom" id="Z1x-xF-28V"/>
+                            <constraint firstItem="9PV-xl-cNd" firstAttribute="trailing" secondItem="ol7-U4-B7x" secondAttribute="trailing" id="bWp-JI-JDe"/>
                             <constraint firstItem="yoD-oY-8GW" firstAttribute="leading" secondItem="WKe-PW-ftI" secondAttribute="leading" id="cM9-0S-eqR"/>
                             <constraint firstItem="WKe-PW-ftI" firstAttribute="leading" secondItem="NO9-wA-NLC" secondAttribute="leading" constant="16" id="fI2-90-TBg"/>
-                            <constraint firstItem="9PV-xl-cNd" firstAttribute="top" secondItem="wxB-qt-K2S" secondAttribute="bottom" constant="16" id="m11-ns-Lqo"/>
+                            <constraint firstItem="ol7-U4-B7x" firstAttribute="leading" secondItem="cZo-v7-W3Y" secondAttribute="leading" id="k4M-0S-0Cc"/>
+                            <constraint firstItem="cZo-v7-W3Y" firstAttribute="top" secondItem="wxB-qt-K2S" secondAttribute="bottom" constant="18" id="klP-Zp-54y"/>
                             <constraint firstItem="NO9-wA-NLC" firstAttribute="trailing" secondItem="yoD-oY-8GW" secondAttribute="trailing" constant="16" id="nVv-qk-mDa"/>
                             <constraint firstItem="af4-zS-SbQ" firstAttribute="leading" secondItem="NO9-wA-NLC" secondAttribute="leading" id="uyG-HM-9Kf"/>
                         </constraints>
@@ -252,8 +278,10 @@
                     </view>
                     <connections>
                         <outlet property="areaTextField" destination="wxB-qt-K2S" id="TFZ-Gk-Agl"/>
+                        <outlet property="detailLocationTextField" destination="cZo-v7-W3Y" id="Qq5-DS-p3B"/>
                         <outlet property="locationTextField" destination="yoD-oY-8GW" id="9hs-nZ-qoE"/>
                         <outlet property="titleTextField" destination="9PV-xl-cNd" id="uiL-Fn-wig"/>
+                        <outlet property="zipCodeTextField" destination="ol7-U4-B7x" id="udh-x4-1FT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bK-kk-gxX" userLabel="First Responder" sceneMemberID="firstResponder"/>

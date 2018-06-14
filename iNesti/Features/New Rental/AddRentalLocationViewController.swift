@@ -12,30 +12,16 @@ class AddRentalLocationViewController: BaseViewController {
 
     @IBOutlet var locationTextField: INTextField!
     @IBOutlet var titleTextField: INTextField!
+    @IBOutlet var detailLocationTextField: INTextField!
+    @IBOutlet var zipCodeTextField: INTextField!
     @IBOutlet var areaTextField: INTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //locationTextField.setBottomBorder()
-        //titleTextField.setBottomBorder()
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
