@@ -20,6 +20,10 @@ class AddRentalTypeEntryViewController: BaseViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        actionButton.layer.borderColor = UIColor.in_yellow.cgColor
+        actionButton.layer.borderWidth = 3.0
+        actionButton.layer.cornerRadius = actionButton.frame.height / 2
     }
 
     override func didReceiveMemoryWarning() {

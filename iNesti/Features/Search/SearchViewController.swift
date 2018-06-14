@@ -30,6 +30,7 @@ class SearchViewController: BaseViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     
     var typeAheadData = [INLocation]()
+    var selectedDuration = RentalDuration.month
     let kSearchResultSegue = "SearchResultSegue"
     
     var typeAheadResults = [INLocation]() {
@@ -63,18 +64,6 @@ class SearchViewController: BaseViewController {
             })
             .disposed(by: disposeBag)
 
-//        datePickerButton.rx.tap
-//            .subscribe({ [weak self] _ in
-//                //self?.showDatePicker()
-//            })
-//            .disposed(by: disposeBag)
-
-//        durationPickerButton.rx.tap
-//            .subscribe(onNext: { [weak self] _ in
-//                self?.showDurationPicker()
-//            })
-//            .disposed(by: disposeBag)
-        
         //Range Slider
         rangeSlider.handleBorderWidth = 1
         rangeSlider.handleColor = .white
@@ -89,17 +78,45 @@ class SearchViewController: BaseViewController {
         rangeSlider.addTarget(self, action: #selector(didChangeSliderValue(_:)), for: .valueChanged)
         rangeSlider.hideLabels = true
         
+        updateSlider(duration: selectedDuration)
+        
         //Show Result Button
         showResultButton.layer.cornerRadius = 3.0
         showResultButton.layer.masksToBounds = false
         showResultButton.layer.applySketchShadow(color: UIColor(white: 0, alpha: 0.13), x: 0, y: 2, blur: 3, spread: 0)
     }
-
+    
+    
+    //MARK: Helper
+    
+    private func updateSlider(duration: RentalDuration) {
+        switch duration {
+        case .month:
+            rangeSlider.minValue = 0
+            rangeSlider.maxValue = 10000
+            rangeSlider.step = 50
+            rangeSlider.selectedMaximum = 10000
+            rangeSlider.selectedMinimum = 0
+        case .day:
+            rangeSlider.minValue = 0
+            rangeSlider.maxValue = 500
+            rangeSlider.step = 10
+            rangeSlider.selectedMaximum = 500
+            rangeSlider.selectedMinimum = 0
+        default:
+            rangeSlider.minValue = 0
+            rangeSlider.maxValue = 3000
+            rangeSlider.step = 50
+            rangeSlider.selectedMaximum = 3000
+            rangeSlider.selectedMinimum = 0
+        }
+        rangeLabel.text = "$\(Int(rangeSlider.selectedMinimum)) - $\(Int(rangeSlider.selectedMaximum))/\(selectedDuration.displayString())"
+    }
 
     //MARK: Action Handler
     
     @objc private func didChangeSliderValue(_ sender: TTRangeSlider) {
-        rangeLabel.text = "$\(Int(sender.selectedMinimum)) - $\(Int(sender.selectedMaximum))"
+        rangeLabel.text = "$\(Int(sender.selectedMinimum)) - $\(Int(sender.selectedMaximum))/\(selectedDuration.displayString())"
     }
     
     @IBAction func handleSearchButton(sender: UIButton) {
@@ -112,9 +129,13 @@ class SearchViewController: BaseViewController {
     @IBAction func handlePeriodButton(sender: UIButton) {
         let dropDown = DropDown()
         dropDown.anchorView = sender
-        dropDown.dataSource = ["月", "日", "年"]
+        dropDown.dataSource = [RentalDuration.month.displayString(), RentalDuration.day.displayString(), RentalDuration.week.displayString()]
         dropDown.selectionAction = { [weak self] (index: Int, item: String) in
             self?.periodButton.setTitle("/ \(item)", for: .normal)
+            
+            let duration = RentalDuration.duration(value: index)
+            self?.selectedDuration = duration
+            self?.updateSlider(duration: duration)
         }
         dropDown.direction = .bottom
         dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
