@@ -42,3 +42,5 @@ let buildingSpecsValues = ["24小时门卫", "健身室", "屋顶花园", "泳�
 
 let pathLineKey = ["red-line", "yellow-line", "blue-line", "green-line"]
 let pathLineValues = ["红线", "黄线", "蓝线", "绿线"]
+
+let subwayLines = ["1","2","3","4","5","6","7","S","A","B","C","D","E","F","G","J","L","M","N","Q","R","W","Z"]

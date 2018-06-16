@@ -39,8 +39,8 @@ class AddRentalTagEntryViewController: BaseViewController {
 
 extension AddRentalTagEntryViewController: RentalTrafficCellDelegate {
     
-    func pickSubwayLine(subwayLineKey: String) {
-        DLog("Subway key: \(subwayLineKey)")
+    func pickSubwayLine(subwayLine: String) {
+        DLog("Subway key: \(subwayLine)")
     }
     
     func pickPathLine(pathLineKey: String) {
@@ -139,7 +139,7 @@ extension RentalTagCell: TTGTextTagCollectionViewDelegate {
 
 
 protocol RentalTrafficCellDelegate: class {
-    func pickSubwayLine(subwayLineKey: String)
+    func pickSubwayLine(subwayLine: String)
     func pickPathLine(pathLineKey: String)
 }
 
@@ -159,15 +159,17 @@ class RentalTrafficCell: UITableViewCell {
     }
     
     @IBAction func handleSubwayLineButton(sender: UIButton) {
-//        let dropDown = DropDown()
-//        dropDown.anchorView = sender
-//        dropDown.dataSource = ["月", "日", "年"]
-//        dropDown.selectionAction = { [weak self] (index: Int, item: String) in
-//            self?.delegate?.pickSubwayLine(subwayLine: item)
-//        }
-//        dropDown.direction = .bottom
-//        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
-//        dropDown.show()
+        let dropDown = DropDown()
+        dropDown.anchorView = sender
+        dropDown.dataSource = subwayLines
+        dropDown.selectionAction = { [weak self] (index: Int, item: String) in
+            self?.delegate?.pickSubwayLine(subwayLine: item)
+            self?.subwayLineButton.setTitle(item, for: .normal)
+            self?.subwayLineButton.setTitleColor(.black, for: .normal)
+        }
+        dropDown.direction = .bottom
+        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
+        dropDown.show()
     }
     
     @IBAction func handlePathLineButton(sender: UIButton) {
