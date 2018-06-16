@@ -27,6 +27,8 @@
 		3CD2E7E8208698EB002252CC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CD2E7EA208698EB002252CC /* Localizable.strings */; };
 		3CD2E7EE20869905002252CC /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2E7ED20869905002252CC /* String+Localization.swift */; };
 		3CEF333A2086D987005281BE /* CALayer+Sketch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33392086D987005281BE /* CALayer+Sketch.swift */; };
+		4D152FD120D59F9800980985 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D152FD020D59F9800980985 /* Login.storyboard */; };
+		4D152FD520D59FBB00980985 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D152FD420D59FBB00980985 /* LoginViewController.swift */; };
 		4D31A60120BE5D1200BA934C /* RentalContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D31A60020BE5D1200BA934C /* RentalContactViewController.swift */; };
 		4D31A60420BE659200BA934C /* location.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D31A60320BE659200BA934C /* location.json */; };
 		4D31A60920BE65E500BA934C /* INLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D31A60820BE65E500BA934C /* INLocation.swift */; };
@@ -133,6 +135,8 @@
 		3CD2E7F620869B5A002252CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
 		3CEF33392086D987005281BE /* CALayer+Sketch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Sketch.swift"; sourceTree = "<group>"; };
 		48B0DCCB0F045000E3080847 /* Pods-iNestiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNestiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iNestiTests/Pods-iNestiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D152FD020D59F9800980985 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		4D152FD420D59FBB00980985 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4D31A60020BE5D1200BA934C /* RentalContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalContactViewController.swift; sourceTree = "<group>"; };
 		4D31A60320BE659200BA934C /* location.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = location.json; sourceTree = "<group>"; };
 		4D31A60820BE65E500BA934C /* INLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INLocation.swift; sourceTree = "<group>"; };
@@ -409,6 +413,8 @@
 			children = (
 				4D3F1E7020B66209006FE7AD /* Registration.storyboard */,
 				4D3F1E7220B66790006FE7AD /* RegistrationViewController.swift */,
+				4D152FD020D59F9800980985 /* Login.storyboard */,
+				4D152FD420D59FBB00980985 /* LoginViewController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -674,6 +680,7 @@
 				3C8FF7A820A34B64009EF837 /* SplashLoadingView.xib in Resources */,
 				4DE765D020C2FAA4002C7A7C /* INItemSpotlightView.xib in Resources */,
 				3C01173720852EF8007C73D8 /* Assets.xcassets in Resources */,
+				4D152FD120D59F9800980985 /* Login.storyboard in Resources */,
 				3C01173520852EF7007C73D8 /* Main.storyboard in Resources */,
 				4DD0A74620B2906200674AAD /* NewRental.storyboard in Resources */,
 				4DBFFA3620B997DC00FDA2BD /* Search.storyboard in Resources */,
@@ -869,6 +876,7 @@
 				E5BDAE8A20C095DE00184423 /* SearchResult.swift in Sources */,
 				4DD0A73D20B1D1AB00674AAD /* INConstants.swift in Sources */,
 				4D31A60120BE5D1200BA934C /* RentalContactViewController.swift in Sources */,
+				4D152FD520D59FBB00980985 /* LoginViewController.swift in Sources */,
 				4DD0A73A20B1D0E900674AAD /* APIManager.swift in Sources */,
 				4D31A60920BE65E500BA934C /* INLocation.swift in Sources */,
 				3CD2E7D820868F54002252CC /* BaseViewController.swift in Sources */,

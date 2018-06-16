@@ -23,6 +23,17 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var confirmTextField: INTextField!
     
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
+    private var isLoading: Bool = false {
+        didSet {
+            if isLoading {
+                loadingIndicator.startAnimating()
+            } else {
+                loadingIndicator.stopAnimating()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,11 +52,6 @@ class RegistrationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     @IBAction func handleBackButton(sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -81,8 +87,11 @@ class RegistrationViewController: UIViewController {
             return
         }
         
-        //TODO: Add submit method
+        isLoading = true
         ProfileManager.shared.register(email: email, username: username, password: password, phone: code + phone) { (success, status) in
+            
+            self.isLoading = false
+            
             if success {
                 self.displayAlert(title: "注册成功", message: "欢迎使用iNest，你可以开始添加房源啦。", completion: { [weak self] (style) in
                     self?.dismiss(animated: true, completion: nil)

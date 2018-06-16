@@ -404,6 +404,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="handleLoginWithSender:" destination="chJ-df-dvr" eventType="touchUpInside" id="z5l-L4-Z0t"/>
+                                                        <segue destination="rkB-Dk-cmn" kind="presentation" id="sRJ-QS-n62"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xa7-Yy-5MV">
@@ -567,6 +568,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zjy-JR-fDS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1394" y="854"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="oWF-Es-AC1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="rkB-Dk-cmn" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XqT-Dl-wsQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1121" y="964"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ea2-DW-BEt">

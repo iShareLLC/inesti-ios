@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="dsN-9u-YQL" customClass="RegistrationViewController" customModule="iNesti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mbJ-Ac-m2E">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="660"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uDD-ag-Zl1">
-                                <rect key="frame" x="0.0" y="20" width="375" height="640"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="680"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dDF-4f-6W3">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="720"/>
@@ -169,13 +169,16 @@
                                                     <constraint firstAttribute="height" constant="50" id="rP5-ky-RJa"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                                <state key="normal" title="下一步">
+                                                <state key="normal" title="注册">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="handleSubmitButtonWithSender:" destination="dsN-9u-YQL" eventType="touchUpInside" id="ZYL-Tt-WSS"/>
                                                 </connections>
                                             </button>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="noj-tp-VLF">
+                                                <rect key="frame" x="177.5" y="625" width="20" height="20"/>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -195,6 +198,7 @@
                                             <constraint firstAttribute="trailing" secondItem="YQS-g5-VyL" secondAttribute="trailing" constant="16" id="BBy-OF-PKb"/>
                                             <constraint firstItem="4a6-Gk-pKk" firstAttribute="centerY" secondItem="iVb-i6-ar6" secondAttribute="centerY" id="BsO-z4-zLf"/>
                                             <constraint firstItem="H59-51-peP" firstAttribute="leading" secondItem="5iW-o2-Bzl" secondAttribute="leading" id="D3v-4b-7ZQ"/>
+                                            <constraint firstItem="noj-tp-VLF" firstAttribute="top" secondItem="SfD-n0-Bfp" secondAttribute="bottom" constant="15" id="LJd-wK-a5C"/>
                                             <constraint firstItem="Hd5-ss-rSZ" firstAttribute="top" secondItem="KpT-y1-4H0" secondAttribute="bottom" constant="15" id="LZK-x0-j4R"/>
                                             <constraint firstAttribute="height" constant="720" id="MmS-rj-bsk"/>
                                             <constraint firstItem="YQS-g5-VyL" firstAttribute="top" secondItem="H59-51-peP" secondAttribute="bottom" constant="22.5" id="NXV-4F-Ado"/>
@@ -202,6 +206,7 @@
                                             <constraint firstItem="MQV-R9-6Du" firstAttribute="centerY" secondItem="aRN-DV-XaX" secondAttribute="centerY" id="RVu-B7-qbr"/>
                                             <constraint firstItem="SfD-n0-Bfp" firstAttribute="trailing" secondItem="Hd5-ss-rSZ" secondAttribute="trailing" id="Rmh-N6-lS3"/>
                                             <constraint firstItem="iVb-i6-ar6" firstAttribute="centerX" secondItem="dDF-4f-6W3" secondAttribute="centerX" constant="10" id="Rzy-ra-nyL"/>
+                                            <constraint firstItem="noj-tp-VLF" firstAttribute="centerX" secondItem="SfD-n0-Bfp" secondAttribute="centerX" id="SY6-fE-979"/>
                                             <constraint firstItem="Hd5-ss-rSZ" firstAttribute="leading" secondItem="bm5-YN-8qn" secondAttribute="trailing" constant="5" id="VLc-ra-Cks"/>
                                             <constraint firstItem="jgm-Jb-4M8" firstAttribute="leading" secondItem="YQS-g5-VyL" secondAttribute="leading" id="Xcm-x7-7As"/>
                                             <constraint firstItem="5iW-o2-Bzl" firstAttribute="leading" secondItem="dDF-4f-6W3" secondAttribute="leading" constant="16" id="ZPf-7L-dJo"/>
@@ -240,12 +245,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qt8-eu-mZU"/>
                     </view>
-                    <size key="freeformSize" width="375" height="660"/>
+                    <size key="freeformSize" width="375" height="700"/>
                     <connections>
                         <outlet property="areaCodeTextField" destination="Uke-Xa-kwN" id="SRp-aj-wIl"/>
                         <outlet property="confirmTextField" destination="izM-Q8-bMQ" id="XIh-Id-gKx"/>
                         <outlet property="emailCheckbox" destination="4a6-Gk-pKk" id="eb4-8m-uzU"/>
                         <outlet property="emailTextField" destination="jgm-Jb-4M8" id="K9l-7J-FIV"/>
+                        <outlet property="loadingIndicator" destination="noj-tp-VLF" id="gGs-dH-f1Y"/>
                         <outlet property="passwordTextField" destination="RMn-Qm-8yd" id="bJe-I4-Xl7"/>
                         <outlet property="phoneCheckbox" destination="bm5-YN-8qn" id="P29-Sh-YdH"/>
                         <outlet property="phoneTextField" destination="Gfd-zs-w3Y" id="z9m-YH-xgq"/>

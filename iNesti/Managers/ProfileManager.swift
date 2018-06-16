@@ -56,7 +56,7 @@ class ProfileManager: NSObject {
         }
     }
     
-    public func login(username: String, password: String, completion: @escaping (Bool?) -> Void) {
+    public func login(username: String, password: String, completion: @escaping (Bool) -> Void) {
         APIManager.shared.postLogin(username: username, password: password) { (success, code, error) in
             if success {
                 self.setIsLoggined(isLogin: true)
@@ -65,6 +65,7 @@ class ProfileManager: NSObject {
             } else {
                 self.setIsLoggined(isLogin: false)
             }
+            completion(success)
         }
     }
     
