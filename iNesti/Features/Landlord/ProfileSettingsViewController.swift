@@ -31,7 +31,7 @@ class ProfileSettingsViewController: UITableViewController {
     func logout() {
         displayAlertOkCancel(title: "登出", message: "是否确认登出？") { (style) in
             if style == .default {
-                ProfileManager.shared.setIsLoggined(isLogin: false)
+                ProfileManager.shared.logout()
                 self.dismiss(animated: true, completion: nil)
             }
         }

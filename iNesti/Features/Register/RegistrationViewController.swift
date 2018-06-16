@@ -15,6 +15,10 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var emailCheckbox: M13Checkbox!
     @IBOutlet weak var phoneCheckbox: M13Checkbox!
     
+    @IBOutlet weak var emailTextField: INTextField!
+    @IBOutlet weak var usernameTextField: INTextField!
+    @IBOutlet weak var areaCodeTextField: INTextField!
+    @IBOutlet weak var phoneTextField: INTextField!
     @IBOutlet weak var passwordTextField: INTextField!
     @IBOutlet weak var confirmTextField: INTextField!
     
@@ -69,15 +73,56 @@ class RegistrationViewController: UIViewController {
             return
         }
         
+        guard let email = emailTextField.text,
+        let username = usernameTextField.text,
+        let password = passwordTextField.text,
+        let code = areaCodeTextField.text,
+        let phone = phoneTextField.text else {
+            return
+        }
+        
         //TODO: Add submit method
-        ProfileManager.shared.setIsLoggined(isLogin: true)
-        self.dismiss(animated: true, completion: nil)
+        ProfileManager.shared.register(email: email, username: username, password: password, phone: code + phone) { (success, status) in
+            if success {
+                self.displayAlert(title: "注册成功", message: "欢迎使用iNest，你可以开始添加房源啦。", completion: { [weak self] (style) in
+                    self?.dismiss(animated: true, completion: nil)
+                })
+            } else {
+                var reason = "用户名已注册"
+                if status == 409 {
+                    reason = "电邮已注册"
+                } else if status == 410 {
+                    reason = "用户名已注册"
+                }
+                self.displayAlert(title: "注册失败", message: reason, completion: nil)
+            }
+        }
     }
     
     private func validation() -> Bool {
         
+        guard let username = usernameTextField.text, username.count >= 6 else {
+            self.displayAlertOkCancel(title: "用户名字符太少", message: "用户名必须有6位字符以上。", completion: nil)
+            return false
+        }
+        
+        guard let email = emailTextField.text, email.isValidEmail() else {
+            self.displayAlertOkCancel(title: "电邮格式问题", message: "请检查电邮格式是否正确。", completion: nil)
+            return false
+        }
+        
+        guard let areaCode = areaCodeTextField.text, !areaCode.isEmpty else {
+            self.displayAlertOkCancel(title: "地区号为空", message: "请输入电话地区号。", completion: nil)
+            return false
+        }
+        
+        guard let phone = phoneTextField.text, phone.count >= 7 else {
+            self.displayAlertOkCancel(title: "电话号长度过短", message: "请输入正确电话号。", completion: nil)
+            return false
+        }
+        
         guard passwordTextField.text == confirmTextField.text else {
-            self.displayAlertOkCancel(title: "密码不符", message: "密码和确认密码不符合，请重新输入") { [weak self] _ in
+            self.displayAlertOkCancel(title: "密码不符", message: "密码和确认密码不符合，请重新输入。") { [weak self] _ in
                 self?.passwordTextField.text = nil
                 self?.confirmTextField.text = nil
             }
@@ -85,7 +130,7 @@ class RegistrationViewController: UIViewController {
         }
         
         guard let password = passwordTextField.text, password.count >= 6 else {
-            self.displayAlertOkCancel(title: "密码数太少", message: "密码必须是6位以上", completion: nil)
+            self.displayAlertOkCancel(title: "密码字符太少", message: "密码必须是6位字符以上。", completion: nil)
             return false
         }
         

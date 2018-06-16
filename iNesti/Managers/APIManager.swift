@@ -17,16 +17,42 @@ class APIManager: NSObject {
         case rentalDetail = "rental/detail"
         case rentalSearch = "rental/search"
         case rentalList = "rental/list"
+        case userRegister = "user/register"
+        case userLogin = "user/login"
     }
     
     enum ServerKey: String {
-        case data = "data"
-        case appToken = "app_token"
-        case statusCode = "status_code"
+        case statusCode = "statusCode"
         case message = "message"
     }
     
-    let host = "https://8iw95ock4b.execute-api.us-east-1.amazonaws.com/prod/"
+    let getHost = "https://8iw95ock4b.execute-api.us-east-1.amazonaws.com/prod/"
+    let postHost = "https://sqim8rl263.execute-api.us-east-1.amazonaws.com/prod/"
+    
+    //MARK: Register
+    func postRegister(email: String, username: String, password: String, phone: String, wechatId: String?, completion: @escaping (Bool, Int, Error?) -> Void) {
+        let params: [String: Any] = [
+            "email" : email,
+            "username": username,
+            "password": password,
+            "phoneNumber": phone,
+            "weChatId": "ewqewq"
+        ]
+        
+        postBooleanReturn(route: ServerRoute.userRegister.rawValue, data: params, completion: completion)
+    }
+    
+    func postLogin(username: String, password: String, completion: @escaping (Bool, Int, Error?) -> Void) {
+        let params: [String: Any] = [
+            "username": username,
+            "password": password
+        ]
+        
+        postBooleanReturn(route: ServerRoute.userLogin.rawValue, data: params, completion: completion)
+    }
+    
+    
+    //MARK: - Rental Process
     
     func getRentalDetail(city: String, neighborhood: String, title: String, postTime: Int) {
         
@@ -38,7 +64,7 @@ class APIManager: NSObject {
         ]
         
         getDataReturn(route: ServerRoute.rentalDetail.rawValue, params: params) { (data, error) in
-            print(data)
+            //print(data)
         }
     }
     
@@ -57,7 +83,7 @@ class APIManager: NSObject {
         ]
         
         getDataReturn(route: ServerRoute.rentalList.rawValue, params: params) { (data, error) in
-            print(data)
+            //print(data)
         }
     }
     
@@ -84,13 +110,9 @@ class APIManager: NSObject {
     
     //MARK: POST DATA HANDLERS
     
-    func postBooleanReturn(route: String, data: [String: Any], completion: @escaping (Bool, Error?) -> Void) {
+    func postBooleanReturn(route: String, data: [String: Any], completion: @escaping (Bool, Int, Error?) -> Void) {
         
-        let parameters: [String: Any] = [
-            //ServerKey.appToken.rawValue : appToken,
-            //ServerKey.timestamp.rawValue: Date.getTimestampNow(),
-            ServerKey.data.rawValue: data
-        ]
+        let parameters = data
         
         /*
         if withAuth {
@@ -104,29 +126,34 @@ class APIManager: NSObject {
         }
          */
         
-        postDataWithUrlRoute(route, parameters: parameters) { (response, error) in
+        postDataReturn(route: route, params: parameters, withAuth: false) { (response, error) in
             guard let response = response else {
                 if let error = error {
                     DLog("\(route) update response error: \(error.localizedDescription)")
                 }
-                completion(false, error)
+                completion(false, -1, error)
                 return
             }
             
-            if let status = response[ServerKey.statusCode.rawValue] as? Int, status == 200 {
-                DLog("[SUCCESS] Post to \(route) Success")
-                completion(true, error)
+            if let status = response[ServerKey.statusCode.rawValue] as? Int {
+                if (status >= 200 && status < 300) {
+                    DLog("[SUCCESS] Post to \(route) Success")
+                    completion(true, status, error)
+                } else {
+                    DLog("[FAILURE] Post to \(route) failed")
+                    completion(false, status, error)
+                }
                 
             } else {
                 DLog("[ERROR] Unable get data from \(route)")
-                completion(false, error)
+                completion(false, -1, error)
             }
         }
     }
     
-    func postDataReturn(route: String, params: [String: Any]?, withAuth: Bool, completion: @escaping ([String : Any]?, Int, Error?) -> Void) {
+    func postDataReturn(route: String, params: [String: Any]?, withAuth: Bool, completion: @escaping ([String : Any]?, Error?) -> Void) {
         
-        var parameter: [String: Any] = [:]
+        //var parameter: [String: Any] = [:]
             //ServerKey.appToken.rawValue : appToken,
             //ServerKey.timestamp.rawValue: Date.getTimestampNow()
         //]
@@ -143,26 +170,26 @@ class APIManager: NSObject {
 //        }
         
         //Combine the incoming data
-        if let params = params {
-            params.forEach { (k, v) in parameter[k] = v }
-        }
+        //if let params = params {
+        //    params.forEach { (k, v) in parameter[k] = v }
+        //}
         
-        postDataWithUrlRoute(route, parameters: parameter) { (response, error) in
+        guard let params = params else { return }
+        
+        postDataWithUrlRoute(route, parameters: params) { (response, error) in
             guard let response = response else {
                 if let error = error {
                     DLog("[ERROR] postDataWithUrlRoute: \(route), error: \(error.localizedDescription)")
                 }
-                completion(nil, -1, error)
+                completion(nil, error)
                 return
             }
             
-            if let statusCode = response[ServerKey.statusCode.rawValue] as? Int {
-                if let data = response[ServerKey.data.rawValue] as? [String : Any] {
-                    completion(data, statusCode, nil)
-                } else {
-                    completion(nil, statusCode, nil)
-                }
+            if let message = response[ServerKey.message.rawValue] as? String {
+                DLog("Server message: \(message)")
             }
+            
+            completion(response, nil)
         }
     }
     
@@ -192,7 +219,7 @@ class APIManager: NSObject {
      * ✅ get data with url string, return NULL, try with Alamofire and callback
      */
     private func getDataWithUrlRoute(_ route: String, parameters: [String: Any], completion: @escaping((Data?, Error?) -> Void)) {
-        let requestUrlStr = host + route
+        let requestUrlStr = getHost + route
         let httpHeaders = ["x-api-key":"K8KvaXzfLoBivwsxGuJwaBmgaW8eCVN9UsNe0MA3"]
         
         Alamofire.request(requestUrlStr, parameters: parameters, headers:httpHeaders).response{ response in
@@ -226,9 +253,10 @@ class APIManager: NSObject {
      */
     private func postDataWithUrlRoute(_ route: String, parameters: [String: Any], completion: @escaping(([String : Any]?, Error?) -> Void)) {
         
-        let requestUrlStr = host + route
+        let requestUrlStr = postHost + route
+        let httpHeaders = ["x-api-key":"K8KvaXzfLoBivwsxGuJwaBmgaW8eCVN9UsNe0MA3"]
         
-        Alamofire.request(requestUrlStr, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseString { (response) in
+        Alamofire.request(requestUrlStr, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers:httpHeaders).responseString { (response) in
             
             if let requestBody = response.request?.httpBody, let body = NSString(data: requestBody, encoding: String.Encoding.utf8.rawValue) {
                 let printText: String = """
@@ -241,6 +269,8 @@ class APIManager: NSObject {
                 """
                 DLog(printText)
             }
+            
+            DLog("To json: \(response.value ?? "")")
             
             if let responseValue = response.value?.toJSON() as? [String: Any] {
                 

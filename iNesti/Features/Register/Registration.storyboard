@@ -242,11 +242,15 @@
                     </view>
                     <size key="freeformSize" width="375" height="660"/>
                     <connections>
+                        <outlet property="areaCodeTextField" destination="Uke-Xa-kwN" id="SRp-aj-wIl"/>
                         <outlet property="confirmTextField" destination="izM-Q8-bMQ" id="XIh-Id-gKx"/>
                         <outlet property="emailCheckbox" destination="4a6-Gk-pKk" id="eb4-8m-uzU"/>
+                        <outlet property="emailTextField" destination="jgm-Jb-4M8" id="K9l-7J-FIV"/>
                         <outlet property="passwordTextField" destination="RMn-Qm-8yd" id="bJe-I4-Xl7"/>
                         <outlet property="phoneCheckbox" destination="bm5-YN-8qn" id="P29-Sh-YdH"/>
+                        <outlet property="phoneTextField" destination="Gfd-zs-w3Y" id="z9m-YH-xgq"/>
                         <outlet property="scrollView" destination="uDD-ag-Zl1" id="GP6-xD-Ab7"/>
+                        <outlet property="usernameTextField" destination="YQS-g5-VyL" id="4fr-3f-mMe"/>
                         <outlet property="wechatCheckbox" destination="aRN-DV-XaX" id="CRC-sM-eON"/>
                     </connections>
                 </viewController>

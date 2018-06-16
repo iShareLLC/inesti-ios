@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Fabric.with([Crashlytics.self])
         
+        ProfileManager.shared.loadLocalUser()
+        
         if let mainNavigationController = self.window?.rootViewController as? UINavigationController {
             self.mainNavigationController = mainNavigationController
             self.mainTabViewController = mainNavigationController.childViewControllers[0] as? NestTabBarController
