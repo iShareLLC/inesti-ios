@@ -56,12 +56,12 @@ class ProfileManager: NSObject {
         }
     }
     
-    public func login(username: String, password: String, completion: @escaping (Bool) -> Void) {
-        APIManager.shared.postLogin(username: username, password: password) { (success, code, error) in
+    public func login(email: String, password: String, completion: @escaping (Bool) -> Void) {
+        APIManager.shared.postLogin(email: email, password: password) { (success, code, error) in
             if success {
                 self.setIsLoggined(isLogin: true)
-                UserDefaults.setUsername(username)
-                self.saveTokenToKeychain(username: username, token: password)
+                UserDefaults.setUsername(email)
+                self.saveTokenToKeychain(username: email, token: password)
             } else {
                 self.setIsLoggined(isLogin: false)
             }
@@ -73,8 +73,8 @@ class ProfileManager: NSObject {
         APIManager.shared.postRegister(email: email, username: username, password: password, phone: phone, wechatId: wechatId) { (success, code, error) in
             if success {
                 self.setIsLoggined(isLogin: true)
-                UserDefaults.setUsername(username)
-                self.saveTokenToKeychain(username: username, token: password)
+                UserDefaults.setUsername(email)
+                self.saveTokenToKeychain(username: email, token: password)
             } else {
                 self.setIsLoggined(isLogin: false)
             }
@@ -83,8 +83,8 @@ class ProfileManager: NSObject {
     }
     
     public func logout() {
-        guard let username = UserDefaults.getUsername() else { return }
-        self.deleteTokenFromKeychain(username: username)
+        guard let email = UserDefaults.getUsername() else { return }
+        self.deleteTokenFromKeychain(username: email)
         UserDefaults.setUsername(nil)
         setIsLoggined(isLogin: false)
     }

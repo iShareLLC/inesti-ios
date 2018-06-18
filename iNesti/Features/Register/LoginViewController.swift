@@ -10,7 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
@@ -41,13 +41,13 @@ class LoginViewController: UIViewController {
             return
         }
         
-        guard let username = usernameTextField.text,
+        guard let email = emailTextField.text,
             let password = passwordTextField.text else {
                 return
         }
         
         isLoading = true
-        ProfileManager.shared.login(username: username, password: password) { (success) in
+        ProfileManager.shared.login(email: email, password: password) { (success) in
             self.isLoading = false
             if success {
                 self.dismiss(animated: true, completion: nil)
@@ -58,8 +58,8 @@ class LoginViewController: UIViewController {
     }
     
     private func validation() -> Bool {
-        guard let username = usernameTextField.text, !username.isEmpty else {
-            self.displayAlertOkCancel(title: "用户名不能为空", message: "请输入用户名。", completion: nil)
+        guard let email = emailTextField.text, !email.isEmpty else {
+            self.displayAlertOkCancel(title: "电邮不能为空", message: "请输入你的电邮。", completion: nil)
             return false
         }
         

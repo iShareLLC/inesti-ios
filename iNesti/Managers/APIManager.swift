@@ -42,9 +42,9 @@ class APIManager: NSObject {
         postBooleanReturn(route: ServerRoute.userRegister.rawValue, data: params, completion: completion)
     }
     
-    func postLogin(username: String, password: String, completion: @escaping (Bool, Int, Error?) -> Void) {
+    func postLogin(email: String, password: String, completion: @escaping (Bool, Int, Error?) -> Void) {
         let params: [String: Any] = [
-            "username": username,
+            "email": email,
             "password": password
         ]
         

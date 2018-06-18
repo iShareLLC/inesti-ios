@@ -41,7 +41,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XQV-el-qkZ" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="电邮" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XQV-el-qkZ" customClass="INTextField" customModule="iNesti" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="124" width="343" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="mZl-b8-zWS"/>
@@ -118,9 +118,9 @@
                     </view>
                     <size key="freeformSize" width="375" height="660"/>
                     <connections>
+                        <outlet property="emailTextField" destination="XQV-el-qkZ" id="gj7-cv-nX4"/>
                         <outlet property="loadingIndicator" destination="ezz-b1-sk4" id="2h6-po-CA1"/>
                         <outlet property="passwordTextField" destination="6hX-Ad-1o6" id="a12-Jb-Fwj"/>
-                        <outlet property="usernameTextField" destination="XQV-el-qkZ" id="9qF-Cj-LaV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lcg-Lw-YDx" userLabel="First Responder" sceneMemberID="firstResponder"/>
