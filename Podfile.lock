@@ -55,29 +55,6 @@ DEPENDENCIES:
   - TTGTagCollectionView
   - TTRangeSlider
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Alamofire
-    - AlamofireImage
-    - Crashlytics
-    - Differentiator
-    - DropDown
-    - DZNEmptyDataSet
-    - ExpandableLabel
-    - Fabric
-    - KMPlaceholderTextView
-    - M13Checkbox
-    - Moya
-    - Result
-    - Reusable
-    - RxCocoa
-    - RxDataSources
-    - RxSwift
-    - SKPhotoBrowser
-    - SVProgressHUD
-    - TTGTagCollectionView
-    - TTRangeSlider
-
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
@@ -102,4 +79,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 9c775281e4c5ac649f85339ed91c89dfe7dcdfc2
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.4.0

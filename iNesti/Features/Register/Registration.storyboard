@@ -47,7 +47,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="z13-1k-uzM"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="dsN-9u-YQL" id="x74-TN-OPq"/>
@@ -59,7 +59,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="nNE-oy-PUp"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="dsN-9u-YQL" id="IPm-nT-SVs"/>
@@ -71,7 +71,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="Qtp-t6-Acb"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="dsN-9u-YQL" id="31s-54-DfC"/>
@@ -83,7 +83,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="ad1-C3-PMs"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="dsN-9u-YQL" id="lV8-RG-aob"/>
@@ -95,7 +95,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="ChZ-ZP-a4K"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="dsN-9u-YQL" id="b6I-tD-4cC"/>
@@ -114,7 +114,7 @@
                                                     <constraint firstAttribute="width" constant="50" id="HrI-gV-lwy"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="dsN-9u-YQL" id="UG9-zZ-Zyo"/>
