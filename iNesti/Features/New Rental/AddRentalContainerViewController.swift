@@ -78,8 +78,7 @@ class AddRentalContainerViewController: BaseViewController {
     
     private func publish() {
         
-        let rental = Rental(id: 0)
-        RentalDataStore.shared.addRental(rental: rental, state: .published)
+        //RentalDataStore.shared.addRental(rental: rental, state: .published)
         
         self.dismiss(animated: true, completion: nil)
     }

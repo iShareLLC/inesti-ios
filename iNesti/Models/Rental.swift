@@ -8,30 +8,45 @@
 
 import UIKit
 
-struct Rental {
-    let id: Int
-}
-
-struct RentalFinal {
-    let id: Int
+struct Rental: Codable {
+    let id: Int?
     let imageUrls: [String]?
     let availableStartDate: Int
     let availableEndDate: Int
     let title: String
     let description: String
-    let prices: [String: [Int]]?
-    let includeInternet: Bool
-    let includeElectricity: Bool
-    let includeWater: Bool
-    let includeGas: Bool
-    let allowCat: Bool
-    let allowDog: Bool
-    let noSmoking: Bool
-    let hasDoorman: Bool
-    let hasWasher: Bool
-    let hasDryer: Bool
+    let prices: RentalPrices
+    let basicFeatures: [String]
     let highlights: [String]
-    let transportation: [String]
+    let moreHighlights: [String]
+    let transportations: RentalTransportation
+}
+
+struct RentalPrices: Codable {
+    let entireUnit: RentalUnit?
+    let masterRoom: RentalUnit?
+}
+
+struct RentalUnit: Codable {
+    let currency: String
+    let month: Int
+    let week: Int
+    let day: Int
+}
+
+struct RentalTransportation: Codable {
+    let subway: RentalTransportationInfo
+    let path: RentalTransportationInfo
+}
+
+struct RentalTransportationInfo: Codable {
+    let zhHans: RentalTransportationLanguage
+    let en: RentalTransportationLanguage
+}
+
+struct RentalTransportationLanguage: Codable {
+    let startText: String
+    let endText: String
 }
 
 public enum RentalDuration: Int {

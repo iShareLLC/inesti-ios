@@ -13,6 +13,8 @@ class RentalDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var containerView: UIView!
     
+    var rental: Rental?
+    
     weak var contactViewController: RentalContactViewController!
     var isContactShown: Bool = false {
         didSet {
@@ -35,6 +37,11 @@ class RentalDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        APIManager.shared.getRentalDetail(id: "1548976200|13", city: "nyc") { (rental, error) in
+            self.rental = rental
+            self.tableView.reloadData()
+        }
         
         self.containerView.isHidden = true
         self.containerView.alpha = 0
@@ -82,6 +89,8 @@ extension RentalDetailViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let rental = rental else { return UITableViewCell() }
         let reuseId = RentalDetailSections.getSection(indexPath.row).reuseIdentifier()
         
         if reuseId == "RentalStatusCell" {
@@ -118,12 +127,12 @@ extension RentalDetailViewController: UITableViewDelegate, UITableViewDataSource
             
         } else if (reuseId == "RentalTransitCell") {
             let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath) as! INTrafficItemInfoCell
-            let info1 = INSpotlightItemInfo(name: "地铁D", iconName: "subway")
-            let info2 = INSpotlightItemInfo(name: "PATH", iconName: "metro")
+            let info1 = INSpotlightItemInfo(name: rental.transportations.path.zhHans.startText, iconName: "subway")
+            let info2 = INSpotlightItemInfo(name: rental.transportations.subway.zhHans.startText, iconName: "metro")
             
-            let traffic1 = "13分钟步行至 Brighton Beach"
-            let traffic2 = "5分钟步行至 Chinatown"
-            cell.setItemInfo(itemInfo: [info1, info2], trafficInfo: [traffic1, traffic2])
+            let end1 = rental.transportations.path.zhHans.endText
+            let end2 = rental.transportations.subway.zhHans.endText
+            cell.setItemInfo(itemInfo: [info1, info2], trafficInfo: [end1, end2])
             return cell
         }
         

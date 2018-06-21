@@ -11,7 +11,11 @@ import UIKit
 class APITester: NSObject {
 
     func testRentalDetail () {
-        APIManager.shared.getRentalDetail(city: "nyc", neighborhood: "midtown", title: "random-title", postTime: Date.getTimestampNow())
+        APIManager.shared.getRentalDetail(id: "1548976200|13", city: "nyc") { (rental, error) in
+            if let rental = rental {
+                print(rental.description)
+            }
+        }
     }
     
     func testRentalList () {

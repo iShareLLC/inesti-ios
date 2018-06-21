@@ -54,17 +54,23 @@ class APIManager: NSObject {
     
     //MARK: - Rental Process
     
-    func getRentalDetail(city: String, neighborhood: String, title: String, postTime: Int) {
+    func getRentalDetail(id: String, city: String, completion: @escaping((Rental?, Error?) -> Void)) {
         
         let params: [String: Any] = [
             "city" : city,
-            "neighborhood": neighborhood,
-            "title": title,
-            "postTime": postTime
+            "id": id
         ]
         
         getDataReturn(route: ServerRoute.rentalDetail.rawValue, params: params) { (data, error) in
-            //print(data)
+            if let data = data {
+                do {
+                    let object = try JSONDecoder().decode(Rental.self, from: data)
+                    completion(object, nil)
+                } catch {
+                    DLog("JSON failed: \(error)")
+                    completion(nil, error)
+                }
+            }
         }
     }
     
